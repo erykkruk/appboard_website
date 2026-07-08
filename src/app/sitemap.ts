@@ -16,5 +16,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       url: absoluteUrl("/pricing"),
     },
+    {
+      changeFrequency: "yearly",
+      lastModified: new Date(),
+      priority: 0.3,
+      url: absoluteUrl("/policy"),
+    },
+    {
+      changeFrequency: "yearly",
+      lastModified: new Date(),
+      priority: 0.3,
+      url: absoluteUrl("/terms"),
+    },
   ];
 }

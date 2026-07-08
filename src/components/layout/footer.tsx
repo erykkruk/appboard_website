@@ -34,6 +34,13 @@ const FOOTER_COLUMNS: FooterColumn[] = [
     ],
     title: "Get started",
   },
+  {
+    links: [
+      { href: "/policy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms of Service" },
+    ],
+    title: "Legal",
+  },
 ];
 
 function FooterNavLink({ link }: { link: FooterLink }): JSX.Element {
