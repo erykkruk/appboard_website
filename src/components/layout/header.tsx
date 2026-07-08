@@ -42,8 +42,8 @@ export function Header(): JSX.Element {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <ButtonLink href={APP_URL} variant="ghost">
-            Sign in
+          <ButtonLink href={`${APP_URL}/demo`} variant="ghost">
+            Demo
           </ButtonLink>
           <ButtonLink href={APP_URL} variant="primary">
             Get started
@@ -79,8 +79,8 @@ export function Header(): JSX.Element {
             </Link>
           ))}
           <div className="mt-3 flex flex-col gap-2 border-t border-line pt-4">
-            <ButtonLink href={APP_URL} variant="secondary">
-              Sign in
+            <ButtonLink href={`${APP_URL}/demo`} variant="secondary">
+              Demo
             </ButtonLink>
             <ButtonLink href={APP_URL} variant="primary">
               Get started
