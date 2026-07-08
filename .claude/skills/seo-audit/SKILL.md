@@ -1,130 +1,130 @@
 # SEO Audit
 
-Kompleksowy audyt SEO strony AppBoard. Uruchamiaj gdy uzytkownik mowi o "audyt SEO", "technical SEO", "problemy z pozycjonowaniem", "ranking issues", "SEO check".
+Comprehensive SEO audit of the AppBoard website. Run when the user mentions "SEO audit", "technical SEO", "ranking problems", "ranking issues", "SEO check".
 
 ## Trigger
 
-`/seo-audit` lub pytania o stan SEO strony.
+`/seo-audit` or questions about the website's SEO state.
 
 ## Workflow
 
-### 1. Wstepna analiza
+### 1. Initial analysis
 
-Zbierz kontekst przed audytem:
-- Jaki zakres? (cala strona / konkretna podstrona)
-- Czy sa znane problemy z indeksacja?
-- Czy Google Search Console zglasza bledy?
+Gather context before the audit:
+- What scope? (whole site / a specific subpage)
+- Are there known indexation problems?
+- Is Google Search Console reporting errors?
 
 ### 2. Technical SEO Framework
 
 #### Crawlability
-- [ ] `robots.txt` poprawny -- sprawdz `src/app/robots.txt/route.ts`
-- [ ] AI boty dozwolone (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) -- **KRYTYCZNE dla AI SEO**
-- [ ] Sitemap XML kompletny -- sprawdz `src/app/sitemap.xml/route.ts`
-- [ ] Wszystkie strony w sitemap (homepage, pricing, features, blog, legal + nowe)
-- [ ] Architektura URL czysta (kebab-case, bez query params)
-- [ ] Brak orphan pages (kazda strona ma link wewnetrzny)
+- [ ] `robots.txt` correct -- check `src/app/robots.txt/route.ts`
+- [ ] AI bots allowed (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) -- **CRITICAL for AI SEO**
+- [ ] Sitemap XML complete -- check `src/app/sitemap.xml/route.ts`
+- [ ] All pages in the sitemap (homepage, pricing, features, blog, legal + new ones)
+- [ ] Clean URL architecture (kebab-case, no query params)
+- [ ] No orphan pages (every page has an internal link)
 
 #### Indexation
-- [ ] Canonical URLs ustawione na kazdej stronie
-- [ ] Brak duplikatow tytulow/opisow
-- [ ] `noindex` tylko na stronach, ktore NIE powinny byc indeksowane (404, admin, dashboard)
-- [ ] Middleware redirect www -> non-www dziala (`middleware.ts`)
-- [ ] Trailing slashes usuwane (301)
+- [ ] Canonical URLs set on every page
+- [ ] No duplicate titles/descriptions
+- [ ] `noindex` only on pages that should NOT be indexed (404, admin, dashboard)
+- [ ] Middleware redirect www -> non-www works (`middleware.ts`)
+- [ ] Trailing slashes removed (301)
 
 #### Core Web Vitals
-- [ ] LCP < 2.5s (sprawdz hero images, animations)
-- [ ] INP < 200ms (sprawdz event handlers, animations)
-- [ ] CLS < 0.1 (sprawdz Image width/height, font loading)
-- [ ] Fonts preloaded z fallbackami (w `layout.tsx`)
+- [ ] LCP < 2.5s (check hero images, animations)
+- [ ] INP < 200ms (check event handlers, animations)
+- [ ] CLS < 0.1 (check Image width/height, font loading)
+- [ ] Fonts preloaded with fallbacks (in `layout.tsx`)
 
 #### Mobile & Security
-- [ ] Viewport meta poprawny
+- [ ] Viewport meta correct
 - [ ] Responsive design (mobile-first Tailwind)
 - [ ] HTTPS enforced (middleware)
-- [ ] Security headers (HSTS, X-Frame-Options, X-Content-Type-Options w `next.config.js`)
+- [ ] Security headers (HSTS, X-Frame-Options, X-Content-Type-Options in `next.config.js`)
 
 ### 3. On-Page SEO
 
 #### Meta Tags
-- [ ] Title 50-60 znakow, unikalne per strona
-- [ ] Description 150-160 znakow z CTA
-- [ ] Keywords odpowiednie (ASO, app store optimization, keyword tracking)
-- [ ] Open Graph kompletne (type, locale, url, title, description, image 1200x630)
-- [ ] Twitter Card `summary_large_image` z image
+- [ ] Title 50-60 characters, unique per page
+- [ ] Description 150-160 characters with a CTA
+- [ ] Appropriate keywords (ASO, app store optimization, keyword tracking)
+- [ ] Open Graph complete (type, locale, url, title, description, image 1200x630)
+- [ ] Twitter Card `summary_large_image` with image
 
 #### Heading Hierarchy
-- [ ] Dokladnie 1x `<h1>` per strona
-- [ ] Hierarchia h1 -> h2 -> h3 bez przeskokow
-- [ ] Headingi zawieraja primary keywords naturalnie
+- [ ] Exactly 1x `<h1>` per page
+- [ ] Hierarchy h1 -> h2 -> h3 without skipping levels
+- [ ] Headings include primary keywords naturally
 
 #### Content Quality
-- [ ] Unikalna tresc na kazdej stronie
-- [ ] E-E-A-T sygnaly (Experience, Expertise, Authority, Trust)
-- [ ] Statystyki ze zrodlami cytowanymi
-- [ ] Swiezosc -- daty aktualizacji widoczne
-- [ ] Alt text na wszystkich obrazach (opisowy, z keywords)
+- [ ] Unique content on every page
+- [ ] E-E-A-T signals (Experience, Expertise, Authority, Trust)
+- [ ] Statistics with cited sources
+- [ ] Freshness -- update dates visible
+- [ ] Alt text on all images (descriptive, with keywords)
 
 #### Internal Linking
-- [ ] Breadcrumbs na podstronach
-- [ ] Link do homepage z kazdej podstrony (logo/nav)
-- [ ] Descriptive anchor text (nie "click here")
-- [ ] Brak broken links
+- [ ] Breadcrumbs on subpages
+- [ ] Link to homepage from every subpage (logo/nav)
+- [ ] Descriptive anchor text (not "click here")
+- [ ] No broken links
 
 ### 4. Structured Data (JSON-LD)
 
-- [ ] Organization schema poprawny
-- [ ] WebApplication / SoftwareApplication schema z cena i features
-- [ ] FAQ schema na stronach z pytaniami
-- [ ] BreadcrumbList schema na podstronach
-- [ ] Product schema na stronie pricing (plany cenowe)
-- [ ] Walidacja: Google Rich Results Test
-- [ ] Brak duplikatow schema
+- [ ] Organization schema correct
+- [ ] WebApplication / SoftwareApplication schema with price and features
+- [ ] FAQ schema on pages with questions
+- [ ] BreadcrumbList schema on subpages
+- [ ] Product schema on the pricing page (pricing plans)
+- [ ] Validation: Google Rich Results Test
+- [ ] No duplicate schema
 
 ### 5. AppBoard-Specific Checks
 
-- [ ] Keywords ASO obecne w tresci (ASO tool, app store optimization, keyword tracking, listing management)
-- [ ] Pricing page z przejrzystymi planami
-- [ ] Feature pages z USP (AI-powered ASO, multi-store support, screenshot tools)
-- [ ] Comparison pages vs konkurencja (AppTweak, Sensor Tower, AppFollow)
-- [ ] Obrazy mockupow i screenshots zoptymalizowane (WebP, odpowiednie rozmiary)
-- [ ] Demo/trial CTA widoczne na kazdej stronie
+- [ ] ASO keywords present in the content (ASO tool, app store optimization, keyword tracking, listing management)
+- [ ] Pricing page with clear plans
+- [ ] Feature pages with USPs (AI-powered ASO, multi-store support, screenshot tools)
+- [ ] Comparison pages vs competitors (AppTweak, Sensor Tower, AppFollow)
+- [ ] Mockup and screenshot images optimized (WebP, appropriate sizes)
+- [ ] Demo/trial CTA visible on every page
 
 ### 6. AI Visibility
 
-- [ ] Tresc extractable -- kluczowe info w pierwszym akapicie
-- [ ] Comparison tables tam, gdzie maja sens
-- [ ] FAQ sections z naturalnymi pytaniami
-- [ ] Brak gated content
-- [ ] Schema markup pomaga AI zrozumiec tresc
-- [ ] AI boty NIE zablokowane w robots.txt
+- [ ] Content extractable -- key info in the first paragraph
+- [ ] Comparison tables where they make sense
+- [ ] FAQ sections with natural questions
+- [ ] No gated content
+- [ ] Schema markup helps AI understand the content
+- [ ] AI bots NOT blocked in robots.txt
 
 ## Output Format
 
 ```markdown
-## SEO Audit Report -- [data]
+## SEO Audit Report -- [date]
 
-### Wynik ogolny: [X/100]
+### Overall score: [X/100]
 
-### Krytyczne problemy
-1. [Problem] -- [Wplyw] -- [Jak naprawic]
+### Critical problems
+1. [Problem] -- [Impact] -- [How to fix]
 
-### Ostrzezenia
-1. [Problem] -- [Wplyw] -- [Jak naprawic]
+### Warnings
+1. [Problem] -- [Impact] -- [How to fix]
 
-### Pozytywne
-1. [Co dziala dobrze]
+### Positives
+1. [What works well]
 
-### Rekomendacje priorytetyzowane
-| # | Dzialanie | Wplyw | Trudnosc | Priorytet |
-|---|-----------|-------|----------|-----------|
-| 1 | ... | Wysoki | Niski | P0 |
+### Prioritized recommendations
+| # | Action | Impact | Difficulty | Priority |
+|---|--------|--------|------------|----------|
+| 1 | ... | High | Low | P0 |
 ```
 
-## Powiazane skille
+## Related skills
 
-- `seo-schema-markup` -- implementacja structured data
-- `seo-ai-optimization` -- optymalizacja pod AI search
-- `seo-technical` -- techniczne zmiany w kodzie
-- `seo-content-strategy` -- strategia tresci i keywords
-- `seo-page-optimization` -- optymalizacja konwersji i on-page
+- `seo-schema-markup` -- structured data implementation
+- `seo-ai-optimization` -- optimization for AI search
+- `seo-technical` -- technical code changes
+- `seo-content-strategy` -- content and keyword strategy
+- `seo-page-optimization` -- conversion and on-page optimization

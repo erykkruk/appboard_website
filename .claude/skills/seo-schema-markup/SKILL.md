@@ -1,21 +1,21 @@
 # Schema Markup
 
-Implementacja i optymalizacja structured data (JSON-LD) na stronie AppBoard. Uruchamiaj gdy uzytkownik mowi o "schema markup", "structured data", "JSON-LD", "rich snippets", "schema.org", "rich results", "knowledge panel".
+Implementation and optimization of structured data (JSON-LD) on the AppBoard website. Run when the user mentions "schema markup", "structured data", "JSON-LD", "rich snippets", "schema.org", "rich results", "knowledge panel".
 
 ## Trigger
 
-`/seo-schema` lub pytania o structured data.
+`/seo-schema` or questions about structured data.
 
 ## Core Principles
 
-1. **Accuracy First** -- schema musi odzwierciedlac faktyczna tresc strony
-2. **JSON-LD format** -- Google recommends, latwiejszy w utrzymaniu
-3. **Walidacja** -- zawsze testuj przed deployem
-4. **@graph pattern** -- lacz wiele typow schema na jednej stronie
+1. **Accuracy First** -- the schema must reflect the actual content of the page
+2. **JSON-LD format** -- Google recommends it, easier to maintain
+3. **Validation** -- always test before deploying
+4. **@graph pattern** -- combine multiple schema types on a single page
 
-## Schema Types dla AppBoard
+## Schema Types for AppBoard
 
-### Aktualnie do zaimplementowania
+### Currently to be implemented
 
 ```json
 {
@@ -27,7 +27,7 @@ Implementacja i optymalizacja structured data (JSON-LD) na stronie AppBoard. Uru
 }
 ```
 
-### Typy schema do dodania
+### Schema types to add
 
 #### 1. Organization (homepage)
 ```json
@@ -108,7 +108,7 @@ Implementacja i optymalizacja structured data (JSON-LD) na stronie AppBoard. Uru
 }
 ```
 
-#### 4. BreadcrumbList (na podstronach)
+#### 4. BreadcrumbList (on subpages)
 ```json
 {
   "@type": "BreadcrumbList",
@@ -163,7 +163,7 @@ Implementacja i optymalizacja structured data (JSON-LD) na stronie AppBoard. Uru
 }
 ```
 
-## @graph Pattern -- laczenie wielu typow
+## @graph Pattern -- combining multiple types
 
 ```json
 {
@@ -177,10 +177,10 @@ Implementacja i optymalizacja structured data (JSON-LD) na stronie AppBoard. Uru
 }
 ```
 
-## Implementacja w Next.js
+## Implementation in Next.js
 
 ```typescript
-// W layout.tsx lub page.tsx
+// In layout.tsx or page.tsx
 <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
@@ -189,7 +189,7 @@ Implementacja i optymalizacja structured data (JSON-LD) na stronie AppBoard. Uru
 />
 ```
 
-Dla dynamicznych stron uzyj helper function:
+For dynamic pages, use a helper function:
 
 ```typescript
 // src/lib/schema.ts
@@ -200,25 +200,25 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) { ... }
 export function generateProductSchema(plans: PricingPlan[]) { ... }
 ```
 
-## Walidacja
+## Validation
 
 1. **Google Rich Results Test**: https://search.google.com/test/rich-results
 2. **Schema.org Validator**: https://validator.schema.org/
 3. **Google Search Console** -> Enhancements
 
-## Checklist implementacji
+## Implementation checklist
 
-- [ ] Dodaj Organization schema na homepage
-- [ ] Dodaj WebApplication schema z features i pricing
-- [ ] Dodaj WebSite schema z potentialAction (search)
-- [ ] Dodaj FAQPage schema na stronach z FAQ
-- [ ] Dodaj BreadcrumbList na podstronach
-- [ ] Dodaj Product schema na pricing page (z planami cenowymi)
-- [ ] Waliduj kazdy typ w Rich Results Test
-- [ ] Usun fake/placeholder data -- musi byc prawdziwe
+- [ ] Add Organization schema on the homepage
+- [ ] Add WebApplication schema with features and pricing
+- [ ] Add WebSite schema with potentialAction (search)
+- [ ] Add FAQPage schema on pages with FAQs
+- [ ] Add BreadcrumbList on subpages
+- [ ] Add Product schema on the pricing page (with pricing plans)
+- [ ] Validate every type in the Rich Results Test
+- [ ] Remove fake/placeholder data -- it must be real
 
-## Powiazane skille
+## Related skills
 
-- `seo-audit` -- pelny audyt SEO
-- `seo-ai-optimization` -- schema pomaga AI wyciagac informacje
-- `seo-technical` -- techniczne zmiany w kodzie
+- `seo-audit` -- full SEO audit
+- `seo-ai-optimization` -- schema helps AI extract information
+- `seo-technical` -- technical code changes

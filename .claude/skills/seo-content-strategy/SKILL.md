@@ -1,16 +1,16 @@
 # SEO Content Strategy
 
-Strategia tresci i keyword research dla AppBoard. Uruchamiaj gdy uzytkownik mowi o "keyword research", "content strategy", "na jakie frazy sie pozycjonowac", "content plan", "blog strategy", "SEO content".
+Content strategy and keyword research for AppBoard. Run when the user mentions "keyword research", "content strategy", "which keywords to rank for", "content plan", "blog strategy", "SEO content".
 
 ## Trigger
 
-`/seo-content` lub pytania o strategie tresci, keywords, pozycjonowanie.
+`/seo-content` or questions about content strategy, keywords, ranking.
 
-## Proceso keyword research
+## Keyword research process
 
-### 1. Identyfikacja seed keywords
+### 1. Seed keyword identification
 
-AppBoard operuje w niszach:
+AppBoard operates in the following niches:
 - **ASO Tools** -- ASO tool, app store optimization tool, ASO platform, ASO software
 - **App Store Optimization** -- app store optimization, keyword optimization, app listing optimization
 - **Keyword Tracking** -- app keyword tracking, app store keywords, keyword research app
@@ -19,9 +19,9 @@ AppBoard operuje w niszach:
 - **Multi-Store** -- manage app store and google play, cross-platform ASO, multi-store management
 - **AI + ASO** -- AI ASO tool, AI app optimization, AI keyword suggestions, AI app descriptions
 
-### 2. Ekspansja keywords
+### 2. Keyword expansion
 
-Dla kazdego seed keyword rozszerz o:
+For each seed keyword, expand with:
 - **Long-tail** -- "best AI ASO tool for indie developers 2026"
 - **Question-based** -- "how to optimize app store listing"
 - **Comparison** -- "appboard vs apptweak", "best ASO tools compared"
@@ -32,10 +32,10 @@ Dla kazdego seed keyword rozszerz o:
   - Commercial: "best ASO tool for startups"
   - Transactional: "sign up for ASO tool", "free ASO platform"
 
-### 3. Priorytetyzacja
+### 3. Prioritization
 
-| Kryterium | Waga |
-|-----------|------|
+| Criterion | Weight |
+|-----------|--------|
 | Search volume | 25% |
 | Difficulty (competition) | 25% |
 | Business relevance | 30% |
@@ -43,7 +43,7 @@ Dla kazdego seed keyword rozszerz o:
 
 ### 4. Content mapping
 
-Kazdy keyword cluster -> konkretna strona/sekcja:
+Each keyword cluster -> a specific page/section:
 
 | Cluster | Target Page | Content Type |
 |---------|-------------|-------------|
@@ -57,21 +57,21 @@ Kazdy keyword cluster -> konkretna strona/sekcja:
 | "ASO tool pricing" | Pricing page | Pricing comparison |
 | "best ASO tools 2026" | Blog / Listicle | Listicle + comparison |
 
-## Content Types dla AppBoard
+## Content Types for AppBoard
 
-### 1. Product Pages (priorytet P0)
-- Homepage z keyword-rich copy
+### 1. Product Pages (priority P0)
+- Homepage with keyword-rich copy
 - Feature pages per functionality (Keywords, Listings, Screenshots, AI)
-- Pricing page z porownaniem planow
+- Pricing page with a plan comparison
 
-### 2. Comparison Content (priorytet P1)
+### 2. Comparison Content (priority P1)
 - "AppBoard vs AppTweak" -- feature-by-feature comparison
 - "AppBoard vs Sensor Tower" -- pricing & features
 - "AppBoard vs AppFollow" -- listing management focus
 - "Best ASO Tools 2026" -- comprehensive guide
 - "Free ASO Tools Compared"
 
-### 3. Educational Content (priorytet P1)
+### 3. Educational Content (priority P1)
 - "What is App Store Optimization (ASO)? Complete Guide"
 - "How to Research App Store Keywords"
 - "App Store Screenshot Best Practices"
@@ -79,30 +79,30 @@ Kazdy keyword cluster -> konkretna strona/sekcja:
 - "App Store vs Google Play: ASO Differences"
 - "How AI is Changing App Store Optimization"
 
-### 4. Use Case Pages (priorytet P2)
+### 4. Use Case Pages (priority P2)
 - "AppBoard for Indie Developers"
 - "AppBoard for App Agencies"
 - "AppBoard for Enterprise Apps"
 - "AppBoard for Game Developers"
 
-### 5. Resource Pages (priorytet P2)
+### 5. Resource Pages (priority P2)
 - "ASO Glossary"
 - "App Store Optimization Checklist"
 - "ASO Metrics & KPIs Guide"
 - "App Store Algorithm Updates"
 
-## Content Guidelines dla SEO
+## Content Guidelines for SEO
 
 ### Title optimization
 - Format: "Primary Keyword -- Secondary Keyword | AppBoard"
-- 50-60 znakow
-- Primary keyword na poczatku
+- 50-60 characters
+- Primary keyword at the beginning
 
 ### Meta description
-- 150-160 znakow
-- Zawiera primary keyword naturalnie
+- 150-160 characters
+- Includes the primary keyword naturally
 - CTA ("Start free", "Try now", "Optimize your app")
-- Unique per strona
+- Unique per page
 
 ### Heading structure
 - H1: Primary keyword (1x per page)
@@ -110,24 +110,24 @@ Kazdy keyword cluster -> konkretna strona/sekcja:
 - H3: Long-tail variations / subtopics
 
 ### Content body
-- Primary keyword w pierwszych 100 slowach
-- Keyword density: 1-2% (naturalnie)
-- LSI keywords (semantycznie powiazane)
-- Min. 300 slow per strona (homepage wiecej)
-- Wewnetrzne linki do powiazanych sekcji
+- Primary keyword within the first 100 words
+- Keyword density: 1-2% (naturally)
+- LSI keywords (semantically related)
+- Min. 300 words per page (homepage more)
+- Internal links to related sections
 
 ### Image SEO
-- Alt text: opisowy z keywords ("AppBoard ASO dashboard showing keyword tracking and app store listing optimization")
-- Filename: kebab-case z keywords (`appboard-keyword-tracking-dashboard.webp`)
-- WebP format, zoptymalizowane rozmiary
+- Alt text: descriptive with keywords ("AppBoard ASO dashboard showing keyword tracking and app store listing optimization")
+- Filename: kebab-case with keywords (`appboard-keyword-tracking-dashboard.webp`)
+- WebP format, optimized sizes
 
-## Research narzedzia
+## Research tools
 
-Gdy Claude robi research pod content strategy:
-1. **WebSearch** -- sprawdz co rankuje na target keywords
-2. **Analiza konkurencji** -- kto rankuje? jaki content maja? (AppTweak, Sensor Tower, AppFollow)
-3. **SERP features** -- jakie rich results pojawiaja sie? (FAQ, How-to, Video)
-4. **AI Overviews** -- czy AI odpowiedzi istnieja? kto jest cytowany?
+When Claude does research for content strategy:
+1. **WebSearch** -- check what ranks for the target keywords
+2. **Competitor analysis** -- who ranks? what content do they have? (AppTweak, Sensor Tower, AppFollow)
+3. **SERP features** -- which rich results appear? (FAQ, How-to, Video)
+4. **AI Overviews** -- do AI answers exist? who is cited?
 
 ## Output Format
 
@@ -149,8 +149,8 @@ Gdy Claude robi research pod content strategy:
 1. ...
 ```
 
-## Powiazane skille
+## Related skills
 
-- `seo-audit` -- audyt obecnego stanu SEO
-- `seo-ai-optimization` -- optymalizacja pod AI search
-- `seo-page-optimization` -- optymalizacja on-page
+- `seo-audit` -- audit of the current SEO state
+- `seo-ai-optimization` -- optimization for AI search
+- `seo-page-optimization` -- on-page optimization

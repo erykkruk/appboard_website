@@ -1,34 +1,34 @@
 # SEO Page Optimization & CRO
 
-Optymalizacja poszczegolnych stron pod SEO on-page i konwersje (CRO). Uruchamiaj gdy uzytkownik mowi o "optymalizuj strone", "popraw konwersje", "landing page optimization", "CRO", "page speed", "on-page SEO".
+Optimization of individual pages for on-page SEO and conversions (CRO). Run when the user talks about "optimize page", "improve conversions", "landing page optimization", "CRO", "page speed", "on-page SEO".
 
 ## Trigger
 
-`/seo-page` lub pytania o optymalizacje konkretnej strony.
+`/seo-page` or questions about optimizing a specific page.
 
-## Framework analizy strony
+## Page analysis framework
 
-### 1. Value Proposition Clarity (najwyzszy wplyw)
+### 1. Value Proposition Clarity (highest impact)
 
-Odwiedzajacy musi zrozumiec oferte w ciagu 5 sekund:
-- [ ] Glowny headline komunikuje wartosc (nie feature)
-- [ ] Subheadline wyjasnia "jak" i "dla kogo"
-- [ ] Hero section ma jasny CTA
-- [ ] Brak jargonu -- zrozumialy dla target audience
+The visitor must understand the offer within 5 seconds:
+- [ ] Main headline communicates value (not a feature)
+- [ ] Subheadline explains "how" and "for whom"
+- [ ] Hero section has a clear CTA
+- [ ] No jargon -- understandable for the target audience
 
 **AppBoard homepage check:**
-- Hero section -> czy "Manage your App Store & Google Play listings with AI" jest natychmiast jasne?
-- CTA -> "Start Free" / "Get Started" widoczne above the fold?
-- Value prop -> "AI-powered ASO platform" -- dobrze, ale czy wystarczajaco konkretne?
-- Subheadline -> powinien adresowac pain point: "Stop managing listings manually. Let AI optimize your keywords, descriptions, and screenshots."
+- Hero section -> is "Manage your App Store & Google Play listings with AI" immediately clear?
+- CTA -> "Start Free" / "Get Started" visible above the fold?
+- Value prop -> "AI-powered ASO platform" -- good, but is it concrete enough?
+- Subheadline -> should address the pain point: "Stop managing listings manually. Let AI optimize your keywords, descriptions, and screenshots."
 
 ### 2. Heading & Copy Optimization
 
-- [ ] H1 zawiera primary keyword (1x per page)
-- [ ] H2s zawieraja secondary keywords
-- [ ] Copy jest benefit-focused (nie feature-focused)
-- [ ] Kazda sekcja ma jasny "so what?" for the reader
-- [ ] Power words w headlines ("Optimize", "Boost", "Automate", "Grow")
+- [ ] H1 contains the primary keyword (1x per page)
+- [ ] H2s contain secondary keywords
+- [ ] Copy is benefit-focused (not feature-focused)
+- [ ] Each section has a clear "so what?" for the reader
+- [ ] Power words in headlines ("Optimize", "Boost", "Automate", "Grow")
 
 **Copy patterns:**
 ```
@@ -49,48 +49,48 @@ Benefit: "Reach global audiences with localized listings in 40+ languages"
 
 - [ ] Primary CTA above the fold
 - [ ] CTA text action-oriented ("Start Optimizing Free", "Try AppBoard Free")
-- [ ] Kontrast kolorystyczny CTA vs tlo
-- [ ] Powtorzony CTA co 2-3 sekcje (scroll depth)
-- [ ] Brak competing CTAs (1 primary action per section)
+- [ ] Color contrast of CTA vs background
+- [ ] Repeated CTA every 2-3 sections (scroll depth)
+- [ ] No competing CTAs (1 primary action per section)
 
 ### 4. Visual Hierarchy
 
-- [ ] Eye path prowadzi do CTA
-- [ ] Whitespace wokol kluczowych elementow
-- [ ] Kontrast tekstu vs tlo (WCAG AA minimum)
-- [ ] Wazne info nie jest ukryte ponizej fold
-- [ ] Mobile: kluczowe elementy widoczne bez scrollowania
+- [ ] Eye path leads to the CTA
+- [ ] Whitespace around key elements
+- [ ] Text vs background contrast (WCAG AA minimum)
+- [ ] Important info is not hidden below the fold
+- [ ] Mobile: key elements visible without scrolling
 
 ### 5. Trust Signals
 
 - [ ] Social proof (user count, apps managed, downloads optimized)
-- [ ] Logos klientow / firm korzystajacych z AppBoard
-- [ ] Testimonials z real names
+- [ ] Logos of clients / companies using AppBoard
+- [ ] Testimonials with real names
 - [ ] Security badges (SOC 2, data encryption)
 - [ ] "Trusted by X developers" / "Managing Y apps"
 - [ ] Integration badges (App Store Connect, Google Play Console)
 
 ### 6. Objection Handling
 
-Typowe obiekcje dla AppBoard:
-| Obiekcja | Jak adresowac |
+Common objections for AppBoard:
+| Objection | How to address it |
 |----------|--------------|
-| "Does it work with my store?" | "Works with both App Store and Google Play" jasno na stronie, z logo obu sklepow |
-| "How is it different from AppTweak?" | Comparison page / section z konkretnymi roznicami (AI-first, pricing, UX) |
+| "Does it work with my store?" | "Works with both App Store and Google Play" clearly on the page, with logos of both stores |
+| "How is it different from AppTweak?" | Comparison page / section with concrete differences (AI-first, pricing, UX) |
 | "Is my data safe?" | Security section: "Your App Store Connect and Google Play credentials are encrypted with AES-256-GCM" |
-| "Does it support Google Play?" | "Full Google Play support" z lista features specyficznych dla GP |
-| "Is it free?" | "Free tier available — no credit card required" jasno przy CTA |
+| "Does it support Google Play?" | "Full Google Play support" with a list of GP-specific features |
+| "Is it free?" | "Free tier available — no credit card required" clearly near the CTA |
 | "Will it mess up my listings?" | "Preview changes before publishing" + "Rollback anytime" |
 | "Do I need technical knowledge?" | "No-code interface — designed for marketers and developers alike" |
 
 ### 7. Friction Points
 
-- [ ] Brak unnecessary form fields (email + password enough for signup)
-- [ ] Signup path: max 2 kliki do dashboard
-- [ ] Brak pop-ups blokujacych content
+- [ ] No unnecessary form fields (email + password enough for signup)
+- [ ] Signup path: max 2 clicks to the dashboard
+- [ ] No pop-ups blocking content
 - [ ] Fast load time (< 3s)
-- [ ] Brak broken links/images
-- [ ] Free tier bez wymagania karty kredytowej
+- [ ] No broken links/images
+- [ ] Free tier without requiring a credit card
 
 ## On-Page SEO Checklist
 
@@ -101,11 +101,11 @@ Typowe obiekcje dla AppBoard:
 - [ ] OG image 1200x630, descriptive alt
 
 ### Content
-- [ ] Primary keyword w pierwszych 100 slowach
-- [ ] Keyword density 1-2% (naturalnie)
-- [ ] LSI keywords (semantycznie powiazane: ASO, app store, google play, keywords, listings, metadata)
-- [ ] Internal links do powiazanych stron
-- [ ] External links do autorytatywnych zrodel (opcjonalnie -- Apple docs, Google Play docs)
+- [ ] Primary keyword in the first 100 words
+- [ ] Keyword density 1-2% (naturally)
+- [ ] LSI keywords (semantically related: ASO, app store, google play, keywords, listings, metadata)
+- [ ] Internal links to related pages
+- [ ] External links to authoritative sources (optional -- Apple docs, Google Play docs)
 
 ### Images
 - [ ] All images have descriptive alt text
@@ -149,8 +149,8 @@ Typowe obiekcje dla AppBoard:
 1. [Variant A vs B] -- [What it tests]
 ```
 
-## Powiazane skille
+## Related skills
 
-- `seo-audit` -- pelny audyt techniczny
-- `seo-content-strategy` -- strategia tresci i keywords
-- `seo-ai-optimization` -- optymalizacja pod AI search
+- `seo-audit` -- full technical audit
+- `seo-content-strategy` -- content and keyword strategy
+- `seo-ai-optimization` -- optimization for AI search

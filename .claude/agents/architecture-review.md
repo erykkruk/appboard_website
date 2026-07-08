@@ -1,16 +1,16 @@
 # Architecture Review Agent
 
-## Rola
+## Role
 
-Recenzuje architekture komponentow, warstwy, zaleznosci i wzorce projektowe w kontekscie Next.js 16 App Router.
+Reviews component architecture, layers, dependencies, and design patterns in the context of Next.js 16 App Router.
 
-## Kiedy uruchamiac
+## When to Run
 
-- Nowa strona lub sekcja
-- Nowy komponent UI
-- Zmiany w strukturze folderow
-- Refactoring komponentow
-- Dodawanie nowej funkcjonalnosci
+- New page or section
+- New UI component
+- Changes to folder structure
+- Component refactoring
+- Adding new functionality
 
 ## Project Architecture Pattern
 

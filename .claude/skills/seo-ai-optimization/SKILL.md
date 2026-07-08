@@ -1,135 +1,135 @@
 # AI SEO -- Generative Engine Optimization (GEO/AEO)
 
-Optymalizacja tresci pod AI search engines -- Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini, Copilot. Cel: tresc AppBoard ma byc CYTOWANA jako zrodlo w odpowiedziach AI.
+Optimizing content for AI search engines -- Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini, Copilot. Goal: AppBoard content should be CITED as a source in AI answers.
 
 ## Trigger
 
-`/seo-ai` lub pytania o "AI SEO", "GEO", "AEO", "AI Overviews", "optimize for ChatGPT", "AI citations", "AI visibility", "jak sie pojawiac w odpowiedziach AI".
+`/seo-ai` or questions about "AI SEO", "GEO", "AEO", "AI Overviews", "optimize for ChatGPT", "AI citations", "AI visibility", "how to appear in AI answers".
 
-## Dlaczego to wazne
+## Why this matters
 
-- AI Overviews pojawiaja sie w ~45% wyszukiwan Google
-- AI Overviews redukuja kliki na strony o do 58%
-- Zoptymalizowana tresc jest cytowana 3x czesciej
-- Statystyki i cytaty zwiekszaja widocznosc o 40%+
+- AI Overviews appear in ~45% of Google searches
+- AI Overviews reduce clicks to pages by up to 58%
+- Optimized content is cited 3x more often
+- Statistics and quotes increase visibility by 40%+
 
-## Jak AI Search dziala
+## How AI Search works
 
-| Platforma | Jak wybiera zrodla |
+| Platform | How it selects sources |
 |-----------|-------------------|
-| **Google AI Overviews** | Silna korelacja z tradycyjnym rankingiem |
-| **ChatGPT** | Szerszy zakres, nie tylko top-ranked |
-| **Perplexity** | Faworyzuje autorytatywne, swieze, dobrze ustrukturyzowane tresci |
+| **Google AI Overviews** | Strong correlation with traditional ranking |
+| **ChatGPT** | Broader range, not just top-ranked |
+| **Perplexity** | Favors authoritative, fresh, well-structured content |
 | **Gemini** | Google index + Knowledge Graph |
-| **Copilot** | Bing index + autorytatywne zrodla |
-| **Claude** | Brave Search + dane treningowe |
+| **Copilot** | Bing index + authoritative sources |
+| **Claude** | Brave Search + training data |
 
-## Trzy filary AI SEO
+## Three pillars of AI SEO
 
-### Filar 1: Structure -- tresc extractable
+### Pillar 1: Structure -- extractable content
 
-AI wyciaga fragmenty, nie cale strony. Kazde kluczowe twierdzenie musi dzialac jako standalone.
+AI extracts fragments, not whole pages. Every key claim must work as a standalone.
 
-**Wzorce blokow tresci:**
-- **Definition blocks** -- dla "What is X?" (40-60 slow, pierwszy akapit)
-- **Step-by-step blocks** -- dla "How to X" (numerowane listy)
-- **Comparison tables** -- dla "X vs Y" (tabele > proza)
-- **FAQ blocks** -- naturalne pytania i odpowiedzi
-- **Statistic blocks** -- dane ze zrodlami
+**Content block patterns:**
+- **Definition blocks** -- for "What is X?" (40-60 words, first paragraph)
+- **Step-by-step blocks** -- for "How to X" (numbered lists)
+- **Comparison tables** -- for "X vs Y" (tables > prose)
+- **FAQ blocks** -- natural questions and answers
+- **Statistic blocks** -- data with sources
 
-**Reguly strukturalne:**
-- Kazda sekcja zaczyna sie od bezposredniej odpowiedzi
-- Kluczowe fragmenty 40-60 slow (optymalne do extraction)
-- H2/H3 headingi dopasowane do fraz wyszukiwania
-- Tabele > proza dla porownan
-- Numerowane listy > paragrafy dla procesow
+**Structural rules:**
+- Each section starts with a direct answer
+- Key fragments 40-60 words (optimal for extraction)
+- H2/H3 headings matched to search phrases
+- Tables > prose for comparisons
+- Numbered lists > paragraphs for processes
 
-### Filar 2: Authority -- tresc citable
+### Pillar 2: Authority -- citable content
 
-Badania Princeton GEO (KDD 2024):
+Princeton GEO research (KDD 2024):
 
-| Metoda | Boost widocznosci |
+| Method | Visibility boost |
 |--------|:-----------------:|
-| Cytuj zrodla | +40% |
-| Dodaj statystyki | +37% |
-| Dodaj cytaty ekspertow | +30% |
-| Autorytatywny ton | +25% |
-| Poprawa klarownosci | +20% |
-| Terminy techniczne | +18% |
+| Cite sources | +40% |
+| Add statistics | +37% |
+| Add expert quotes | +30% |
+| Authoritative tone | +25% |
+| Improve clarity | +20% |
+| Technical terms | +18% |
 | ~~Keyword stuffing~~ | **-10%** |
 
-**Dla AppBoard konkretnie:**
-- Cytuj badania o wplywie ASO na pobrania i przychody aplikacji
-- Podawaj konkretne liczby (np. "Support for 40+ locales", "Manage App Store & Google Play from one dashboard")
-- Autorska ekspertyza -- pisz z pozycji eksperta ASO i mobile growth
-- Daty aktualizacji widoczne ("Last updated: [date]")
-- Porownania z konkurencja z konkretnymi danymi (AppTweak, Sensor Tower, AppFollow)
+**For AppBoard specifically:**
+- Cite research on the impact of ASO on app downloads and revenue
+- Provide concrete numbers (e.g. "Support for 40+ locales", "Manage App Store & Google Play from one dashboard")
+- Author expertise -- write from the position of an ASO and mobile growth expert
+- Visible update dates ("Last updated: [date]")
+- Comparisons with competitors backed by concrete data (AppTweak, Sensor Tower, AppFollow)
 
-### Filar 3: Presence -- badz tam, gdzie AI szuka
+### Pillar 3: Presence -- be where AI looks
 
-AI nie cytuje tylko Twojej strony -- cytuje gdzie sie pojawiasz:
-- **Wikipedia** (7.8% cytowan ChatGPT)
-- **Reddit** (1.8% cytowan)
-- **YouTube** (czeste cytaty w AI Overviews)
+AI doesn't cite only your page -- it cites where you appear:
+- **Wikipedia** (7.8% of ChatGPT citations)
+- **Reddit** (1.8% of citations)
+- **YouTube** (frequent citations in AI Overviews)
 - **Product Hunt, G2, Capterra** (review sites)
-- **GitHub** (dla developer-oriented content)
-- **Dev.to, Medium** (dla technicznych artykulow)
+- **GitHub** (for developer-oriented content)
+- **Dev.to, Medium** (for technical articles)
 
-**Akcje dla AppBoard:**
-- Utrzymuj profil na Product Hunt
-- Tworz content na YouTube (demo ASO workflow, keyword research tutorials)
-- Badz aktywny na Reddit r/iOSProgramming, r/androiddev, r/AppStoreOptimization
-- Zdobywaj recenzje na G2, Capterra, Product Hunt
-- Publikuj case studies i ASO guides na blogu
-- Dziel sie open-source tools lub darmowymi ASO resources
+**Actions for AppBoard:**
+- Maintain a Product Hunt profile
+- Create content on YouTube (ASO workflow demos, keyword research tutorials)
+- Be active on Reddit r/iOSProgramming, r/androiddev, r/AppStoreOptimization
+- Earn reviews on G2, Capterra, Product Hunt
+- Publish case studies and ASO guides on the blog
+- Share open-source tools or free ASO resources
 
-## AI Bot Access -- KRYTYCZNE
+## AI Bot Access -- CRITICAL
 
-Sprawdz `robots.txt` czy te boty NIE SA zablokowane:
+Check `robots.txt` to ensure these bots are NOT blocked:
 - **GPTBot** + **ChatGPT-User** -- OpenAI
 - **PerplexityBot** -- Perplexity
 - **ClaudeBot** + **anthropic-ai** -- Anthropic
 - **Google-Extended** -- Google Gemini/AI Overviews
 - **Bingbot** -- Microsoft Copilot
 
-robots.txt AppBoard NIE powinien blokowac tych botow. Utrzymaj to.
+AppBoard's robots.txt should NOT block these bots. Keep it that way.
 
-## Typy tresci, ktore AI cytuje najczesciej
+## Content types AI cites most often
 
-| Typ tresci | Udzial cytowan |
+| Content type | Share of citations |
 |------------|:--------------:|
-| Porownania (vs articles) | ~33% |
-| Definitywne przewodniki | ~15% |
-| Oryginalne dane/badania | ~12% |
+| Comparisons (vs articles) | ~33% |
+| Definitive guides | ~15% |
+| Original data/research | ~12% |
 | Best-of/listicles | ~10% |
 | Product pages | ~10% |
 | How-to guides | ~8% |
 
-## Optymalizacja tresci AppBoard pod AI
+## Optimizing AppBoard content for AI
 
 ### Homepage
-- Jasna definicja w pierwszym akapicie: "AppBoard is an AI-powered ASO platform that helps developers optimize their App Store and Google Play listings..."
-- Feature comparison table: AppBoard vs manual ASO vs inne narzedzia
-- Statystyki: "Support for App Store & Google Play", "40+ locales", "AI-generated descriptions & keywords"
-- FAQ section z naturalnymi pytaniami
+- Clear definition in the first paragraph: "AppBoard is an AI-powered ASO platform that helps developers optimize their App Store and Google Play listings..."
+- Feature comparison table: AppBoard vs manual ASO vs other tools
+- Statistics: "Support for App Store & Google Play", "40+ locales", "AI-generated descriptions & keywords"
+- FAQ section with natural questions
 
 ### Feature Pages
 - Specific metrics: "Generate optimized keywords in seconds", "Manage screenshots across all device sizes"
-- Use case examples z konkretnymi scenariuszami (indie dev, agency, enterprise)
-- Pricing transparency z porownaniem planow
+- Use case examples with concrete scenarios (indie dev, agency, enterprise)
+- Pricing transparency with a plan comparison
 
-### Comparison Pages (kluczowe dla AI citations)
-- "AppBoard vs AppTweak" -- szczegolowe porownanie features i cen
-- "AppBoard vs Sensor Tower" -- focus na dostepnosc i AI features
-- "AppBoard vs AppFollow" -- focus na listing management
-- "Best ASO Tools 2026" -- listicle z AppBoard w czolowce
+### Comparison Pages (key for AI citations)
+- "AppBoard vs AppTweak" -- detailed comparison of features and prices
+- "AppBoard vs Sensor Tower" -- focus on availability and AI features
+- "AppBoard vs AppFollow" -- focus on listing management
+- "Best ASO Tools 2026" -- listicle with AppBoard at the top
 
 ### Blog/Content Pages
 - 1 target query per post
-- Definicja w pierwszym akapicie
-- Oryginalne dane lub expert quotes
-- "Last updated" widoczne
-- Author bio z credentials
+- Definition in the first paragraph
+- Original data or expert quotes
+- "Last updated" visible
+- Author bio with credentials
 
 ### Educational Content (ASO Guides)
 - "What is ASO? Complete Guide"
@@ -140,33 +140,33 @@ robots.txt AppBoard NIE powinien blokowac tych botow. Utrzymaj to.
 
 ## Monitoring AI Visibility
 
-### Narzedzia
-| Narzedzie | Zakres |
+### Tools
+| Tool | Scope |
 |-----------|--------|
 | **Otterly AI** | ChatGPT, Perplexity, Google AI Overviews |
 | **Peec AI** | Multi-platform monitoring |
 | **ZipTie** | Brand mention + sentiment |
 
-### DIY Monitoring (miesieczny)
-1. Wez top 20 fraz ASO-related
-2. Sprawdz w ChatGPT, Perplexity, Google
-3. Zapisz: czy AppBoard jest cytowane? Kto jest?
-4. Trackuj miesiac po miesiacu
+### DIY Monitoring (monthly)
+1. Take the top 20 ASO-related phrases
+2. Check them in ChatGPT, Perplexity, Google
+3. Record: is AppBoard cited? Who is?
+4. Track month over month
 
-## Checklist implementacji
+## Implementation checklist
 
-- [ ] Upewnij sie, ze AI boty NIE sa blokowane w robots.txt
-- [ ] Dodaj definition block w hero section (40-60 slow)
-- [ ] Dodaj FAQ section z schema markup
-- [ ] Dodaj comparison tables (AppBoard vs competitors)
-- [ ] Dodaj statystyki ze zrodlami
-- [ ] Sprawdz freshness signals (daty aktualizacji)
-- [ ] Dodaj proper schema markup (FAQPage, WebApplication)
-- [ ] Stworz comparison pages vs AppTweak, Sensor Tower, AppFollow
-- [ ] Setup monthly AI visibility monitoring
+- [ ] Make sure AI bots are NOT blocked in robots.txt
+- [ ] Add a definition block in the hero section (40-60 words)
+- [ ] Add an FAQ section with schema markup
+- [ ] Add comparison tables (AppBoard vs competitors)
+- [ ] Add statistics with sources
+- [ ] Check freshness signals (update dates)
+- [ ] Add proper schema markup (FAQPage, WebApplication)
+- [ ] Create comparison pages vs AppTweak, Sensor Tower, AppFollow
+- [ ] Set up monthly AI visibility monitoring
 
-## Powiazane skille
+## Related skills
 
-- `seo-audit` -- pelny audyt SEO
-- `seo-schema-markup` -- structured data pomaga AI zrozumiec tresc
-- `seo-content-strategy` -- strategia tresci do tworzenia citable content
+- `seo-audit` -- full SEO audit
+- `seo-schema-markup` -- structured data helps AI understand content
+- `seo-content-strategy` -- content strategy for creating citable content

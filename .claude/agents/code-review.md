@@ -1,58 +1,58 @@
 # Code Review Agent
 
-## Rola
+## Role
 
-Recenzuje jakosc kodu, naming, style, TypeScript patterns i zgodnosc z projektem.
+Reviews code quality, naming, style, TypeScript patterns, and project consistency.
 
-## Kiedy uruchamiac
+## When to Run
 
-- Kazda zmiana w kodzie
-- Nowy komponent lub strona
+- Every code change
+- New component or page
 - Refactoring
-- Przed mergem do main
+- Before merging to main
 
-## Checklist review
+## Review Checklist
 
 ### Styling & Design
-- [ ] **Tailwind Classes Only**: Kolory uzywaja Tailwind classes z AppBoard palette
+- [ ] **Tailwind Classes Only**: Colors use Tailwind classes from the AppBoard palette
 - [ ] **AppBoard Color Palette via Tailwind**:
   - Dark background: `bg-appboard-dark`
   - Surface: `bg-appboard-surface`
   - Accent: `text-appboard-accent` / `bg-appboard-accent`
   - White text: `text-white`
   - Secondary text: `text-white/70`
-- [ ] **NO Inline Styles**: Unikaj `style={{ }}` — uzywaj Tailwind classes
-- [ ] **CN Utility**: Uzyj `cn()` utility dla conditional classes zamiast string concatenation
-- [ ] **Responsive Classes**: Mobile-first approach z `md:`, `lg:`, `xl:` breakpoints
-- [ ] **Container Patterns**: Uzyj `max-w-7xl mx-auto` dla standard content
+- [ ] **NO Inline Styles**: Avoid `style={{ }}` — use Tailwind classes
+- [ ] **CN Utility**: Use the `cn()` utility for conditional classes instead of string concatenation
+- [ ] **Responsive Classes**: Mobile-first approach with `md:`, `lg:`, `xl:` breakpoints
+- [ ] **Container Patterns**: Use `max-w-7xl mx-auto` for standard content
 
 ### Component Architecture
-- [ ] **Function Signatures**: Wszystkie komponenty zwracaja explicit `JSX.Element`
-- [ ] **Client Components**: Interaktywne komponenty uzywaja `"use client"` directive
-- [ ] **Barrel Exports**: Komponenty exportowane przez `index.ts` files
+- [ ] **Function Signatures**: All components return an explicit `JSX.Element`
+- [ ] **Client Components**: Interactive components use the `"use client"` directive
+- [ ] **Barrel Exports**: Components exported through `index.ts` files
 - [ ] **Sectional Architecture**:
-  - Layout components w `/components/layout/`
-  - Page sections w `/components/sections/`
-  - Reusable UI w `/components/ui/`
+  - Layout components in `/components/layout/`
+  - Page sections in `/components/sections/`
+  - Reusable UI in `/components/ui/`
 
 ### File Organization
 - [ ] **Correct Folders**:
-  - `src/app/` dla Next.js pages, layout, API routes
-  - `src/components/layout/` dla Header, Footer
-  - `src/components/sections/` dla page sections
-  - `src/components/ui/` dla reusable UI components
-  - `src/lib/` dla utilities
-  - `src/types/` dla TypeScript definitions
-- [ ] **Import Paths**: Uzywa `@/` dla absolute imports
+  - `src/app/` for Next.js pages, layout, API routes
+  - `src/components/layout/` for Header, Footer
+  - `src/components/sections/` for page sections
+  - `src/components/ui/` for reusable UI components
+  - `src/lib/` for utilities
+  - `src/types/` for TypeScript definitions
+- [ ] **Import Paths**: Uses `@/` for absolute imports
 - [ ] **Naming Convention**:
   - Files: `kebab-case.tsx` (hero-section.tsx)
   - Components: `PascalCase` (HeroSection)
   - Types: `PascalCase` (FeatureCardProps)
 
 ### TypeScript Standards
-- [ ] **Strict Typing**: Wszystkie funkcje maja explicit return types (`JSX.Element`)
-- [ ] **No Any Types**: Explicit typing dla wszystkich variables i props
-- [ ] **State Typing**: Proper typing dla useState i useRef
+- [ ] **Strict Typing**: All functions have explicit return types (`JSX.Element`)
+- [ ] **No Any Types**: Explicit typing for all variables and props
+- [ ] **State Typing**: Proper typing for useState and useRef
   ```typescript
   const [isOpen, setIsOpen] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -63,11 +63,11 @@ Recenzuje jakosc kodu, naming, style, TypeScript patterns i zgodnosc z projektem
   ```
 
 ### Image Optimization
-- [ ] **Next.js Image**: Wszystkie images uzywaja Next.js `Image` component
-- [ ] **Priority Loading**: Hero/above-fold images maja `priority` prop
-- [ ] **Responsive Sizing**: Proper `className` dla responsive image sizing
-- [ ] **Alt Text**: Descriptive alt text na wszystkich images
-- [ ] **WebP Format**: Uzywa `.webp` format
+- [ ] **Next.js Image**: All images use the Next.js `Image` component
+- [ ] **Priority Loading**: Hero/above-fold images have the `priority` prop
+- [ ] **Responsive Sizing**: Proper `className` for responsive image sizing
+- [ ] **Alt Text**: Descriptive alt text on all images
+- [ ] **WebP Format**: Uses `.webp` format
 
 ### Responsive Design (Mobile-First)
 - [ ] **Breakpoint Usage**:
@@ -75,22 +75,22 @@ Recenzuje jakosc kodu, naming, style, TypeScript patterns i zgodnosc z projektem
   - `md:` 768px+ (tablet)
   - `lg:` 1024px+ (desktop)
   - `xl:` 1280px+ (large desktop)
-- [ ] **Container Constraints**: `max-w-7xl` dla content
+- [ ] **Container Constraints**: `max-w-7xl` for content
 
 ### Performance
-- [ ] **Effect Cleanup**: Wszystkie `useEffect` hooks maja proper cleanup functions
-- [ ] **Image Loading**: Critical images maja `priority` prop
+- [ ] **Effect Cleanup**: All `useEffect` hooks have proper cleanup functions
+- [ ] **Image Loading**: Critical images have the `priority` prop
 - [ ] **Dynamic Imports**: Heavy components lazy loaded
 
 ### Accessibility (WCAG)
-- [ ] **Semantic HTML**: Uzywa proper `<section>`, `<nav>`, `<main>` elements
-- [ ] **Alt Text**: Wszystkie images maja descriptive alt attributes
-- [ ] **Focus Management**: Interactive elements sa keyboard accessible
-- [ ] **ARIA Labels**: Custom controls maja proper ARIA attributes
+- [ ] **Semantic HTML**: Uses proper `<section>`, `<nav>`, `<main>` elements
+- [ ] **Alt Text**: All images have descriptive alt attributes
+- [ ] **Focus Management**: Interactive elements are keyboard accessible
+- [ ] **ARIA Labels**: Custom controls have proper ARIA attributes
 - [ ] **Color Contrast**: Text meets WCAG AA standards
 
 ### SEO & Metadata
-- [ ] **Page Metadata**: Kazda strona ma unikalne metadata
+- [ ] **Page Metadata**: Every page has unique metadata
 - [ ] **Open Graph**: Complete OG tags
 - [ ] **Structured Data**: JSON-LD schema markup
 - [ ] **Image Meta**: Social sharing images properly configured

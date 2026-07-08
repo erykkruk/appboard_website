@@ -1,12 +1,12 @@
 # SEO Technical Implementation
 
-Techniczne zmiany w kodzie Next.js pod katem SEO. Uruchamiaj gdy trzeba zaimplementowac konkretne zmiany techniczne SEO w kodzie.
+Technical changes in the Next.js code for SEO. Run when concrete technical SEO changes need to be implemented in the code.
 
 ## Trigger
 
-`/seo-tech` lub konkretne zadania implementacyjne: "dodaj sitemap", "popraw robots.txt", "dodaj schema", "zoptymalizuj meta tagi", "popraw Core Web Vitals".
+`/seo-tech` or specific implementation tasks: "add sitemap", "fix robots.txt", "add schema", "optimize meta tags", "improve Core Web Vitals".
 
-## Architektura SEO w projekcie
+## SEO architecture in the project
 
 ```
 src/
@@ -22,17 +22,17 @@ src/
 │   └── terms-of-use/page.tsx   <- Page metadata
 ├── lib/
 │   ├── seo.ts                  <- SEO utility functions
-│   └── schema.ts               <- [DO STWORZENIA] Schema generators
+│   └── schema.ts               <- [TO BE CREATED] Schema generators
 ├── middleware.ts                <- URL canonicalization, HTTPS redirect
 └── next.config.js              <- Headers, caching, security
 ```
 
-## Implementacja patterns
+## Implementation patterns
 
-### 1. Metadata per strona (Next.js Metadata API)
+### 1. Metadata per page (Next.js Metadata API)
 
 ```typescript
-// Kazda page.tsx eksportuje metadata
+// Each page.tsx exports metadata
 export const metadata: Metadata = {
   title: "Page Title -- AppBoard",
   description: "150-160 char description with ASO keywords",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
 ### 2. Schema helpers (src/lib/schema.ts)
 
-Stworz centralne generatory schema:
+Create centralized schema generators:
 
 ```typescript
 import { Organization, WebApplication, FAQPage, BreadcrumbList, WebSite, Product } from "schema-dts";
@@ -150,25 +150,25 @@ export function generateGraphSchema(...schemas: object[]) {
 }
 ```
 
-### 3. Sitemap rozszerzony
+### 3. Extended sitemap
 
-Kazda nowa strona musi byc dodana do `src/app/sitemap.xml/route.ts`:
+Every new page must be added to `src/app/sitemap.xml/route.ts`:
 
 ```typescript
 const sitemap = [
   { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
   { url: `${baseUrl}/pricing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
   { url: `${baseUrl}/features`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-  // Dodawaj tu kazda nowa strone
+  // Add every new page here
 ];
 ```
 
-### 4. Robots.txt z AI botami
+### 4. Robots.txt with AI bots
 
-Upewnij sie, ze `robots.txt` NIE blokuje AI crawlerow. Przy zmianach pamietaj:
+Make sure `robots.txt` does NOT block AI crawlers. When making changes, remember:
 
 ```
-# AI bots -- NIGDY nie blokuj (chcemy byc cytowani)
+# AI bots -- NEVER block (we want to be cited)
 # GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot, Google-Extended
 ```
 
@@ -186,22 +186,22 @@ import Image from "next/image";
 
 ### 6. Performance checklist
 
-- [ ] Font preload w layout.tsx
-- [ ] `next/image` zamiast `<img>` wszedzie
-- [ ] `priority` na hero images
-- [ ] Dynamic imports dla ciezkich komponentow
-- [ ] Compression enabled w next.config.js
-- [ ] Cache headers na assets (1 year immutable)
+- [ ] Font preload in layout.tsx
+- [ ] `next/image` instead of `<img>` everywhere
+- [ ] `priority` on hero images
+- [ ] Dynamic imports for heavy components
+- [ ] Compression enabled in next.config.js
+- [ ] Cache headers on assets (1 year immutable)
 
-### 7. Nowe strony -- template
+### 7. New pages -- template
 
-Przy tworzeniu nowej strony:
+When creating a new page:
 
 ```typescript
 // 1. Metadata
 export const metadata: Metadata = { ... };
 
-// 2. Schema (jesli relevant)
+// 2. Schema (if relevant)
 const schemaData = generateGraphSchema(
   generateOrganizationSchema(),
   generateBreadcrumbSchema([...])
@@ -217,25 +217,25 @@ export default function NewPage() {
   );
 }
 
-// 4. Dodaj do sitemap.xml/route.ts
-// 5. Dodaj internal link z homepage/nav
+// 4. Add to sitemap.xml/route.ts
+// 5. Add an internal link from homepage/nav
 ```
 
-## Pliki do modyfikacji (czeste)
+## Files to modify (common)
 
-| Plik | Kiedy |
+| File | When |
 |------|-------|
-| `src/app/layout.tsx` | Globalny schema, metadata template, fonts |
+| `src/app/layout.tsx` | Global schema, metadata template, fonts |
 | `src/app/page.tsx` | Homepage metadata, homepage schema |
-| `src/app/sitemap.xml/route.ts` | Nowa strona -> dodaj URL |
-| `src/app/robots.txt/route.ts` | Nowa blokowana/dozwolona sciezka |
-| `src/lib/seo.ts` | Nowe SEO utility functions |
-| `src/lib/schema.ts` | Nowe schema generators |
+| `src/app/sitemap.xml/route.ts` | New page -> add URL |
+| `src/app/robots.txt/route.ts` | New blocked/allowed path |
+| `src/lib/seo.ts` | New SEO utility functions |
+| `src/lib/schema.ts` | New schema generators |
 | `middleware.ts` | URL redirects, canonicalization |
 | `next.config.js` | Headers, caching, image config |
 
-## Powiazane skille
+## Related skills
 
-- `seo-audit` -- co trzeba naprawic
-- `seo-schema-markup` -- szczegoly schema implementation
-- `seo-content-strategy` -- jakie metadata i tresc
+- `seo-audit` -- what needs to be fixed
+- `seo-schema-markup` -- schema implementation details
+- `seo-content-strategy` -- what metadata and content
