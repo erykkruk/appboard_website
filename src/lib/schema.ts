@@ -1,0 +1,81 @@
+import { absoluteUrl, APP_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
+
+type JsonLdObject = Record<string, unknown>;
+
+export function buildOrganizationSchema(): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@id": `${SITE_URL}/#organization`,
+    "@type": "Organization",
+    description: SITE_DESCRIPTION,
+    logo: `${SITE_URL}/icon.svg`,
+    name: SITE_NAME,
+    url: SITE_URL,
+  };
+}
+
+export function buildWebSiteSchema(): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@id": `${SITE_URL}/#website`,
+    "@type": "WebSite",
+    description: SITE_DESCRIPTION,
+    name: SITE_NAME,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    url: SITE_URL,
+  };
+}
+
+export function buildSoftwareApplicationSchema(): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@id": `${SITE_URL}/#software`,
+    "@type": "SoftwareApplication",
+    applicationCategory: "BusinessApplication",
+    description: SITE_DESCRIPTION,
+    featureList: [
+      "App Store Connect and Google Play Console connections",
+      "Listing metadata editing per language with draft and publish flows",
+      "GitHub-style change history with diffs and rollback",
+      "AI assistant for descriptions, translations, and ASO keyword suggestions",
+      "Screenshot studio with CLI and CI uploads",
+      "Keyword rank tracking, market comparison, and competitor research",
+      "Review management with AI-drafted replies",
+      "Batch publishing to both stores with per-item reports",
+      "Privacy declarations, age ratings, and in-app purchase management",
+      "Multi-workspace teams with roles and an end-to-end encrypted credentials vault",
+    ],
+    name: SITE_NAME,
+    offers: {
+      "@type": "Offer",
+      description: "Free early access while AppBoard is in beta.",
+      price: "0",
+      priceCurrency: "USD",
+      url: APP_URL,
+    },
+    operatingSystem: "Web",
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    url: SITE_URL,
+  };
+}
+
+export interface FaqEntry {
+  answer: string;
+  question: string;
+}
+
+export function buildFaqSchema(path: string, entries: FaqEntry[]): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@id": `${absoluteUrl(path)}#faq`,
+    "@type": "FAQPage",
+    mainEntity: entries.map((entry) => ({
+      "@type": "Question",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: entry.answer,
+      },
+      name: entry.question,
+    })),
+  };
+}
