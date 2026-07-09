@@ -79,7 +79,7 @@ export function SelfHostedSection(): JSX.Element {
             <ButtonLink href={GITHUB_URL} size="lg" variant="primary">
               View on GitHub
             </ButtonLink>
-            <ButtonLink href="/docs" size="lg" variant="secondary">
+            <ButtonLink href="/docs/self-hosting" size="lg" variant="secondary">
               Self-hosting guide
             </ButtonLink>
             <ButtonLink href={DISCORD_URL} size="lg" variant="secondary">

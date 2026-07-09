@@ -1,3 +1,6 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
 import { ImageResponse } from "next/og";
 
 import { SITE_DESCRIPTION } from "@/lib/seo";
@@ -5,6 +8,10 @@ import { SITE_DESCRIPTION } from "@/lib/seo";
 export const alt = "AppBoard — ASO for App Store and Google Play in one panel";
 export const contentType = "image/png";
 export const size = { height: 630, width: 1200 };
+
+const logoDataUri = `data:image/svg+xml;base64,${readFileSync(
+  join(process.cwd(), "public/images/brand/appboard-hex-a-violet.svg"),
+).toString("base64")}`;
 
 export default function OpengraphImage(): ImageResponse {
   return new ImageResponse(
@@ -22,15 +29,7 @@ export default function OpengraphImage(): ImageResponse {
       }}
     >
       <div style={{ alignItems: "center", display: "flex", gap: "20px" }}>
-        <div
-          style={{
-            background: "linear-gradient(135deg, #6d6ffb, #22d3ee)",
-            borderRadius: "16px",
-            display: "flex",
-            height: "64px",
-            width: "64px",
-          }}
-        />
+        <img alt="" height={72} src={logoDataUri} width={63} />
         <div style={{ display: "flex", fontSize: "44px", fontWeight: 700 }}>AppBoard</div>
       </div>
       <div

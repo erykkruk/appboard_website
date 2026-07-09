@@ -102,6 +102,17 @@ export const DOCS_SECTIONS: DocSection[] = [
     ],
     title: "Platform",
   },
+  {
+    pages: [
+      {
+        description:
+          "AppBoard is open source and self-hostable. Which repository is which, how to run the stack yourself with Docker, and the license terms.",
+        slug: "self-hosting",
+        title: "Self-hosting & open source",
+      },
+    ],
+    title: "Open source",
+  },
 ];
 
 export const ALL_DOC_PAGES: DocPage[] = DOCS_SECTIONS.flatMap(
