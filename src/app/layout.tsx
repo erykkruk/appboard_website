@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 
+import { FeedbackWidget } from "@/components/feedback/feedback-widget";
 import { JsonLd } from "@/components/ui";
 import { buildOrganizationSchema, buildWebSiteSchema } from "@/lib/schema";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/seo";
@@ -70,6 +71,7 @@ export default function RootLayout({
         <JsonLd data={buildOrganizationSchema()} />
         <JsonLd data={buildWebSiteSchema()} />
         {children}
+        <FeedbackWidget />
         {/* Umami analytics — production only so local/dev traffic is excluded. */}
         {process.env.NODE_ENV === "production" && (
           <Script
