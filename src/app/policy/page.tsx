@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import type { JSX } from "react";
 
 const LAST_UPDATED = "July 8, 2026";
-const CONTACT_EMAIL = "support@appboard.dev";
+const CONTACT_EMAIL = "contact@appboard.dev";
 
 const DESCRIPTION =
   "How AppBoard collects, uses, and protects your data — including end-to-end encrypted store credentials for App Store Connect and Google Play.";

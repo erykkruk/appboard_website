@@ -9,6 +9,7 @@ interface PricingTier {
   features: string[];
   highlighted?: boolean;
   name: string;
+  regularPrice?: string;
 }
 
 const TIERS: PricingTier[] = [
@@ -34,6 +35,7 @@ const TIERS: PricingTier[] = [
     ],
     highlighted: true,
     name: "Pro",
+    regularPrice: "$10",
   },
   {
     description: "For teams managing portfolios together.",
@@ -80,6 +82,11 @@ export function PricingTiersSection(): JSX.Element {
               </div>
               <p className="mt-2 text-sm text-muted">{tier.description}</p>
               <p className="mt-6">
+                {tier.regularPrice ? (
+                  <span className="mr-2 text-2xl font-medium text-muted line-through decoration-accent-bright/70">
+                    {tier.regularPrice}
+                  </span>
+                ) : null}
                 <span className="text-4xl font-semibold tracking-tight text-foreground">
                   $0
                 </span>

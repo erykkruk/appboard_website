@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import type { JSX } from "react";
 
 const LAST_UPDATED = "July 8, 2026";
-const CONTACT_EMAIL = "support@appboard.dev";
+const CONTACT_EMAIL = "contact@appboard.dev";
 
 const DESCRIPTION =
   "The terms that govern your use of AppBoard — the ASO platform for managing App Store and Google Play listings from one panel.";
