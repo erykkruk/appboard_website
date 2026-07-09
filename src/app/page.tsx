@@ -1,9 +1,13 @@
 import { Footer, Header } from "@/components/layout";
 import {
+  ComparisonSection,
   CtaSection,
+  FaqSection,
   FeaturesSection,
+  FounderNoteSection,
   HeroSection,
   HowItWorksSection,
+  ProductTourSection,
   ResearchSection,
 } from "@/components/sections";
 import { JsonLd } from "@/components/ui";
@@ -25,9 +29,13 @@ export default function HomePage(): JSX.Element {
       <Header />
       <main className="relative w-full flex-1">
         <HeroSection />
-        <FeaturesSection />
+        <ProductTourSection />
+        <ComparisonSection />
         <HowItWorksSection />
         <ResearchSection />
+        <FeaturesSection />
+        <FounderNoteSection />
+        <FaqSection />
         <CtaSection />
       </main>
       <Footer />

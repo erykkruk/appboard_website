@@ -20,19 +20,20 @@ interface FooterColumn {
 const FOOTER_COLUMNS: FooterColumn[] = [
   {
     links: [
-      { href: "/#features", label: "Features" },
-      { href: "/#how-it-works", label: "How it works" },
-      { href: "/#research", label: "Research" },
+      { href: "/#tour", label: "Product tour" },
       { href: "/pricing", label: "Pricing" },
+      { external: true, href: `${APP_URL}/demo`, label: "Live demo" },
+      { external: true, href: APP_URL, label: "Sign in" },
     ],
     title: "Product",
   },
   {
     links: [
-      { external: true, href: APP_URL, label: "Sign in" },
-      { external: true, href: APP_URL, label: "Create account" },
+      { href: "/docs", label: "Documentation" },
+      { href: "/blog", label: "Blog" },
+      { href: "/faq", label: "FAQ" },
     ],
-    title: "Get started",
+    title: "Resources",
   },
   {
     links: [
@@ -44,7 +45,8 @@ const FOOTER_COLUMNS: FooterColumn[] = [
 ];
 
 function FooterNavLink({ link }: { link: FooterLink }): JSX.Element {
-  const className = "text-sm text-muted transition-colors hover:text-foreground";
+  const className =
+    "anim-underline text-sm text-muted transition-colors hover:text-foreground";
 
   if (link.external) {
     return (
@@ -73,7 +75,7 @@ export function Footer(): JSX.Element {
               screenshots, research, and publishing from one panel.
             </p>
           </div>
-          <div className="flex gap-16">
+          <div className="flex flex-wrap gap-x-16 gap-y-8">
             {FOOTER_COLUMNS.map((column) => (
               <nav aria-label={column.title} key={column.title}>
                 <h2 className="text-sm font-semibold text-foreground">{column.title}</h2>
@@ -88,8 +90,11 @@ export function Footer(): JSX.Element {
             ))}
           </div>
         </div>
-        <div className="mt-12 border-t border-line pt-6">
+        <div className="mt-12 flex flex-col gap-2 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-muted">© 2026 AppBoard. All rights reserved.</p>
+          <p className="text-sm text-muted">
+            Built independently, one release at a time.
+          </p>
         </div>
       </div>
     </footer>

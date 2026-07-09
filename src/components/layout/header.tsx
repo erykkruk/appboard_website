@@ -17,10 +17,11 @@ interface NavLink {
 }
 
 const NAV_LINKS: NavLink[] = [
-  { href: "/#features", label: "Features" },
-  { href: "/#how-it-works", label: "How it works" },
-  { href: "/#research", label: "Research" },
+  { href: "/#tour", label: "Product" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/docs", label: "Docs" },
+  { href: "/blog", label: "Blog" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export function Header(): JSX.Element {
@@ -33,7 +34,7 @@ export function Header(): JSX.Element {
         <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
-              className="text-sm text-muted transition-colors hover:text-foreground"
+              className="anim-underline text-sm text-muted transition-colors hover:text-foreground"
               href={link.href}
               key={link.href}
             >
@@ -43,7 +44,7 @@ export function Header(): JSX.Element {
         </nav>
         <div className="hidden items-center gap-3 md:flex">
           <ButtonLink href={`${APP_URL}/demo`} variant="ghost">
-            Demo
+            Live demo
           </ButtonLink>
           <ButtonLink href={APP_URL} variant="primary">
             Get started
@@ -80,7 +81,7 @@ export function Header(): JSX.Element {
           ))}
           <div className="mt-3 flex flex-col gap-2 border-t border-line pt-4">
             <ButtonLink href={`${APP_URL}/demo`} variant="secondary">
-              Demo
+              Live demo
             </ButtonLink>
             <ButtonLink href={APP_URL} variant="primary">
               Get started

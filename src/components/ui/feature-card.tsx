@@ -1,32 +1,56 @@
+import Link from "next/link";
+
 import { cn } from "@/lib/utils";
+
+import { ArrowRightIcon } from "./icons";
 
 import type { JSX, ReactNode } from "react";
 
 interface FeatureCardProps {
   className?: string;
   description: string;
+  href?: string;
   icon: ReactNode;
+  linkLabel?: string;
   title: string;
 }
 
 export function FeatureCard({
   className,
   description,
+  href,
   icon,
+  linkLabel = "Learn more",
   title,
 }: FeatureCardProps): JSX.Element {
-  return (
-    <article
-      className={cn(
-        "group rounded-2xl border border-line bg-panel/60 p-6 transition-colors hover:border-accent/50 hover:bg-panel",
-        className,
-      )}
-    >
+  const body = (
+    <>
       <div className="flex size-11 items-center justify-center rounded-xl border border-line bg-surface text-accent-bright transition-colors group-hover:border-accent/50">
         {icon}
       </div>
       <h3 className="mt-5 text-lg font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
-    </article>
+      {href ? (
+        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent-bright">
+          {linkLabel}
+          <ArrowRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+        </span>
+      ) : null}
+    </>
   );
+
+  const cardStyles = cn(
+    "group rounded-2xl border border-line bg-panel/60 p-6 transition-colors hover:border-accent/50 hover:bg-panel",
+    className,
+  );
+
+  if (href) {
+    return (
+      <Link className={cn(cardStyles, "flex flex-col")} href={href}>
+        {body}
+      </Link>
+    );
+  }
+
+  return <article className={cardStyles}>{body}</article>;
 }

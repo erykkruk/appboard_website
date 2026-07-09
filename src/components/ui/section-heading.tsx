@@ -1,13 +1,15 @@
 import { cn } from "@/lib/utils";
 
-import type { JSX } from "react";
+import { Eyebrow } from "./eyebrow";
+
+import type { JSX, ReactNode } from "react";
 
 interface SectionHeadingProps {
   align?: "center" | "left";
   className?: string;
   description?: string;
   eyebrow: string;
-  title: string;
+  title: ReactNode;
 }
 
 export function SectionHeading({
@@ -25,10 +27,8 @@ export function SectionHeading({
         className,
       )}
     >
-      <p className="text-sm font-semibold uppercase tracking-widest text-accent-bright">
-        {eyebrow}
-      </p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+      <Eyebrow align={align}>{eyebrow}</Eyebrow>
+      <h2 className="display mt-4 text-4xl text-foreground sm:text-5xl">
         {title}
       </h2>
       {description ? (

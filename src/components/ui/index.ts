@@ -1,5 +1,7 @@
 export { ButtonLink } from "./button-link";
+export { Eyebrow } from "./eyebrow";
 export { FeatureCard } from "./feature-card";
+export { Highlight } from "./highlight";
 export {
   ArrowRightIcon,
   BranchIcon,
@@ -16,4 +18,5 @@ export {
   SparklesIcon,
 } from "./icons";
 export { JsonLd } from "./json-ld";
+export { ScreenshotFrame } from "./screenshot-frame";
 export { SectionHeading } from "./section-heading";
