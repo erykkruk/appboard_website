@@ -9,6 +9,7 @@ import {
   HowItWorksSection,
   ProductTourSection,
   ResearchSection,
+  SelfHostedSection,
 } from "@/components/sections";
 import { JsonLd } from "@/components/ui";
 import { buildSoftwareApplicationSchema } from "@/lib/schema";
@@ -34,6 +35,7 @@ export default function HomePage(): JSX.Element {
         <HowItWorksSection />
         <ResearchSection />
         <FeaturesSection />
+        <SelfHostedSection />
         <FounderNoteSection />
         <FaqSection />
         <CtaSection />

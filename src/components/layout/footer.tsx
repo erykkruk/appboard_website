@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { APP_URL } from "@/lib/seo";
+import { APP_URL, GITHUB_URL } from "@/lib/seo";
 
 import { Logo } from "./logo";
 
@@ -32,6 +32,8 @@ const FOOTER_COLUMNS: FooterColumn[] = [
       { href: "/docs", label: "Documentation" },
       { href: "/blog", label: "Blog" },
       { href: "/faq", label: "FAQ" },
+      { external: true, href: GITHUB_URL, label: "Source on GitHub" },
+      { href: "/#self-hosted", label: "Self-hosting" },
     ],
     title: "Resources",
   },

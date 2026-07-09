@@ -9,3 +9,4 @@ export { PRICING_FAQ, PricingFaqSection } from "./pricing-faq-section";
 export { PricingTiersSection } from "./pricing-tiers-section";
 export { ProductTourSection } from "./product-tour-section";
 export { ResearchSection } from "./research-section";
+export { SelfHostedSection } from "./self-hosted-section";

@@ -1,5 +1,5 @@
 import { ButtonLink, CheckIcon } from "@/components/ui";
-import { APP_URL } from "@/lib/seo";
+import { APP_URL, GITHUB_URL } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 import type { JSX } from "react";
@@ -109,6 +109,18 @@ export function PricingTiersSection(): JSX.Element {
               </ButtonLink>
             </article>
           ))}
+        </div>
+        <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-accent/30 bg-accent/10 px-6 py-4 text-center">
+          <p className="text-sm text-foreground">
+            <span className="font-semibold">Prefer to self-host?</span> AppBoard
+            is source-available and free for personal &amp; non-commercial use.{" "}
+            <a
+              className="anim-underline font-medium text-accent-bright"
+              href={GITHUB_URL}
+            >
+              View it on GitHub →
+            </a>
+          </p>
         </div>
       </div>
     </section>
