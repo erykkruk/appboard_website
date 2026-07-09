@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 
 import { JsonLd } from "@/components/ui";
 import { buildOrganizationSchema, buildWebSiteSchema } from "@/lib/schema";
@@ -69,6 +70,15 @@ export default function RootLayout({
         <JsonLd data={buildOrganizationSchema()} />
         <JsonLd data={buildWebSiteSchema()} />
         {children}
+        {/* Umami analytics — production only so local/dev traffic is excluded. */}
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            defer
+            src="https://umami.team.codigee.com/script.js"
+            data-website-id="194b7cde-67b6-4978-9164-ee7915aa7849"
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );
