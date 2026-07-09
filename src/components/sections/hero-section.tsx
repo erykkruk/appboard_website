@@ -1,6 +1,8 @@
 import { ArrowRightIcon, ButtonLink, Highlight, ScreenshotFrame } from "@/components/ui";
 import { APP_URL } from "@/lib/seo";
 
+import { HeroLogo3d } from "./hero-logo-3d";
+
 import type { JSX } from "react";
 
 const HERO_FACTS = [
@@ -17,6 +19,12 @@ export function HeroSection(): JSX.Element {
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-[480px] bg-[radial-gradient(ellipse_at_top,rgba(109,111,251,0.18),transparent_65%)]"
       />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 hidden h-[720px] md:block"
+      >
+        <HeroLogo3d />
+      </div>
       <div className="relative mx-auto max-w-6xl text-center">
         <p className="mx-auto w-fit rounded-full border border-line bg-panel/60 px-4 py-1.5 text-sm text-muted">
           Free while in beta — no credit card, no sales call
