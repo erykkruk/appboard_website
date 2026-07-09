@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const SITE_URL = "https://appboard.dev";
 export const APP_URL = "https://app.appboard.dev";
 export const GITHUB_URL = "https://github.com/erykkruk/appboard_backend";
+export const DISCORD_URL = "https://discord.gg/3VpCwukDE3";
 export const SITE_NAME = "AppBoard";
 export const SITE_TITLE = "AppBoard — ASO for App Store & Google Play in One Panel";
 export const SITE_DESCRIPTION =

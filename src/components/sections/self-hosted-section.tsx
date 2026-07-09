@@ -1,6 +1,7 @@
 import {
   BranchIcon,
   ButtonLink,
+  DiscordIcon,
   FeatureCard,
   Highlight,
   LockIcon,
@@ -8,7 +9,7 @@ import {
   SectionHeading,
   ShieldIcon,
 } from "@/components/ui";
-import { GITHUB_URL } from "@/lib/seo";
+import { DISCORD_URL, GITHUB_URL } from "@/lib/seo";
 
 import type { JSX, ReactNode } from "react";
 
@@ -80,6 +81,10 @@ export function SelfHostedSection(): JSX.Element {
             </ButtonLink>
             <ButtonLink href="/docs" size="lg" variant="secondary">
               Self-hosting guide
+            </ButtonLink>
+            <ButtonLink href={DISCORD_URL} size="lg" variant="secondary">
+              <DiscordIcon className="size-4" />
+              Join our Discord
             </ButtonLink>
           </div>
           <p className="text-sm text-muted">

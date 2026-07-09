@@ -9,6 +9,7 @@ export {
   ChatIcon,
   CheckIcon,
   CloseIcon,
+  DiscordIcon,
   ImageIcon,
   LockIcon,
   MenuIcon,
