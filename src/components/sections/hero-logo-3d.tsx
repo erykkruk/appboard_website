@@ -34,17 +34,23 @@ export function HeroLogo3d(): JSX.Element {
       const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 1000);
       camera.position.set(0, 0, 260);
 
+      // Light setup tuned so the logo reads immediately at its initial
+      // rotation (-0.9 rad), not only after it turns toward the rim light.
       const rim = new THREE.DirectionalLight(0xb7b9ff, 5);
       rim.position.set(-160, 180, 90);
       scene.add(rim);
-      const key = new THREE.DirectionalLight(0x8f91ff, 1.6);
+      const key = new THREE.DirectionalLight(0x9b9dff, 3.2);
       key.position.set(80, 20, 280);
       scene.add(key);
-      scene.add(new THREE.AmbientLight(0x1c2030, 2));
+      // Fill from the right-front — hits the faces the start rotation shows.
+      const fill = new THREE.DirectionalLight(0x8f91ff, 2.4);
+      fill.position.set(200, -60, 180);
+      scene.add(fill);
+      scene.add(new THREE.AmbientLight(0x353b58, 2.4));
 
       const material = new THREE.MeshStandardMaterial({
-        color: 0x14151d,
-        metalness: 0.7,
+        color: 0x1e2030,
+        metalness: 0.62,
         roughness: 0.32,
       });
 
