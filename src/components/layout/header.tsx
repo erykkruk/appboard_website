@@ -18,6 +18,7 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
   { href: "/#tour", label: "Product" },
+  { href: "/screenshot-editor", label: "Free editor" },
   { href: "/pricing", label: "Pricing" },
   { href: "/opensource", label: "Open source" },
   { href: "/docs", label: "Docs" },

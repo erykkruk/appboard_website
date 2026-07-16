@@ -59,6 +59,38 @@ export function buildSoftwareApplicationSchema(): JsonLdObject {
   };
 }
 
+export function buildScreenshotEditorSchema(): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@id": `${absoluteUrl("/screenshot-editor")}#app`,
+    "@type": "WebApplication",
+    applicationCategory: "DesignApplication",
+    browserRequirements: "Requires a modern browser with JavaScript.",
+    description:
+      "A free, browser-based App Store and Google Play screenshot editor: device mockups, gradients, text, shapes, panorama layouts, templates, and PNG export — everything runs on your device.",
+    featureList: [
+      "iPhone, iPad, Android, Apple Watch, and laptop device mockups",
+      "Real Apple product bezels (Photo style)",
+      "Gradient, mesh, radial, and patterned backgrounds",
+      "Decorative text, shapes, badges, callouts, and emoji stickers",
+      "One-click templates and 3D device tilt",
+      "Panorama layouts split into multiple store screenshots on export",
+      "Undo/redo, snap guides, and localStorage autosave",
+      "PNG export at exact store dimensions",
+    ],
+    isAccessibleForFree: true,
+    name: "Free ASO Screenshot Editor",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    operatingSystem: "Web",
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    url: absoluteUrl("/screenshot-editor"),
+  };
+}
+
 export interface FaqEntry {
   answer: string;
   question: string;

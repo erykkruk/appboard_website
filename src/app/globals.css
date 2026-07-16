@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @font-face {
   font-family: "PP Formula Condensed";
@@ -21,6 +22,25 @@
   --color-glow: #22d3ee;
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* shadcn/ui semantic tokens — dark by default, matching the site palette.
+     Consumed by the ported Screenshot Editor UI primitives (button, select,
+     slider, dialog, …). Additive: existing site utilities are untouched. */
+  --color-border: #263047;
+  --color-input: #263047;
+  --color-ring: #5b5ee8;
+  --color-primary: #5b5ee8;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #1a2133;
+  --color-secondary-foreground: #e8ecf4;
+  --color-muted-foreground: #9aa5bb;
+  --color-accent-foreground: #ffffff;
+  --color-popover: #111726;
+  --color-popover-foreground: #e8ecf4;
+  --color-card: #0a0e18;
+  --color-card-foreground: #e8ecf4;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -248,4 +268,16 @@ body {
   font-size: 0.875rem;
   text-align: center;
   color: var(--color-muted);
+}
+
+/* Ported shadcn/ui surfaces use a bare `border` (no color utility) and render
+   in portals outside any page wrapper. Give them the semantic border color so
+   they match the editor chrome without a global default-border rule that would
+   affect the rest of the marketing site. */
+[data-slot="button"][data-variant="outline"],
+[data-slot="select-content"],
+[data-slot="dropdown-menu-content"],
+[data-slot="dropdown-menu-sub-content"],
+[data-slot="dialog-content"] {
+  border-color: var(--color-border);
 }
