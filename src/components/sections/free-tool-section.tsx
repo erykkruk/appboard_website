@@ -7,6 +7,7 @@ import {
 } from "@/components/ui";
 
 import type { JSX } from "react";
+import { APP_URL } from "@/lib/seo";
 
 const TOOL_POINTS = [
 	"Device mockups: iPhone, iPad, Android, Watch, laptop — plus real Apple bezels",
@@ -41,7 +42,7 @@ export function FreeToolSection(): JSX.Element {
 								))}
 							</ul>
 							<div className="mt-9 flex flex-wrap items-center gap-4">
-								<ButtonLink href="/screenshot-editor" size="lg" variant="primary">
+								<ButtonLink href={`${APP_URL}/editor`} size="lg" variant="primary">
 									Open the editor
 									<ArrowRightIcon className="size-4" />
 								</ButtonLink>

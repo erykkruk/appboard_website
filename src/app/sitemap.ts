@@ -25,12 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: absoluteUrl("/blog"),
     },
     {
-      changeFrequency: "monthly",
-      lastModified: new Date(),
-      priority: 0.9,
-      url: absoluteUrl("/screenshot-editor"),
-    },
-    {
       changeFrequency: "weekly",
       lastModified: new Date(),
       priority: 0.8,
