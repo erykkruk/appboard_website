@@ -5,6 +5,7 @@ import {
   FaqSection,
   FeaturesSection,
   FounderNoteSection,
+  FreeToolSection,
   HeroSection,
   HowItWorksSection,
   ProductTourSection,
@@ -35,6 +36,7 @@ export default function HomePage(): JSX.Element {
         <HowItWorksSection />
         <ResearchSection />
         <FeaturesSection />
+        <FreeToolSection />
         <SelfHostedSection />
         <FounderNoteSection />
         <FaqSection />
