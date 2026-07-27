@@ -1,5 +1,6 @@
 import { Footer, Header } from "@/components/layout";
 import {
+  CommunitySection,
   ComparisonSection,
   CtaSection,
   FaqSection,
@@ -39,6 +40,7 @@ export default function HomePage(): JSX.Element {
         <FreeToolSection />
         <SelfHostedSection />
         <FounderNoteSection />
+        <CommunitySection />
         <FaqSection />
         <CtaSection />
       </main>

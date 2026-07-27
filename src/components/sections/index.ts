@@ -1,3 +1,4 @@
+export { CommunitySection } from "./community-section";
 export { ComparisonSection } from "./comparison-section";
 export { CtaSection } from "./cta-section";
 export { FaqSection } from "./faq-section";
