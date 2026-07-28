@@ -14,6 +14,7 @@ export {
   LockIcon,
   MenuIcon,
   PlugIcon,
+  RedditIcon,
   RocketIcon,
   ShieldIcon,
   SparklesIcon,

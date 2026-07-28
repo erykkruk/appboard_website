@@ -10,6 +10,7 @@ export const GITHUB_REPOS = {
   website: "https://github.com/erykkruk/appboard_website",
 };
 export const DISCORD_URL = "https://discord.gg/3VpCwukDE3";
+export const REDDIT_URL = "https://www.reddit.com/r/appboard/";
 export const SITE_NAME = "AppBoard";
 export const SITE_TITLE = "AppBoard — ASO for App Store & Google Play in One Panel";
 export const SITE_DESCRIPTION =

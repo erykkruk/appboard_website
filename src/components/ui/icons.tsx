@@ -141,6 +141,20 @@ export function DiscordIcon({ className }: IconProps): JSX.Element {
   );
 }
 
+// Brand glyph — filled (not IconBase, which is stroke-only).
+export function RedditIcon({ className }: IconProps): JSX.Element {
+	return (
+		<svg
+			aria-hidden="true"
+			className={className}
+			fill="currentColor"
+			viewBox="0 0 24 24"
+		>
+			<path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286A.72.72 0 0 0 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199a1.999 1.999 0 1 1-1.947 2.46v.002a2.37 2.37 0 0 0-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363a2.802 2.802 0 1 1 2.908 4.753c-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87a2.8 2.8 0 1 1 2.908-4.759c1.289-.797 2.914-1.297 4.693-1.363v-.008a3.11 3.11 0 0 1 2.866-3.09 2 2 0 0 1 1.913-2.612ZM9.25 10.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm5.5 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095Z" />
+		</svg>
+	);
+}
+
 export function MenuIcon({ className }: IconProps): JSX.Element {
   return (
     <IconBase className={className}>
