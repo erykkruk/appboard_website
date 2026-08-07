@@ -18,12 +18,9 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
   { href: "/#tour", label: "Product" },
-  { href: `${APP_URL}/editor`, label: "Free editor" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/opensource", label: "Open source" },
   { href: "/docs", label: "Docs" },
   { href: "/blog", label: "Blog" },
-  { href: "/faq", label: "FAQ" },
 ];
 
 export function Header(): JSX.Element {
@@ -45,11 +42,11 @@ export function Header(): JSX.Element {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <ButtonLink href={`${APP_URL}/demo`} variant="ghost">
-            Live demo
+          <ButtonLink href={APP_URL} variant="ghost">
+            Sign in
           </ButtonLink>
           <ButtonLink href={APP_URL} variant="primary">
-            Get started
+            Get started free
           </ButtonLink>
         </div>
         <button
@@ -82,11 +79,11 @@ export function Header(): JSX.Element {
             </Link>
           ))}
           <div className="mt-3 flex flex-col gap-2 border-t border-line pt-4">
-            <ButtonLink href={`${APP_URL}/demo`} variant="secondary">
-              Live demo
+            <ButtonLink href={APP_URL} variant="secondary">
+              Sign in
             </ButtonLink>
             <ButtonLink href={APP_URL} variant="primary">
-              Get started
+              Get started free
             </ButtonLink>
           </div>
         </nav>

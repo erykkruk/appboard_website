@@ -6,7 +6,6 @@ import {
   ImageIcon,
   LockIcon,
   PlugIcon,
-  RocketIcon,
   SectionHeading,
   ShieldIcon,
   SparklesIcon,
@@ -26,79 +25,68 @@ const ICON_CLASS = "size-5";
 const FEATURES: Feature[] = [
   {
     description:
-      "Link App Store Connect (API key) and Google Play Console (service account) once. Apps from both stores sit side by side — including manually registered draft apps Google's API won't show.",
+      "App Store and Google Play today. Huawei AppGallery, Samsung Galaxy Store, Amazon Appstore, Xiaomi GetApps, RuStore and ONE Store are on the way.",
     href: "/docs/connect-app-store",
     icon: <PlugIcon className={ICON_CLASS} />,
-    title: "Store connections",
+    title: "Multi-store, one workspace",
   },
   {
     description:
-      "Edit titles, descriptions, and keywords per language with drafts, live character counters, GitHub-style diffs, full change history, and one-click rollback.",
-    href: "/docs/listings",
+      "AI groups complaints into themes, tells you what users keep hitting, and drafts replies in the reviewer's language.",
+    href: "/docs/reviews",
+    icon: <ChatIcon className={ICON_CLASS} />,
+    title: "AI review analysis",
+  },
+  {
+    description:
+      "Diffs on every field and language, a full change log, and one-click rollback when an update turns out wrong.",
+    href: "/docs/history-and-rollback",
     icon: <BranchIcon className={ICON_CLASS} />,
-    title: "Listings with version control",
+    title: "Version history",
   },
   {
     description:
-      "Generate and translate descriptions, get ASO keyword suggestions, and draft review replies. Runs on your own OpenRouter key — any model, and you approve everything.",
+      "Write and translate descriptions, get ASO keyword ideas, run on your own OpenRouter key with any model. You approve everything.",
     href: "/docs/ai-assistant",
     icon: <SparklesIcon className={ICON_CLASS} />,
     title: "AI assistant",
   },
   {
     description:
-      "Compose store graphics in the browser — device frames, backgrounds, headlines, language variants — plus panorama splitting and pixel-perfect crop for every device size.",
-    href: "/docs/screenshots",
-    icon: <ImageIcon className={ICON_CLASS} />,
-    title: "Graphics editor",
-  },
-  {
-    description:
-      "Track keyword positions in the top 50, compare markets, mine reviews for complaint themes, and analyze competitors — works on any store app, not just yours.",
+      "Track keyword positions, compare markets and analyze competitors on any store app, not just your own.",
     href: "/docs/research",
     icon: <ChartIcon className={ICON_CLASS} />,
     title: "Keyword and market research",
   },
   {
     description:
-      "Read and answer reviews from both stores in one inbox — with rating distribution, device context, and AI-drafted responses whenever you want them.",
-    href: "/docs/reviews",
-    icon: <ChatIcon className={ICON_CLASS} />,
-    title: "Review management",
+      "Design and export store graphics in your browser, free and without an account, at exact device sizes.",
+    href: "/docs/screenshots",
+    icon: <ImageIcon className={ICON_CLASS} />,
+    title: "Free screenshot editor",
   },
   {
     description:
-      "Push metadata to the App Store and Google Play in one batch — as a draft or straight to review — and get a per-item report of what shipped.",
-    href: "/docs/publishing",
-    icon: <RocketIcon className={ICON_CLASS} />,
-    title: "Batch publishing",
-  },
-  {
-    description:
-      "Manage privacy declarations, age ratings, and in-app purchases alongside your listings — no console hopping.",
-    href: "/docs/workspace",
-    icon: <ShieldIcon className={ICON_CLASS} />,
-    title: "Compliance toolkit",
-  },
-  {
-    description:
-      "Multi-workspace teams, feature flags, app groups for Android + iOS pairs, and an end-to-end encrypted credentials vault. Your store keys stay yours.",
+      "Store credentials live in an end-to-end encrypted vault. AppBoard's servers never see them in plaintext.",
     href: "/docs/security",
     icon: <LockIcon className={ICON_CLASS} />,
-    title: "Teams and security",
+    title: "Encrypted credentials vault",
+  },
+  {
+    description:
+      "Open source, and every part runs in the web panel. Nothing to install, and you can self-host the whole thing.",
+    href: "/docs/self-hosting",
+    icon: <ShieldIcon className={ICON_CLASS} />,
+    title: "Open source and self-hostable",
   },
 ];
 
 export function FeaturesSection(): JSX.Element {
   return (
-    <section className="scroll-mt-24 px-4 py-20 sm:px-6" id="features">
+    <section className="scroll-mt-24 px-4 py-24 sm:px-6" id="features">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading
-          description="Open source, and everything runs in the web panel — no installs, no plugins, no desktop app. Every card links to the docs."
-          eyebrow="Features"
-          title="The whole ASO workflow, in one place"
-        />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <SectionHeading eyebrow="Features" title="Short version" />
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((feature) => (
             <FeatureCard
               description={feature.description}

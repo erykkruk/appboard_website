@@ -8,6 +8,7 @@ export { FreeToolSection } from "./free-tool-section";
 export { HeroSection } from "./hero-section";
 export { HowItWorksSection } from "./how-it-works-section";
 export { PRICING_FAQ, PricingFaqSection } from "./pricing-faq-section";
+export { PricingTeaserSection } from "./pricing-teaser-section";
 export { PricingTiersSection } from "./pricing-tiers-section";
 export { ProductTourSection } from "./product-tour-section";
 export { ResearchSection } from "./research-section";

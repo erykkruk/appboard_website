@@ -1,17 +1,12 @@
 import { Footer, Header } from "@/components/layout";
 import {
-  CommunitySection,
-  ComparisonSection,
   CtaSection,
   FaqSection,
   FeaturesSection,
-  FounderNoteSection,
-  FreeToolSection,
   HeroSection,
   HowItWorksSection,
+  PricingTeaserSection,
   ProductTourSection,
-  ResearchSection,
-  SelfHostedSection,
 } from "@/components/sections";
 import { JsonLd } from "@/components/ui";
 import { buildSoftwareApplicationSchema } from "@/lib/schema";
@@ -32,15 +27,10 @@ export default function HomePage(): JSX.Element {
       <Header />
       <main className="relative w-full flex-1">
         <HeroSection />
-        <ProductTourSection />
-        <ComparisonSection />
         <HowItWorksSection />
-        <ResearchSection />
+        <ProductTourSection />
         <FeaturesSection />
-        <FreeToolSection />
-        <SelfHostedSection />
-        <FounderNoteSection />
-        <CommunitySection />
+        <PricingTeaserSection />
         <FaqSection />
         <CtaSection />
       </main>

@@ -29,6 +29,11 @@ const LANDING_FAQ: FaqEntry[] = [
   },
   {
     answer:
+      "The App Store and Google Play are supported today. Huawei AppGallery, Samsung Galaxy Store, Amazon Appstore, Xiaomi GetApps, RuStore and ONE Store are being built and will appear in the same workspace, so one listing can go to every store you publish on.",
+    question: "What about stores other than Apple and Google?",
+  },
+  {
+    answer:
       "AI features run through OpenRouter with your own API key, so you pick the model and pay the provider directly. AI drafts descriptions, translations, keyword ideas and review replies — but nothing is ever sent to a store without your approval.",
     question: "How does the AI work, and whose API key does it use?",
   },
