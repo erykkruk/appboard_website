@@ -1,4 +1,4 @@
-import { SectionHeading } from "@/components/ui";
+import { Reveal, SectionHeading } from "@/components/ui";
 
 import type { JSX } from "react";
 
@@ -10,39 +10,52 @@ interface Step {
 const STEPS: Step[] = [
   {
     description:
-      "Connect App Store Connect and Google Play Console. Credentials are protected by an end-to-end encrypted vault — AppBoard never sees them in plaintext.",
+      "Link App Store Connect and Google Play Console once. Your keys go straight into an end-to-end encrypted vault.",
     title: "Connect your stores",
   },
   {
     description:
-      "Edit metadata per language, polish screenshots in the studio, and let the AI assistant generate, translate, and suggest ASO phrases backed by research.",
-    title: "Optimize your listings",
+      "Every field, every language, one editor. Design store graphics in the browser at the exact sizes each store demands.",
+    title: "Edit listings and screenshots",
   },
   {
     description:
-      "Batch publish to both stores and get a per-item report. Every change is versioned with diffs, so you can review history and roll back anytime.",
-    title: "Publish with confidence",
+      "Check the diff, then push to both stores in one batch. Every change is versioned and one click from a rollback.",
+    title: "Publish everywhere",
+  },
+  {
+    description:
+      "Both stores' reviews land in one inbox. Keyword positions, market data and competitor research sit next to them.",
+    title: "Track reviews and keywords",
   },
 ];
 
 export function HowItWorksSection(): JSX.Element {
   return (
-    <section className="scroll-mt-24 border-y border-line bg-surface px-4 py-20 sm:px-6" id="how-it-works">
+    <section
+      className="scroll-mt-24 border-y border-line bg-surface px-4 py-24 sm:px-6"
+      id="how-it-works"
+    >
       <div className="mx-auto max-w-6xl">
-        <SectionHeading
-          description="Three steps from scattered store consoles to a single, versioned ASO workflow."
-          eyebrow="How it works"
-          title="Connect. Optimize. Publish."
-        />
-        <ol className="mt-14 grid gap-8 md:grid-cols-3">
+        <Reveal>
+          <SectionHeading
+            eyebrow="How it works"
+            title="Four steps, no console hopping"
+          />
+        </Reveal>
+        <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, index) => (
-            <li className="relative rounded-2xl border border-line bg-panel/40 p-6" key={step.title}>
+            <Reveal as="li" delayMs={index * 90} key={step.title}>
               <span className="flex size-10 items-center justify-center rounded-full bg-accent/15 text-base font-semibold text-accent-bright">
                 {index + 1}
               </span>
-              <h3 className="mt-5 text-lg font-semibold text-foreground">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
-            </li>
+              <h3 className="mt-5 text-lg font-semibold text-foreground">
+                {step.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {step.description}
+              </p>
+            </Reveal>
           ))}
         </ol>
       </div>

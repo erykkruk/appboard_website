@@ -7,6 +7,7 @@ import { ArrowRightIcon } from "./icons";
 import type { JSX, ReactNode } from "react";
 
 interface FeatureCardProps {
+  badge?: ReactNode;
   className?: string;
   description: string;
   href?: string;
@@ -16,6 +17,7 @@ interface FeatureCardProps {
 }
 
 export function FeatureCard({
+  badge,
   className,
   description,
   href,
@@ -25,8 +27,11 @@ export function FeatureCard({
 }: FeatureCardProps): JSX.Element {
   const body = (
     <>
-      <div className="flex size-11 items-center justify-center rounded-xl border border-line bg-surface text-accent-bright transition-colors group-hover:border-accent/50">
-        {icon}
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex size-11 items-center justify-center rounded-xl border border-line bg-surface text-accent-bright transition-colors group-hover:border-accent/50">
+          {icon}
+        </div>
+        {badge}
       </div>
       <h3 className="mt-5 text-lg font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
@@ -40,7 +45,7 @@ export function FeatureCard({
   );
 
   const cardStyles = cn(
-    "group rounded-2xl border border-line bg-panel/60 p-6 transition-colors hover:border-accent/50 hover:bg-panel",
+    "lift group rounded-2xl border border-line bg-panel/60 p-6 hover:border-accent/50 hover:bg-panel",
     className,
   );
 
