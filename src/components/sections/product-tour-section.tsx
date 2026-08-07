@@ -6,6 +6,7 @@ import {
   Reveal,
   ScreenshotFrame,
   SectionHeading,
+  VideoDemo,
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
@@ -22,6 +23,7 @@ interface TourStop {
   points: string[];
   title: string;
   visual: ReactNode;
+  wide?: boolean;
 }
 
 const TOUR_STOPS: TourStop[] = [
@@ -91,19 +93,24 @@ const TOUR_STOPS: TourStop[] = [
     docsHref: "/docs/screenshots",
     docsLabel: "Screenshots and graphics",
     eyebrow: "Screenshots",
-    lead: "Screenshots, icons and feature graphics live in one grid, per device and per language, with each store's exact pixel requirements printed where you upload. Design them in the built-in editor and they export at the size the store demands.",
+    lead: "Screenshots, icons and feature graphics live in one grid, per device and per language. Design them in the built-in editor, tilt a real 3D device, and export at the exact size each store demands. This is the actual editor, recorded in the browser.",
     points: [
       "Per language and per device, from iPhone to 10 inch tablets",
-      "Built-in editor with device frames, backgrounds and headlines",
-      "Ship graphics together with the metadata, in the same publish",
+      "Real WebGL device models you can rotate, plus 40 scene templates",
+      "Free to use without an account, and nothing is uploaded to a server",
     ],
-    title: "Screenshots managed per language, not per download folder",
+    title: "A graphics editor that knows every store size",
     visual: (
-      <ScreenshotFrame
-        alt="AppBoard screenshot manager showing phone screenshots per language with device size requirements"
-        src="/images/panel/app-screenshots-en.png"
+      <VideoDemo
+        caption="Pick a template, tilt the 3D device, export at store size"
+        height={800}
+        poster="/videos/editor-demo-poster.jpg"
+        src="/videos/editor-demo.mp4"
+        title="Screen recording of the AppBoard screenshot editor: applying the Hero 3D scene template and rotating a WebGL iPhone model through pose presets"
+        width={1280}
       />
     ),
+    wide: true,
   },
   {
     docsHref: "/docs/research",
@@ -125,35 +132,54 @@ const TOUR_STOPS: TourStop[] = [
   },
 ];
 
+function TourCopy({ stop }: { stop: TourStop }): JSX.Element {
+  return (
+    <>
+      <Eyebrow>{stop.eyebrow}</Eyebrow>
+      <h3 className="display mt-4 text-4xl text-foreground sm:text-5xl">{stop.title}</h3>
+      <p className="mt-5 text-[15px] leading-relaxed text-muted">{stop.lead}</p>
+      <ul className="mt-5 space-y-2.5">
+        {stop.points.map((point) => (
+          <li className="flex gap-3 text-sm leading-relaxed text-muted" key={point}>
+            <span
+              aria-hidden="true"
+              className="mt-2 size-1.5 shrink-0 rounded-full bg-accent-bright"
+            />
+            {point}
+          </li>
+        ))}
+      </ul>
+      <Link
+        className="anim-underline mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-accent-bright"
+        href={stop.docsHref}
+      >
+        {stop.docsLabel}
+        <ArrowRightIcon className="size-3.5" />
+      </Link>
+    </>
+  );
+}
+
 function TourStopRow({ index, stop }: { index: number; stop: TourStop }): JSX.Element {
+  if (stop.wide) {
+    return (
+      <Reveal>
+        <div className="mx-auto max-w-3xl text-center [&_p]:mx-auto [&_ul]:inline-block [&_ul]:text-left">
+          <div className="flex flex-col items-center">
+            <TourCopy stop={stop} />
+          </div>
+        </div>
+        <div className="mt-12">{stop.visual}</div>
+      </Reveal>
+    );
+  }
+
   const imageFirst = index % 2 === 1;
 
   return (
     <Reveal className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <div className={cn(imageFirst && "lg:order-2")}>
-        <Eyebrow>{stop.eyebrow}</Eyebrow>
-        <h3 className="display mt-4 text-4xl text-foreground sm:text-5xl">
-          {stop.title}
-        </h3>
-        <p className="mt-5 text-[15px] leading-relaxed text-muted">{stop.lead}</p>
-        <ul className="mt-5 space-y-2.5">
-          {stop.points.map((point) => (
-            <li className="flex gap-3 text-sm leading-relaxed text-muted" key={point}>
-              <span
-                aria-hidden="true"
-                className="mt-2 size-1.5 shrink-0 rounded-full bg-accent-bright"
-              />
-              {point}
-            </li>
-          ))}
-        </ul>
-        <Link
-          className="anim-underline mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-accent-bright"
-          href={stop.docsHref}
-        >
-          {stop.docsLabel}
-          <ArrowRightIcon className="size-3.5" />
-        </Link>
+        <TourCopy stop={stop} />
       </div>
       <div className={cn(imageFirst && "lg:order-1")}>{stop.visual}</div>
     </Reveal>

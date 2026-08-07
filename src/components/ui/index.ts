@@ -24,3 +24,4 @@ export { JsonLd } from "./json-ld";
 export { Reveal } from "./reveal";
 export { ScreenshotFrame } from "./screenshot-frame";
 export { SectionHeading } from "./section-heading";
+export { VideoDemo } from "./video-demo";

@@ -55,7 +55,7 @@ export function HeroSection(): JSX.Element {
           ))}
         </ul>
       </div>
-      <div className="relative mx-auto mt-20 max-w-5xl">
+      <div className="parallax-rise relative mx-auto mt-20 max-w-5xl">
         <div
           aria-hidden="true"
           className="absolute -inset-x-8 -top-16 h-64 bg-gradient-to-r from-accent/30 via-glow/15 to-accent/30 blur-3xl"

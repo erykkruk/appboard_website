@@ -419,3 +419,26 @@ body {
     animation: none;
   }
 }
+
+/* Scroll-linked parallax on the hero visual. Uses a native scroll-driven
+   animation, so there is no scroll listener and nothing to jank; browsers
+   without `animation-timeline` simply render the final state. Transform only,
+   so the image still paints immediately and LCP is unaffected. */
+@keyframes parallax-rise {
+  from {
+    transform: translate3d(0, 42px, 0) scale(0.985);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .parallax-rise {
+      animation: parallax-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 45%;
+    }
+  }
+}
