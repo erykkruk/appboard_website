@@ -281,3 +281,141 @@ body {
 [data-slot="dialog-content"] {
   border-color: var(--color-border);
 }
+
+/* ── Motion ──────────────────────────────────────────────────────────────
+   Scroll-entrance and looping product-demo animations. Everything below is
+   compositor-only (opacity / transform / clip-path) so nothing reflows, and
+   the looping demos only run once `.is-visible` is set by the Reveal
+   observer, so off-screen demos cost nothing. */
+
+/* Guarded by `scripting: enabled` so that without JS (or in a client that
+   never runs the observer) the content simply stays visible instead of being
+   stuck at opacity 0. */
+@media (scripting: enabled) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.lift {
+  transition:
+    transform 0.25s ease-out,
+    border-color 0.25s ease-out,
+    background-color 0.25s ease-out;
+}
+
+.lift:hover {
+  transform: translateY(-3px);
+}
+
+/* Text that writes itself in, revealed by a compositor-friendly wipe */
+@keyframes write-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.is-visible .demo-write {
+  animation: write-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.is-visible .demo-fade {
+  animation: fade-up 0.55s ease-out both;
+}
+
+.is-visible .demo-caret {
+  animation: caret-blink 1.1s steps(1, end) infinite;
+}
+
+.is-visible .demo-ring {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+.is-visible .demo-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Above-the-fold entrance: runs on load, no observer, so there is no flash of
+   hidden content before hydration. */
+.enter {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .enter {
+    animation: none;
+  }
+
+  .lift:hover {
+    transform: none;
+  }
+
+  .is-visible .demo-write,
+  .is-visible .demo-fade,
+  .is-visible .demo-caret,
+  .is-visible .demo-ring,
+  .is-visible .demo-spin {
+    animation: none;
+  }
+}

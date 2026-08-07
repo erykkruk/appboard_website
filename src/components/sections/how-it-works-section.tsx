@@ -1,4 +1,4 @@
-import { SectionHeading } from "@/components/ui";
+import { Reveal, SectionHeading } from "@/components/ui";
 
 import type { JSX } from "react";
 
@@ -37,13 +37,15 @@ export function HowItWorksSection(): JSX.Element {
       id="how-it-works"
     >
       <div className="mx-auto max-w-6xl">
-        <SectionHeading
-          eyebrow="How it works"
-          title="Four steps, no console hopping"
-        />
+        <Reveal>
+          <SectionHeading
+            eyebrow="How it works"
+            title="Four steps, no console hopping"
+          />
+        </Reveal>
         <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, index) => (
-            <li key={step.title}>
+            <Reveal as="li" delayMs={index * 90} key={step.title}>
               <span className="flex size-10 items-center justify-center rounded-full bg-accent/15 text-base font-semibold text-accent-bright">
                 {index + 1}
               </span>
@@ -53,7 +55,7 @@ export function HowItWorksSection(): JSX.Element {
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {step.description}
               </p>
-            </li>
+            </Reveal>
           ))}
         </ol>
       </div>

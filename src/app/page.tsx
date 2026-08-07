@@ -7,6 +7,7 @@ import {
   HowItWorksSection,
   PricingTeaserSection,
   ProductTourSection,
+  StoresSection,
 } from "@/components/sections";
 import { JsonLd } from "@/components/ui";
 import { buildSoftwareApplicationSchema } from "@/lib/schema";
@@ -27,6 +28,7 @@ export default function HomePage(): JSX.Element {
       <Header />
       <main className="relative w-full flex-1">
         <HeroSection />
+        <StoresSection />
         <HowItWorksSection />
         <ProductTourSection />
         <FeaturesSection />

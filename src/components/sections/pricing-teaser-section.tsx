@@ -1,11 +1,11 @@
-import { ArrowRightIcon, ButtonLink, Highlight } from "@/components/ui";
+import { ArrowRightIcon, ButtonLink, Highlight, Reveal } from "@/components/ui";
 
 import type { JSX } from "react";
 
 export function PricingTeaserSection(): JSX.Element {
   return (
     <section className="border-y border-line bg-surface px-4 py-24 sm:px-6" id="pricing">
-      <div className="mx-auto max-w-2xl text-center">
+      <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="display text-4xl text-foreground sm:text-5xl">
           Right now it is <Highlight>free</Highlight>
         </h2>
@@ -20,7 +20,7 @@ export function PricingTeaserSection(): JSX.Element {
             <ArrowRightIcon className="size-4" />
           </ButtonLink>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

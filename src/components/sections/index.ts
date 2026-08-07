@@ -1,6 +1,7 @@
 export { CommunitySection } from "./community-section";
 export { ComparisonSection } from "./comparison-section";
 export { CtaSection } from "./cta-section";
+export { DiffDemo } from "./diff-demo";
 export { FaqSection } from "./faq-section";
 export { FeaturesSection } from "./features-section";
 export { FounderNoteSection } from "./founder-note-section";
@@ -13,3 +14,5 @@ export { PricingTiersSection } from "./pricing-tiers-section";
 export { ProductTourSection } from "./product-tour-section";
 export { ResearchSection } from "./research-section";
 export { SelfHostedSection } from "./self-hosted-section";
+export { StoresSection } from "./stores-section";
+export { TranslateDemo } from "./translate-demo";

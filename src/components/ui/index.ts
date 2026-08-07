@@ -1,4 +1,5 @@
 export { ButtonLink } from "./button-link";
+export { ComingSoonBadge } from "./coming-soon-badge";
 export { Eyebrow } from "./eyebrow";
 export { FeatureCard } from "./feature-card";
 export { Highlight } from "./highlight";
@@ -20,5 +21,6 @@ export {
   SparklesIcon,
 } from "./icons";
 export { JsonLd } from "./json-ld";
+export { Reveal } from "./reveal";
 export { ScreenshotFrame } from "./screenshot-frame";
 export { SectionHeading } from "./section-heading";

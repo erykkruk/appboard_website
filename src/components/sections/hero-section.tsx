@@ -26,15 +26,15 @@ export function HeroSection(): JSX.Element {
         <HeroLogo3d />
       </div>
       <div className="relative mx-auto max-w-4xl text-center">
-        <h1 className="display mx-auto text-6xl text-foreground sm:text-8xl">
+        <h1 className="display enter mx-auto text-6xl text-foreground sm:text-8xl">
           Run every app store listing from <Highlight>one panel</Highlight>
         </h1>
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-muted">
+        <p className="enter mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-muted [animation-delay:120ms]">
           Metadata in every language, screenshots, reviews and AI research for
           the App Store and Google Play. Draft it, review the diff, publish
           everywhere.
         </p>
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="enter mt-10 flex flex-col items-center justify-center gap-3 [animation-delay:240ms] sm:flex-row">
           <ButtonLink href={APP_URL} size="lg" variant="primary">
             Get started free
             <ArrowRightIcon className="size-4" />
@@ -43,10 +43,10 @@ export function HeroSection(): JSX.Element {
             Open the live demo
           </ButtonLink>
         </div>
-        <p className="mt-5 text-sm text-muted">
+        <p className="enter mt-5 text-sm text-muted [animation-delay:320ms]">
           Free while in beta. No credit card, no sales call.
         </p>
-        <ul className="mx-auto mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted">
+        <ul className="enter mx-auto mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted [animation-delay:400ms]">
           {HERO_FACTS.map((fact) => (
             <li className="flex items-center gap-2" key={fact}>
               <span aria-hidden="true" className="size-1 rounded-full bg-accent-bright" />

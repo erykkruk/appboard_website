@@ -1,22 +1,27 @@
 import {
-  BranchIcon,
   ChartIcon,
   ChatIcon,
+  ComingSoonBadge,
   FeatureCard,
   ImageIcon,
   LockIcon,
   PlugIcon,
+  Reveal,
+  RocketIcon,
   SectionHeading,
   ShieldIcon,
   SparklesIcon,
 } from "@/components/ui";
+import { APP_URL, DISCORD_URL } from "@/lib/seo";
 
 import type { JSX, ReactNode } from "react";
 
 interface Feature {
+  comingSoon?: boolean;
   description: string;
   href: string;
   icon: ReactNode;
+  linkLabel?: string;
   title: string;
 }
 
@@ -25,59 +30,61 @@ const ICON_CLASS = "size-5";
 const FEATURES: Feature[] = [
   {
     description:
-      "App Store and Google Play today. Huawei AppGallery, Samsung Galaxy Store, Amazon Appstore, Xiaomi GetApps, RuStore and ONE Store are on the way.",
+      "Link App Store Connect and Google Play Console once. AppBoard pulls in every app and every localization you already have.",
     href: "/docs/connect-app-store",
     icon: <PlugIcon className={ICON_CLASS} />,
-    title: "Multi-store, one workspace",
+    title: "Connect once, import everything",
   },
   {
     description:
-      "AI groups complaints into themes, tells you what users keep hitting, and drafts replies in the reviewer's language.",
-    href: "/docs/reviews",
-    icon: <ChatIcon className={ICON_CLASS} />,
-    title: "AI review analysis",
+      "Design and export store graphics in your browser at exact device sizes. No account, no install, free forever.",
+    href: `${APP_URL}/editor`,
+    icon: <ImageIcon className={ICON_CLASS} />,
+    title: "Free screenshot editor",
   },
   {
     description:
-      "Diffs on every field and language, a full change log, and one-click rollback when an update turns out wrong.",
-    href: "/docs/history-and-rollback",
-    icon: <BranchIcon className={ICON_CLASS} />,
-    title: "Version history",
-  },
-  {
-    description:
-      "Write and translate descriptions, get ASO keyword ideas, run on your own OpenRouter key with any model. You approve everything.",
-    href: "/docs/ai-assistant",
-    icon: <SparklesIcon className={ICON_CLASS} />,
-    title: "AI assistant",
-  },
-  {
-    description:
-      "Track keyword positions, compare markets and analyze competitors on any store app, not just your own.",
+      "Track keyword positions with day-over-day movement, compare markets and analyze competitors on any store app.",
     href: "/docs/research",
     icon: <ChartIcon className={ICON_CLASS} />,
     title: "Keyword and market research",
   },
   {
     description:
-      "Design and export store graphics in your browser, free and without an account, at exact device sizes.",
-    href: "/docs/screenshots",
-    icon: <ImageIcon className={ICON_CLASS} />,
-    title: "Free screenshot editor",
+      "Both stores' reviews in one inbox with rating, version and device context, plus AI-drafted replies you approve.",
+    href: "/docs/reviews",
+    icon: <ChatIcon className={ICON_CLASS} />,
+    title: "Reviews in one inbox",
   },
   {
     description:
-      "Store credentials live in an end-to-end encrypted vault. AppBoard's servers never see them in plaintext.",
+      "Batch publish metadata and graphics to both stores, as a draft or straight for review, with a per-item report.",
+    href: "/docs/publishing",
+    icon: <RocketIcon className={ICON_CLASS} />,
+    title: "Publish from one dashboard",
+  },
+  {
+    description:
+      "Store credentials sit in an end-to-end encrypted vault. AppBoard's servers never see them in plaintext.",
     href: "/docs/security",
     icon: <LockIcon className={ICON_CLASS} />,
     title: "Encrypted credentials vault",
   },
   {
     description:
-      "Open source, and every part runs in the web panel. Nothing to install, and you can self-host the whole thing.",
+      "Free while in beta and source-available forever. Run the whole thing on your own server whenever you want to.",
     href: "/docs/self-hosting",
     icon: <ShieldIcon className={ICON_CLASS} />,
     title: "Open source and self-hostable",
+  },
+  {
+    comingSoon: true,
+    description:
+      "Propose the features you need and vote on everyone else's, so the roadmap is decided by the people shipping apps.",
+    href: DISCORD_URL,
+    icon: <SparklesIcon className={ICON_CLASS} />,
+    linkLabel: "Shape it on Discord",
+    title: "A wishlist you vote on",
   },
 ];
 
@@ -85,16 +92,21 @@ export function FeaturesSection(): JSX.Element {
   return (
     <section className="scroll-mt-24 px-4 py-24 sm:px-6" id="features">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading eyebrow="Features" title="Short version" />
+        <Reveal>
+          <SectionHeading eyebrow="Features" title="Everything else, briefly" />
+        </Reveal>
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {FEATURES.map((feature) => (
-            <FeatureCard
-              description={feature.description}
-              href={feature.href}
-              icon={feature.icon}
-              key={feature.title}
-              title={feature.title}
-            />
+          {FEATURES.map((feature, index) => (
+            <Reveal delayMs={(index % 4) * 80} key={feature.title}>
+              <FeatureCard
+                badge={feature.comingSoon ? <ComingSoonBadge /> : undefined}
+                description={feature.description}
+                href={feature.href}
+                icon={feature.icon}
+                linkLabel={feature.linkLabel}
+                title={feature.title}
+              />
+            </Reveal>
           ))}
         </div>
       </div>
