@@ -3,6 +3,7 @@ import {
   CtaSection,
   FaqSection,
   FeaturesSection,
+  FreeToolSection,
   HeroSection,
   HowItWorksSection,
   PricingTeaserSection,
@@ -32,6 +33,7 @@ export default function HomePage(): JSX.Element {
         <HowItWorksSection />
         <ProductTourSection />
         <FeaturesSection />
+        <FreeToolSection />
         <PricingTeaserSection />
         <FaqSection />
         <CtaSection />
