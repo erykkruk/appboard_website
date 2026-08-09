@@ -37,6 +37,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: absoluteUrl("/faq"),
     },
     {
+      changeFrequency: "monthly",
+      lastModified: new Date(),
+      priority: 0.7,
+      url: absoluteUrl("/screenshot-editor"),
+    },
+    {
+      changeFrequency: "monthly",
+      lastModified: new Date(),
+      priority: 0.6,
+      url: absoluteUrl("/opensource"),
+    },
+    {
       changeFrequency: "yearly",
       lastModified: new Date(),
       priority: 0.3,
