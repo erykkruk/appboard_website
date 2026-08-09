@@ -9,6 +9,42 @@ export interface BlogArticle {
 
 export const BLOG_ARTICLES: BlogArticle[] = [
   {
+    date: "2026-08-07",
+    description:
+      "What ASO agencies actually deliver, what they cost in 2026, and when hiring one beats doing app store optimization yourself with tools. Plus how to vet a vendor.",
+    readingMinutes: 11,
+    slug: "app-store-optimization-services",
+    tag: "Strategy",
+    title: "App store optimization services vs doing it yourself",
+  },
+  {
+    date: "2026-08-05",
+    description:
+      "How many languages each store supports, which markets pay back first, why keywords are per-locale and never translated, and the localization mistakes that waste budget.",
+    readingMinutes: 12,
+    slug: "app-store-localization",
+    tag: "Localization",
+    title: "App localization: which markets are actually worth it",
+  },
+  {
+    date: "2026-08-03",
+    description:
+      "Every App Store and Google Play screenshot size required in 2026, verified against Apple and Google documentation, plus how to generate the whole set fast.",
+    readingMinutes: 10,
+    slug: "app-store-screenshot-sizes",
+    tag: "Reference",
+    title: "App Store screenshot sizes and dimensions (2026 guide)",
+  },
+  {
+    date: "2026-08-01",
+    description:
+      "A comparison of the best ASO tools in 2026 with prices checked against vendor pages, what each one is genuinely best at, and the products still listed that no longer exist.",
+    readingMinutes: 11,
+    slug: "best-aso-tools",
+    tag: "Tools",
+    title: "The best ASO tools in 2026: an honest comparison",
+  },
+  {
     date: "2026-07-06",
     description:
       "A practical pre-release checklist for app metadata, screenshots, and store compliance — the exact steps to run before every App Store and Google Play release.",
