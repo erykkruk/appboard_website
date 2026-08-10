@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { JsonLd } from "@/components/ui";
-import { getArticle } from "@/lib/blog";
+import { buildBlogAlternates, getArticle, getPlSlugForEn } from "@/lib/blog";
 import { buildFaqSchema } from "@/lib/schema";
 import { APP_URL, buildPageMetadata } from "@/lib/seo";
 
@@ -12,11 +12,14 @@ import type { Metadata } from "next";
 import type { JSX } from "react";
 
 const SLUG = "best-aso-tools";
+const PL_SLUG = getPlSlugForEn(SLUG) ?? "pozycjonowanie-aplikacji-mobilnych";
 const article = getArticle(SLUG);
 
 export const metadata: Metadata = buildPageMetadata({
   description:
     "A comparison of the best ASO tools in 2026 with prices checked against vendor pages: AppTweak, App Radar, Appfigures, Mobile Action, AppFollow, AppBoard and more.",
+  languages: buildBlogAlternates(SLUG, PL_SLUG),
+  locale: "en_US",
   path: `/blog/${SLUG}`,
   title: "The best ASO tools in 2026",
 });
@@ -60,7 +63,10 @@ export default function Page(): JSX.Element {
   }
 
   return (
-    <ArticleLayout article={article}>
+    <ArticleLayout
+      article={article}
+      translationHref={`/pl/blog/${PL_SLUG}`}
+    >
       <JsonLd data={buildFaqSchema(`/blog/${SLUG}`, FAQ)} />
       <p>
         Every &ldquo;best ASO tools&rdquo; list currently ranking on Google was

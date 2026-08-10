@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { JsonLd } from "@/components/ui";
-import { getArticle } from "@/lib/blog";
+import { buildBlogAlternates, getArticle, getPlSlugForEn } from "@/lib/blog";
 import { buildFaqSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -12,11 +12,14 @@ import type { Metadata } from "next";
 import type { JSX } from "react";
 
 const SLUG = "app-store-optimization-services";
+const PL_SLUG = getPlSlugForEn(SLUG) ?? "promocja-aplikacji-mobilnej";
 const article = getArticle(SLUG);
 
 export const metadata: Metadata = buildPageMetadata({
   description:
     "What app store optimization services actually deliver, what agencies cost in 2026, how that compares to doing ASO yourself with tools, and how to vet a vendor.",
+  languages: buildBlogAlternates(SLUG, PL_SLUG),
+  locale: "en_US",
   path: `/blog/${SLUG}`,
   title: "App store optimization services vs doing it yourself (2026)",
 });
@@ -60,7 +63,10 @@ export default function Page(): JSX.Element {
   }
 
   return (
-    <ArticleLayout article={article}>
+    <ArticleLayout
+      article={article}
+      translationHref={`/pl/blog/${PL_SLUG}`}
+    >
       <JsonLd data={buildFaqSchema(`/blog/${SLUG}`, FAQ)} />
       <p>
         Search for app store optimization services and you get three kinds of
