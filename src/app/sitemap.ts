@@ -1,4 +1,4 @@
-import { BLOG_ARTICLES } from "@/lib/blog";
+import { BLOG_ARTICLES, BLOG_ARTICLES_PL } from "@/lib/blog";
 import { ALL_DOC_PAGES } from "@/lib/docs";
 import { absoluteUrl } from "@/lib/seo";
 
@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.8,
       url: absoluteUrl("/blog"),
+    },
+    {
+      changeFrequency: "weekly",
+      lastModified: new Date(),
+      priority: 0.8,
+      url: absoluteUrl("/pl/blog"),
     },
     {
       changeFrequency: "weekly",
@@ -69,6 +75,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: absoluteUrl(`/blog/${article.slug}`),
   }));
 
+  const blogPlEntries: MetadataRoute.Sitemap = BLOG_ARTICLES_PL.map(
+    (article) => ({
+      changeFrequency: "monthly",
+      lastModified: new Date(article.date),
+      priority: 0.6,
+      url: absoluteUrl(`/pl/blog/${article.slug}`),
+    }),
+  );
+
   const docEntries: MetadataRoute.Sitemap = ALL_DOC_PAGES.map((page) => ({
     changeFrequency: "monthly",
     lastModified: new Date(),
@@ -76,5 +91,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: absoluteUrl(`/docs/${page.slug}`),
   }));
 
-  return [...staticEntries, ...blogEntries, ...docEntries];
+  return [...staticEntries, ...blogEntries, ...blogPlEntries, ...docEntries];
 }

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { JsonLd } from "@/components/ui";
-import { getArticle } from "@/lib/blog";
+import { buildBlogAlternates, getArticle, getPlSlugForEn } from "@/lib/blog";
 import { buildFaqSchema } from "@/lib/schema";
 import { APP_URL, buildPageMetadata } from "@/lib/seo";
 
@@ -12,11 +12,14 @@ import type { Metadata } from "next";
 import type { JSX } from "react";
 
 const SLUG = "app-store-screenshot-sizes";
+const PL_SLUG = getPlSlugForEn(SLUG) ?? "app-store-connect-publikacja-aplikacji";
 const article = getArticle(SLUG);
 
 export const metadata: Metadata = buildPageMetadata({
   description:
     "Every App Store and Google Play screenshot size required in 2026, verified against Apple and Google documentation, plus how to generate the full set fast.",
+  languages: buildBlogAlternates(SLUG, PL_SLUG),
+  locale: "en_US",
   path: `/blog/${SLUG}`,
   title: "App Store screenshot sizes and dimensions (2026 guide)",
 });
@@ -67,7 +70,10 @@ export default function Page(): JSX.Element {
   }
 
   return (
-    <ArticleLayout article={article}>
+    <ArticleLayout
+      article={article}
+      translationHref={`/pl/blog/${PL_SLUG}`}
+    >
       <JsonLd data={buildFaqSchema(`/blog/${SLUG}`, FAQ)} />
       <p>
         The short answer, if that is all you came for: export one iPhone set at{" "}

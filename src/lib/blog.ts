@@ -100,6 +100,79 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   },
 ];
 
+export const BLOG_ARTICLES_PL: BlogArticle[] = [
+  {
+    date: "2026-08-09",
+    description:
+      "Ile realnie kosztuje promocja aplikacji mobilnej w Polsce: stawki agencji w złotówkach, benchmarki CPI, kanały które działają i moment, w którym warto zlecić to na zewnątrz.",
+    readingMinutes: 12,
+    slug: "promocja-aplikacji-mobilnej",
+    tag: "Marketing",
+    title: "Promocja aplikacji mobilnej: ile to kosztuje i co naprawdę działa",
+  },
+  {
+    date: "2026-08-07",
+    description:
+      "Pozycjonowanie aplikacji mobilnych w Google Play i App Store: aktualne limity znaków, polska fleksja w słowach kluczowych, testy A/B w sklepach i narzędzia, które nadal istnieją.",
+    readingMinutes: 13,
+    slug: "pozycjonowanie-aplikacji-mobilnych",
+    tag: "ASO",
+    title: "Pozycjonowanie aplikacji mobilnych (ASO): przewodnik na 2026",
+  },
+  {
+    date: "2026-08-05",
+    description:
+      "App Store Connect od podstaw: klucz API i plik .p8, role użytkowników, limity metadanych, pole keywords liczone w bajtach oraz aktualne wymagane rozmiary zrzutów ekranu.",
+    readingMinutes: 12,
+    slug: "app-store-connect-publikacja-aplikacji",
+    tag: "App Store",
+    title: "App Store Connect: publikacja aplikacji krok po kroku (2026)",
+  },
+  {
+    date: "2026-08-03",
+    description:
+      "Google Play Console w 2026: konto osobiste czy organizacji, numer D-U-N-S, wymóg 12 testerów przez 14 dni, limity znaków, specyfikacja grafik i ścieżki testowe.",
+    readingMinutes: 12,
+    slug: "google-play-console-publikacja-aplikacji",
+    tag: "Google Play",
+    title: "Google Play Console: publikacja aplikacji krok po kroku (2026)",
+  },
+];
+
+const EN_TO_PL_SLUG: Record<string, string> = {
+  "app-store-localization": "google-play-console-publikacja-aplikacji",
+  "app-store-optimization-services": "promocja-aplikacji-mobilnej",
+  "app-store-screenshot-sizes": "app-store-connect-publikacja-aplikacji",
+  "best-aso-tools": "pozycjonowanie-aplikacji-mobilnych",
+};
+
+const PL_TO_EN_SLUG: Record<string, string> = Object.fromEntries(
+  Object.entries(EN_TO_PL_SLUG).map(([en, pl]) => [pl, en]),
+);
+
 export function getArticle(slug: string): BlogArticle | undefined {
   return BLOG_ARTICLES.find((article) => article.slug === slug);
+}
+
+export function getArticlePl(slug: string): BlogArticle | undefined {
+  return BLOG_ARTICLES_PL.find((article) => article.slug === slug);
+}
+
+export function getPlSlugForEn(slug: string): string | undefined {
+  return EN_TO_PL_SLUG[slug];
+}
+
+export function getEnSlugForPl(slug: string): string | undefined {
+  return PL_TO_EN_SLUG[slug];
+}
+
+export function buildBlogAlternates(
+  enSlug: string,
+  plSlug: string,
+): Record<string, string> {
+  return {
+    "en-US": `/blog/${enSlug}`,
+    "pl-PL": `/pl/blog/${plSlug}`,
+    "x-default": `/blog/${enSlug}`,
+  };
 }

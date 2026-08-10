@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ArticleLayout } from "@/components/layout/article-layout";
 import { JsonLd } from "@/components/ui";
-import { getArticle } from "@/lib/blog";
+import { buildBlogAlternates, getArticle, getPlSlugForEn } from "@/lib/blog";
 import { buildFaqSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -12,11 +12,14 @@ import type { Metadata } from "next";
 import type { JSX } from "react";
 
 const SLUG = "app-store-localization";
+const PL_SLUG = getPlSlugForEn(SLUG) ?? "google-play-console-publikacja-aplikacji";
 const article = getArticle(SLUG);
 
 export const metadata: Metadata = buildPageMetadata({
   description:
     "How to localize your app store listing: how many languages each store supports, which markets pay back first, per-locale keyword rules, and the mistakes that waste budget.",
+  languages: buildBlogAlternates(SLUG, PL_SLUG),
+  locale: "en_US",
   path: `/blog/${SLUG}`,
   title: "App localization in 2026: which markets are worth it",
 });
@@ -60,7 +63,10 @@ export default function Page(): JSX.Element {
   }
 
   return (
-    <ArticleLayout article={article}>
+    <ArticleLayout
+      article={article}
+      translationHref={`/pl/blog/${PL_SLUG}`}
+    >
       <JsonLd data={buildFaqSchema(`/blog/${SLUG}`, FAQ)} />
       <p>
         App store localization gets written about by two groups who never talk to

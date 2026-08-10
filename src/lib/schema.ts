@@ -96,11 +96,16 @@ export interface FaqEntry {
   question: string;
 }
 
-export function buildFaqSchema(path: string, entries: FaqEntry[]): JsonLdObject {
+export function buildFaqSchema(
+  path: string,
+  entries: FaqEntry[],
+  inLanguage?: string,
+): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@id": `${absoluteUrl(path)}#faq`,
     "@type": "FAQPage",
+    ...(inLanguage ? { inLanguage } : {}),
     mainEntity: entries.map((entry) => ({
       "@type": "Question",
       acceptedAnswer: {

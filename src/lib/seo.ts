@@ -22,12 +22,16 @@ export function absoluteUrl(path: string): string {
 
 interface PageMetadataInput {
   description: string;
+  languages?: Record<string, string>;
+  locale?: string;
   path: string;
   title?: string;
 }
 
 export function buildPageMetadata({
   description,
+  languages,
+  locale,
   path,
   title,
 }: PageMetadataInput): Metadata {
@@ -36,10 +40,12 @@ export function buildPageMetadata({
   return {
     alternates: {
       canonical: path,
+      ...(languages ? { languages } : {}),
     },
     description,
     openGraph: {
       description,
+      ...(locale ? { locale } : {}),
       siteName: SITE_NAME,
       title: resolvedTitle,
       type: "website",
