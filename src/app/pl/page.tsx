@@ -23,6 +23,7 @@ const PL_DESCRIPTION =
   "Zarządzaj listingami w App Store i Google Play z jednego panelu. Metadane w każdym języku, wersjonowanie zmian z diffami i rollbackiem, publikacja z ASO od AI.";
 
 export const metadata: Metadata = buildPageMetadata({
+  absoluteTitle: true,
   description: PL_DESCRIPTION,
   languages: buildAlternates("/"),
   locale: "pl_PL",

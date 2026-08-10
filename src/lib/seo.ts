@@ -21,6 +21,7 @@ export function absoluteUrl(path: string): string {
 }
 
 interface PageMetadataInput {
+  absoluteTitle?: boolean;
   description: string;
   languages?: Record<string, string>;
   locale?: string;
@@ -29,6 +30,7 @@ interface PageMetadataInput {
 }
 
 export function buildPageMetadata({
+  absoluteTitle,
   description,
   languages,
   locale,
@@ -51,7 +53,7 @@ export function buildPageMetadata({
       type: "website",
       url: path,
     },
-    title: title ?? { absolute: SITE_TITLE },
+    title: absoluteTitle && title ? { absolute: title } : (title ?? { absolute: SITE_TITLE }),
     twitter: {
       card: "summary_large_image",
       description,
