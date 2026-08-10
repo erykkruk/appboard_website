@@ -81,7 +81,7 @@ Each locale declares a **scope**: `site` (every page) or `blog` (the blog only,
 for markets where we publish articles but do not translate the product). A
 blog-scoped locale is filtered out of the sitemap, the `hreflang` alternates and
 the language switcher on every non-blog page, so it can never produce a dead link
-like `/de/pricing`. Planned: EN and PL are `site`; DE and ES will be `blog`.
+like `/de/pricing`. EN and PL are `site`; DE and ES are `blog`. The split is enforced by types: marketing surfaces are keyed by `SiteLocale`, shared chrome by `Locale`.
 
 **Adding a locale** = registry entry + dictionary + per-page content files and
 routes. Nothing else. Full instructions in `src/lib/i18n/README.md`.

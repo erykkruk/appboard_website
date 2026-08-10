@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, LOCALE_CONFIG, type Locale } from "@/lib/i18n/locales";
+import { DEFAULT_LOCALE, LOCALE_CONFIG, type SiteLocale } from "@/lib/i18n/locales";
 
 import { Footer } from "./footer";
 import { Header } from "./header";
@@ -8,7 +8,7 @@ import type { JSX, ReactNode } from "react";
 interface LegalPageLayoutProps {
   children: ReactNode;
   lastUpdated: string;
-  locale?: Locale;
+  locale?: SiteLocale;
   subtitle: string;
   title: string;
 }
@@ -18,7 +18,7 @@ interface LegalCopy {
   lastUpdatedPrefix: string;
 }
 
-const LEGAL_COPY: Record<Locale, LegalCopy> = {
+const LEGAL_COPY: Record<SiteLocale, LegalCopy> = {
   en: {
     eyebrow: "Legal",
     lastUpdatedPrefix: "Last updated: ",

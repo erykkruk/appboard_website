@@ -1,14 +1,14 @@
-import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
+import { DEFAULT_LOCALE, type SiteLocale } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
 import type { JSX } from "react";
 
 interface ComingSoonBadgeProps {
   className?: string;
-  locale?: Locale;
+  locale?: SiteLocale;
 }
 
-const LABEL: Record<Locale, string> = {
+const LABEL: Record<SiteLocale, string> = {
   en: "Coming soon",
   pl: "Wkrótce",
 };

@@ -1,13 +1,13 @@
 import { Reveal, SectionHeading } from "@/components/ui";
 import { HOME_CONTENT } from "@/lib/i18n/content/home";
-import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
+import { DEFAULT_LOCALE, type SiteLocale } from "@/lib/i18n/locales";
 
 import type { JSX } from "react";
 
 export function HowItWorksSection({
   locale = DEFAULT_LOCALE,
 }: {
-  locale?: Locale;
+  locale?: SiteLocale;
 }): JSX.Element {
   const copy = HOME_CONTENT[locale].howItWorks;
 

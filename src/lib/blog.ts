@@ -142,12 +142,92 @@ export const BLOG_ARTICLES_PL: BlogArticle[] = [
   },
 ];
 
+export const BLOG_ARTICLES_DE: BlogArticle[] = [
+  {
+    date: "2026-08-11",
+    description:
+      "Google Play Console 2026: privates Konto oder Organisation, D-U-N-S, die 12-Tester-Regel über 14 Tage, Zeichenlimits, Grafikvorgaben und der DSA-Händlerstatus.",
+    readingMinutes: 13,
+    slug: "google-play-console-app-veroeffentlichen",
+    tag: "Google Play",
+    title: "Google Play Console: App veröffentlichen (Leitfaden 2026)",
+  },
+  {
+    date: "2026-08-10",
+    description:
+      "App Store Connect von Grund auf: API-Key und .p8-Datei, Metadatenlimits, das Keyword-Feld in Bytes statt Zeichen, aktuelle Screenshot-Größen und der DSA-Händlerstatus.",
+    readingMinutes: 13,
+    slug: "app-store-connect-app-veroeffentlichen",
+    tag: "App Store",
+    title: "App Store Connect: App veröffentlichen (Leitfaden 2026)",
+  },
+  {
+    date: "2026-08-09",
+    description:
+      "App Store Optimierung 2026: die tatsächlich geltenden Zeichenlimits, deutsche Keywords und Umlaute, kostenlose A/B-Tests in beiden Stores und Tools, die es noch gibt.",
+    readingMinutes: 13,
+    slug: "app-store-optimierung",
+    tag: "ASO",
+    title: "App Store Optimierung (ASO): der Leitfaden für 2026",
+  },
+  {
+    date: "2026-08-08",
+    description:
+      "Was ASO wirklich kostet: veröffentlichte Agenturpreise in Euro, der Aufwand in Eigenregie, die Rechnung gegen eine eigene Stelle und die Warnsignale bei Anbietern.",
+    readingMinutes: 12,
+    slug: "aso-agentur-kosten",
+    tag: "Marketing",
+    title: "Was kostet ASO? Agentur, Tools oder selbst machen (2026)",
+  },
+];
+
+export const BLOG_ARTICLES_ES: BlogArticle[] = [
+  {
+    date: "2026-08-11",
+    description:
+      "Google Play Console en 2026: cuenta personal u organización, D-U-N-S, la regla de 12 testers durante 14 días, límites de caracteres, gráficos y el estatus de comerciante del DSA.",
+    readingMinutes: 13,
+    slug: "google-play-console-publicar-app",
+    tag: "Google Play",
+    title: "Google Play Console: cómo publicar una app (guía 2026)",
+  },
+  {
+    date: "2026-08-10",
+    description:
+      "App Store Connect desde cero: clave de API y archivo .p8, límites de metadatos, el campo de keywords medido en bytes, tamaños de captura vigentes y el estatus de comerciante.",
+    readingMinutes: 13,
+    slug: "app-store-connect-publicar-app",
+    tag: "App Store",
+    title: "App Store Connect: cómo publicar una app (guía 2026)",
+  },
+  {
+    date: "2026-08-09",
+    description:
+      "Posicionamiento ASO en 2026: los límites de caracteres reales, las tildes que consumen el doble en el campo de keywords, tests A/B gratuitos y herramientas que siguen vivas.",
+    readingMinutes: 13,
+    slug: "posicionamiento-aso",
+    tag: "ASO",
+    title: "Posicionamiento ASO: la guía completa de 2026",
+  },
+  {
+    date: "2026-08-08",
+    description:
+      "Cuánto cuesta el ASO en España: los pocos precios publicados en euros, el coste real de hacerlo tú, cuándo compensa una agencia y las señales de alarma al contratar.",
+    readingMinutes: 12,
+    slug: "agencia-aso-precios",
+    tag: "Marketing",
+    title: "Agencia ASO: precios reales y cuándo merece la pena (2026)",
+  },
+];
+
 /**
  * Every locale that has articles. A locale is absent until its first article
  * ships, which is what lets a blog-only locale be registered ahead of content.
  */
 export const BLOG_ARTICLES_BY_LOCALE: Partial<Record<Locale, BlogArticle[]>> = {
+  de: BLOG_ARTICLES_DE,
   en: BLOG_ARTICLES,
+  es: BLOG_ARTICLES_ES,
   pl: BLOG_ARTICLES_PL,
 };
 

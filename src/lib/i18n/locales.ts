@@ -1,8 +1,25 @@
-export const LOCALES = ["en", "pl"] as const;
+/** Locales that serve the whole site, marketing pages included. */
+export const SITE_LOCALES = ["en", "pl"] as const;
+
+/** Locales that serve the blog only. */
+export const BLOG_ONLY_LOCALES = ["de", "es"] as const;
+
+export const LOCALES = [...SITE_LOCALES, ...BLOG_ONLY_LOCALES] as const;
 
 export type Locale = (typeof LOCALES)[number];
 
-export const DEFAULT_LOCALE: Locale = "en";
+/**
+ * A locale that has marketing pages. Content that only exists on the marketing
+ * site is keyed by this, so adding a blog-only locale never forces a homepage,
+ * pricing or docs translation that will not be rendered.
+ */
+export type SiteLocale = (typeof SITE_LOCALES)[number];
+
+export const DEFAULT_LOCALE: SiteLocale = "en";
+
+export function isSiteLocale(locale: Locale): locale is SiteLocale {
+  return (SITE_LOCALES as readonly Locale[]).includes(locale);
+}
 
 /**
  * How much of the site a locale serves.
@@ -45,6 +62,26 @@ export const LOCALE_CONFIG: Record<Locale, LocaleConfig> = {
     pathPrefix: "/pl",
     scope: "site",
     shortLabel: "PL",
+  },
+  de: {
+    code: "de",
+    hreflang: "de-DE",
+    htmlLang: "de",
+    label: "Deutsch",
+    ogLocale: "de_DE",
+    pathPrefix: "/de",
+    scope: "blog",
+    shortLabel: "DE",
+  },
+  es: {
+    code: "es",
+    hreflang: "es-ES",
+    htmlLang: "es",
+    label: "Español",
+    ogLocale: "es_ES",
+    pathPrefix: "/es",
+    scope: "blog",
+    shortLabel: "ES",
   },
 };
 

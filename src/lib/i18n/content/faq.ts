@@ -1,4 +1,4 @@
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 import type { FaqEntry } from "@/lib/schema";
 
 export interface FaqCategoryContent {
@@ -349,7 +349,7 @@ const PL: FaqPageContent = {
   title: "Wszystko, o co ludzie pytają, zanim powierzą nam klucze do sklepów",
 };
 
-export const FAQ_PAGE_CONTENT: Record<Locale, FaqPageContent> = {
+export const FAQ_PAGE_CONTENT: Record<SiteLocale, FaqPageContent> = {
   en: EN,
   pl: PL,
 };

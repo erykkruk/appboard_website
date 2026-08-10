@@ -2,13 +2,13 @@ import { CheckIcon, CloseIcon, SectionHeading } from "@/components/ui";
 import { OPEN_SOURCE_CONTENT } from "@/lib/i18n/content/opensource";
 import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
 
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 import type { JSX } from "react";
 
 export function ComparisonSection({
   locale = DEFAULT_LOCALE,
 }: {
-  locale?: Locale;
+  locale?: SiteLocale;
 }): JSX.Element {
   const content = OPEN_SOURCE_CONTENT[locale].comparison;
   const rows = content.rows;

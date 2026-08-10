@@ -4,13 +4,13 @@ import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
 import { APP_URL, GITHUB_URL } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 import type { JSX } from "react";
 
 export function PricingTiersSection({
   locale = DEFAULT_LOCALE,
 }: {
-  locale?: Locale;
+  locale?: SiteLocale;
 }): JSX.Element {
   const content = PRICING_CONTENT[locale].tiers;
 

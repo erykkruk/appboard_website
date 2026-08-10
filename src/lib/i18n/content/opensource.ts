@@ -1,4 +1,4 @@
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 
 export type OpenSourceRepoId = "backend" | "panel" | "website";
 
@@ -542,7 +542,7 @@ const PL: OpenSourceContent = {
   },
 };
 
-export const OPEN_SOURCE_CONTENT: Record<Locale, OpenSourceContent> = {
+export const OPEN_SOURCE_CONTENT: Record<SiteLocale, OpenSourceContent> = {
   en: EN,
   pl: PL,
 };

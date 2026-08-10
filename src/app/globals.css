@@ -244,6 +244,17 @@ body {
   font-size: 0.9375rem;
 }
 
+/*
+ * Long compounds (German "Organisationskonto", "D-U-N-S-Nummer") set a cell's
+ * min-content width and push the whole page wider than the viewport on phones.
+ * `anywhere` lets the word break AND shrinks min-content, which `break-word`
+ * does not. Shorter-word locales are unaffected because nothing needs breaking.
+ */
+.prose th,
+.prose td {
+  overflow-wrap: anywhere;
+}
+
 .prose th {
   text-align: left;
   font-weight: 600;
