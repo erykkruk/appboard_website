@@ -1,3 +1,4 @@
+import type { Locale } from "@/lib/i18n/locales";
 import { buildAlternates, findRoutePair } from "@/lib/i18n/routes";
 
 export interface BlogArticle {
@@ -141,6 +142,19 @@ export const BLOG_ARTICLES_PL: BlogArticle[] = [
   },
 ];
 
+/**
+ * Every locale that has articles. A locale is absent until its first article
+ * ships, which is what lets a blog-only locale be registered ahead of content.
+ */
+export const BLOG_ARTICLES_BY_LOCALE: Partial<Record<Locale, BlogArticle[]>> = {
+  en: BLOG_ARTICLES,
+  pl: BLOG_ARTICLES_PL,
+};
+
+export function getArticlesFor(locale: Locale): BlogArticle[] {
+  return BLOG_ARTICLES_BY_LOCALE[locale] ?? [];
+}
+
 export function getArticle(slug: string): BlogArticle | undefined {
   return BLOG_ARTICLES.find((article) => article.slug === slug);
 }
@@ -150,11 +164,11 @@ export function getArticlePl(slug: string): BlogArticle | undefined {
 }
 
 export function getPlSlugForEn(slug: string): string | undefined {
-  return findRoutePair(`/blog/${slug}`)?.pl.replace("/pl/blog/", "");
+  return findRoutePair(`/blog/${slug}`)?.pl?.replace("/pl/blog/", "");
 }
 
 export function getEnSlugForPl(slug: string): string | undefined {
-  return findRoutePair(`/pl/blog/${slug}`)?.en.replace("/blog/", "");
+  return findRoutePair(`/pl/blog/${slug}`)?.en?.replace("/blog/", "");
 }
 
 export function buildBlogAlternates(enSlug: string): Record<string, string> {

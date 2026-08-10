@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-import { LOCALE_CONFIG, LOCALE_LIST, type Locale } from "@/lib/i18n/locales";
-import { switcherTarget } from "@/lib/i18n/routes";
+import { LOCALE_CONFIG, type Locale } from "@/lib/i18n/locales";
+import { switcherOptions } from "@/lib/i18n/routes";
 import { cn } from "@/lib/utils";
 
 import type { JSX } from "react";
@@ -25,6 +25,7 @@ export function LanguageSwitcher({
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const current = LOCALE_CONFIG[locale];
+  const options = switcherOptions(pathname);
 
   useEffect(() => {
     if (!isOpen) {
@@ -81,22 +82,22 @@ export function LanguageSwitcher({
         )}
         role="menu"
       >
-        {LOCALE_LIST.map((option) => (
+        {options.map(({ config, href }) => (
           <Link
-            aria-current={option.code === locale ? "true" : undefined}
+            aria-current={config.code === locale ? "true" : undefined}
             className={cn(
               "block px-3 py-2 text-sm transition-colors hover:bg-panel",
-              option.code === locale
+              config.code === locale
                 ? "text-foreground"
                 : "text-muted hover:text-foreground",
             )}
-            href={switcherTarget(pathname, option.code)}
-            hrefLang={option.htmlLang}
-            key={option.code}
+            href={href}
+            hrefLang={config.htmlLang}
+            key={config.code}
             onClick={() => setIsOpen(false)}
             role="menuitem"
           >
-            {option.label}
+            {config.label}
           </Link>
         ))}
       </div>

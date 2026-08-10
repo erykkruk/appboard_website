@@ -1,7 +1,7 @@
-import { BLOG_ARTICLES, BLOG_ARTICLES_PL } from "@/lib/blog";
+import { BLOG_ARTICLES_BY_LOCALE } from "@/lib/blog";
 import { ALL_DOC_PAGES } from "@/lib/docs";
-import { DEFAULT_LOCALE, LOCALES } from "@/lib/i18n/locales";
-import { getLocalizedPath } from "@/lib/i18n/routes";
+import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
+import { getLocalizedPath, localesForPath } from "@/lib/i18n/routes";
 import { absoluteUrl } from "@/lib/seo";
 
 import type { MetadataRoute } from "next";
@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.flatMap((route) =>
-    LOCALES.map((locale) => ({
+    localesForPath(route.path).map((locale) => ({
       changeFrequency: route.changeFrequency,
       lastModified: now,
       priority:
@@ -40,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const docEntries: MetadataRoute.Sitemap = ALL_DOC_PAGES.flatMap((page) =>
-    LOCALES.map((locale) => ({
+    localesForPath(`/docs/${page.slug}`).map((locale) => ({
       changeFrequency: "monthly" as const,
       lastModified: now,
       priority: 0.6,
@@ -48,21 +48,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  const blogEntries: MetadataRoute.Sitemap = BLOG_ARTICLES.map((article) => ({
-    changeFrequency: "monthly" as const,
-    lastModified: new Date(article.date),
-    priority: 0.6,
-    url: absoluteUrl(`/blog/${article.slug}`),
-  }));
-
-  const blogPlEntries: MetadataRoute.Sitemap = BLOG_ARTICLES_PL.map(
-    (article) => ({
+  const blogEntries: MetadataRoute.Sitemap = Object.entries(
+    BLOG_ARTICLES_BY_LOCALE,
+  ).flatMap(([locale, articles]) =>
+    articles.map((article) => ({
       changeFrequency: "monthly" as const,
       lastModified: new Date(article.date),
       priority: 0.6,
-      url: absoluteUrl(`/pl/blog/${article.slug}`),
-    }),
+      url: absoluteUrl(
+        locale === DEFAULT_LOCALE
+          ? `/blog/${article.slug}`
+          : `/${locale}/blog/${article.slug}`,
+      ),
+    })),
   );
 
-  return [...staticEntries, ...docEntries, ...blogEntries, ...blogPlEntries];
+  return [...staticEntries, ...docEntries, ...blogEntries];
 }

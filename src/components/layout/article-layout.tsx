@@ -3,11 +3,7 @@ import Link from "next/link";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ArrowRightIcon, ButtonLink, Eyebrow, JsonLd } from "@/components/ui";
-import {
-  BLOG_ARTICLES,
-  BLOG_ARTICLES_PL,
-  type BlogArticle,
-} from "@/lib/blog";
+import { getArticlesFor, type BlogArticle } from "@/lib/blog";
 import { getChrome } from "@/lib/i18n/dictionaries";
 import {
   DEFAULT_LOCALE,
@@ -40,11 +36,6 @@ interface ArticleChrome {
   translationLabel: string;
 }
 
-const ARTICLE_LISTS: Record<Locale, BlogArticle[]> = {
-  en: BLOG_ARTICLES,
-  pl: BLOG_ARTICLES_PL,
-};
-
 const BLOG_HREF: Record<Locale, string> = {
   en: "/blog",
   pl: "/pl/blog",
@@ -60,7 +51,7 @@ function articleChrome(locale: Locale): ArticleChrome {
   const config = LOCALE_CONFIG[locale];
 
   return {
-    articles: ARTICLE_LISTS[locale],
+    articles: getArticlesFor(locale),
     backToBlog: chrome.articleBackToBlog,
     blogHref: BLOG_HREF[locale],
     ctaBody: chrome.articleCtaBody,
