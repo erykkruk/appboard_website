@@ -18,7 +18,7 @@ const article = getArticle(SLUG);
 export const metadata: Metadata = buildPageMetadata({
   description:
     "A comparison of the best ASO tools in 2026 with prices checked against vendor pages: AppTweak, App Radar, Appfigures, Mobile Action, AppFollow, AppBoard and more.",
-  languages: buildBlogAlternates(SLUG, PL_SLUG),
+  languages: buildBlogAlternates(SLUG),
   locale: "en_US",
   path: `/blog/${SLUG}`,
   title: "The best ASO tools in 2026",

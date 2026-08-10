@@ -8,20 +8,24 @@ import {
   BLOG_ARTICLES_PL,
   type BlogArticle,
 } from "@/lib/blog";
+import { getChrome } from "@/lib/i18n/dictionaries";
+import {
+  DEFAULT_LOCALE,
+  LOCALE_CONFIG,
+  type Locale,
+} from "@/lib/i18n/locales";
 import { absoluteUrl, APP_URL, SITE_NAME } from "@/lib/seo";
 
 import type { JSX, ReactNode } from "react";
 
-export type ArticleLocale = "en" | "pl";
-
 interface ArticleLayoutProps {
   article: BlogArticle;
   children: ReactNode;
-  locale?: ArticleLocale;
+  locale?: Locale;
   translationHref?: string;
 }
 
-interface LocaleConfig {
+interface ArticleChrome {
   articles: BlogArticle[];
   backToBlog: string;
   blogHref: string;
@@ -36,38 +40,40 @@ interface LocaleConfig {
   translationLabel: string;
 }
 
-const LOCALES: Record<ArticleLocale, LocaleConfig> = {
-  en: {
-    articles: BLOG_ARTICLES,
-    backToBlog: "Back to blog",
-    blogHref: "/blog",
-    ctaBody:
-      "See how AppBoard handles listings, versioning, keywords, and reviews for both stores — no signup required.",
-    ctaButton: "Open the live demo",
-    ctaTitle: "Try this workflow in AppBoard",
-    dateLocale: "en-US",
-    htmlLang: "en",
-    inLanguage: "en-US",
-    moreArticles: "More articles",
-    readingSuffix: "min read",
-    translationLabel: "Przeczytaj po polsku",
-  },
-  pl: {
-    articles: BLOG_ARTICLES_PL,
-    backToBlog: "Wróć na blog",
-    blogHref: "/pl/blog",
-    ctaBody:
-      "Zobacz, jak AppBoard prowadzi listingi, wersjonowanie, słowa kluczowe i opinie w obu sklepach. Bez zakładania konta.",
-    ctaButton: "Otwórz demo",
-    ctaTitle: "Sprawdź ten workflow w AppBoard",
-    dateLocale: "pl-PL",
-    htmlLang: "pl",
-    inLanguage: "pl-PL",
-    moreArticles: "Więcej artykułów",
-    readingSuffix: "min czytania",
-    translationLabel: "Read in English",
-  },
+const ARTICLE_LISTS: Record<Locale, BlogArticle[]> = {
+  en: BLOG_ARTICLES,
+  pl: BLOG_ARTICLES_PL,
 };
+
+const BLOG_HREF: Record<Locale, string> = {
+  en: "/blog",
+  pl: "/pl/blog",
+};
+
+const TRANSLATION_LABEL: Record<Locale, string> = {
+  en: "Przeczytaj po polsku",
+  pl: "Read in English",
+};
+
+function articleChrome(locale: Locale): ArticleChrome {
+  const chrome = getChrome(locale);
+  const config = LOCALE_CONFIG[locale];
+
+  return {
+    articles: ARTICLE_LISTS[locale],
+    backToBlog: chrome.articleBackToBlog,
+    blogHref: BLOG_HREF[locale],
+    ctaBody: chrome.articleCtaBody,
+    ctaButton: chrome.articleCtaButton,
+    ctaTitle: chrome.articleCtaTitle,
+    dateLocale: config.hreflang,
+    htmlLang: config.htmlLang,
+    inLanguage: config.hreflang,
+    moreArticles: chrome.articleMore,
+    readingSuffix: chrome.articleReadingSuffix,
+    translationLabel: TRANSLATION_LABEL[locale],
+  };
+}
 
 function formatDate(date: string, dateLocale: string): string {
   return new Date(`${date}T00:00:00Z`).toLocaleDateString(dateLocale, {
@@ -80,7 +86,7 @@ function formatDate(date: string, dateLocale: string): string {
 
 function buildArticleSchema(
   article: BlogArticle,
-  config: LocaleConfig,
+  config: ArticleChrome,
 ): Record<string, unknown> {
   const url = absoluteUrl(`${config.blogHref}/${article.slug}`);
 
@@ -112,10 +118,10 @@ function buildArticleSchema(
 export function ArticleLayout({
   article,
   children,
-  locale = "en",
+  locale = DEFAULT_LOCALE,
   translationHref,
 }: ArticleLayoutProps): JSX.Element {
-  const config = LOCALES[locale];
+  const config = articleChrome(locale);
   const moreArticles = config.articles
     .filter((candidate) => candidate.slug !== article.slug)
     .slice(0, 2);
@@ -123,7 +129,7 @@ export function ArticleLayout({
   return (
     <>
       <JsonLd data={buildArticleSchema(article, config)} />
-      <Header />
+      <Header locale={locale} />
       <main className="relative w-full flex-1">
         <section className="px-4 pb-10 pt-20 sm:px-6 sm:pt-28">
           <div className="mx-auto max-w-3xl">
@@ -230,7 +236,7 @@ export function ArticleLayout({
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </>
   );
 }

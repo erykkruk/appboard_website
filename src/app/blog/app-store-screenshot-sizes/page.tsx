@@ -18,7 +18,7 @@ const article = getArticle(SLUG);
 export const metadata: Metadata = buildPageMetadata({
   description:
     "Every App Store and Google Play screenshot size required in 2026, verified against Apple and Google documentation, plus how to generate the full set fast.",
-  languages: buildBlogAlternates(SLUG, PL_SLUG),
+  languages: buildBlogAlternates(SLUG),
   locale: "en_US",
   path: `/blog/${SLUG}`,
   title: "App Store screenshot sizes and dimensions (2026 guide)",

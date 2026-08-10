@@ -18,7 +18,7 @@ const article = getArticlePl(SLUG);
 export const metadata: Metadata = buildPageMetadata({
   description:
     "Ile kosztuje promocja aplikacji mobilnej w Polsce: stawki agencji w złotówkach, benchmarki CPI, kanały które działają i moment, w którym warto zlecić to na zewnątrz.",
-  languages: buildBlogAlternates(EN_SLUG, SLUG),
+  languages: buildBlogAlternates(EN_SLUG),
   locale: "pl_PL",
   path: `/pl/blog/${SLUG}`,
   title: "Promocja aplikacji mobilnej: ile to kosztuje i co naprawdę działa",

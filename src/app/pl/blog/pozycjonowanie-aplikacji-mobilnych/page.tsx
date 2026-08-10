@@ -18,7 +18,7 @@ const article = getArticlePl(SLUG);
 export const metadata: Metadata = buildPageMetadata({
   description:
     "Pozycjonowanie aplikacji mobilnych (ASO) w 2026: aktualne limity znaków, polska fleksja w słowach kluczowych, testy A/B w sklepach i narzędzia, które nadal istnieją.",
-  languages: buildBlogAlternates(EN_SLUG, SLUG),
+  languages: buildBlogAlternates(EN_SLUG),
   locale: "pl_PL",
   path: `/pl/blog/${SLUG}`,
   title: "Pozycjonowanie aplikacji mobilnych (ASO): przewodnik na 2026",
