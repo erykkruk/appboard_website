@@ -8,129 +8,72 @@ import {
   SectionHeading,
   VideoDemo,
 } from "@/components/ui";
+import { HOME_CONTENT } from "@/lib/i18n/content/home";
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
 import { DiffDemo } from "./diff-demo";
 import { TranslateDemo } from "./translate-demo";
 
+import type { TourStopContent } from "@/lib/i18n/content/home";
 import type { JSX, ReactNode } from "react";
 
-interface TourStop {
-  docsHref: string;
-  docsLabel: string;
-  eyebrow: string;
-  lead: string;
-  points: string[];
-  title: string;
+interface TourStop extends TourStopContent {
   visual: ReactNode;
   wide?: boolean;
 }
 
-const TOUR_STOPS: TourStop[] = [
-  {
-    docsHref: "/docs/listings",
-    docsLabel: "Listings and languages",
-    eyebrow: "One editor",
-    lead: "Connect App Store Connect and Google Play once and AppBoard pulls every localization from both stores. From then on the title, subtitle, description, keywords and what's new for every language live in a single editor, as drafts.",
-    points: [
-      "Character counters tick against each store's real limits as you type",
-      "Languages you touched stay marked until you push them",
-      "Drafts sit next to what is actually live in the store",
-    ],
-    title: "Every language in one editor",
-    visual: (
-      <ScreenshotFrame
-        alt="AppBoard listings editor with title, short description and full description fields, per-language tabs and live character counters"
-        src="/images/panel/app-listings-editor.png"
-      />
-    ),
-  },
-  {
-    docsHref: "/docs/publishing",
-    docsLabel: "Publishing",
-    eyebrow: "Diff before publish",
-    lead: "Before anything reaches a store you see a GitHub-style diff: exactly which fields changed, in which language, old value against what is live right now. Then push to both stores from one dashboard and get a per-item report.",
-    points: [
-      "Red and green, field by field, language by language",
-      "Push as a draft or send straight for review",
-      "Nothing leaves your draft until you press publish",
-    ],
-    title: "See exactly what changes before it goes live",
-    visual: <DiffDemo />,
-  },
-  {
-    docsHref: "/docs/ai-assistant",
-    docsLabel: "AI assistant",
-    eyebrow: "AI translation",
-    lead: "Translation that understands ASO instead of translating word for word. Titles, subtitles and keywords are localized with your store limits and keyword intent in mind, and brand terms you mark as do-not-translate stay untouched.",
-    points: [
-      "Per-field do-not-translate terms for brand and product names",
-      "Free-text instructions to steer tone and glossary",
-      "Runs on your own OpenRouter key, with any model you pick",
-    ],
-    title: "AI translation that speaks ASO, not just German",
-    visual: <TranslateDemo />,
-  },
-  {
-    docsHref: "/docs/history-and-rollback",
-    docsLabel: "History and rollback",
-    eyebrow: "History",
-    lead: "Every published change is recorded per field and per language with a timestamp, so you can answer what did we change in May without scrolling Slack. When an update turns out to be a mistake, one click puts the old value back in your draft.",
-    points: [
-      "Filter the log by field and by language",
-      "One-click rollback into your draft, never straight to the store",
-      "A full audit trail of who changed what, and when",
-    ],
-    title: "An undo button for your store listing",
-    visual: (
-      <ScreenshotFrame
-        alt="AppBoard change history with GitHub-style red and green diffs per field and language, and rollback buttons"
-        src="/images/panel/app-history.png"
-      />
-    ),
-  },
-  {
-    docsHref: "/docs/screenshots",
-    docsLabel: "Screenshots and graphics",
-    eyebrow: "Screenshots",
-    lead: "Screenshots, icons and feature graphics live in one grid, per device and per language. Design them in the built-in editor, tilt a real 3D device, and export at the exact size each store demands. This is the actual editor, recorded in the browser.",
-    points: [
-      "Per language and per device, from iPhone to 10 inch tablets",
-      "Real WebGL device models you can rotate, plus 40 scene templates",
-      "Free to use without an account, and nothing is uploaded to a server",
-    ],
-    title: "A graphics editor that knows every store size",
-    visual: (
-      <VideoDemo
-        caption="Pick a template, tilt the 3D device, export at store size"
-        height={800}
-        poster="/videos/editor-demo-poster.jpg"
-        src="/videos/editor-demo.mp4"
-        title="Screen recording of the AppBoard screenshot editor: applying the Hero 3D scene template and rotating a WebGL iPhone model through pose presets"
-        width={1280}
-      />
-    ),
-    wide: true,
-  },
-  {
-    docsHref: "/docs/research",
-    docsLabel: "Research and reviews",
-    eyebrow: "Research",
-    lead: "AppBoard reads the reviews for you and groups the complaints into themes, so you learn what keeps breaking without reading hundreds of them. The same research works on competitors, alongside keyword positions and market comparisons.",
-    points: [
-      "Review themes, sentiment and what users love or hate most",
-      "Keyword rank tracking with day-over-day movement",
-      "Works on any store app, not only the ones you connected",
-    ],
-    title: "Find out what users actually complain about",
-    visual: (
-      <ScreenshotFrame
-        alt="AppBoard review analysis with an AI summary, positive and negative sentiment counts, features users love against features they criticize, and a ranked list of top user irritations"
-        src="/images/panel/research-analysis.png"
-      />
-    ),
-  },
-];
+const WIDE_STOP_INDEX = 4;
+
+function tourVisual(
+  index: number,
+  stop: TourStopContent,
+  locale: Locale,
+): ReactNode {
+  switch (index) {
+    case 1:
+      return <DiffDemo locale={locale} />;
+    case 2:
+      return <TranslateDemo locale={locale} />;
+    case 3:
+      return (
+        <ScreenshotFrame alt={stop.visualAlt} src="/images/panel/app-history.png" />
+      );
+    case WIDE_STOP_INDEX:
+      return (
+        <VideoDemo
+          caption={stop.videoCaption}
+          height={800}
+          poster="/videos/editor-demo-poster.jpg"
+          src="/videos/editor-demo.mp4"
+          title={stop.visualAlt}
+          width={1280}
+        />
+      );
+    case 5:
+      return (
+        <ScreenshotFrame
+          alt={stop.visualAlt}
+          src="/images/panel/research-analysis.png"
+        />
+      );
+    default:
+      return (
+        <ScreenshotFrame
+          alt={stop.visualAlt}
+          src="/images/panel/app-listings-editor.png"
+        />
+      );
+  }
+}
+
+function tourStops(locale: Locale): TourStop[] {
+  return HOME_CONTENT[locale].tour.stops.map((stop, index) => ({
+    ...stop,
+    visual: tourVisual(index, stop, locale),
+    ...(index === WIDE_STOP_INDEX ? { wide: true } : {}),
+  }));
+}
 
 function TourCopy({ stop }: { stop: TourStop }): JSX.Element {
   return (
@@ -186,18 +129,21 @@ function TourStopRow({ index, stop }: { index: number; stop: TourStop }): JSX.El
   );
 }
 
-export function ProductTourSection(): JSX.Element {
+export function ProductTourSection({
+  locale = DEFAULT_LOCALE,
+}: {
+  locale?: Locale;
+}): JSX.Element {
+  const copy = HOME_CONTENT[locale].tour;
+
   return (
     <section className="scroll-mt-24 px-4 py-24 sm:px-6" id="tour">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <SectionHeading
-            eyebrow="Inside the panel"
-            title="This is what you actually get"
-          />
+          <SectionHeading eyebrow={copy.eyebrow} title={copy.title} />
         </Reveal>
         <div className="mt-16 space-y-28">
-          {TOUR_STOPS.map((stop, index) => (
+          {tourStops(locale).map((stop, index) => (
             <TourStopRow index={index} key={stop.eyebrow} stop={stop} />
           ))}
         </div>

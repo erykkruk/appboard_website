@@ -1,41 +1,33 @@
 import { SectionHeading } from "@/components/ui";
+import { PRICING_CONTENT } from "@/lib/i18n/content/pricing";
+import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
 
+import type { Locale } from "@/lib/i18n/locales";
 import type { FaqEntry } from "@/lib/schema";
 import type { JSX } from "react";
 
-export const PRICING_FAQ: FaqEntry[] = [
-  {
-    answer:
-      "Yes. AppBoard is in early access and every plan is free while we are in beta. We will announce final pricing before general availability, with plenty of notice for existing users.",
-    question: "Is AppBoard really free right now?",
-  },
-  {
-    answer:
-      "AppBoard connects to App Store Connect (Apple App Store) and Google Play Console (Google Play). You can manage listings for both stores from a single workspace.",
-    question: "Which app stores does AppBoard support?",
-  },
-  {
-    answer:
-      "Store credentials are protected by an end-to-end encrypted vault. Keys are encrypted with a passphrase-derived key, so they are never stored or readable in plaintext on our servers.",
-    question: "How are my store credentials protected?",
-  },
-  {
-    answer:
-      "The AI assistant runs on OpenRouter, so you can pick any supported model for generating descriptions, translations, ASO keyword suggestions, and review replies.",
-    question: "Which AI models can I use?",
-  },
-];
+export function getPricingFaq(locale: Locale): FaqEntry[] {
+  return PRICING_CONTENT[locale].faq.entries;
+}
 
-export function PricingFaqSection(): JSX.Element {
+export const PRICING_FAQ: FaqEntry[] = getPricingFaq(DEFAULT_LOCALE);
+
+export function PricingFaqSection({
+  locale = DEFAULT_LOCALE,
+}: {
+  locale?: Locale;
+}): JSX.Element {
+  const content = PRICING_CONTENT[locale].faq;
+
   return (
     <section className="border-t border-line bg-surface px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-3xl">
         <SectionHeading
-          eyebrow="FAQ"
-          title="Frequently asked questions"
+          eyebrow={content.eyebrow}
+          title={content.title}
         />
         <dl className="mt-12 space-y-8">
-          {PRICING_FAQ.map((entry) => (
+          {content.entries.map((entry) => (
             <div className="rounded-2xl border border-line bg-panel/40 p-6" key={entry.question}>
               <dt className="font-semibold text-foreground">{entry.question}</dt>
               <dd className="mt-2 text-sm leading-relaxed text-muted">{entry.answer}</dd>

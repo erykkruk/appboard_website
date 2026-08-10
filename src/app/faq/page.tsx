@@ -1,6 +1,7 @@
 import { Footer, Header } from "@/components/layout";
 import { ArrowRightIcon, ButtonLink, Eyebrow, JsonLd } from "@/components/ui";
 import { buildFaqSchema } from "@/lib/schema";
+import { buildAlternates } from "@/lib/i18n/routes";
 import { APP_URL, buildPageMetadata } from "@/lib/seo";
 
 import type { FaqEntry } from "@/lib/schema";
@@ -12,6 +13,7 @@ const FAQ_DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   description: FAQ_DESCRIPTION,
+  languages: buildAlternates("/faq"),
   path: "/faq",
   title: "FAQ",
 });

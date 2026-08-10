@@ -18,7 +18,7 @@ const article = getArticle(SLUG);
 export const metadata: Metadata = buildPageMetadata({
   description:
     "How to localize your app store listing: how many languages each store supports, which markets pay back first, per-locale keyword rules, and the mistakes that waste budget.",
-  languages: buildBlogAlternates(SLUG, PL_SLUG),
+  languages: buildBlogAlternates(SLUG),
   locale: "en_US",
   path: `/blog/${SLUG}`,
   title: "App localization in 2026: which markets are worth it",

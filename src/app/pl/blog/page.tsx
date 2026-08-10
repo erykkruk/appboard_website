@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Footer, Header } from "@/components/layout";
 import { Eyebrow } from "@/components/ui";
 import { BLOG_ARTICLES_PL } from "@/lib/blog";
+import { buildAlternates } from "@/lib/i18n/routes";
 import { buildPageMetadata } from "@/lib/seo";
 
 import type { Metadata } from "next";
@@ -13,11 +14,7 @@ const BLOG_DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   description: BLOG_DESCRIPTION,
-  languages: {
-    "en-US": "/blog",
-    "pl-PL": "/pl/blog",
-    "x-default": "/blog",
-  },
+  languages: buildAlternates("/blog"),
   locale: "pl_PL",
   path: "/pl/blog",
   title: "Blog po polsku",
@@ -39,7 +36,7 @@ export default function BlogPlPage(): JSX.Element {
 
   return (
     <>
-      <Header />
+      <Header locale="pl" />
       <main className="relative w-full flex-1" lang="pl">
         <section className="px-4 pb-10 pt-20 sm:px-6 sm:pt-28">
           <div className="mx-auto max-w-3xl">
@@ -103,7 +100,7 @@ export default function BlogPlPage(): JSX.Element {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer locale="pl" />
     </>
   );
 }

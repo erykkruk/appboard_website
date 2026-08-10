@@ -1,9 +1,17 @@
 import { ArrowRightIcon, ButtonLink, Highlight } from "@/components/ui";
+import { HOME_CONTENT } from "@/lib/i18n/content/home";
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
 import { APP_URL } from "@/lib/seo";
 
 import type { JSX } from "react";
 
-export function CtaSection(): JSX.Element {
+export function CtaSection({
+  locale = DEFAULT_LOCALE,
+}: {
+  locale?: Locale;
+}): JSX.Element {
+  const copy = HOME_CONTENT[locale].cta;
+
   return (
     <section className="px-4 py-24 sm:px-6">
       <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-line bg-surface px-6 py-16 text-center sm:px-12">
@@ -13,19 +21,17 @@ export function CtaSection(): JSX.Element {
         />
         <div className="relative">
           <h2 className="display text-4xl text-foreground sm:text-6xl">
-            Your next release day could be <Highlight>calm</Highlight>
+            {`${copy.titleLead} `}
+            <Highlight>{copy.titleHighlight}</Highlight>
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
-            Click into the live demo and poke around a real workspace, or connect
-            your own stores in a few minutes. Free while in beta.
-          </p>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-muted">{copy.lead}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <ButtonLink href={`${APP_URL}/demo`} size="lg" variant="primary">
-              Open the live demo
+              {copy.primaryCta}
               <ArrowRightIcon className="size-4" />
             </ButtonLink>
             <ButtonLink href={APP_URL} size="lg" variant="secondary">
-              Create free account
+              {copy.secondaryCta}
             </ButtonLink>
           </div>
         </div>

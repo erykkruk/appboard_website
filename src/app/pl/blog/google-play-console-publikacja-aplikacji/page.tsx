@@ -18,7 +18,7 @@ const article = getArticlePl(SLUG);
 export const metadata: Metadata = buildPageMetadata({
   description:
     "Google Play Console w 2026: konto osobiste czy organizacji, numer D-U-N-S, wymóg 12 testerów przez 14 dni, limity znaków i pełna specyfikacja grafik.",
-  languages: buildBlogAlternates(EN_SLUG, SLUG),
+  languages: buildBlogAlternates(EN_SLUG),
   locale: "pl_PL",
   path: `/pl/blog/${SLUG}`,
   title: "Google Play Console: publikacja aplikacji krok po kroku (2026)",

@@ -9,46 +9,29 @@ import {
   SectionHeading,
   ShieldIcon,
 } from "@/components/ui";
+import { OPEN_SOURCE_CONTENT } from "@/lib/i18n/content/opensource";
+import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
 import { DISCORD_URL, GITHUB_URL } from "@/lib/seo";
 
+import type { Locale } from "@/lib/i18n/locales";
 import type { JSX, ReactNode } from "react";
-
-interface SelfHostedPoint {
-  description: string;
-  icon: ReactNode;
-  title: string;
-}
 
 const ICON_CLASS = "size-5";
 
-const POINTS: SelfHostedPoint[] = [
-  {
-    description:
-      "Deploy the whole stack on your own VPS or cloud with Docker. Your database, your store credentials, your rules — nothing leaves your infrastructure.",
-    icon: <LockIcon className={ICON_CLASS} />,
-    title: "Own your data",
-  },
-  {
-    description:
-      "The full source is public — read it, audit it, and adapt it to your workflow. Free for personal and non-commercial use.",
-    icon: <BranchIcon className={ICON_CLASS} />,
-    title: "Source-available",
-  },
-  {
-    description:
-      "One backend, one panel, one Postgres. Runs on anything that runs Docker — a spare VPS, your homelab, or an existing cluster. No vendor lock-in.",
-    icon: <RocketIcon className={ICON_CLASS} />,
-    title: "Deploy anywhere",
-  },
-  {
-    description:
-      "Store keys live in an end-to-end encrypted vault on your server. Self-hosting keeps your App Store and Google Play credentials entirely under your control.",
-    icon: <ShieldIcon className={ICON_CLASS} />,
-    title: "Credentials stay yours",
-  },
+const POINT_ICONS: ReactNode[] = [
+  <LockIcon className={ICON_CLASS} key="own-your-data" />,
+  <BranchIcon className={ICON_CLASS} key="source-available" />,
+  <RocketIcon className={ICON_CLASS} key="deploy-anywhere" />,
+  <ShieldIcon className={ICON_CLASS} key="credentials-stay-yours" />,
 ];
 
-export function SelfHostedSection(): JSX.Element {
+export function SelfHostedSection({
+  locale = DEFAULT_LOCALE,
+}: {
+  locale?: Locale;
+}): JSX.Element {
+  const content = OPEN_SOURCE_CONTENT[locale].selfHosted;
+
   return (
     <section
       className="scroll-mt-24 border-y border-line bg-surface px-4 py-24 sm:px-6"
@@ -56,19 +39,20 @@ export function SelfHostedSection(): JSX.Element {
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          description="AppBoard is source-available and self-hostable. Run it on your own servers and keep full control of your data — free for personal and non-commercial use."
-          eyebrow="Self-hosted"
+          description={content.description}
+          eyebrow={content.eyebrow}
           title={
             <>
-              Own your data. Run it on your <Highlight>own servers</Highlight>
+              {`${content.titleLead} `}
+              <Highlight>{content.titleHighlight}</Highlight>
             </>
           }
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {POINTS.map((point) => (
+          {content.points.map((point, index) => (
             <FeatureCard
               description={point.description}
-              icon={point.icon}
+              icon={POINT_ICONS[index]}
               key={point.title}
               title={point.title}
             />
@@ -77,20 +61,17 @@ export function SelfHostedSection(): JSX.Element {
         <div className="mt-12 flex flex-col items-center gap-4">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <ButtonLink href={GITHUB_URL} size="lg" variant="primary">
-              View on GitHub
+              {content.githubCta}
             </ButtonLink>
-            <ButtonLink href="/docs/self-hosting" size="lg" variant="secondary">
-              Self-hosting guide
+            <ButtonLink href={content.docsHref} size="lg" variant="secondary">
+              {content.docsCta}
             </ButtonLink>
             <ButtonLink href={DISCORD_URL} size="lg" variant="secondary">
               <DiscordIcon className="size-4" />
-              Join our Discord
+              {content.discordCta}
             </ButtonLink>
           </div>
-          <p className="text-sm text-muted">
-            Source-available under the PolyForm Noncommercial License — free for
-            personal &amp; non-commercial use.
-          </p>
+          <p className="text-sm text-muted">{content.licenseNote}</p>
         </div>
       </div>
     </section>

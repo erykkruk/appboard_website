@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Footer, Header } from "@/components/layout";
 import { Eyebrow } from "@/components/ui";
 import { BLOG_ARTICLES } from "@/lib/blog";
+import { buildAlternates } from "@/lib/i18n/routes";
 import { buildPageMetadata } from "@/lib/seo";
 
 import type { Metadata } from "next";
@@ -13,6 +14,7 @@ const BLOG_DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   description: BLOG_DESCRIPTION,
+  languages: buildAlternates("/blog"),
   path: "/blog",
   title: "Blog",
 });

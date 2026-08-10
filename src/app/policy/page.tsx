@@ -1,4 +1,5 @@
 import { LegalPageLayout } from "@/components/layout";
+import { buildAlternates } from "@/lib/i18n/routes";
 import { buildPageMetadata, SITE_NAME } from "@/lib/seo";
 
 import type { Metadata } from "next";
@@ -12,6 +13,7 @@ const DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   description: DESCRIPTION,
+  languages: buildAlternates("/policy"),
   path: "/policy",
   title: "Privacy Policy",
 });

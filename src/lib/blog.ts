@@ -1,3 +1,6 @@
+import type { Locale } from "@/lib/i18n/locales";
+import { buildAlternates, findRoutePair } from "@/lib/i18n/routes";
+
 export interface BlogArticle {
   date: string;
   description: string;
@@ -139,16 +142,18 @@ export const BLOG_ARTICLES_PL: BlogArticle[] = [
   },
 ];
 
-const EN_TO_PL_SLUG: Record<string, string> = {
-  "app-store-localization": "google-play-console-publikacja-aplikacji",
-  "app-store-optimization-services": "promocja-aplikacji-mobilnej",
-  "app-store-screenshot-sizes": "app-store-connect-publikacja-aplikacji",
-  "best-aso-tools": "pozycjonowanie-aplikacji-mobilnych",
+/**
+ * Every locale that has articles. A locale is absent until its first article
+ * ships, which is what lets a blog-only locale be registered ahead of content.
+ */
+export const BLOG_ARTICLES_BY_LOCALE: Partial<Record<Locale, BlogArticle[]>> = {
+  en: BLOG_ARTICLES,
+  pl: BLOG_ARTICLES_PL,
 };
 
-const PL_TO_EN_SLUG: Record<string, string> = Object.fromEntries(
-  Object.entries(EN_TO_PL_SLUG).map(([en, pl]) => [pl, en]),
-);
+export function getArticlesFor(locale: Locale): BlogArticle[] {
+  return BLOG_ARTICLES_BY_LOCALE[locale] ?? [];
+}
 
 export function getArticle(slug: string): BlogArticle | undefined {
   return BLOG_ARTICLES.find((article) => article.slug === slug);
@@ -159,20 +164,13 @@ export function getArticlePl(slug: string): BlogArticle | undefined {
 }
 
 export function getPlSlugForEn(slug: string): string | undefined {
-  return EN_TO_PL_SLUG[slug];
+  return findRoutePair(`/blog/${slug}`)?.pl?.replace("/pl/blog/", "");
 }
 
 export function getEnSlugForPl(slug: string): string | undefined {
-  return PL_TO_EN_SLUG[slug];
+  return findRoutePair(`/pl/blog/${slug}`)?.en?.replace("/blog/", "");
 }
 
-export function buildBlogAlternates(
-  enSlug: string,
-  plSlug: string,
-): Record<string, string> {
-  return {
-    "en-US": `/blog/${enSlug}`,
-    "pl-PL": `/pl/blog/${plSlug}`,
-    "x-default": `/blog/${enSlug}`,
-  };
+export function buildBlogAlternates(enSlug: string): Record<string, string> {
+  return buildAlternates(`/blog/${enSlug}`);
 }

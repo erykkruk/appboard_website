@@ -18,7 +18,7 @@ const article = getArticle(SLUG);
 export const metadata: Metadata = buildPageMetadata({
   description:
     "What app store optimization services actually deliver, what agencies cost in 2026, how that compares to doing ASO yourself with tools, and how to vet a vendor.",
-  languages: buildBlogAlternates(SLUG, PL_SLUG),
+  languages: buildBlogAlternates(SLUG),
   locale: "en_US",
   path: `/blog/${SLUG}`,
   title: "App store optimization services vs doing it yourself (2026)",

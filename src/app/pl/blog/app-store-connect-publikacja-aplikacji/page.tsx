@@ -18,7 +18,7 @@ const article = getArticlePl(SLUG);
 export const metadata: Metadata = buildPageMetadata({
   description:
     "App Store Connect od podstaw: klucz API i plik .p8, role użytkowników, limity metadanych, pole keywords liczone w bajtach i aktualne rozmiary zrzutów ekranu.",
-  languages: buildBlogAlternates(EN_SLUG, SLUG),
+  languages: buildBlogAlternates(EN_SLUG),
   locale: "pl_PL",
   path: `/pl/blog/${SLUG}`,
   title: "App Store Connect: publikacja aplikacji krok po kroku (2026)",

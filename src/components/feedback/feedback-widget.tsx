@@ -1,8 +1,10 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import { ChatIcon, CloseIcon } from "@/components/ui";
+import { localeFromPath, type Locale } from "@/lib/i18n/locales";
 import { API_URL } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -18,12 +20,92 @@ const FEATURES = [
   "Other",
 ] as const;
 
+const FEATURE_LABELS: Record<Locale, Record<string, string>> = {
+  en: {},
+  pl: {
+    "AI assistant": "Asystent AI",
+    Listings: "Listingi",
+    Other: "Inne",
+    Publishing: "Publikacja",
+    "Research & rank tracking": "Research i pozycje",
+    Reviews: "Opinie",
+    Screenshots: "Zrzuty ekranu",
+    "Self-hosting": "Self-hosting",
+    "Store connections": "Połączenia ze sklepami",
+  },
+};
+
+interface FeedbackCopy {
+  attachments: string;
+  close: string;
+  emailLabel: string;
+  featureLabel: string;
+  filesSelected: (count: number) => string;
+  genericError: string;
+  intro: string;
+  messageLabel: string;
+  messagePlaceholder: string;
+  otherLabel: string;
+  otherPlaceholder: string;
+  sendError: string;
+  sending: string;
+  submit: string;
+  thanksBody: string;
+  thanksTitle: string;
+  title: string;
+}
+
+const COPY: Record<Locale, FeedbackCopy> = {
+  en: {
+    attachments: "Attachments (optional)",
+    close: "Close",
+    emailLabel: "Your email",
+    featureLabel: "What's it about?",
+    filesSelected: (count) => `${count} file${count > 1 ? "s" : ""} selected`,
+    genericError: "Something went wrong. Please try again.",
+    intro: "Bugs, ideas, anything — we'd love to hear it.",
+    messageLabel: "Message",
+    messagePlaceholder: "Tell us what's on your mind…",
+    otherLabel: "Please specify",
+    otherPlaceholder: "Which area?",
+    sendError: "Failed to send feedback.",
+    sending: "Sending…",
+    submit: "Send feedback",
+    thanksBody: "Your feedback landed in our inbox. We read every message.",
+    thanksTitle: "Thank you! 🙌",
+    title: "Leave your feedback",
+  },
+  pl: {
+    attachments: "Załączniki (opcjonalnie)",
+    close: "Zamknij",
+    emailLabel: "Twój e-mail",
+    featureLabel: "Czego dotyczy?",
+    filesSelected: (count) => `Wybrane pliki: ${count}`,
+    genericError: "Coś poszło nie tak. Spróbuj ponownie.",
+    intro: "Błędy, pomysły, cokolwiek. Chętnie to przeczytamy.",
+    messageLabel: "Wiadomość",
+    messagePlaceholder: "Napisz, co Ci chodzi po głowie…",
+    otherLabel: "Doprecyzuj",
+    otherPlaceholder: "Jaki obszar?",
+    sendError: "Nie udało się wysłać wiadomości.",
+    sending: "Wysyłanie…",
+    submit: "Wyślij",
+    thanksBody:
+      "Twoja wiadomość trafiła do naszej skrzynki. Czytamy każdą z nich.",
+    thanksTitle: "Dziękujemy!",
+    title: "Napisz do nas",
+  },
+};
+
 const INPUT_CLASS =
   "w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm text-foreground outline-none transition-colors placeholder:text-muted focus:border-accent";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 export function FeedbackWidget(): React.JSX.Element {
+  const locale = localeFromPath(usePathname());
+  const copy = COPY[locale];
+  const featureLabels = FEATURE_LABELS[locale];
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [feature, setFeature] = useState<string>(FEATURES[0]);
@@ -66,13 +148,13 @@ export function FeedbackWidget(): React.JSX.Element {
           data?: { info?: string };
         };
         throw new Error(
-          data.data?.info ?? "Something went wrong. Please try again.",
+          data.data?.info ?? copy.genericError,
         );
       }
       setStatus("sent");
     } catch (err) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "Failed to send feedback.");
+      setError(err instanceof Error ? err.message : copy.sendError);
     }
   }
 
@@ -81,7 +163,7 @@ export function FeedbackWidget(): React.JSX.Element {
       <button
         type="button"
         aria-expanded={open}
-        aria-label="Leave your feedback"
+        aria-label={copy.title}
         className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-sm font-medium text-white shadow-[0_8px_30px_-6px_rgba(91,94,232,0.6)] transition-all hover:bg-accent-bright active:scale-[0.97]"
         onClick={() => setOpen((o) => !o)}
       >
@@ -90,7 +172,7 @@ export function FeedbackWidget(): React.JSX.Element {
         ) : (
           <>
             <ChatIcon className="size-5" />
-            <span className="hidden sm:inline">Leave your feedback</span>
+            <span className="hidden sm:inline">{copy.title}</span>
           </>
         )}
       </button>
@@ -103,9 +185,11 @@ export function FeedbackWidget(): React.JSX.Element {
       >
         {status === "sent" ? (
           <div className="py-4 text-center">
-            <p className="text-lg font-semibold text-foreground">Thank you! 🙌</p>
+            <p className="text-lg font-semibold text-foreground">
+              {copy.thanksTitle}
+            </p>
             <p className="mt-2 text-sm text-muted">
-              Your feedback landed in our inbox. We read every message.
+              {copy.thanksBody}
             </p>
             <button
               type="button"
@@ -115,17 +199,17 @@ export function FeedbackWidget(): React.JSX.Element {
                 setOpen(false);
               }}
             >
-              Close
+              {copy.close}
             </button>
           </div>
         ) : (
           <form className="space-y-3" onSubmit={handleSubmit}>
             <div>
               <h2 className="text-base font-semibold text-foreground">
-                Leave your feedback
+                {copy.title}
               </h2>
               <p className="mt-1 text-xs text-muted">
-                Bugs, ideas, anything — we&apos;d love to hear it.
+                {copy.intro}
               </p>
             </div>
 
@@ -134,7 +218,7 @@ export function FeedbackWidget(): React.JSX.Element {
                 className="mb-1 block text-xs text-muted"
                 htmlFor="fb-email"
               >
-                Your email
+                {copy.emailLabel}
               </label>
               <input
                 className={INPUT_CLASS}
@@ -152,7 +236,7 @@ export function FeedbackWidget(): React.JSX.Element {
                 className="mb-1 block text-xs text-muted"
                 htmlFor="fb-feature"
               >
-                What&apos;s it about?
+                {copy.featureLabel}
               </label>
               <select
                 className={INPUT_CLASS}
@@ -162,7 +246,7 @@ export function FeedbackWidget(): React.JSX.Element {
               >
                 {FEATURES.map((f) => (
                   <option key={f} value={f}>
-                    {f}
+                    {featureLabels[f] ?? f}
                   </option>
                 ))}
               </select>
@@ -174,14 +258,14 @@ export function FeedbackWidget(): React.JSX.Element {
                   className="mb-1 block text-xs text-muted"
                   htmlFor="fb-other"
                 >
-                  Please specify
+                  {copy.otherLabel}
                 </label>
                 <input
                   className={INPUT_CLASS}
                   id="fb-other"
                   maxLength={200}
                   onChange={(e) => setOtherText(e.target.value)}
-                  placeholder="Which area?"
+                  placeholder={copy.otherPlaceholder}
                   value={otherText}
                 />
               </div>
@@ -192,14 +276,14 @@ export function FeedbackWidget(): React.JSX.Element {
                 className="mb-1 block text-xs text-muted"
                 htmlFor="fb-message"
               >
-                Message
+                {copy.messageLabel}
               </label>
               <textarea
                 className={cn(INPUT_CLASS, "min-h-24 resize-y")}
                 id="fb-message"
                 maxLength={5000}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Tell us what's on your mind…"
+                placeholder={copy.messagePlaceholder}
                 required
                 value={message}
               />
@@ -210,7 +294,7 @@ export function FeedbackWidget(): React.JSX.Element {
                 className="mb-1 block text-xs text-muted"
                 htmlFor="fb-files"
               >
-                Attachments (optional)
+                {copy.attachments}
               </label>
               <input
                 className="w-full text-xs text-muted file:mr-3 file:rounded-md file:border-0 file:bg-surface file:px-3 file:py-1.5 file:text-xs file:text-foreground hover:file:bg-panel"
@@ -221,7 +305,7 @@ export function FeedbackWidget(): React.JSX.Element {
               />
               {files.length > 0 && (
                 <p className="mt-1 text-xs text-muted">
-                  {files.length} file{files.length > 1 ? "s" : ""} selected
+                  {copy.filesSelected(files.length)}
                 </p>
               )}
             </div>
@@ -235,7 +319,7 @@ export function FeedbackWidget(): React.JSX.Element {
               disabled={status === "sending"}
               type="submit"
             >
-              {status === "sending" ? "Sending…" : "Send feedback"}
+              {status === "sending" ? copy.sending : copy.submit}
             </button>
           </form>
         )}

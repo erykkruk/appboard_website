@@ -7,6 +7,7 @@ import {
 } from "@/components/sections";
 import { JsonLd } from "@/components/ui";
 import { buildFaqSchema } from "@/lib/schema";
+import { buildAlternates } from "@/lib/i18n/routes";
 import { buildPageMetadata } from "@/lib/seo";
 
 import type { Metadata } from "next";
@@ -17,6 +18,7 @@ const PRICING_DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   description: PRICING_DESCRIPTION,
+  languages: buildAlternates("/pricing"),
   path: "/pricing",
   title: "Pricing",
 });
