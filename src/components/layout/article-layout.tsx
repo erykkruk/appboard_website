@@ -37,12 +37,17 @@ interface ArticleChrome {
 }
 
 const BLOG_HREF: Record<Locale, string> = {
+  de: "/de/blog",
   en: "/blog",
+  es: "/es/blog",
   pl: "/pl/blog",
 };
 
+/** Label for the inline link to the article's counterpart in another locale. */
 const TRANSLATION_LABEL: Record<Locale, string> = {
+  de: "Read in English",
   en: "Przeczytaj po polsku",
+  es: "Read in English",
   pl: "Read in English",
 };
 

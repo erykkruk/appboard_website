@@ -12,7 +12,7 @@ import {
 import {
   DEFAULT_LOCALE,
   LOCALE_CONFIG,
-  type Locale,
+  type SiteLocale,
 } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
@@ -21,7 +21,7 @@ import type { JSX, ReactNode } from "react";
 
 interface DocsLayoutProps {
   children: ReactNode;
-  locale?: Locale;
+  locale?: SiteLocale;
   slug: string;
 }
 
@@ -35,7 +35,7 @@ interface DocsCopy {
   previous: string;
 }
 
-const DOCS_COPY: Record<Locale, DocsCopy> = {
+const DOCS_COPY: Record<SiteLocale, DocsCopy> = {
   en: {
     eyebrow: "Docs",
     fallbackTitle: "Documentation",
@@ -63,7 +63,7 @@ interface DocsRegistry {
   sections: DocSection[];
 }
 
-const DOCS_REGISTRY: Record<Locale, DocsRegistry> = {
+const DOCS_REGISTRY: Record<SiteLocale, DocsRegistry> = {
   en: {
     allPages: ALL_DOC_PAGES,
     basePath: "/docs",
@@ -82,7 +82,7 @@ function SidebarNav({
   locale,
   slug,
 }: {
-  locale: Locale;
+  locale: SiteLocale;
   slug: string;
 }): JSX.Element {
   const { basePath, sections } = DOCS_REGISTRY[locale];
@@ -128,7 +128,7 @@ function PrevNextLink({
   page,
 }: {
   direction: "next" | "prev";
-  locale: Locale;
+  locale: SiteLocale;
   page: DocPage;
 }): JSX.Element {
   const isNext = direction === "next";

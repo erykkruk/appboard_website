@@ -27,6 +27,15 @@ Not every locale gets the whole site. Each locale declares a `scope`:
 | `site` | Every page, marketing and blog | A market where we translate the product |
 | `blog` | The blog and its articles only | A market where we publish articles but do not translate the product pages |
 
+Scope is expressed in the type system, not only in data. `SITE_LOCALES` and
+`BLOG_ONLY_LOCALES` are separate tuples; `Locale` is their union and `SiteLocale`
+is the first one alone. Marketing content and marketing components are keyed by
+`SiteLocale`, so adding a blog-only locale never demands a homepage, pricing,
+docs or legal translation. Shared chrome, the article layout and the globally
+mounted feedback widget are keyed by `Locale` and must cover every market.
+
+Current state: `en` and `pl` are `site`; `de` and `es` are `blog`.
+
 A `blog` locale is filtered out of `localesForPath`, so it never reaches the
 sitemap, the `hreflang` alternates or the language switcher on a marketing page.
 There is no way to emit a link to `/de/pricing` when German is blog-scoped. On

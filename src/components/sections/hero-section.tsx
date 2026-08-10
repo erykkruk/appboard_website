@@ -1,6 +1,6 @@
 import { ArrowRightIcon, ButtonLink, Highlight, ScreenshotFrame } from "@/components/ui";
 import { HOME_CONTENT } from "@/lib/i18n/content/home";
-import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
+import { DEFAULT_LOCALE, type SiteLocale } from "@/lib/i18n/locales";
 import { APP_URL } from "@/lib/seo";
 
 import { HeroLogo3d } from "./hero-logo-3d";
@@ -10,7 +10,7 @@ import type { JSX } from "react";
 export function HeroSection({
   locale = DEFAULT_LOCALE,
 }: {
-  locale?: Locale;
+  locale?: SiteLocale;
 }): JSX.Element {
   const copy = HOME_CONTENT[locale].hero;
 

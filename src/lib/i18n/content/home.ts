@@ -1,6 +1,6 @@
 import { APP_URL, DISCORD_URL } from "@/lib/seo";
 
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 import type { FaqEntry } from "@/lib/schema";
 
 export interface HeroContent {
@@ -912,4 +912,4 @@ const PL: HomeContent = {
   },
 };
 
-export const HOME_CONTENT: Record<Locale, HomeContent> = { en: EN, pl: PL };
+export const HOME_CONTENT: Record<SiteLocale, HomeContent> = { en: EN, pl: PL };

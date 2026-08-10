@@ -2,11 +2,11 @@ import { SectionHeading } from "@/components/ui";
 import { PRICING_CONTENT } from "@/lib/i18n/content/pricing";
 import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
 
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 import type { FaqEntry } from "@/lib/schema";
 import type { JSX } from "react";
 
-export function getPricingFaq(locale: Locale): FaqEntry[] {
+export function getPricingFaq(locale: SiteLocale): FaqEntry[] {
   return PRICING_CONTENT[locale].faq.entries;
 }
 
@@ -15,7 +15,7 @@ export const PRICING_FAQ: FaqEntry[] = getPricingFaq(DEFAULT_LOCALE);
 export function PricingFaqSection({
   locale = DEFAULT_LOCALE,
 }: {
-  locale?: Locale;
+  locale?: SiteLocale;
 }): JSX.Element {
   const content = PRICING_CONTENT[locale].faq;
 

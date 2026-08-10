@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { JsonLd, Reveal, SectionHeading } from "@/components/ui";
 import { HOME_CONTENT } from "@/lib/i18n/content/home";
-import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
+import { DEFAULT_LOCALE, type SiteLocale } from "@/lib/i18n/locales";
 import { buildFaqSchema } from "@/lib/schema";
 
 import type { JSX } from "react";
@@ -10,7 +10,7 @@ import type { JSX } from "react";
 export function FaqSection({
   locale = DEFAULT_LOCALE,
 }: {
-  locale?: Locale;
+  locale?: SiteLocale;
 }): JSX.Element {
   const copy = HOME_CONTENT[locale].faq;
 

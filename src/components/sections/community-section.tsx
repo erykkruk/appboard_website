@@ -7,7 +7,7 @@ import {
 import { OPEN_SOURCE_CONTENT } from "@/lib/i18n/content/opensource";
 import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
 
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 import type { JSX } from "react";
 import { DISCORD_URL, REDDIT_URL } from "@/lib/seo";
 
@@ -21,7 +21,7 @@ const CHANNEL_HREFS: string[] = [DISCORD_URL, REDDIT_URL];
 export function CommunitySection({
 	locale = DEFAULT_LOCALE,
 }: {
-	locale?: Locale;
+	locale?: SiteLocale;
 }): JSX.Element {
 	const content = OPEN_SOURCE_CONTENT[locale].community;
 

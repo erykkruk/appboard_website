@@ -1,4 +1,4 @@
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 import type { FaqEntry } from "@/lib/schema";
 
 export interface PricingTierContent {
@@ -205,7 +205,7 @@ const PL: PricingContent = {
   },
 };
 
-export const PRICING_CONTENT: Record<Locale, PricingContent> = {
+export const PRICING_CONTENT: Record<SiteLocale, PricingContent> = {
   en: EN,
   pl: PL,
 };

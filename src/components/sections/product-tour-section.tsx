@@ -9,7 +9,7 @@ import {
   VideoDemo,
 } from "@/components/ui";
 import { HOME_CONTENT } from "@/lib/i18n/content/home";
-import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
+import { DEFAULT_LOCALE, type SiteLocale } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
 import { DiffDemo } from "./diff-demo";
@@ -28,7 +28,7 @@ const WIDE_STOP_INDEX = 4;
 function tourVisual(
   index: number,
   stop: TourStopContent,
-  locale: Locale,
+  locale: SiteLocale,
 ): ReactNode {
   switch (index) {
     case 1:
@@ -67,7 +67,7 @@ function tourVisual(
   }
 }
 
-function tourStops(locale: Locale): TourStop[] {
+function tourStops(locale: SiteLocale): TourStop[] {
   return HOME_CONTENT[locale].tour.stops.map((stop, index) => ({
     ...stop,
     visual: tourVisual(index, stop, locale),
@@ -132,7 +132,7 @@ function TourStopRow({ index, stop }: { index: number; stop: TourStop }): JSX.El
 export function ProductTourSection({
   locale = DEFAULT_LOCALE,
 }: {
-  locale?: Locale;
+  locale?: SiteLocale;
 }): JSX.Element {
   const copy = HOME_CONTENT[locale].tour;
 

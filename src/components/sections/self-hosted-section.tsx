@@ -13,7 +13,7 @@ import { OPEN_SOURCE_CONTENT } from "@/lib/i18n/content/opensource";
 import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
 import { DISCORD_URL, GITHUB_URL } from "@/lib/seo";
 
-import type { Locale } from "@/lib/i18n/locales";
+import type { SiteLocale } from "@/lib/i18n/locales";
 import type { JSX, ReactNode } from "react";
 
 const ICON_CLASS = "size-5";
@@ -28,7 +28,7 @@ const POINT_ICONS: ReactNode[] = [
 export function SelfHostedSection({
   locale = DEFAULT_LOCALE,
 }: {
-  locale?: Locale;
+  locale?: SiteLocale;
 }): JSX.Element {
   const content = OPEN_SOURCE_CONTENT[locale].selfHosted;
 

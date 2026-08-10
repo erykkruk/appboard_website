@@ -42,15 +42,23 @@ const MIRRORED_PATHS: string[] = [
  */
 const TRANSLATED_PATHS: Record<string, Partial<Record<Locale, string>>> = {
   "/blog/app-store-localization": {
+    de: "/de/blog/google-play-console-app-veroeffentlichen",
+    es: "/es/blog/google-play-console-publicar-app",
     pl: "/pl/blog/google-play-console-publikacja-aplikacji",
   },
   "/blog/app-store-optimization-services": {
+    de: "/de/blog/aso-agentur-kosten",
+    es: "/es/blog/agencia-aso-precios",
     pl: "/pl/blog/promocja-aplikacji-mobilnej",
   },
   "/blog/app-store-screenshot-sizes": {
+    de: "/de/blog/app-store-connect-app-veroeffentlichen",
+    es: "/es/blog/app-store-connect-publicar-app",
     pl: "/pl/blog/app-store-connect-publikacja-aplikacji",
   },
   "/blog/best-aso-tools": {
+    de: "/de/blog/app-store-optimierung",
+    es: "/es/blog/posicionamiento-aso",
     pl: "/pl/blog/pozycjonowanie-aplikacji-mobilnych",
   },
 };
