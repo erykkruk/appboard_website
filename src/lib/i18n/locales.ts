@@ -47,6 +47,15 @@ export function localeHome(locale: Locale): string {
   return LOCALE_CONFIG[locale].pathPrefix || "/";
 }
 
+/** The locale a pathname belongs to, for chrome mounted outside a page. */
+export function localeFromPath(pathname: string): Locale {
+  const segment = pathname.split("/")[1] ?? "";
+
+  return isLocale(segment) && segment !== DEFAULT_LOCALE
+    ? segment
+    : DEFAULT_LOCALE;
+}
+
 export function withLocalePrefix(path: string, locale: Locale): string {
   const prefix = LOCALE_CONFIG[locale].pathPrefix;
 

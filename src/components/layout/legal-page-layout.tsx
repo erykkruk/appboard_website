@@ -1,3 +1,5 @@
+import { DEFAULT_LOCALE, LOCALE_CONFIG, type Locale } from "@/lib/i18n/locales";
+
 import { Footer } from "./footer";
 import { Header } from "./header";
 
@@ -6,9 +8,26 @@ import type { JSX, ReactNode } from "react";
 interface LegalPageLayoutProps {
   children: ReactNode;
   lastUpdated: string;
+  locale?: Locale;
   subtitle: string;
   title: string;
 }
+
+interface LegalCopy {
+  eyebrow: string;
+  lastUpdatedPrefix: string;
+}
+
+const LEGAL_COPY: Record<Locale, LegalCopy> = {
+  en: {
+    eyebrow: "Legal",
+    lastUpdatedPrefix: "Last updated: ",
+  },
+  pl: {
+    eyebrow: "Informacje prawne",
+    lastUpdatedPrefix: "Ostatnia aktualizacja: ",
+  },
+};
 
 // Prose styling for the semantic HTML the legal pages pass as children. Tailwind
 // v4 arbitrary variants keep the markup clean (plain <h2>/<p>/<ul>) while staying
@@ -26,23 +45,31 @@ const PROSE_CLASSES = [
 export function LegalPageLayout({
   children,
   lastUpdated,
+  locale = DEFAULT_LOCALE,
   subtitle,
   title,
 }: LegalPageLayoutProps): JSX.Element {
+  const copy = LEGAL_COPY[locale];
+  const contentLang =
+    locale === DEFAULT_LOCALE ? undefined : LOCALE_CONFIG[locale].htmlLang;
+
   return (
     <>
-      <Header />
-      <main className="relative w-full flex-1">
+      <Header locale={locale} />
+      <main className="relative w-full flex-1" lang={contentLang}>
         <section className="px-4 pb-10 pt-20 sm:px-6 sm:pt-28">
           <div className="mx-auto max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-widest text-accent-bright">
-              Legal
+              {copy.eyebrow}
             </p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               {title}
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">{subtitle}</p>
-            <p className="mt-4 text-sm text-muted">Last updated: {lastUpdated}</p>
+            <p className="mt-4 text-sm text-muted">
+              {copy.lastUpdatedPrefix}
+              {lastUpdated}
+            </p>
           </div>
         </section>
         <section className="px-4 pb-24 sm:px-6">
@@ -51,7 +78,7 @@ export function LegalPageLayout({
           </article>
         </section>
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </>
   );
 }

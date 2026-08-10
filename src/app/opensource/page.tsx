@@ -12,6 +12,7 @@ import {
   SectionHeading,
 } from "@/components/ui";
 import { buildSoftwareApplicationSchema } from "@/lib/schema";
+import { buildAlternates } from "@/lib/i18n/routes";
 import {
   buildPageMetadata,
   DISCORD_URL,
@@ -27,6 +28,7 @@ const OPEN_SOURCE_DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   description: OPEN_SOURCE_DESCRIPTION,
+  languages: buildAlternates("/opensource"),
   path: "/opensource",
   title: "Open source",
 });

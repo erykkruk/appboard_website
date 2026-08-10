@@ -1,6 +1,7 @@
 import { DocsLayout } from "@/components/layout/docs-layout";
 import { ScreenshotFrame } from "@/components/ui";
 import { getDocPage } from "@/lib/docs";
+import { buildAlternates } from "@/lib/i18n/routes";
 import { buildPageMetadata } from "@/lib/seo";
 
 import type { Metadata } from "next";
@@ -11,6 +12,7 @@ const page = getDocPage(SLUG);
 
 export const metadata: Metadata = buildPageMetadata({
   description: page?.description ?? "",
+  languages: buildAlternates(`/docs/${SLUG}`),
   path: `/docs/${SLUG}`,
   title: page?.title,
 });

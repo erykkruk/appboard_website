@@ -1,12 +1,22 @@
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 
 import type { JSX } from "react";
 
 interface ComingSoonBadgeProps {
   className?: string;
+  locale?: Locale;
 }
 
-export function ComingSoonBadge({ className }: ComingSoonBadgeProps): JSX.Element {
+const LABEL: Record<Locale, string> = {
+  en: "Coming soon",
+  pl: "Wkrótce",
+};
+
+export function ComingSoonBadge({
+  className,
+  locale = DEFAULT_LOCALE,
+}: ComingSoonBadgeProps): JSX.Element {
   return (
     <span
       className={cn(
@@ -14,7 +24,7 @@ export function ComingSoonBadge({ className }: ComingSoonBadgeProps): JSX.Elemen
         className,
       )}
     >
-      Coming soon
+      {LABEL[locale]}
     </span>
   );
 }

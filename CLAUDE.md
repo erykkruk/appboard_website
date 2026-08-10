@@ -65,6 +65,26 @@ public/
 └── videos/                       # Video assets (demo videos)
 ```
 
+## Internationalization
+
+The site ships English and Polish and is built for more locales. English stays at
+the root (`/pricing`) and is indexed — never move or redirect an English URL.
+Other locales live under a prefix (`/pl/pricing`).
+
+Everything derives from `src/lib/i18n/`: `locales.ts` (registry), `routes.ts`
+(EN/PL route pairs, `buildAlternates`), `dictionaries.ts` (shared header/footer
+chrome), and `content/*.ts` (per-surface copy keyed by locale). The sitemap, the
+`hreflang` tags, the language switcher and the route-pairing test all read from
+`ROUTE_PAIRS`, so the registry cannot drift from the filesystem.
+
+**Adding a locale** = registry entry + dictionary + per-page content files and
+routes. Nothing else. Full instructions in `src/lib/i18n/README.md`.
+
+Rules: pages pass `locale` explicitly to `Header`, `Footer` and sections (default
+`DEFAULT_LOCALE`); non-default locales set `lang` on their main element; canonical
+points at itself and `x-default` at English; product terms (App Store, Google
+Play, ASO, listing, open source, self-hosting) stay English in every locale.
+
 ## Architecture Pattern
 
 Static marketing website using Next.js App Router with server components. Pages are composed of section components. Reusable UI primitives in `components/ui/`.

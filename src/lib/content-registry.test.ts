@@ -9,6 +9,9 @@ import {
   getPlSlugForEn,
 } from "./blog";
 import { ALL_DOC_PAGES, DOCS_SECTIONS } from "./docs";
+import { ALL_DOC_PAGES_PL } from "./i18n/content/docs";
+import { DEFAULT_LOCALE, LOCALES } from "./i18n/locales";
+import { findRoutePair, ROUTE_PAIRS } from "./i18n/routes";
 
 const APP_DIR = join(import.meta.dir, "..", "app");
 
@@ -75,5 +78,43 @@ describe("docs registry", () => {
       section.pages.map((page) => page.slug),
     );
     expect(new Set(slugs).size).toBe(slugs.length);
+  });
+});
+
+describe("locale routing", () => {
+  it("has a rendered page for every path in every locale", () => {
+    for (const pair of ROUTE_PAIRS) {
+      for (const locale of LOCALES) {
+        const path = pair[locale];
+        const segments = path === "/" ? [] : path.slice(1).split("/");
+        const pagePath = join(APP_DIR, ...segments, "page.tsx");
+        expect(existsSync(pagePath), `${locale}: ${path}`).toBe(true);
+      }
+    }
+  });
+
+  it("pairs every route in both directions", () => {
+    for (const pair of ROUTE_PAIRS) {
+      for (const locale of LOCALES) {
+        expect(findRoutePair(pair[locale]), pair[locale]).toEqual(pair);
+      }
+    }
+  });
+
+  it("keeps the default locale unprefixed and other locales prefixed", () => {
+    for (const pair of ROUTE_PAIRS) {
+      expect(pair[DEFAULT_LOCALE].startsWith("/pl")).toBe(false);
+      expect(pair.pl.startsWith("/pl")).toBe(true);
+    }
+  });
+
+  it("mirrors the docs registry across locales", () => {
+    expect(ALL_DOC_PAGES_PL.map((page) => page.slug)).toEqual(
+      ALL_DOC_PAGES.map((page) => page.slug),
+    );
+    for (const page of ALL_DOC_PAGES_PL) {
+      expect(page.title.length).toBeGreaterThan(0);
+      expect(page.description.length).toBeGreaterThan(0);
+    }
   });
 });

@@ -1,33 +1,27 @@
 import { Eyebrow } from "@/components/ui";
+import { OPEN_SOURCE_CONTENT } from "@/lib/i18n/content/opensource";
+import { DEFAULT_LOCALE } from "@/lib/i18n/locales";
 
+import type { Locale } from "@/lib/i18n/locales";
 import type { JSX } from "react";
 
-export function FounderNoteSection(): JSX.Element {
+export function FounderNoteSection({
+  locale = DEFAULT_LOCALE,
+}: {
+  locale?: Locale;
+}): JSX.Element {
+  const content = OPEN_SOURCE_CONTENT[locale].founderNote;
+
   return (
     <section className="border-y border-line bg-surface px-4 py-24 sm:px-6">
       <div className="mx-auto max-w-2xl">
-        <Eyebrow>A note from the builder</Eyebrow>
+        <Eyebrow>{content.eyebrow}</Eyebrow>
         <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted">
-          <p>
-            AppBoard started as an internal tool. I ship my own apps, and every
-            release ended the same way: two consoles, a dozen tabs, a spreadsheet
-            of translations, and that quiet fear of overwriting a description
-            nobody had backed up.
-          </p>
-          <p>
-            So I built the tool I wanted: listings versioned like code, diffs
-            before every publish, and both stores in one place. No growth hacks,
-            no dashboards pretending to be insights — just the release-day work,
-            made calm.
-          </p>
-          <p>
-            If something feels off or missing, tell me — it&apos;s a small product
-            and feedback genuinely changes the roadmap.
-          </p>
+          {content.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </div>
-        <p className="mt-8 font-medium text-foreground">
-          — Eryk, building AppBoard
-        </p>
+        <p className="mt-8 font-medium text-foreground">{content.signature}</p>
       </div>
     </section>
   );

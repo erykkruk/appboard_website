@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Footer, Header } from "@/components/layout";
 import { ArrowRightIcon } from "@/components/ui";
 import { DOCS_SECTIONS } from "@/lib/docs";
+import { buildAlternates } from "@/lib/i18n/routes";
 import { buildPageMetadata } from "@/lib/seo";
 
 import type { Metadata } from "next";
@@ -13,6 +14,7 @@ const DOCS_DESCRIPTION =
 
 export const metadata: Metadata = buildPageMetadata({
   description: DOCS_DESCRIPTION,
+  languages: buildAlternates("/docs"),
   path: "/docs",
   title: "Documentation",
 });
