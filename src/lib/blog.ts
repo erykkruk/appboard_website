@@ -12,6 +12,15 @@ export interface BlogArticle {
 
 export const BLOG_ARTICLES: BlogArticle[] = [
   {
+    date: "2026-08-30",
+    description:
+      "Video outperforms static creative almost everywhere else, so what does it do in a store listing? The real numbers, how Apple and Google ship video differently, and the landscape trap that can leave your search result blank.",
+    readingMinutes: 11,
+    slug: "app-preview-video-vs-screenshots",
+    tag: "Creative",
+    title: "App preview video vs screenshots: what actually converts",
+  },
+  {
     date: "2026-08-07",
     description:
       "What ASO agencies actually deliver, what they cost in 2026, and when hiring one beats doing app store optimization yourself with tools. Plus how to vet a vendor.",
@@ -50,7 +59,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     date: "2026-07-06",
     description:
-      "A practical pre-release checklist for app metadata, screenshots, and store compliance — the exact steps to run before every App Store and Google Play release.",
+      "A practical pre-release checklist for app metadata, screenshots, and store compliance - the exact steps to run before every App Store and Google Play release.",
     readingMinutes: 8,
     slug: "aso-checklist-before-every-release",
     tag: "Workflow",
@@ -95,7 +104,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     date: "2026-06-01",
     description:
-      "Replying to reviews measurably improves ratings and retention — but only if you do it consistently. A sustainable system for answering every review.",
+      "Replying to reviews measurably improves ratings and retention - but only if you do it consistently. A sustainable system for answering every review.",
     readingMinutes: 6,
     slug: "respond-to-app-reviews",
     tag: "Reviews",
@@ -104,6 +113,15 @@ export const BLOG_ARTICLES: BlogArticle[] = [
 ];
 
 export const BLOG_ARTICLES_PL: BlogArticle[] = [
+  {
+    date: "2026-08-30",
+    description:
+      "Ile realnie daje wideo promocyjne w App Store i Google Play, czym App Preview różni się od filmu na Play, kanały YouTube per język i pułapka poziomego wideo, która zabiera zrzuty z wyników wyszukiwania.",
+    readingMinutes: 12,
+    slug: "wideo-promocyjne-aplikacji",
+    tag: "Kreacje",
+    title: "Wideo promocyjne aplikacji czy zrzuty ekranu: co konwertuje lepiej",
+  },
   {
     date: "2026-08-09",
     description:
@@ -144,6 +162,15 @@ export const BLOG_ARTICLES_PL: BlogArticle[] = [
 
 export const BLOG_ARTICLES_DE: BlogArticle[] = [
   {
+    date: "2026-08-30",
+    description:
+      "Was ein App Preview Video wirklich an Conversion bringt, wie unterschiedlich App Store und Google Play Video ausspielen, YouTube-Kanäle pro Sprache und die Querformat-Falle, die Screenshots aus den Suchergebnissen entfernt.",
+    readingMinutes: 12,
+    slug: "app-preview-video-oder-screenshots",
+    tag: "Creatives",
+    title: "App Preview Video oder Screenshots: was wirklich konvertiert",
+  },
+  {
     date: "2026-08-11",
     description:
       "Google Play Console 2026: privates Konto oder Organisation, D-U-N-S, die 12-Tester-Regel über 14 Tage, Zeichenlimits, Grafikvorgaben und der DSA-Händlerstatus.",
@@ -182,6 +209,15 @@ export const BLOG_ARTICLES_DE: BlogArticle[] = [
 ];
 
 export const BLOG_ARTICLES_ES: BlogArticle[] = [
+  {
+    date: "2026-08-30",
+    description:
+      "Cuánto suma de verdad un vídeo de presentación, en qué se diferencian App Store y Google Play al mostrarlo, los canales de YouTube por idioma y la trampa del formato horizontal que deja tu resultado de búsqueda sin capturas.",
+    readingMinutes: 12,
+    slug: "video-promocional-o-capturas",
+    tag: "Creatividades",
+    title: "Vídeo promocional o capturas: qué convierte mejor en las tiendas",
+  },
   {
     date: "2026-08-11",
     description:

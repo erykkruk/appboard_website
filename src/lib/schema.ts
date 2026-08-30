@@ -67,7 +67,7 @@ export function buildScreenshotEditorSchema(): JsonLdObject {
     applicationCategory: "DesignApplication",
     browserRequirements: "Requires a modern browser with JavaScript.",
     description:
-      "A free, browser-based App Store and Google Play screenshot editor: device mockups, gradients, text, shapes, panorama layouts, templates, and PNG export — everything runs on your device.",
+      "A free, browser-based App Store and Google Play screenshot editor: device mockups, gradients, text, shapes, panorama layouts, templates, and PNG export - everything runs on your device.",
     featureList: [
       "iPhone, iPad, Android, Apple Watch, and laptop device mockups",
       "Real Apple product bezels (Photo style)",
@@ -88,6 +88,44 @@ export function buildScreenshotEditorSchema(): JsonLdObject {
     operatingSystem: "Web",
     publisher: { "@id": `${SITE_URL}/#organization` },
     url: absoluteUrl("/screenshot-editor"),
+  };
+}
+
+/**
+ * The person behind the product. A named author with a role is what search
+ * engines look for as an experience signal on an article, so bylined posts
+ * carry this instead of the bare Organization.
+ */
+export const SITE_AUTHOR = {
+  jobTitle: "Founder",
+  name: "Eryk Kruk",
+} as const;
+
+export function buildPersonSchema(): JsonLdObject {
+  return {
+    "@id": `${SITE_URL}/#author`,
+    "@type": "Person",
+    jobTitle: SITE_AUTHOR.jobTitle,
+    name: SITE_AUTHOR.name,
+    worksFor: { "@id": `${SITE_URL}/#organization` },
+  };
+}
+
+export interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
+
+export function buildBreadcrumbSchema(items: BreadcrumbItem[]): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      item: absoluteUrl(item.path),
+      name: item.name,
+      position: index + 1,
+    })),
   };
 }
 
