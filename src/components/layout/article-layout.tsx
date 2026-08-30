@@ -8,15 +8,24 @@ import { getChrome } from "@/lib/i18n/dictionaries";
 import {
   DEFAULT_LOCALE,
   LOCALE_CONFIG,
+  localeHome,
   type Locale,
 } from "@/lib/i18n/locales";
+import { buildBreadcrumbSchema, buildPersonSchema } from "@/lib/schema";
 import { absoluteUrl, APP_URL, SITE_NAME } from "@/lib/seo";
 
 import type { JSX, ReactNode } from "react";
 
 interface ArticleLayoutProps {
   article: BlogArticle;
+  /**
+   * Sign the post off with the founder byline and credit it to a Person rather
+   * than the bare Organization. Unbylined posts keep the previous schema.
+   */
+  bylined?: boolean;
   children: ReactNode;
+  /** Article images, in order, for the BlogPosting `image` property. */
+  images?: string[];
   locale?: Locale;
   translationHref?: string;
 }
@@ -25,6 +34,9 @@ interface ArticleChrome {
   articles: BlogArticle[];
   backToBlog: string;
   blogHref: string;
+  byline: string;
+  homeLabel: string;
+  homeHref: string;
   ctaBody: string;
   ctaButton: string;
   ctaTitle: string;
@@ -51,6 +63,22 @@ const TRANSLATION_LABEL: Record<Locale, string> = {
   pl: "Read in English",
 };
 
+/** Sign-off shown at the end of a bylined article. */
+const BYLINE: Record<Locale, string> = {
+  de: "Geschrieben von Eryk Kruk, Gründer von AppBoard.",
+  en: "Written by Eryk Kruk, Founder of AppBoard.",
+  es: "Escrito por Eryk Kruk, fundador de AppBoard.",
+  pl: "Napisał Eryk Kruk, założyciel AppBoard.",
+};
+
+/** Breadcrumb root label, so the trail reads in the reader's language. */
+const HOME_LABEL: Record<Locale, string> = {
+  de: "Startseite",
+  en: "Home",
+  es: "Inicio",
+  pl: "Strona główna",
+};
+
 function articleChrome(locale: Locale): ArticleChrome {
   const chrome = getChrome(locale);
   const config = LOCALE_CONFIG[locale];
@@ -59,6 +87,9 @@ function articleChrome(locale: Locale): ArticleChrome {
     articles: getArticlesFor(locale),
     backToBlog: chrome.articleBackToBlog,
     blogHref: BLOG_HREF[locale],
+    byline: BYLINE[locale],
+    homeHref: localeHome(locale),
+    homeLabel: HOME_LABEL[locale],
     ctaBody: chrome.articleCtaBody,
     ctaButton: chrome.articleCtaButton,
     ctaTitle: chrome.articleCtaTitle,
@@ -83,21 +114,28 @@ function formatDate(date: string, dateLocale: string): string {
 function buildArticleSchema(
   article: BlogArticle,
   config: ArticleChrome,
+  bylined: boolean,
+  images: string[],
 ): Record<string, unknown> {
   const url = absoluteUrl(`${config.blogHref}/${article.slug}`);
 
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    author: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: absoluteUrl("/"),
-    },
+    author: bylined
+      ? buildPersonSchema()
+      : {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: absoluteUrl("/"),
+        },
     dateModified: article.date,
     datePublished: article.date,
     description: article.description,
     headline: article.title,
+    ...(images.length > 0
+      ? { image: images.map((image) => absoluteUrl(image)) }
+      : {}),
     inLanguage: config.inLanguage,
     mainEntityOfPage: {
       "@id": url,
@@ -113,7 +151,9 @@ function buildArticleSchema(
 
 export function ArticleLayout({
   article,
+  bylined = false,
   children,
+  images = [],
   locale = DEFAULT_LOCALE,
   translationHref,
 }: ArticleLayoutProps): JSX.Element {
@@ -124,7 +164,14 @@ export function ArticleLayout({
 
   return (
     <>
-      <JsonLd data={buildArticleSchema(article, config)} />
+      <JsonLd data={buildArticleSchema(article, config, bylined, images)} />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: config.homeLabel, path: config.homeHref },
+          { name: "Blog", path: config.blogHref },
+          { name: article.title, path: `${config.blogHref}/${article.slug}` },
+        ])}
+      />
       <Header locale={locale} />
       <main className="relative w-full flex-1">
         <section className="px-4 pb-10 pt-20 sm:px-6 sm:pt-28">
@@ -170,6 +217,19 @@ export function ArticleLayout({
         <section className="px-4 pb-20 sm:px-6">
           <div className="prose mx-auto max-w-3xl" lang={config.htmlLang}>
             {children}
+            {bylined ? (
+              <div className="mt-12 flex items-center gap-3 border-t border-line pt-6">
+                <span
+                  aria-hidden="true"
+                  className="flex size-10 shrink-0 items-center justify-center rounded-full border border-line bg-panel text-sm font-semibold text-accent-bright"
+                >
+                  EK
+                </span>
+                <span className="text-sm leading-relaxed text-muted">
+                  {config.byline}
+                </span>
+              </div>
+            ) : null}
           </div>
           <div className="mx-auto mt-16 max-w-3xl">
             <div className="rounded-2xl border border-line bg-panel/60 p-8 sm:p-10">

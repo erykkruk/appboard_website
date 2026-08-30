@@ -41,6 +41,9 @@ const MIRRORED_PATHS: string[] = [
  * A locale missing from an entry simply has no version of that article yet.
  */
 const TRANSLATED_PATHS: Record<string, Partial<Record<Locale, string>>> = {
+  "/blog/app-preview-video-vs-screenshots": {
+    pl: "/pl/blog/wideo-promocyjne-aplikacji",
+  },
   "/blog/app-store-localization": {
     de: "/de/blog/google-play-console-app-veroeffentlichen",
     es: "/es/blog/google-play-console-publicar-app",
