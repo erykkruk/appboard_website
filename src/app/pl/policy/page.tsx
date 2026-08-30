@@ -29,14 +29,14 @@ export default function PrivacyPolicyPagePl(): JSX.Element {
       title={PL_TITLE}
     >
       <p>
-        {SITE_NAME} (&bdquo;AppBoard&rdquo;, &bdquo;my&rdquo;,
-        &bdquo;nas&rdquo;) udostępnia platformę App Store Optimization (ASO),
+        {SITE_NAME} (&quot;AppBoard&quot;, &quot;my&quot;,
+        &quot;nas&quot;) udostępnia platformę App Store Optimization (ASO),
         która pomaga zarządzać listingami w sklepach z aplikacjami,
         screenshotami, metadanymi, opiniami oraz produktami in-app dla Apple App
         Store i Google Play z jednego panelu. Niniejsza Polityka prywatności
         opisuje, w jaki sposób postępujemy z Twoimi informacjami, gdy korzystasz
         z naszej strony internetowej i aplikacji (łącznie:
-        &bdquo;Usługa&rdquo;).
+        &quot;Usługa&quot;).
       </p>
 
       <p>
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPagePl(): JSX.Element {
           listingami, przechowujemy przekazane przez Ciebie dane dostępowe do
           API: klucze konta serwisowego Google Play oraz klucze API App Store
           Connect. Są one trzymane w sejfie szyfrowanym end-to-end (zobacz
-          sekcję &bdquo;Jak chronimy dane dostępowe do sklepów&rdquo; poniżej).
+          sekcję &quot;Jak chronimy dane dostępowe do sklepów&quot; poniżej).
         </li>
         <li>
           <strong>Dane aplikacji.</strong> Metadane, które synchronizujemy z
@@ -188,8 +188,8 @@ export default function PrivacyPolicyPagePl(): JSX.Element {
       <h2>Zmiany niniejszej polityki</h2>
       <p>
         Możemy okresowo aktualizować niniejszą Politykę prywatności. Gdy to
-        zrobimy, zmienimy widoczną powyżej datę &bdquo;Ostatnia
-        aktualizacja&rdquo; oraz, w uzasadnionych przypadkach, poinformujemy Cię
+        zrobimy, zmienimy widoczną powyżej datę &quot;Ostatnia
+        aktualizacja&quot; oraz, w uzasadnionych przypadkach, poinformujemy Cię
         o zmianach.
       </p>
 

@@ -75,7 +75,7 @@ export default function Page(): JSX.Element {
         tytule słowo cennik albo pytanie ile kosztuje.{" "}
         <strong>Żadna z tych dwóch nie podaje ani jednej kwoty w
         złotówkach.</strong> Trzy kolejne mają w sekcji pytań nagłówek
-        &bdquo;Ile kosztuje marketing aplikacji?&rdquo; i odpowiadają, że cena
+        &quot;Ile kosztuje marketing aplikacji?&quot; i odpowiadają, że cena
         jest ustalana indywidualnie.
       </p>
       <p>

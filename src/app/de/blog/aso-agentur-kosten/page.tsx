@@ -249,8 +249,8 @@ export default function Page(): JSX.Element {
       <p>
         Für einen Markt und zwei Stores landet man damit grob bei ein bis zwei
         Wochen Anfangsaufwand und danach bei mehreren Stunden pro Monat. Diese
-        Zeit ist der eigentliche Vergleichsmaßstab: Nicht &bdquo;900 EUR gegen
-        0 EUR&ldquo;, sondern 900 EUR gegen den internen Stundensatz mal diesen
+        Zeit ist der eigentliche Vergleichsmaßstab: Nicht &quot;900 EUR gegen
+        0 EUR&quot;, sondern 900 EUR gegen den internen Stundensatz mal diesen
         Aufwand, plus die Toolkosten.
       </p>
 

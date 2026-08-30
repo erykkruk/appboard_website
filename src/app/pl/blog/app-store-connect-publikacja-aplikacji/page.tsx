@@ -237,7 +237,7 @@ export default function Page(): JSX.Element {
         której nie napisała po polsku żadna strona, mimo że akurat nas dotyczy
         najbardziej. W UTF-8 łacińska litera bez ogonków zajmuje jeden bajt, ale{" "}
         <strong>polskie znaki diakrytyczne zajmują po dwa</strong>. Słowo
-        &bdquo;ćwiczenia&rdquo; to dziesięć znaków, ale jedenaście bajtów.
+        &quot;ćwiczenia&quot; to dziesięć znaków, ale jedenaście bajtów.
         Zestaw polskich słów kluczowych z ogonkami wyczerpie limit szybciej,
         niż podpowiada licznik znaków w edytorze tekstu.
       </p>

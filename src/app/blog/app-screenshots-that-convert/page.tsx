@@ -93,7 +93,7 @@ export default function Page(): JSX.Element {
         flow and not your settings screen.
       </p>
       <p>
-        Frame one should answer &ldquo;what is this and why should I care?&rdquo;
+        Frame one should answer &quot;what is this and why should I care?&quot;
         in a single glance: your core value, shown in the app, with a short
         caption. Frame two builds on it with the next most compelling thing.
         Everything else is supporting evidence.
@@ -103,9 +103,9 @@ export default function Page(): JSX.Element {
       <p>
         A bare screenshot makes the viewer do the work of figuring out what they
         are looking at. A short caption does it for them. Keep captions to a few
-        words - a benefit, not a UI label. &ldquo;See your strength trend over
-        months&rdquo; beats a raw chart with no context; &ldquo;Analytics
-        Screen&rdquo; is worse than nothing.
+        words - a benefit, not a UI label. &quot;See your strength trend over
+        months&quot; beats a raw chart with no context; &quot;Analytics
+        Screen&quot; is worse than nothing.
       </p>
       <table>
         <thead>
@@ -183,7 +183,7 @@ export default function Page(): JSX.Element {
       <p>
         Both stores support a short video above your screenshots, and it plays a
         different role than a static frame. The App Store allows up to three app
-        preview videos (15&ndash;30 seconds) that autoplay, muted, right in
+        preview videos (15-30 seconds) that autoplay, muted, right in
         search results - so the first few seconds have to make sense without
         sound. Google Play takes a promo video via a YouTube link that sits with
         your feature graphic. A video is not mandatory and a weak one hurts more

@@ -96,8 +96,8 @@ export default function Page(): JSX.Element {
       </p>
       <p>
         With 30 characters you get your brand plus roughly one keyword phrase.
-        &ldquo;Lumen: Habit Tracker&rdquo; spends its budget well; &ldquo;Lumen -
-        The #1 Best App&rdquo; wastes it on words nobody searches for.
+        &quot;Lumen: Habit Tracker&quot; spends its budget well; &quot;Lumen -
+        The #1 Best App&quot; wastes it on words nobody searches for.
       </p>
 
       <h2>The keyword split: hidden field vs indexed body</h2>
@@ -129,7 +129,7 @@ export default function Page(): JSX.Element {
           <tr>
             <td>Repetition</td>
             <td>Never repeat title words</td>
-            <td>2&ndash;3 mentions reads as natural</td>
+            <td>2-3 mentions reads as natural</td>
           </tr>
           <tr>
             <td>Description role</td>
@@ -159,7 +159,7 @@ export default function Page(): JSX.Element {
         The App Store&apos;s 170-character promotional text sits above the
         description and - this is the useful part - can be changed without
         submitting a new build. It is perfect for a sale, an event, or a
-        &ldquo;new in this version&rdquo; note. It is not indexed, so keywords
+        &quot;new in this version&quot; note. It is not indexed, so keywords
         here do nothing for search. Google Play has no direct equivalent; the
         closest lever is editing your short description.
       </p>

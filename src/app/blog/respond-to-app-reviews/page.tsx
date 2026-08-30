@@ -74,7 +74,7 @@ export default function Page(): JSX.Element {
       <p>
         Because Google Play lets you edit your reply, you can update it when a bug
         the reviewer reported is fixed - a nice touch that turns a one-star
-        complaint into a visible &ldquo;fixed in 2.4&rdquo; note. The App Store
+        complaint into a visible &quot;fixed in 2.4&quot; note. The App Store
         reply appears after moderation, so do not expect it to be instant.
       </p>
 
@@ -86,7 +86,7 @@ export default function Page(): JSX.Element {
       <ul>
         <li>
           <strong>Acknowledge the specific thing</strong> they mentioned, not a
-          generic &ldquo;thanks for your feedback&rdquo;.
+          generic &quot;thanks for your feedback&quot;.
         </li>
         <li>
           <strong>Answer or route</strong> - give the fix, the workaround, or

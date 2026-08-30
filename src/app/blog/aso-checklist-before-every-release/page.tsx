@@ -42,7 +42,7 @@ export default function Page(): JSX.Element {
       <p>
         The single most useful habit is knowing what your listing said
         yesterday. When conversion drops after a release, the first question is
-        always &ldquo;what changed?&rdquo; - and if you cannot answer it in
+        always &quot;what changed?&quot; - and if you cannot answer it in
         seconds, you are guessing. Keep a versioned record of every field per
         language. This is the kind of thing AppBoard&apos;s history view catches
         automatically, but even a git repo of exported metadata beats nothing.
@@ -57,7 +57,7 @@ export default function Page(): JSX.Element {
       <ul>
         <li>
           <strong>App Store title (30 chars):</strong> brand plus one or two
-          high-value keywords. No filler like &ldquo;- The best app&rdquo;.
+          high-value keywords. No filler like &quot;- The best app&quot;.
         </li>
         <li>
           <strong>App Store subtitle (30 chars):</strong> a second keyword line,

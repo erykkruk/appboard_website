@@ -79,14 +79,14 @@ export default function Page(): JSX.Element {
         Beginnen wir mit einer Beobachtung, die für deutsche Inhalte praktische
         Folgen hat:{" "}
         <strong>
-          das bloße Kürzel &bdquo;ASO&ldquo; bedeutet im deutschen Netz nicht App
+          das bloße Kürzel &quot;ASO&quot; bedeutet im deutschen Netz nicht App
           Store Optimization.
         </strong>{" "}
         Die erste Ergebnisseite wird von der abwertenden Kurzform für
-        &bdquo;Asozialer&ldquo; dominiert, dazu kommen die medizinischen
+        &quot;Asozialer&quot; dominiert, dazu kommen die medizinischen
         Bedeutungen Antistreptolysin O und Antisense-Oligonukleotid sowie
         Administrative Services Only aus der Versicherungswelt. Selbst die
-        Kombination &bdquo;aso app&ldquo; hilft nicht weiter: Das Topergebnis ist
+        Kombination &quot;aso app&quot; hilft nicht weiter: Das Topergebnis ist
         die ASO-App des Abfall-Service Osterholz, einer kommunalen
         Müllabfuhr-Anwendung.
       </p>
@@ -186,14 +186,14 @@ export default function Page(): JSX.Element {
       <p>
         <strong>Erstens die Bytes.</strong> Das Keyword-Feld misst 100 Bytes. Ein
         normaler lateinischer Buchstabe belegt in UTF-8 ein Byte, ä, ö, ü und ß
-        belegen jeweils zwei. &bdquo;Größe&ldquo; sind 5 Zeichen und 7 Bytes,
-        &bdquo;Ernährungstagebuch&ldquo; sind 18 Zeichen und 19 Bytes. Ein
+        belegen jeweils zwei. &quot;Größe&quot; sind 5 Zeichen und 7 Bytes,
+        &quot;Ernährungstagebuch&quot; sind 18 Zeichen und 19 Bytes. Ein
         Zeichenzähler im Editor führt hier systematisch in die Irre.
       </p>
       <p>
         <strong>Zweitens die Komposita.</strong> Deutsche Nutzer suchen sowohl
         nach zusammengesetzten Wörtern als auch nach getrennten Varianten, etwa
-        &bdquo;Haushaltsbuch&ldquo; gegenüber &bdquo;Haushalt Buch&ldquo;. Beide
+        &quot;Haushaltsbuch&quot; gegenüber &quot;Haushalt Buch&quot;. Beide
         Formen in das Feld zu schreiben kostet Bytes, die an anderer Stelle
         fehlen. Weder Apple noch Google veröffentlichen, wie sie Wortbestandteile
         zerlegen, wer hier Gewissheit behauptet, behauptet zu viel. Praktikabel

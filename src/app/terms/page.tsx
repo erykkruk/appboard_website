@@ -27,9 +27,9 @@ export default function TermsOfServicePage(): JSX.Element {
     >
       <h2>1. Acceptance of terms</h2>
       <p>
-        These Terms of Service (&ldquo;Terms&rdquo;) form a binding agreement
-        between you and {SITE_NAME} (&ldquo;AppBoard&rdquo;, &ldquo;we&rdquo;,
-        &ldquo;us&rdquo;). By creating an account or using the Service, you agree
+        These Terms of Service (&quot;Terms&quot;) form a binding agreement
+        between you and {SITE_NAME} (&quot;AppBoard&quot;, &quot;we&quot;,
+        &quot;us&quot;). By creating an account or using the Service, you agree
         to these Terms. If you do not agree, do not use the Service.
       </p>
 
@@ -114,7 +114,7 @@ export default function TermsOfServicePage(): JSX.Element {
 
       <h2>10. Disclaimers</h2>
       <p>
-        The Service is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;
+        The Service is provided &quot;as is&quot; and &quot;as available&quot;
         without warranties of any kind, whether express or implied, including
         fitness for a particular purpose and non-infringement. We do not warrant
         that the Service will be uninterrupted, error-free, or that store
@@ -141,7 +141,7 @@ export default function TermsOfServicePage(): JSX.Element {
       <h2>13. Changes to these terms</h2>
       <p>
         We may update these Terms from time to time. When we do, we will revise the
-        &ldquo;Last updated&rdquo; date above and, where appropriate, notify you.
+        &quot;Last updated&quot; date above and, where appropriate, notify you.
         Continued use of the Service after changes take effect constitutes
         acceptance of the updated Terms.
       </p>

@@ -193,8 +193,8 @@ export default function Page(): JSX.Element {
       <h2>The keyword rule that decides your strategy</h2>
       <p>
         Apple indexes keywords per localization, and keywords do not combine
-        across localizations. If &ldquo;bus&rdquo; sits in your English (US)
-        keyword field and &ldquo;metro&rdquo; sits in your Spanish (Mexico)
+        across localizations. If &quot;bus&quot; sits in your English (US)
+        keyword field and &quot;metro&quot; sits in your Spanish (Mexico)
         field, you can rank for each term in the US storefront, but you will not
         rank for the two words used together as a phrase.
       </p>
