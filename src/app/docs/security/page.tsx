@@ -20,8 +20,8 @@ export default function SecurityPage(): JSX.Element {
   return (
     <DocsLayout slug={SLUG}>
       <p>
-        Store credentials — your App Store Connect API key and Google Play service
-        account — are the most sensitive data in AppBoard. They live in an
+        Store credentials - your App Store Connect API key and Google Play service
+        account - are the most sensitive data in AppBoard. They live in an
         end-to-end encrypted vault that only you can unlock.
       </p>
 
@@ -31,7 +31,7 @@ export default function SecurityPage(): JSX.Element {
         <strong>passphrase you set</strong>, scoped to your workspace. Credentials
         are encrypted before they reach the database, and they can only be
         decrypted while the vault is unlocked with your passphrase. Store
-        credentials cannot be saved outside the vault — there is no plaintext
+        credentials cannot be saved outside the vault - there is no plaintext
         fallback.
       </p>
 
@@ -45,7 +45,7 @@ export default function SecurityPage(): JSX.Element {
 
       <h2>Resetting the vault</h2>
       <p>
-        If you forget the passphrase, the only path forward is a reset — and a
+        If you forget the passphrase, the only path forward is a reset - and a
         reset <strong>wipes the vault and every stored credential</strong>. There
         is no recovery code and no backdoor; that&apos;s what makes the vault
         end-to-end encrypted. After a reset you reconnect your stores and set a
@@ -69,7 +69,7 @@ export default function SecurityPage(): JSX.Element {
           new session.
         </li>
         <li>
-          Losing the .p8 or service account JSON isn&apos;t catastrophic — you can
+          Losing the .p8 or service account JSON isn&apos;t catastrophic - you can
           revoke and regenerate them at the store and re-add the connection.
         </li>
       </ul>

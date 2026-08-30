@@ -20,7 +20,7 @@ export const DOCS_SECTIONS: DocSection[] = [
       },
       {
         description:
-          "Connect App Store Connect with an API key: issuer ID, key ID, and the .p8 private key — plus how the encrypted vault protects them.",
+          "Connect App Store Connect with an API key: issuer ID, key ID, and the .p8 private key - plus how the encrypted vault protects them.",
         slug: "connect-app-store",
         title: "Connect App Store Connect",
       },
@@ -55,7 +55,7 @@ export const DOCS_SECTIONS: DocSection[] = [
       },
       {
         description:
-          "Every published change is recorded per field and language with red/green diffs — and one-click rollback into your draft.",
+          "Every published change is recorded per field and language with red/green diffs - and one-click rollback into your draft.",
         slug: "history-and-rollback",
         title: "History & rollback",
       },

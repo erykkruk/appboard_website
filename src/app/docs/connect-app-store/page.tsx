@@ -44,7 +44,7 @@ export default function ConnectAppStorePage(): JSX.Element {
           </tr>
           <tr>
             <td>Private key (.p8)</td>
-            <td>The key file you download — Apple lets you download it once.</td>
+            <td>The key file you download - Apple lets you download it once.</td>
           </tr>
         </tbody>
       </table>
@@ -64,7 +64,7 @@ export default function ConnectAppStorePage(): JSX.Element {
           <strong>Key ID</strong>.
         </li>
         <li>
-          Download the <strong>.p8</strong> private key file and keep it — Apple
+          Download the <strong>.p8</strong> private key file and keep it - Apple
           only offers the download once.
         </li>
       </ol>
@@ -92,7 +92,7 @@ export default function ConnectAppStorePage(): JSX.Element {
       <p>
         If this is your first credential, AppBoard walks you through creating the{" "}
         <a href="/docs/security">encrypted vault</a>. The vault must be unlocked
-        for AppBoard to use the key — while it is locked, store calls are
+        for AppBoard to use the key - while it is locked, store calls are
         rejected and the UI prompts you to unlock.
       </p>
 

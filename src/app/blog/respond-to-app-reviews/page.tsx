@@ -27,7 +27,7 @@ export default function Page(): JSX.Element {
       <p>
         Replying to reviews is the highest-leverage support work you are probably
         not doing. It is public, so every reply is read by future visitors, not
-        just the one reviewer. It measurably nudges ratings — plenty of people
+        just the one reviewer. It measurably nudges ratings - plenty of people
         raise their star rating after a developer responds thoughtfully. And it
         is one of the few ASO levers that costs nothing but attention. The catch
         is consistency: replying once in a burst does little; replying to every
@@ -37,7 +37,7 @@ export default function Page(): JSX.Element {
       <h2>How replies work on each store</h2>
       <p>
         The mechanics differ enough to matter. On both stores your reply is
-        public — there is no private channel — so treat every response as copy a
+        public - there is no private channel - so treat every response as copy a
         prospective user will read.
       </p>
       <table>
@@ -73,7 +73,7 @@ export default function Page(): JSX.Element {
       </table>
       <p>
         Because Google Play lets you edit your reply, you can update it when a bug
-        the reviewer reported is fixed — a nice touch that turns a one-star
+        the reviewer reported is fixed - a nice touch that turns a one-star
         complaint into a visible &ldquo;fixed in 2.4&rdquo; note. The App Store
         reply appears after moderation, so do not expect it to be instant.
       </p>
@@ -89,7 +89,7 @@ export default function Page(): JSX.Element {
           generic &ldquo;thanks for your feedback&rdquo;.
         </li>
         <li>
-          <strong>Answer or route</strong> — give the fix, the workaround, or
+          <strong>Answer or route</strong> - give the fix, the workaround, or
           where to get help.
         </li>
         <li>
@@ -97,7 +97,7 @@ export default function Page(): JSX.Element {
           Future readers judge you by how you handle criticism.
         </li>
         <li>
-          <strong>Close the loop</strong> when you ship a fix — a short update
+          <strong>Close the loop</strong> when you ship a fix - a short update
           that the issue is resolved.
         </li>
       </ul>
@@ -114,7 +114,7 @@ export default function Page(): JSX.Element {
           <tr>
             <td>Thanks for your feedback!</td>
             <td>
-              You are right that export was broken on iPad — it is fixed in 2.4,
+              You are right that export was broken on iPad - it is fixed in 2.4,
               out now. Thanks for the nudge.
             </td>
           </tr>
@@ -128,7 +128,7 @@ export default function Page(): JSX.Element {
           <tr>
             <td>We are sorry you feel that way.</td>
             <td>
-              That crash on launch was a real bug on Android 15 — patched in the
+              That crash on launch was a real bug on Android 15 - patched in the
               latest update. Let me know if it persists.
             </td>
           </tr>
@@ -146,13 +146,13 @@ export default function Page(): JSX.Element {
       </p>
       <p>
         If a review is abusive or clearly violates store policy, you can report
-        it rather than reply — but that bar is high. Most negative reviews are
+        it rather than reply - but that bar is high. Most negative reviews are
         just frustrated users, and a good reply can turn them around.
       </p>
 
       <h2>A sustainable system</h2>
       <p>
-        The reason developers stop replying is not that they do not care — it is
+        The reason developers stop replying is not that they do not care - it is
         that reviews are scattered across two consoles and it becomes a chore.
         The fix is to make it a small, routine habit rather than a periodic
         heroic effort.
@@ -169,7 +169,7 @@ export default function Page(): JSX.Element {
         </li>
         <li>
           <strong>Draft, then approve.</strong> Templates and AI drafts speed up
-          the boring 80% — a thank-you, a routing note — so you spend your energy
+          the boring 80% - a thank-you, a routing note - so you spend your energy
           on the reviews that need a real answer. Always read before you send; a
           canned reply that misses the point is worse than none.
         </li>
@@ -182,7 +182,7 @@ export default function Page(): JSX.Element {
         AppBoard drafts replies in the reviewer&apos;s language and waits for you
         to approve them, which is the balance that keeps this sustainable: fast
         on the routine ones, human on the ones that matter. But the tool is
-        secondary. The habit — reply to every review, calmly, consistently — is
+        secondary. The habit - reply to every review, calmly, consistently - is
         what quietly lifts your rating over months.
       </p>
 
@@ -192,7 +192,7 @@ export default function Page(): JSX.Element {
         is the other half. Both platforms provide a native in-app review prompt
         (Apple&apos;s SKStoreReviewController and Google&apos;s In-App Review
         API) that shows the rating dialog without kicking the user out to the
-        store. Use them — but timing is everything. Prompt after a moment of
+        store. Use them - but timing is everything. Prompt after a moment of
         success (a completed workout, a saved file, a level cleared), never
         during onboarding, never after an error, and never twice in one session.
         The platforms also rate-limit these prompts, so you cannot spam them even
@@ -202,8 +202,8 @@ export default function Page(): JSX.Element {
       <p>
         And do not fake it. Buying reviews or funneling only happy users to the
         store while diverting unhappy ones elsewhere violates both stores&apos;
-        policies and gets caught. The honest version — prompt at good moments,
-        reply to everyone, fix what reviews reveal — is slower but it is the only
+        policies and gets caught. The honest version - prompt at good moments,
+        reply to everyone, fix what reviews reveal - is slower but it is the only
         one that survives.
       </p>
 

@@ -12,7 +12,7 @@ const article = getArticle(SLUG);
 
 export const metadata: Metadata = buildPageMetadata({
   description:
-    "How to structure App Store and Google Play descriptions so both the algorithm and real people respond — the first line, formatting, and good vs bad examples.",
+    "How to structure App Store and Google Play descriptions so both the algorithm and real people respond - the first line, formatting, and good vs bad examples.",
   path: `/blog/${SLUG}`,
   title: "Writing app descriptions that get read",
 });
@@ -27,7 +27,7 @@ export default function Page(): JSX.Element {
       <p>
         Almost nobody reads your full app description. On the App Store it does
         not even affect your ranking. So why write it well? Because the small
-        fraction of people who do expand it are your highest-intent visitors —
+        fraction of people who do expand it are your highest-intent visitors -
         they are close to installing and looking for a reason. And on Google
         Play, where the description is keyword-indexed, it is doing double duty.
         Either way, the first line matters far more than the last paragraph.
@@ -38,7 +38,7 @@ export default function Page(): JSX.Element {
         Both stores collapse the description and show only the first line or two
         before a &ldquo;more&rdquo; tap. Assume most people read only that. So
         your opening sentence has to state, plainly, what the app does and who it
-        is for — not set a mood.
+        is for - not set a mood.
       </p>
       <p>
         <strong>Weak:</strong> In today&apos;s fast-paced world, staying
@@ -71,7 +71,7 @@ export default function Page(): JSX.Element {
         </li>
         <li>
           <strong>Proof:</strong> a specific number, an award, a recognizable
-          integration — something a skeptic can verify.
+          integration - something a skeptic can verify.
         </li>
         <li>
           <strong>Close:</strong> a plain call to action and any support or
@@ -87,7 +87,7 @@ export default function Page(): JSX.Element {
       <h3>Write for Google Play&apos;s index without stuffing</h3>
       <p>
         On Google Play the description feeds search, so your two or three target
-        phrases should appear — but naturally, a couple of times, in sentences a
+        phrases should appear - but naturally, a couple of times, in sentences a
         human would actually write. Keyword-stuffing (&ldquo;best free habit
         tracker habit app habit tracking daily habits&rdquo;) reads like spam and
         Google demotes it. If you would be embarrassed to read the sentence
@@ -121,7 +121,7 @@ export default function Page(): JSX.Element {
           </tr>
           <tr>
             <td>Advanced privacy features</td>
-            <td>Your data stays on device — no account required</td>
+            <td>Your data stays on device - no account required</td>
           </tr>
           <tr>
             <td>Seamless syncing</td>
@@ -140,7 +140,7 @@ export default function Page(): JSX.Element {
         than nothing, but it is not the same as a localized listing. Idioms fall
         flat, the keyword phrases people actually search differ by market, and
         the first-line hook that lands in English may be clumsy in German. At
-        minimum, hand-check the opening line and the feature headers per locale —
+        minimum, hand-check the opening line and the feature headers per locale -
         those are what people read.
       </p>
 
@@ -149,7 +149,7 @@ export default function Page(): JSX.Element {
         Descriptions drift. You tweak a line for a sale, add a feature, remove a
         deprecated one, and six months later you cannot remember what the
         original said or which edit moved conversion. Version the copy the way
-        you version code — every change, per language, with the ability to roll
+        you version code - every change, per language, with the ability to roll
         back. This is exactly what AppBoard&apos;s change history is for, but the
         principle holds with any tool: never let your live copy be the only copy
         you have.
@@ -171,7 +171,7 @@ export default function Page(): JSX.Element {
       </ol>
       <p>
         Do that pass every release and your description will already beat most of
-        the store. The bar is low — most descriptions open with a cliché and
+        the store. The bar is low - most descriptions open with a cliché and
         never recover. Say something real in the first line and you are ahead.
       </p>
     </ArticleLayout>

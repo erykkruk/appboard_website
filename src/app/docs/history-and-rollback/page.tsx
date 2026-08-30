@@ -50,13 +50,13 @@ export default function HistoryPage(): JSX.Element {
       <h2>Rolling back</h2>
       <p>
         Found a change you want to undo? Roll it back with one click. Rollback
-        doesn&apos;t touch the live store directly — it restores the old value
+        doesn&apos;t touch the live store directly - it restores the old value
         into your <a href="/docs/listings">draft</a> and marks that language as
         dirty.
       </p>
       <ol>
         <li>Open the history entry you want to revert.</li>
-        <li>Roll it back — the old value returns to your draft.</li>
+        <li>Roll it back - the old value returns to your draft.</li>
         <li>
           Review the restored draft, then{" "}
           <a href="/docs/publishing">publish</a> it to make the rollback live.
@@ -74,7 +74,7 @@ export default function HistoryPage(): JSX.Element {
       <h2>Draft diffs</h2>
       <p>
         Alongside published history, AppBoard can show a live diff of your
-        current draft versus what&apos;s on the store, per language — the same
+        current draft versus what&apos;s on the store, per language - the same
         pending changes you&apos;ll see on the{" "}
         <a href="/docs/publishing">publish page</a> before you push.
       </p>

@@ -24,7 +24,7 @@ import type { Metadata } from "next";
 import type { JSX, ReactNode } from "react";
 
 const OPEN_SOURCE_DESCRIPTION =
-  "AppBoard is open source and self-hostable — backend, admin panel, and website are all public. Free for personal and non-commercial use under the PolyForm Noncommercial License.";
+  "AppBoard is open source and self-hostable - backend, admin panel, and website are all public. Free for personal and non-commercial use under the PolyForm Noncommercial License.";
 
 export const metadata: Metadata = buildPageMetadata({
   description: OPEN_SOURCE_DESCRIPTION,
@@ -48,21 +48,21 @@ const REPOS: Repo[] = [
       "Bun + Elysia + Drizzle + PostgreSQL. Store connections, listings, publishing, research, keyword rank tracking, the encrypted vault, and the REST API.",
     href: GITHUB_REPOS.backend,
     icon: <PlugIcon className={ICON_CLASS} />,
-    title: "appboard_backend — API",
+    title: "appboard_backend - API",
   },
   {
     description:
       "Next.js + React admin panel: dashboard, listing editor with diffs and history, screenshot studio, research, reviews inbox, and automation.",
     href: GITHUB_REPOS.panel,
     icon: <ImageIcon className={ICON_CLASS} />,
-    title: "appboard_web — admin panel",
+    title: "appboard_web - admin panel",
   },
   {
     description:
-      "This marketing site — Next.js landing pages, documentation, and blog. Fork it, learn from it, or run your own.",
+      "This marketing site - Next.js landing pages, documentation, and blog. Fork it, learn from it, or run your own.",
     href: GITHUB_REPOS.website,
     icon: <BranchIcon className={ICON_CLASS} />,
-    title: "appboard_website — website",
+    title: "appboard_website - website",
   },
 ];
 
@@ -81,12 +81,12 @@ export default function OpenSourcePage(): JSX.Element {
               AppBoard is <Highlight>open source</Highlight>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              The whole platform — backend, admin panel, and this website — is
+              The whole platform - backend, admin panel, and this website - is
               public and self-hostable. And it will stay that way: AppBoard is
               committed to being open source, for good.
             </p>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-muted">
-              Source-available under the PolyForm Noncommercial License — free for
+              Source-available under the PolyForm Noncommercial License - free for
               personal and non-commercial use.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

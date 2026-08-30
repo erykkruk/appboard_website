@@ -35,14 +35,14 @@ export default function GettingStartedPage(): JSX.Element {
       </p>
       <p>
         Want to look around before connecting a real account? Open the{" "}
-        <a href={`${APP_URL}/demo`}>live demo</a> — a fully populated workspace
+        <a href={`${APP_URL}/demo`}>live demo</a> - a fully populated workspace
         with sample apps, listings, and reviews, no signup required.
       </p>
 
       <h2>Create your workspace</h2>
       <p>
         Every account starts with a workspace. A workspace is the container for
-        your apps, store connections, settings, and encrypted credentials — and
+        your apps, store connections, settings, and encrypted credentials - and
         it is the boundary AppBoard uses to keep data isolated. You can create
         more workspaces later for separate teams or clients.
       </p>
@@ -54,11 +54,11 @@ export default function GettingStartedPage(): JSX.Element {
       </p>
       <ul>
         <li>
-          <a href="/docs/connect-app-store">Connect App Store Connect</a> — with
+          <a href="/docs/connect-app-store">Connect App Store Connect</a> - with
           an App Store Connect API key.
         </li>
         <li>
-          <a href="/docs/connect-google-play">Connect Google Play Console</a> —
+          <a href="/docs/connect-google-play">Connect Google Play Console</a> -
           with a service account JSON.
         </li>
       </ul>
@@ -71,7 +71,7 @@ export default function GettingStartedPage(): JSX.Element {
       <blockquote>
         <p>
           <strong>Heads up:</strong> resetting the vault permanently wipes every
-          stored credential — there is no recovery code. Save your passphrase in
+          stored credential - there is no recovery code. Save your passphrase in
           a password manager before you continue.
         </p>
       </blockquote>
@@ -95,7 +95,7 @@ export default function GettingStartedPage(): JSX.Element {
           the character counters and dirty-state markers.
         </li>
         <li>
-          <a href="/docs/publishing">Publish your changes</a> — nothing reaches
+          <a href="/docs/publishing">Publish your changes</a> - nothing reaches
           a store until you push it.
         </li>
         <li>

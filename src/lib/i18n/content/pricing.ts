@@ -68,14 +68,14 @@ const EN: PricingContent = {
   },
   page: {
     eyebrow: "Pricing",
-    lead: "From your first app to a full portfolio — start free today and grow into the plan that fits your team.",
+    lead: "From your first app to a full portfolio - start free today and grow into the plan that fits your team.",
     title: "Simple plans for every stage",
   },
   tiers: {
     betaSuffix: "during beta",
     ctaLabel: "Get started",
     earlyAccessBody:
-      "AppBoard is free while in beta. The tiers below show the planned structure — pricing will be announced before general availability.",
+      "AppBoard is free while in beta. The tiers below show the planned structure - pricing will be announced before general availability.",
     earlyAccessLabel: "Early access:",
     mostPopular: "Most popular",
     selfHostBody:
@@ -98,7 +98,7 @@ const EN: PricingContent = {
         description: "For developers who treat ASO as a growth channel.",
         features: [
           "Unlimited connected apps",
-          "AI assistant via OpenRouter — any model",
+          "AI assistant via OpenRouter - any model",
           "Keyword, market, and competitor research",
           "Screenshot studio with CLI and CI uploads",
           "Batch publishing with per-item reports",

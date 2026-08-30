@@ -45,7 +45,7 @@ export default function BlogPage(): JSX.Element {
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
               Field notes on App Store Optimization from the people building
-              AppBoard — metadata, keywords, screenshots, and reviews, with the
+              AppBoard - metadata, keywords, screenshots, and reviews, with the
               real character limits and store rules that trip people up.
             </p>
           </div>

@@ -301,7 +301,7 @@ const EN: HomeContent = {
     ctaLabel: "Open the editor",
     ctaNote: "Free forever · no login",
     description:
-      "Design App Store and Google Play screenshots for free — right in your browser. Pick a template, drop in your screenshot, rotate a real 3D device, export at exact store dimensions. No account needed.",
+      "Design App Store and Google Play screenshots for free - right in your browser. Pick a template, drop in your screenshot, rotate a real 3D device, export at exact store dimensions. No account needed.",
     eyebrow: "Free tool",
     gallery: [
       {
@@ -350,13 +350,13 @@ const EN: HomeContent = {
       },
     ],
     galleryLead:
-      "Every one of these took under a minute — pick a template, your screenshot stays, the scene changes:",
+      "Every one of these took under a minute - pick a template, your screenshot stays, the scene changes:",
     points: [
-      "Real 3D device models — rotate an iPhone or Galaxy in true WebGL, plus drawn and clay styles",
+      "Real 3D device models - rotate an iPhone or Galaxy in true WebGL, plus drawn and clay styles",
       "20+ scene templates: hero shots, panoramas, social proof, award laurels, dark mode",
-      "Gradients, mesh, patterns, decorative text, shapes — and language variants per locale",
+      "Gradients, mesh, patterns, decorative text, shapes - and language variants per locale",
       "Panorama layouts that export as several consecutive store screenshots",
-      "100% in your browser — no sign-up, nothing uploaded to a server",
+      "100% in your browser - no sign-up, nothing uploaded to a server",
     ],
     title: "Free ASO Screenshot Editor",
   },

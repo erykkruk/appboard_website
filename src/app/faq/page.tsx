@@ -28,12 +28,12 @@ const FAQ_CATEGORIES: FaqCategory[] = [
     entries: [
       {
         answer:
-          "AppBoard is one panel for managing your App Store and Google Play listings — metadata, screenshots, versions, reviews and ASO research — instead of jumping between App Store Connect and the Play Console. It's built for indie developers and small teams shipping the same app on both stores.",
+          "AppBoard is one panel for managing your App Store and Google Play listings - metadata, screenshots, versions, reviews and ASO research - instead of jumping between App Store Connect and the Play Console. It's built for indie developers and small teams shipping the same app on both stores.",
         question: "What is AppBoard?",
       },
       {
         answer:
-          "Yes. The live demo is a real AppBoard workspace pre-filled with example apps, reviews and listing history. It opens in one click — no signup and no store credentials — so you can click through every screen before deciding.",
+          "Yes. The live demo is a real AppBoard workspace pre-filled with example apps, reviews and listing history. It opens in one click - no signup and no store credentials - so you can click through every screen before deciding.",
         question: "Can I try it without connecting my own apps?",
       },
       {
@@ -43,12 +43,12 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         answer:
-          "About ten minutes if you have your store keys ready — an App Store Connect API key and a Google Play service account. Once they're connected, AppBoard imports your apps and listings automatically.",
+          "About ten minutes if you have your store keys ready - an App Store Connect API key and a Google Play service account. Once they're connected, AppBoard imports your apps and listings automatically.",
         question: "How long does setup take?",
       },
       {
         answer:
-          "Yes. AppBoard is an open-source product, and the whole tool runs in the web panel — there's no desktop app, no plugin and nothing to install. Any modern browser is enough.",
+          "Yes. AppBoard is an open-source product, and the whole tool runs in the web panel - there's no desktop app, no plugin and nothing to install. Any modern browser is enough.",
         question: "Is AppBoard open source, and do I need to install anything?",
       },
     ],
@@ -58,7 +58,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
     entries: [
       {
         answer:
-          "Both. App Store Connect connects with an API key — Issuer ID, Key ID and the .p8 file. Google Play connects with a service account JSON. Apps from both stores then sit side by side in one workspace.",
+          "Both. App Store Connect connects with an API key - Issuer ID, Key ID and the .p8 file. Google Play connects with a service account JSON. Apps from both stores then sit side by side in one workspace.",
         question: "Which stores does AppBoard support?",
       },
       {
@@ -68,7 +68,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         answer:
-          "Yes. A full re-import per store pulls everything fresh from the store and replaces the local data for that store — useful if something drifted out of sync or you changed things directly in the store console.",
+          "Yes. A full re-import per store pulls everything fresh from the store and replaces the local data for that store - useful if something drifted out of sync or you changed things directly in the store console.",
         question: "Can I re-sync everything from a store?",
       },
       {
@@ -98,7 +98,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         answer:
-          "No. Credentials stay encrypted in the vault, and everything in AppBoard is workspace-scoped — teammates work with your listings without ever seeing the raw keys.",
+          "No. Credentials stay encrypted in the vault, and everything in AppBoard is workspace-scoped - teammates work with your listings without ever seeing the raw keys.",
         question: "Can teammates see my credentials?",
       },
     ],
@@ -118,17 +118,17 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         answer:
-          "You can push a version as a draft or send it for review. AppBoard doesn't override the managed-publishing timing you've set — that stays in the Play Console.",
+          "You can push a version as a draft or send it for review. AppBoard doesn't override the managed-publishing timing you've set - that stays in the Play Console.",
         question: "What publishing options exist on Google Play?",
       },
       {
         answer:
-          "Screenshots are managed per device and per language at exact store dimensions, and the built-in editor composes scenes — device frame, background, headline — and exports each image at the precise size the stores require, with language variants of the same scene.",
+          "Screenshots are managed per device and per language at exact store dimensions, and the built-in editor composes scenes - device frame, background, headline - and exports each image at the precise size the stores require, with language variants of the same scene.",
         question: "How does AppBoard handle screenshots?",
       },
       {
         answer:
-          "Upload one wide panorama and AppBoard splits it into 2–10 consecutive screenshots for the panoramic store-listing effect. And if an image has the wrong size, the crop tool locks to per-device presets — from iPhone 3.5\" to iPad Pro 12.9\" to Android tablets — so the store accepts the upload on the first try.",
+          "Upload one wide panorama and AppBoard splits it into 2-10 consecutive screenshots for the panoramic store-listing effect. And if an image has the wrong size, the crop tool locks to per-device presets - from iPhone 3.5\" to iPad Pro 12.9\" to Android tablets - so the store accepts the upload on the first try.",
         question: "What about panoramas and wrong-sized images?",
       },
     ],
@@ -138,12 +138,12 @@ const FAQ_CATEGORIES: FaqCategory[] = [
     entries: [
       {
         answer:
-          "Your own. AI runs through your OpenRouter key with any model you choose, and you pay the provider directly — AppBoard doesn't mark up or resell tokens.",
+          "Your own. AI runs through your OpenRouter key with any model you choose, and you pay the provider directly - AppBoard doesn't mark up or resell tokens.",
         question: "Whose AI key does AppBoard use?",
       },
       {
         answer:
-          "It drafts descriptions, translations, keyword ideas and review replies. Everything the AI produces is a suggestion you review and approve — nothing reaches a store automatically.",
+          "It drafts descriptions, translations, keyword ideas and review replies. Everything the AI produces is a suggestion you review and approve - nothing reaches a store automatically.",
         question: "What does the AI actually do?",
       },
       {
@@ -153,7 +153,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         answer:
-          "Yes. You can research any app on the stores — its keywords, the markets it ranks in, its reviews, and a side-by-side visual comparison with yours.",
+          "Yes. You can research any app on the stores - its keywords, the markets it ranks in, its reviews, and a side-by-side visual comparison with yours.",
         question: "Can I research competitors?",
       },
     ],
@@ -168,7 +168,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         answer:
-          "Early users get notice and a migration path onto whatever plan fits — no silent charging and no surprise switch from free to paid.",
+          "Early users get notice and a migration path onto whatever plan fits - no silent charging and no surprise switch from free to paid.",
         question: "What happens to my account after the beta?",
       },
     ],

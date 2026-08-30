@@ -73,7 +73,7 @@ export default function ScreenshotsPage(): JSX.Element {
       <p>
         The screenshot editor composes full store graphics in the browser: pick a
         background (solid or gradient), drop your app screenshot into a device
-        frame — iPhone or Android — position and rotate it, and add headline
+        frame - iPhone or Android - position and rotate it, and add headline
         text on top. Scenes are saved per language and device, and export
         happens at the exact canonical dimensions for the selected device type,
         so the store won&apos;t bounce your upload for a size mismatch.
@@ -87,14 +87,14 @@ export default function ScreenshotsPage(): JSX.Element {
       <h3>Language variants</h3>
       <p>
         A scene isn&apos;t tied to one locale. Use language variants to
-        regenerate the same composition for every language you ship — same
-        layout, translated headline — without redesigning anything.
+        regenerate the same composition for every language you ship - same
+        layout, translated headline - without redesigning anything.
       </p>
 
       <h2>Panorama splitting</h2>
       <p>
         For the panoramic listing effect, upload one wide image and AppBoard
-        slices it vertically into 2–10 equal parts, uploading each part as a
+        slices it vertically into 2-10 equal parts, uploading each part as a
         consecutive screenshot. Frame the crop and zoom first, pick the number
         of parts, and the split preview shows exactly where the cuts land.
       </p>
@@ -109,7 +109,7 @@ export default function ScreenshotsPage(): JSX.Element {
         Upload an image that doesn&apos;t match the slot and the crop tool opens
         automatically, locked to the target device&apos;s aspect ratio in
         portrait or landscape. Zoom and position, and the export lands at the
-        exact pixel target — for example 1242 × 2688 for a 6.5-inch iPhone —
+        exact pixel target - for example 1242 × 2688 for a 6.5-inch iPhone -
         across every preset from the 3.5-inch iPhone to the 12.9-inch iPad Pro
         and Android tablets.
       </p>
@@ -123,7 +123,7 @@ export default function ScreenshotsPage(): JSX.Element {
         <p>
           <strong>Heads up:</strong> stores reject screenshot sets that
           don&apos;t match the required dimensions exactly. Use the shown size for
-          each slot, or export from the editor or crop tool — both already
+          each slot, or export from the editor or crop tool - both already
           target the exact pixels.
         </p>
       </blockquote>

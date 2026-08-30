@@ -9,7 +9,7 @@ const LAST_UPDATED = "July 8, 2026";
 const CONTACT_EMAIL = "contact@appboard.dev";
 
 const DESCRIPTION =
-  "How AppBoard collects, uses, and protects your data — including end-to-end encrypted store credentials for App Store Connect and Google Play.";
+  "How AppBoard collects, uses, and protects your data - including end-to-end encrypted store credentials for App Store Connect and Google Play.";
 
 export const metadata: Metadata = buildPageMetadata({
   description: DESCRIPTION,
@@ -43,13 +43,13 @@ export default function PrivacyPolicyPage(): JSX.Element {
         </li>
         <li>
           <strong>Store credentials.</strong> To manage your listings we store
-          the API credentials you provide — Google Play service account keys and
+          the API credentials you provide - Google Play service account keys and
           App Store Connect API keys. These are held in an end-to-end encrypted
           vault (see &ldquo;How we protect store credentials&rdquo; below).
         </li>
         <li>
           <strong>App data.</strong> Metadata we synchronize from the connected
-          stores on your behalf — app titles, descriptions, screenshots,
+          stores on your behalf - app titles, descriptions, screenshots,
           categories, reviews, in-app products, and related listing content.
         </li>
         <li>
@@ -96,17 +96,17 @@ export default function PrivacyPolicyPage(): JSX.Element {
       <ul>
         <li>
           <strong>Apple App Store Connect</strong> and{" "}
-          <strong>Google Play</strong> — to read and publish your listing data
+          <strong>Google Play</strong> - to read and publish your listing data
           using the credentials you provide.
         </li>
         <li>
-          <strong>AI providers</strong> — when you use AI features, the relevant
+          <strong>AI providers</strong> - when you use AI features, the relevant
           text (for example a listing draft or a review) is sent to our AI
           provider to generate a response. This content is not used to train
           third-party models.
         </li>
         <li>
-          <strong>Infrastructure and hosting providers</strong> — to run and
+          <strong>Infrastructure and hosting providers</strong> - to run and
           store data for the Service.
         </li>
       </ul>
@@ -141,8 +141,8 @@ export default function PrivacyPolicyPage(): JSX.Element {
 
       <h2>Security</h2>
       <p>
-        We use industry-standard measures — including encryption in transit,
-        encryption at rest, and the end-to-end encrypted credential vault — to
+        We use industry-standard measures - including encryption in transit,
+        encryption at rest, and the end-to-end encrypted credential vault - to
         protect your data. No method of transmission or storage is completely
         secure, but we work continually to safeguard your information.
       </p>

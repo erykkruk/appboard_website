@@ -127,7 +127,7 @@ export function ArrowRightIcon({ className }: IconProps): JSX.Element {
   );
 }
 
-// Brand glyph — filled (not IconBase, which is stroke-only).
+// Brand glyph - filled (not IconBase, which is stroke-only).
 export function DiscordIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
@@ -141,7 +141,7 @@ export function DiscordIcon({ className }: IconProps): JSX.Element {
   );
 }
 
-// Brand glyph — filled (not IconBase, which is stroke-only).
+// Brand glyph - filled (not IconBase, which is stroke-only).
 export function RedditIcon({ className }: IconProps): JSX.Element {
 	return (
 		<svg

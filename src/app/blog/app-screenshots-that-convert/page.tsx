@@ -28,7 +28,7 @@ export default function Page(): JSX.Element {
         Screenshots sell your app better than any sentence you write. Most
         visitors decide from the first two frames without scrolling and without
         reading a word of your description. Yet screenshots are usually an
-        afterthought — a few raw captures with no caption, in whatever order the
+        afterthought - a few raw captures with no caption, in whatever order the
         export tool spat them out. Fixing that is one of the highest-return
         things you can do to a listing.
       </p>
@@ -59,7 +59,7 @@ export default function Page(): JSX.Element {
           </tr>
           <tr>
             <td>Feature graphic</td>
-            <td>—</td>
+            <td>-</td>
             <td>1024&times;500 (required)</td>
           </tr>
           <tr>
@@ -76,7 +76,7 @@ export default function Page(): JSX.Element {
       </table>
       <p>
         A few things people trip on. The App Store 6.7&Prime; size at
-        1290&times;2796 is the current iPhone reference — upload at exactly that
+        1290&times;2796 is the current iPhone reference - upload at exactly that
         resolution to avoid resampling artifacts. Google Play&apos;s feature
         graphic is mandatory and has no App Store equivalent, so it is easy to
         forget; it appears at the top of your listing, so a blank or ugly one is
@@ -86,7 +86,7 @@ export default function Page(): JSX.Element {
 
       <h2>The first two frames are the ad</h2>
       <p>
-        Assume the majority of viewers see only your first two screenshots — the
+        Assume the majority of viewers see only your first two screenshots - the
         ones visible without scrolling in the search results and at the top of
         your page. Everything after frame two is for the minority who are already
         interested. So your two strongest ideas go first, not your onboarding
@@ -103,7 +103,7 @@ export default function Page(): JSX.Element {
       <p>
         A bare screenshot makes the viewer do the work of figuring out what they
         are looking at. A short caption does it for them. Keep captions to a few
-        words — a benefit, not a UI label. &ldquo;See your strength trend over
+        words - a benefit, not a UI label. &ldquo;See your strength trend over
         months&rdquo; beats a raw chart with no context; &ldquo;Analytics
         Screen&rdquo; is worse than nothing.
       </p>
@@ -136,20 +136,20 @@ export default function Page(): JSX.Element {
       </p>
       <ol>
         <li>
-          <strong>The core value</strong> — the one thing your app is best at.
+          <strong>The core value</strong> - the one thing your app is best at.
         </li>
         <li>
-          <strong>The second hook</strong> — the next reason to care.
+          <strong>The second hook</strong> - the next reason to care.
         </li>
         <li>
-          <strong>Depth</strong> — a feature that shows the app is serious.
+          <strong>Depth</strong> - a feature that shows the app is serious.
         </li>
         <li>
-          <strong>Proof or trust</strong> — social proof, privacy, an
+          <strong>Proof or trust</strong> - social proof, privacy, an
           integration people recognize.
         </li>
         <li>
-          <strong>The ask</strong> — a clean final frame that invites the tap.
+          <strong>The ask</strong> - a clean final frame that invites the tap.
         </li>
       </ol>
       <p>
@@ -163,14 +163,14 @@ export default function Page(): JSX.Element {
         Heavily stylized frames that hide the actual interface are both a
         conversion risk and a rejection risk. If your screenshots look nothing
         like the app, install-to-retention suffers because expectations were set
-        wrong — and both stores can reject screenshots that misrepresent the
+        wrong - and both stores can reject screenshots that misrepresent the
         product. Frame the real UI attractively: a device bezel, a clean
         background, a caption. Do not fake a UI that does not exist.
       </p>
 
       <h2>Localize the images, not just the store text</h2>
       <p>
-        If your captions are baked into the images — and they usually are — every
+        If your captions are baked into the images - and they usually are - every
         localized listing needs its own screenshot set with translated captions.
         Upload English captions to your Japanese listing and that is exactly what
         Japanese users see. Managing separate screenshot sets per language and
@@ -184,7 +184,7 @@ export default function Page(): JSX.Element {
         Both stores support a short video above your screenshots, and it plays a
         different role than a static frame. The App Store allows up to three app
         preview videos (15&ndash;30 seconds) that autoplay, muted, right in
-        search results — so the first few seconds have to make sense without
+        search results - so the first few seconds have to make sense without
         sound. Google Play takes a promo video via a YouTube link that sits with
         your feature graphic. A video is not mandatory and a weak one hurts more
         than no video, so only ship one if it genuinely shows the app in motion
@@ -195,7 +195,7 @@ export default function Page(): JSX.Element {
         Whatever you ship, treat visuals as an experiment, not a one-time task.
         Change the first frame, wait a couple of weeks, and watch whether your
         install rate moves. Screenshots are the highest-leverage thing to test
-        because they carry most of the conversion — a better frame one can lift
+        because they carry most of the conversion - a better frame one can lift
         installs more than any keyword change you make that quarter.
       </p>
 
@@ -204,7 +204,7 @@ export default function Page(): JSX.Element {
         Show a friend who has never seen your app just the first two screenshots,
         for three seconds, then hide them. Ask what the app does and who it is
         for. If they can answer, your frames are working. If they hesitate, your
-        first two frames are not pulling their weight — and that is where nearly
+        first two frames are not pulling their weight - and that is where nearly
         all of your conversion is won or lost.
       </p>
     </ArticleLayout>
