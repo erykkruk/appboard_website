@@ -15,7 +15,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     date: "2026-08-30",
     description:
       "Video outperforms static creative almost everywhere else, so what does it do in a store listing? The real numbers, how Apple and Google ship video differently, and the landscape trap that can leave your search result blank.",
-    readingMinutes: 11,
+    readingMinutes: 7,
     slug: "app-preview-video-vs-screenshots",
     tag: "Creative",
     title: "App preview video vs screenshots: what actually converts",
@@ -117,7 +117,7 @@ export const BLOG_ARTICLES_PL: BlogArticle[] = [
     date: "2026-08-30",
     description:
       "Ile realnie daje wideo promocyjne w App Store i Google Play, czym App Preview różni się od filmu na Play, kanały YouTube per język i pułapka poziomego wideo, która zabiera zrzuty z wyników wyszukiwania.",
-    readingMinutes: 12,
+    readingMinutes: 7,
     slug: "wideo-promocyjne-aplikacji",
     tag: "Kreacje",
     title: "Wideo promocyjne aplikacji czy zrzuty ekranu: co konwertuje lepiej",
@@ -165,7 +165,7 @@ export const BLOG_ARTICLES_DE: BlogArticle[] = [
     date: "2026-08-30",
     description:
       "Was ein App Preview Video wirklich an Conversion bringt, wie unterschiedlich App Store und Google Play Video ausspielen, YouTube-Kanäle pro Sprache und die Querformat-Falle, die Screenshots aus den Suchergebnissen entfernt.",
-    readingMinutes: 12,
+    readingMinutes: 7,
     slug: "app-preview-video-oder-screenshots",
     tag: "Creatives",
     title: "App Preview Video oder Screenshots: was wirklich konvertiert",
@@ -213,7 +213,7 @@ export const BLOG_ARTICLES_ES: BlogArticle[] = [
     date: "2026-08-30",
     description:
       "Cuánto suma de verdad un vídeo de presentación, en qué se diferencian App Store y Google Play al mostrarlo, los canales de YouTube por idioma y la trampa del formato horizontal que deja tu resultado de búsqueda sin capturas.",
-    readingMinutes: 12,
+    readingMinutes: 7,
     slug: "video-promocional-o-capturas",
     tag: "Creatividades",
     title: "Vídeo promocional o capturas: qué convierte mejor en las tiendas",
