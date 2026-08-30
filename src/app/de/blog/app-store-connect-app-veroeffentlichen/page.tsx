@@ -100,8 +100,8 @@ export default function Page(): JSX.Element {
         Vor der ersten Veröffentlichung steht die Mitgliedschaft im Apple
         Developer Program. Apple veröffentlicht dafür{" "}
         <strong>99 US-Dollar pro Jahr</strong>. Das ist keine Formalie, sondern
-        eine Korrektur: Zahlreiche deutsche Seiten schreiben &bdquo;99
-        Euro&ldquo; und geben damit einen Preis an, den Apple so nicht
+        eine Korrektur: Zahlreiche deutsche Seiten schreiben &quot;99
+        Euro&quot; und geben damit einen Preis an, den Apple so nicht
         veröffentlicht. Der lokale Betrag entsteht erst im Bezahlvorgang und
         hängt von Wechselkurs und Steuersatz ab. Wer intern budgetiert, plant
         deshalb mit dem Dollarbetrag zuzüglich Umrechnung, nicht mit einer
@@ -212,13 +212,13 @@ export default function Page(): JSX.Element {
       </p>
       <ul>
         <li>
-          &bdquo;Größe&ldquo; hat 5 Zeichen und belegt 7 Bytes.
+          &quot;Größe&quot; hat 5 Zeichen und belegt 7 Bytes.
         </li>
         <li>
-          &bdquo;Bücher&ldquo; hat 6 Zeichen und belegt 7 Bytes.
+          &quot;Bücher&quot; hat 6 Zeichen und belegt 7 Bytes.
         </li>
         <li>
-          &bdquo;Ernährungstagebuch&ldquo; hat 18 Zeichen und belegt 19 Bytes.
+          &quot;Ernährungstagebuch&quot; hat 18 Zeichen und belegt 19 Bytes.
         </li>
       </ul>
       <p>

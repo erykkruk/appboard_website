@@ -26,12 +26,12 @@ export default function PrivacyPolicyPage(): JSX.Element {
       title="Privacy Policy"
     >
       <p>
-        {SITE_NAME} (&ldquo;AppBoard&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;)
+        {SITE_NAME} (&quot;AppBoard&quot;, &quot;we&quot;, &quot;us&quot;)
         provides an App Store Optimization (ASO) platform that helps you manage
         app store listings, screenshots, metadata, reviews, and in-app products
         for the Apple App Store and Google Play from a single panel. This Privacy
         Policy describes how we handle your information when you use our website
-        and application (together, the &ldquo;Service&rdquo;).
+        and application (together, the &quot;Service&quot;).
       </p>
 
       <h2>Information we collect</h2>
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage(): JSX.Element {
           <strong>Store credentials.</strong> To manage your listings we store
           the API credentials you provide - Google Play service account keys and
           App Store Connect API keys. These are held in an end-to-end encrypted
-          vault (see &ldquo;How we protect store credentials&rdquo; below).
+          vault (see &quot;How we protect store credentials&quot; below).
         </li>
         <li>
           <strong>App data.</strong> Metadata we synchronize from the connected
@@ -111,8 +111,8 @@ export default function PrivacyPolicyPage(): JSX.Element {
         </li>
       </ul>
       <p>
-        Your use of the connected stores is also governed by Apple&rsquo;s and
-        Google&rsquo;s respective terms and privacy policies.
+        Your use of the connected stores is also governed by Apple&apos;s and
+        Google&apos;s respective terms and privacy policies.
       </p>
 
       <h2>How we share information</h2>
@@ -153,7 +153,7 @@ export default function PrivacyPolicyPage(): JSX.Element {
         Service. We do not use advertising cookies.
       </p>
 
-      <h2>Children&rsquo;s privacy</h2>
+      <h2>Children&apos;s privacy</h2>
       <p>
         The Service is intended for developers and businesses and is not directed
         to children under 16. We do not knowingly collect personal data from
@@ -163,7 +163,7 @@ export default function PrivacyPolicyPage(): JSX.Element {
       <h2>Changes to this policy</h2>
       <p>
         We may update this Privacy Policy from time to time. When we do, we will
-        revise the &ldquo;Last updated&rdquo; date above and, where appropriate,
+        revise the &quot;Last updated&quot; date above and, where appropriate,
         notify you.
       </p>
 

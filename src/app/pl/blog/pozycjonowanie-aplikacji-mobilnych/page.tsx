@@ -162,8 +162,8 @@ export default function Page(): JSX.Element {
         ma limit <strong>100 bajtów, nie 100 znaków</strong>. W UTF-8 zwykła
         łacińska litera zajmuje jeden bajt, ale{" "}
         <strong>polskie znaki diakrytyczne zajmują po dwa</strong>. Wyraz
-        &bdquo;ćwiczenia&rdquo; to dziesięć znaków i jedenaście bajtów.
-        &bdquo;żółć&rdquo; to cztery znaki i siedem bajtów. Zestaw słów z
+        &quot;ćwiczenia&quot; to dziesięć znaków i jedenaście bajtów.
+        &quot;żółć&quot; to cztery znaki i siedem bajtów. Zestaw słów z
         ogonkami wyczerpie limit szybciej, niż pokazuje licznik znaków w
         zwykłym edytorze.
       </p>
@@ -180,7 +180,7 @@ export default function Page(): JSX.Element {
         <li>
           <strong>Wybierz formę podstawową</strong> i tę, którą użytkownicy
           realnie wpisują. Często to nie to samo. Ludzie szukają
-          &bdquo;treningi&rdquo;, nie &bdquo;trening&rdquo;.
+          &quot;treningi&quot;, nie &quot;trening&quot;.
         </li>
         <li>
           <strong>Rozstrzygnij ogonki per słowo, nie hurtem.</strong> Część

@@ -69,7 +69,7 @@ export default function Page(): JSX.Element {
     >
       <JsonLd data={buildFaqSchema(`/blog/${SLUG}`, FAQ)} />
       <p>
-        Every &ldquo;best ASO tools&rdquo; list currently ranking on Google was
+        Every &quot;best ASO tools&quot; list currently ranking on Google was
         written by a company that sells one of the tools, and every one of them
         puts its own product first. That is not the real problem. The real
         problem is that the prices are wrong. Three of the top-ranking lists

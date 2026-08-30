@@ -49,8 +49,8 @@ export default function Page(): JSX.Element {
         This is the source people skip, and it is the best one. Read your reviews
         and note the exact words users use to describe what your app does for
         them. Real users rarely use your marketing vocabulary. If they keep
-        saying &ldquo;meal planner&rdquo; and your listing says &ldquo;nutrition
-        organizer&rdquo;, you have found a gap. AppBoard surfaces review themes
+        saying &quot;meal planner&quot; and your listing says &quot;nutrition
+        organizer&quot;, you have found a gap. AppBoard surfaces review themes
         automatically, but reading fifty reviews by hand works fine too.
       </p>
       <h3>Competitors</h3>
@@ -87,7 +87,7 @@ export default function Page(): JSX.Element {
           <tr>
             <td>Winnable</td>
             <td>High</td>
-            <td>Low&ndash;medium</td>
+            <td>Low-medium</td>
             <td>Target now</td>
           </tr>
           <tr>
@@ -105,10 +105,10 @@ export default function Page(): JSX.Element {
         </tbody>
       </table>
       <p>
-        As a new or small app, live in the &ldquo;winnable&rdquo; and &ldquo;long
-        tail&rdquo; rows. You will not outrank an incumbent for
-        &ldquo;fitness&rdquo; this quarter, but you can absolutely own
-        &ldquo;strength training log for lifters&rdquo; - and those users convert
+        As a new or small app, live in the &quot;winnable&quot; and &quot;long
+        tail&quot; rows. You will not outrank an incumbent for
+        &quot;fitness&quot; this quarter, but you can absolutely own
+        &quot;strength training log for lifters&quot; - and those users convert
         better anyway because the match is exact.
       </p>
 

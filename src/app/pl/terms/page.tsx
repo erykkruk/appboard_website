@@ -36,9 +36,9 @@ export default function TermsOfServicePagePl(): JSX.Element {
 
       <h2>1. Akceptacja warunków</h2>
       <p>
-        Niniejszy regulamin (&bdquo;Warunki&rdquo;) stanowi wiążącą umowę między
-        Tobą a {SITE_NAME} (&bdquo;AppBoard&rdquo;, &bdquo;my&rdquo;,
-        &bdquo;nas&rdquo;). Zakładając konto lub korzystając z Usługi,
+        Niniejszy regulamin (&quot;Warunki&quot;) stanowi wiążącą umowę między
+        Tobą a {SITE_NAME} (&quot;AppBoard&quot;, &quot;my&quot;,
+        &quot;nas&quot;). Zakładając konto lub korzystając z Usługi,
         akceptujesz niniejsze Warunki. Jeśli się na nie nie zgadzasz, nie
         korzystaj z Usługi.
       </p>
@@ -134,8 +134,8 @@ export default function TermsOfServicePagePl(): JSX.Element {
 
       <h2>10. Wyłączenia odpowiedzialności</h2>
       <p>
-        Usługa jest udostępniana w stanie &bdquo;takim, jaka jest&rdquo; oraz
-        &bdquo;w miarę dostępności&rdquo;, bez jakichkolwiek gwarancji, wyraźnych
+        Usługa jest udostępniana w stanie &quot;takim, jaka jest&quot; oraz
+        &quot;w miarę dostępności&quot;, bez jakichkolwiek gwarancji, wyraźnych
         ani dorozumianych, w tym gwarancji przydatności do określonego celu oraz
         nienaruszania praw osób trzecich. Nie gwarantujemy, że Usługa będzie
         działać nieprzerwanie i bezbłędnie ani że publikacja w sklepie zawsze
@@ -164,7 +164,7 @@ export default function TermsOfServicePagePl(): JSX.Element {
       <h2>13. Zmiany niniejszych warunków</h2>
       <p>
         Możemy okresowo aktualizować niniejsze Warunki. Gdy to zrobimy, zmienimy
-        widoczną powyżej datę &bdquo;Ostatnia aktualizacja&rdquo; oraz, w
+        widoczną powyżej datę &quot;Ostatnia aktualizacja&quot; oraz, w
         uzasadnionych przypadkach, poinformujemy Cię o zmianach. Dalsze
         korzystanie z Usługi po wejściu zmian w życie oznacza akceptację
         zaktualizowanych Warunków.

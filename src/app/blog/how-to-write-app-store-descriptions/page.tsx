@@ -36,7 +36,7 @@ export default function Page(): JSX.Element {
       <h2>The first line does the work</h2>
       <p>
         Both stores collapse the description and show only the first line or two
-        before a &ldquo;more&rdquo; tap. Assume most people read only that. So
+        before a &quot;more&quot; tap. Assume most people read only that. So
         your opening sentence has to state, plainly, what the app does and who it
         is for - not set a mood.
       </p>
@@ -62,7 +62,7 @@ export default function Page(): JSX.Element {
       </p>
       <ul>
         <li>
-          <strong>Opening (1&ndash;2 lines):</strong> what it does, who it is
+          <strong>Opening (1-2 lines):</strong> what it does, who it is
           for, the main outcome.
         </li>
         <li>
@@ -79,7 +79,7 @@ export default function Page(): JSX.Element {
         </li>
       </ul>
       <p>
-        You have 4000 characters on both stores. That is room for maybe 250&ndash;350
+        You have 4000 characters on both stores. That is room for maybe 250-350
         words of actual content. Using all 4000 is almost always a mistake; the
         density of a good landing page beats the length of a bad one.
       </p>
@@ -88,8 +88,8 @@ export default function Page(): JSX.Element {
       <p>
         On Google Play the description feeds search, so your two or three target
         phrases should appear - but naturally, a couple of times, in sentences a
-        human would actually write. Keyword-stuffing (&ldquo;best free habit
-        tracker habit app habit tracking daily habits&rdquo;) reads like spam and
+        human would actually write. Keyword-stuffing (&quot;best free habit
+        tracker habit app habit tracking daily habits&quot;) reads like spam and
         Google demotes it. If you would be embarrassed to read the sentence
         aloud, rewrite it.
       </p>
@@ -102,9 +102,9 @@ export default function Page(): JSX.Element {
       <h2>Concrete beats clever</h2>
       <p>
         The fastest way to improve any app description is to replace adjectives
-        with facts. &ldquo;Powerful analytics&rdquo; means nothing.
-        &ldquo;See your 7-day and 30-day trends, export to CSV, and compare any
-        two periods&rdquo; means something. Numbers, nouns, and verbs sell;
+        with facts. &quot;Powerful analytics&quot; means nothing.
+        &quot;See your 7-day and 30-day trends, export to CSV, and compare any
+        two periods&quot; means something. Numbers, nouns, and verbs sell;
         adjectives decorate.
       </p>
       <table>

@@ -242,7 +242,7 @@ export default function Page(): JSX.Element {
 
       <h3>The scaling cascade nobody publishes</h3>
       <p>
-        Everyone writes &ldquo;Apple scales down automatically.&rdquo; Here is the
+        Everyone writes &quot;Apple scales down automatically.&quot; Here is the
         actual chain, which is why supplying only the largest set is safe:
       </p>
       <ul>
@@ -365,7 +365,7 @@ export default function Page(): JSX.Element {
       <ul>
         <li>
           <strong>
-            &ldquo;The dimensions of one or more screenshots are wrong&rdquo;
+            &quot;The dimensions of one or more screenshots are wrong&quot;
           </strong>{" "}
           usually means an export that is a pixel or two off. Design tools round
           when a canvas is scaled. Set the artboard to the exact target and
