@@ -58,8 +58,8 @@ export default function ConnectGooglePlayPage(): JSX.Element {
 
       <h2>Full re-import</h2>
       <p>
-        If your local apps have drifted from what&apos;s on the account — stale
-        entries, a reorganized console, or a fresh start — run a{" "}
+        If your local apps have drifted from what&apos;s on the account - stale
+        entries, a reorganized console, or a fresh start - run a{" "}
         <strong>full re-import</strong>. AppBoard wipes the locally stored apps
         for that store and fetches everything fresh from the account.
       </p>
@@ -75,8 +75,8 @@ export default function ConnectGooglePlayPage(): JSX.Element {
       <h2>Publishing to Play</h2>
       <p>
         When you <a href="/docs/publishing">publish</a>, AppBoard can push your
-        changes as a draft or send them for review. Managed publishing modes —
-        manual, automatic, or scheduled — are controlled in the Play Console
+        changes as a draft or send them for review. Managed publishing modes -
+        manual, automatic, or scheduled - are controlled in the Play Console
         itself, so AppBoard respects whatever you have configured there.
       </p>
     </DocsLayout>

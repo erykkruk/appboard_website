@@ -77,7 +77,7 @@ export default function ListingsPage(): JSX.Element {
         </tbody>
       </table>
       <p>
-        Available fields vary by store — the editor only shows what the platform
+        Available fields vary by store - the editor only shows what the platform
         supports for that app.
       </p>
 
@@ -93,7 +93,7 @@ export default function ListingsPage(): JSX.Element {
         Switch languages with the tabs at the top of the editor. Each language is
         an independent draft with its own dirty marker, which keeps large
         multi-locale listings manageable. When a draft looks right, move on to{" "}
-        <a href="/docs/publishing">publishing</a> — nothing you type here reaches
+        <a href="/docs/publishing">publishing</a> - nothing you type here reaches
         the store automatically.
       </p>
       <p>

@@ -72,7 +72,7 @@ export default function RootLayout({
         <JsonLd data={buildWebSiteSchema()} />
         {children}
         <FeedbackWidget />
-        {/* Umami analytics — production only so local/dev traffic is excluded. */}
+        {/* Umami analytics - production only so local/dev traffic is excluded. */}
         {process.env.NODE_ENV === "production" && (
           <Script
             defer

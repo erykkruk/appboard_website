@@ -42,7 +42,7 @@ export function HeroLogo3d(): JSX.Element {
       const key = new THREE.DirectionalLight(0x9b9dff, 3.2);
       key.position.set(80, 20, 280);
       scene.add(key);
-      // Fill from the right-front — hits the faces the start rotation shows.
+      // Fill from the right-front - hits the faces the start rotation shows.
       const fill = new THREE.DirectionalLight(0x8f91ff, 2.4);
       fill.position.set(200, -60, 180);
       scene.add(fill);

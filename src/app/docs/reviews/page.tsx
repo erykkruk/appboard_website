@@ -47,7 +47,7 @@ export default function ReviewsPage(): JSX.Element {
       <h2>AI-drafted replies</h2>
       <p>
         Every review has an <strong>AI Draft</strong> button. It generates a
-        suggested response you can edit before sending — useful for working
+        suggested response you can edit before sending - useful for working
         through a backlog of feedback quickly while keeping a human in the loop.
       </p>
 
@@ -63,7 +63,7 @@ export default function ReviewsPage(): JSX.Element {
       <p>
         Looking for patterns rather than individual replies? The{" "}
         <a href="/docs/research">Research</a> tools scrape and categorize reviews
-        in bulk — including for competitor apps — to surface the complaints and
+        in bulk - including for competitor apps - to surface the complaints and
         themes behind your ratings.
       </p>
     </DocsLayout>

@@ -22,7 +22,7 @@ export default function PublishingPage(): JSX.Element {
     <DocsLayout slug={SLUG}>
       <p>
         Publishing is the deliberate step that pushes your drafts to the store.
-        Until you publish, everything you edit stays local to AppBoard — nothing
+        Until you publish, everything you edit stays local to AppBoard - nothing
         is sent automatically.
       </p>
 
@@ -35,7 +35,7 @@ export default function PublishingPage(): JSX.Element {
       <p>
         The publish page lists every pending change per field and per language,
         so you can see exactly what will be sent before you commit. Changes that
-        match the live store value aren&apos;t listed — only real differences show
+        match the live store value aren&apos;t listed - only real differences show
         up.
       </p>
 
@@ -45,11 +45,11 @@ export default function PublishingPage(): JSX.Element {
       </p>
       <ul>
         <li>
-          <strong>Push as draft</strong> — send the changes to the store without
+          <strong>Push as draft</strong> - send the changes to the store without
           submitting them, so you can finish review inside the Play Console.
         </li>
         <li>
-          <strong>Send changes for review</strong> — submit the update to
+          <strong>Send changes for review</strong> - submit the update to
           Google.
         </li>
       </ul>
@@ -70,7 +70,7 @@ export default function PublishingPage(): JSX.Element {
       <h2>Batch publishing</h2>
       <p>
         When you push several items together, AppBoard runs them as a batch and
-        returns a <strong>per-item report</strong> — each field/language pair
+        returns a <strong>per-item report</strong> - each field/language pair
         shows whether it succeeded or failed, so a single rejected item
         doesn&apos;t leave you guessing about the rest.
       </p>

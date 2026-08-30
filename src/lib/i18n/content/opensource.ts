@@ -125,7 +125,7 @@ const EN: OpenSourceContent = {
       {
         cta: "Join r/appboard",
         description:
-          "Feature requests, ASO tips and longer discussions. Vote on what gets built next — the roadmap is shaped by the community.",
+          "Feature requests, ASO tips and longer discussions. Vote on what gets built next - the roadmap is shaped by the community.",
         name: "Reddit",
         points: [
           "Vote on feature requests",
@@ -135,13 +135,13 @@ const EN: OpenSourceContent = {
       },
     ],
     description:
-      "AppBoard is open source and built in the open. The people using it decide where it goes — join in, say hi, and tell us what you need.",
+      "AppBoard is open source and built in the open. The people using it decide where it goes - join in, say hi, and tell us what you need.",
     eyebrow: "Community",
     title: "Built in the open, with you",
   },
   comparison: {
     description:
-      "Nothing here is magic — it's the same work you already do, minus the tab juggling.",
+      "Nothing here is magic - it's the same work you already do, minus the tab juggling.",
     eyebrow: "Why bother",
     headerTask: "Release-day task",
     headerWith: "With AppBoard",
@@ -184,36 +184,36 @@ const EN: OpenSourceContent = {
     eyebrow: "A note from the builder",
     paragraphs: [
       "AppBoard started as an internal tool. I ship my own apps, and every release ended the same way: two consoles, a dozen tabs, a spreadsheet of translations, and that quiet fear of overwriting a description nobody had backed up.",
-      "So I built the tool I wanted: listings versioned like code, diffs before every publish, and both stores in one place. No growth hacks, no dashboards pretending to be insights — just the release-day work, made calm.",
-      "If something feels off or missing, tell me — it's a small product and feedback genuinely changes the roadmap.",
+      "So I built the tool I wanted: listings versioned like code, diffs before every publish, and both stores in one place. No growth hacks, no dashboards pretending to be insights - just the release-day work, made calm.",
+      "If something feels off or missing, tell me - it's a small product and feedback genuinely changes the roadmap.",
     ],
-    signature: "— Eryk, building AppBoard",
+    signature: "- Eryk, building AppBoard",
   },
   page: {
     discordCta: "Join our Discord",
     eyebrow: "Open source",
     githubCta: "View on GitHub",
-    lead: "The whole platform — backend, admin panel, and this website — is public and self-hostable. And it will stay that way: AppBoard is committed to being open source, for good.",
+    lead: "The whole platform - backend, admin panel, and this website - is public and self-hostable. And it will stay that way: AppBoard is committed to being open source, for good.",
     licenseNote:
-      "Source-available under the PolyForm Noncommercial License — free for personal and non-commercial use.",
+      "Source-available under the PolyForm Noncommercial License - free for personal and non-commercial use.",
     repos: [
       {
         description:
           "Bun + Elysia + Drizzle + PostgreSQL. Store connections, listings, publishing, research, keyword rank tracking, the encrypted vault, and the REST API.",
         id: "backend",
-        title: "appboard_backend — API",
+        title: "appboard_backend - API",
       },
       {
         description:
           "Next.js + React admin panel: dashboard, listing editor with diffs and history, screenshot studio, research, reviews inbox, and automation.",
         id: "panel",
-        title: "appboard_web — admin panel",
+        title: "appboard_web - admin panel",
       },
       {
         description:
-          "This marketing site — Next.js landing pages, documentation, and blog. Fork it, learn from it, or run your own.",
+          "This marketing site - Next.js landing pages, documentation, and blog. Fork it, learn from it, or run your own.",
         id: "website",
-        title: "appboard_website — website",
+        title: "appboard_website - website",
       },
     ],
     reposDescription:
@@ -226,7 +226,7 @@ const EN: OpenSourceContent = {
   },
   research: {
     description:
-      "Most ASO tools stop at keywords. AppBoard turns store reviews and rankings into a research engine — below, a real deep run on Instagram and TikTok.",
+      "Most ASO tools stop at keywords. AppBoard turns store reviews and rankings into a research engine - below, a real deep run on Instagram and TikTok.",
     docsHref: "/docs/research",
     docsLabel: "Read the docs: Research",
     eyebrow: "Research and AI",
@@ -234,13 +234,13 @@ const EN: OpenSourceContent = {
       {
         alt: "AI-analyzed complaint themes for Instagram with severity badges and verbatim user quotes: missing features, UX/UI, login and account, crashes",
         caption:
-          "Complaint themes with severity and verbatim quotes — the why behind the stars",
+          "Complaint themes with severity and verbatim quotes - the why behind the stars",
         src: "/images/panel/research-themes.png",
       },
       {
         alt: "Quick wins list and ASO metadata audit for Instagram, with keyword coverage tags showing which keywords are missing from title and description",
         caption:
-          "Quick wins + metadata audit — which keywords your listing is missing",
+          "Quick wins + metadata audit - which keywords your listing is missing",
         src: "/images/panel/research-quickwins.png",
       },
       {
@@ -252,7 +252,7 @@ const EN: OpenSourceContent = {
       {
         alt: "Star distribution and heuristic issue categories for TikTok built from 500 scraped App Store reviews",
         caption:
-          "Star distribution + issue buckets from raw reviews — works without an AI key",
+          "Star distribution + issue buckets from raw reviews - works without an AI key",
         src: "/images/panel/research-categories.png",
       },
       {
@@ -267,17 +267,17 @@ const EN: OpenSourceContent = {
     points: [
       {
         description:
-          "Point AppBoard at any app in the store — yours or a competitor's. It scrapes the listing and reviews, and the AI turns hundreds of them into what users love, what they criticize, and their top irritations — with verbatim quotes as evidence.",
+          "Point AppBoard at any app in the store - yours or a competitor's. It scrapes the listing and reviews, and the AI turns hundreds of them into what users love, what they criticize, and their top irritations - with verbatim quotes as evidence.",
         title: "AI review mining on any app",
       },
       {
         description:
-          "Deep mode fetches the full review set — up to 1,500 on Google Play, ~500 on the App Store — and map-reduces it through the model, so the report reflects the whole tail, not just the last angry week.",
+          "Deep mode fetches the full review set - up to 1,500 on Google Play, ~500 on the App Store - and map-reduces it through the model, so the report reflects the whole tail, not just the last angry week.",
         title: "Deep mode for the full picture",
       },
       {
         description:
-          "Keyword coverage is checked against your actual title and description, and positions are tracked within the store's top 50 — per market, with a reason why each keyword matters.",
+          "Keyword coverage is checked against your actual title and description, and positions are tracked within the store's top 50 - per market, with a reason why each keyword matters.",
         title: "Keywords, coverage and positions",
       },
       {
@@ -290,28 +290,28 @@ const EN: OpenSourceContent = {
   },
   selfHosted: {
     description:
-      "AppBoard is source-available and self-hostable. Run it on your own servers and keep full control of your data — free for personal and non-commercial use.",
+      "AppBoard is source-available and self-hostable. Run it on your own servers and keep full control of your data - free for personal and non-commercial use.",
     discordCta: "Join our Discord",
     docsCta: "Self-hosting guide",
     docsHref: "/docs/self-hosting",
     eyebrow: "Self-hosted",
     githubCta: "View on GitHub",
     licenseNote:
-      "Source-available under the PolyForm Noncommercial License — free for personal & non-commercial use.",
+      "Source-available under the PolyForm Noncommercial License - free for personal & non-commercial use.",
     points: [
       {
         description:
-          "Deploy the whole stack on your own VPS or cloud with Docker. Your database, your store credentials, your rules — nothing leaves your infrastructure.",
+          "Deploy the whole stack on your own VPS or cloud with Docker. Your database, your store credentials, your rules - nothing leaves your infrastructure.",
         title: "Own your data",
       },
       {
         description:
-          "The full source is public — read it, audit it, and adapt it to your workflow. Free for personal and non-commercial use.",
+          "The full source is public - read it, audit it, and adapt it to your workflow. Free for personal and non-commercial use.",
         title: "Source-available",
       },
       {
         description:
-          "One backend, one panel, one Postgres. Runs on anything that runs Docker — a spare VPS, your homelab, or an existing cluster. No vendor lock-in.",
+          "One backend, one panel, one Postgres. Runs on anything that runs Docker - a spare VPS, your homelab, or an existing cluster. No vendor lock-in.",
         title: "Deploy anywhere",
       },
       {

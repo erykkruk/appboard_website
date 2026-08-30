@@ -31,7 +31,7 @@ const LEGAL_COPY: Record<SiteLocale, LegalCopy> = {
 
 // Prose styling for the semantic HTML the legal pages pass as children. Tailwind
 // v4 arbitrary variants keep the markup clean (plain <h2>/<p>/<ul>) while staying
-// on the site's design tokens — no typography plugin needed.
+// on the site's design tokens - no typography plugin needed.
 const PROSE_CLASSES = [
   "[&_h2]:mt-12 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-foreground",
   "[&_h2:first-child]:mt-0",

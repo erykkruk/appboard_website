@@ -5,7 +5,7 @@ import { ImageResponse } from "next/og";
 
 import { SITE_DESCRIPTION } from "@/lib/seo";
 
-export const alt = "AppBoard — ASO for App Store and Google Play in one panel";
+export const alt = "AppBoard - ASO for App Store and Google Play in one panel";
 export const contentType = "image/png";
 export const size = { height: 630, width: 1200 };
 

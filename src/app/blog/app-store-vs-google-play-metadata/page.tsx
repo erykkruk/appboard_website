@@ -34,7 +34,7 @@ export default function Page(): JSX.Element {
       </p>
       <p>
         Here is every field that matters, side by side, with the 2026 limits and
-        — more importantly — what each store actually does with the text.
+        - more importantly - what each store actually does with the text.
       </p>
 
       <h2>Text fields at a glance</h2>
@@ -57,19 +57,19 @@ export default function Page(): JSX.Element {
           <tr>
             <td>Subtitle</td>
             <td>30 chars</td>
-            <td>—</td>
+            <td>-</td>
             <td>App Store: yes</td>
           </tr>
           <tr>
             <td>Short description</td>
-            <td>—</td>
+            <td>-</td>
             <td>80 chars</td>
             <td>Google Play: yes</td>
           </tr>
           <tr>
             <td>Keywords field</td>
             <td>100 chars</td>
-            <td>—</td>
+            <td>-</td>
             <td>App Store: yes (hidden)</td>
           </tr>
           <tr>
@@ -81,7 +81,7 @@ export default function Page(): JSX.Element {
           <tr>
             <td>Promotional text</td>
             <td>170 chars</td>
-            <td>—</td>
+            <td>-</td>
             <td>No</td>
           </tr>
         </tbody>
@@ -91,7 +91,7 @@ export default function Page(): JSX.Element {
       <p>
         Both stores cap the title at 30 characters, and on both it is the single
         strongest ranking signal. Note that Google Play only dropped to 30 in
-        2021 — it used to allow 50 — so any guide telling you to pack keywords
+        2021 - it used to allow 50 - so any guide telling you to pack keywords
         into a long Play title is out of date.
       </p>
       <p>
@@ -104,7 +104,7 @@ export default function Page(): JSX.Element {
       <p>
         This is the biggest structural difference. The App Store gives you a
         100-character keywords field that users never see. Google Play has
-        nothing equivalent — instead it indexes your title, short description,
+        nothing equivalent - instead it indexes your title, short description,
         and full description.
       </p>
       <table>
@@ -142,22 +142,22 @@ export default function Page(): JSX.Element {
         Practical consequence: on the App Store, write the description purely to
         convince a human, because it will not help you rank. On Google Play, the
         description does both jobs, so you have to balance readability against
-        getting your target phrases in — usually two or three mentions across
+        getting your target phrases in - usually two or three mentions across
         4000 characters, placed where they read naturally.
       </p>
 
       <h3>Using the App Store keywords field well</h3>
       <p>
-        Do not put spaces after your commas — each space costs a character you
+        Do not put spaces after your commas - each space costs a character you
         could spend on another term. Do not repeat any word already in your
         title or subtitle; those are indexed, so repeating them is pure waste.
-        And do not add your own brand name — you already rank for it.
+        And do not add your own brand name - you already rank for it.
       </p>
 
       <h2>Promotional text: the field with no ranking value</h2>
       <p>
         The App Store&apos;s 170-character promotional text sits above the
-        description and — this is the useful part — can be changed without
+        description and - this is the useful part - can be changed without
         submitting a new build. It is perfect for a sale, an event, or a
         &ldquo;new in this version&rdquo; note. It is not indexed, so keywords
         here do nothing for search. Google Play has no direct equivalent; the
@@ -186,7 +186,7 @@ export default function Page(): JSX.Element {
           </tr>
           <tr>
             <td>Feature graphic</td>
-            <td>—</td>
+            <td>-</td>
             <td>1024&times;500 (required)</td>
           </tr>
           <tr>
@@ -198,7 +198,7 @@ export default function Page(): JSX.Element {
       </table>
       <p>
         Google&apos;s feature graphic has no App Store analogue and is easy to
-        forget — it appears at the top of your Play listing and in promotional
+        forget - it appears at the top of your Play listing and in promotional
         placements, so a missing or ugly one is very visible. Both stores let you
         localize screenshots, and both will show whatever language you uploaded,
         even if it is wrong for the viewer.
@@ -210,7 +210,7 @@ export default function Page(): JSX.Element {
         differ. Google Play allows one reply per review, and you can edit it
         later. The App Store also supports public replies, but your reply appears
         after moderation rather than instantly. Neither store lets you reply
-        privately, so every response is public-facing copy — write accordingly.
+        privately, so every response is public-facing copy - write accordingly.
       </p>
       <table>
         <thead>
@@ -249,7 +249,7 @@ export default function Page(): JSX.Element {
         because it is doing ranking work the App Store subtitle does elsewhere.
       </p>
       <p>
-        The tab-juggling is the hard part — keeping two consoles, several
+        The tab-juggling is the hard part - keeping two consoles, several
         languages, and two sets of rules straight in your head. Managing both
         listings in one place (with per-language counters against each
         store&apos;s exact limit) is most of why AppBoard exists. But even a

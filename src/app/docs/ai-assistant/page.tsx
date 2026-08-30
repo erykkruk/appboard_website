@@ -42,7 +42,7 @@ export default function AiAssistantPage(): JSX.Element {
       <p>
         Because it runs on OpenRouter, you can use essentially any model
         OpenRouter offers. Set a workspace default and override it for a specific
-        feature — for example a stronger model for translations and a faster one
+        feature - for example a stronger model for translations and a faster one
         for quick review replies.
       </p>
 
@@ -63,15 +63,15 @@ export default function AiAssistantPage(): JSX.Element {
       <p>
         AI output always lands as a draft or a suggestion. Nothing reaches the
         App Store or Google Play until you review it and{" "}
-        <a href="/docs/publishing">publish</a> — the assistant proposes, you
+        <a href="/docs/publishing">publish</a> - the assistant proposes, you
         approve.
       </p>
 
       <blockquote>
         <p>
           <strong>Heads up:</strong> without an OpenRouter key, AI features stay
-          off, but the rest of AppBoard — including heuristic review
-          categorization in Research — keeps working.
+          off, but the rest of AppBoard - including heuristic review
+          categorization in Research - keeps working.
         </p>
       </blockquote>
     </DocsLayout>

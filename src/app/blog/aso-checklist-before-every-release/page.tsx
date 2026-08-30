@@ -28,7 +28,7 @@ export default function Page(): JSX.Element {
         Most metadata mistakes I have shipped were not typos. They were things I
         forgot to check because I was tired, it was late, and the build was
         already uploading. A checklist fixes that. It turns release day from a
-        memory test into a boring, repeatable procedure — which is exactly what
+        memory test into a boring, repeatable procedure - which is exactly what
         you want when a bad character in your title field can sit live for a week
         before anyone notices.
       </p>
@@ -42,7 +42,7 @@ export default function Page(): JSX.Element {
       <p>
         The single most useful habit is knowing what your listing said
         yesterday. When conversion drops after a release, the first question is
-        always &ldquo;what changed?&rdquo; — and if you cannot answer it in
+        always &ldquo;what changed?&rdquo; - and if you cannot answer it in
         seconds, you are guessing. Keep a versioned record of every field per
         language. This is the kind of thing AppBoard&apos;s history view catches
         automatically, but even a git repo of exported metadata beats nothing.
@@ -61,7 +61,7 @@ export default function Page(): JSX.Element {
         </li>
         <li>
           <strong>App Store subtitle (30 chars):</strong> a second keyword line,
-          not a tagline. It is indexed — use it.
+          not a tagline. It is indexed - use it.
         </li>
         <li>
           <strong>Google Play title (30 chars):</strong> was 50 until 2021, so
@@ -102,7 +102,7 @@ export default function Page(): JSX.Element {
         <li>
           <strong>App Store keywords (100 chars):</strong> comma-separated, no
           spaces after commas (spaces waste characters). Do not repeat words
-          already in your title or subtitle — they are already indexed.
+          already in your title or subtitle - they are already indexed.
         </li>
         <li>
           <strong>Singular vs plural:</strong> the algorithm handles most stems,
@@ -111,7 +111,7 @@ export default function Page(): JSX.Element {
         <li>
           <strong>Google Play density:</strong> get your two or three target
           phrases into the title, short description, and naturally into the full
-          description — without keyword-stuffing, which Google demotes.
+          description - without keyword-stuffing, which Google demotes.
         </li>
       </ul>
       <p>
@@ -123,7 +123,7 @@ export default function Page(): JSX.Element {
       <h2>Visual checklist</h2>
       <p>
         Screenshots convert better than any word you write, and they are the
-        easiest thing to get subtly wrong. Verify the exact specs every time —
+        easiest thing to get subtly wrong. Verify the exact specs every time -
         Apple and Google change accepted sizes more often than you would expect.
       </p>
       <ul>
@@ -149,7 +149,7 @@ export default function Page(): JSX.Element {
 
       <h2>Store-rules checklist (the rejection list)</h2>
       <p>
-        These are the ones that do not just underperform — they get you bounced
+        These are the ones that do not just underperform - they get you bounced
         from review and cost you days.
       </p>
       <ul>
@@ -159,7 +159,7 @@ export default function Page(): JSX.Element {
         </li>
         <li>
           <strong>Promotional text (App Store, 170 chars):</strong> you can
-          update it without a new build, so use it for time-sensitive messaging —
+          update it without a new build, so use it for time-sensitive messaging -
           but it is not indexed, so do not stuff keywords there.
         </li>
         <li>

@@ -38,7 +38,7 @@ export default function PricingPage(): JSX.Element {
               Simple plans for every stage
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
-              From your first app to a full portfolio — start free today and grow
+              From your first app to a full portfolio - start free today and grow
               into the plan that fits your team.
             </p>
           </div>

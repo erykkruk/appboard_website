@@ -37,7 +37,7 @@ export interface ChromeDictionary {
 const EN: ChromeDictionary = {
   articleBackToBlog: "Back to blog",
   articleCtaBody:
-    "See how AppBoard handles listings, versioning, keywords, and reviews for both stores — no signup required.",
+    "See how AppBoard handles listings, versioning, keywords, and reviews for both stores - no signup required.",
   articleCtaButton: "Open the live demo",
   articleCtaTitle: "Try this workflow in AppBoard",
   articleMore: "More articles",
@@ -81,7 +81,7 @@ const EN: ChromeDictionary = {
   footerCopyright: "© 2026 AppBoard. All rights reserved.",
   footerNote: "Built independently, one release at a time.",
   footerTagline:
-    "App Store Optimization for App Store and Google Play — listings, screenshots, research, and publishing from one panel.",
+    "App Store Optimization for App Store and Google Play - listings, screenshots, research, and publishing from one panel.",
   languageLabel: "Language",
   mainNavLabel: "Main navigation",
   mobileNavLabel: "Mobile navigation",

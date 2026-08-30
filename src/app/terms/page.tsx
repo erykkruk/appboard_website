@@ -9,7 +9,7 @@ const LAST_UPDATED = "July 8, 2026";
 const CONTACT_EMAIL = "contact@appboard.dev";
 
 const DESCRIPTION =
-  "The terms that govern your use of AppBoard — the ASO platform for managing App Store and Google Play listings from one panel.";
+  "The terms that govern your use of AppBoard - the ASO platform for managing App Store and Google Play listings from one panel.";
 
 export const metadata: Metadata = buildPageMetadata({
   description: DESCRIPTION,
@@ -44,7 +44,7 @@ export default function TermsOfServicePage(): JSX.Element {
       <h2>3. Accounts</h2>
       <p>
         You are responsible for the information you provide, for maintaining the
-        confidentiality of your credentials — including your vault passphrase —
+        confidentiality of your credentials - including your vault passphrase -
         and for all activity under your account. You must be at least 16 years old
         and able to form a binding contract to use the Service.
       </p>
@@ -58,7 +58,7 @@ export default function TermsOfServicePage(): JSX.Element {
       <h2>4. Connected stores and authorization</h2>
       <p>
         When you connect a store, you authorize AppBoard to access and act on that
-        store on your behalf using the credentials you provide — for example, to
+        store on your behalf using the credentials you provide - for example, to
         read, edit, and publish listing data as you direct. You represent that you
         are authorized to grant this access and that your use complies with the
         terms of Apple App Store Connect and Google Play. Your relationship with

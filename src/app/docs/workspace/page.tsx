@@ -20,7 +20,7 @@ export default function WorkspacePage(): JSX.Element {
   return (
     <DocsLayout slug={SLUG}>
       <p>
-        A workspace is the boundary around everything you manage in AppBoard — its
+        A workspace is the boundary around everything you manage in AppBoard - its
         apps, store connections, credentials, and settings. This page covers the
         controls that sit at the workspace level.
       </p>
@@ -29,14 +29,14 @@ export default function WorkspacePage(): JSX.Element {
       <p>
         You can run more than one workspace, which is handy for separating teams,
         clients, or brands. Each workspace has its own apps, its own encrypted{" "}
-        <a href="/docs/security">vault</a>, and its own settings — data never
+        <a href="/docs/security">vault</a>, and its own settings - data never
         crosses between them.
       </p>
 
       <h2>Feature flags</h2>
       <p>
         Modules can be toggled per workspace with feature flags, so you can turn
-        off parts of AppBoard a given workspace doesn&apos;t need — for example
+        off parts of AppBoard a given workspace doesn&apos;t need - for example
         hiding Research or the AI assistant. Some features depend on others: when
         you disable a prerequisite, the features that rely on it switch off too.
       </p>
@@ -57,8 +57,8 @@ export default function WorkspacePage(): JSX.Element {
 
       <h2>Ratings and compliance</h2>
       <p>
-        Workspace tools also cover the compliance metadata stores require —
-        editing age ratings and privacy declarations — so the non-marketing parts
+        Workspace tools also cover the compliance metadata stores require -
+        editing age ratings and privacy declarations - so the non-marketing parts
         of a listing stay in one place too.
       </p>
 

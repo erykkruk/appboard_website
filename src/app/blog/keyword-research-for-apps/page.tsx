@@ -28,7 +28,7 @@ export default function Page(): JSX.Element {
         Keyword research for apps has a reputation for requiring an expensive
         tool and a spreadsheet with forty columns. It does not. The paid tools
         estimate search volume and difficulty using models that are, at best,
-        directionally correct — and you can get most of the way there with free
+        directionally correct - and you can get most of the way there with free
         signals and a bit of discipline. Here is the workflow I actually use.
       </p>
 
@@ -42,7 +42,7 @@ export default function Page(): JSX.Element {
         Type your core term into the App Store and Google Play search bars and
         write down every suggestion. Autocomplete is ranked by real query
         popularity, so it is the closest thing to free volume data you have. Do
-        it on both stores — their suggestions differ.
+        it on both stores - their suggestions differ.
       </p>
       <h3>Your own reviews</h3>
       <p>
@@ -57,7 +57,7 @@ export default function Page(): JSX.Element {
       <p>
         Look at the titles and subtitles of the apps that rank for your core
         term. They have already done research; their word choices are data. You
-        are not copying — you are noting which phrases the market treats as
+        are not copying - you are noting which phrases the market treats as
         important.
       </p>
 
@@ -65,7 +65,7 @@ export default function Page(): JSX.Element {
       <p>
         Now narrow. For each candidate, judge two things honestly: how relevant
         it is to what your app actually does, and how hard it would be to rank.
-        Relevance is non-negotiable — ranking for a term that brings the wrong
+        Relevance is non-negotiable - ranking for a term that brings the wrong
         users just tanks your conversion and, over time, your ranking.
       </p>
       <table>
@@ -108,7 +108,7 @@ export default function Page(): JSX.Element {
         As a new or small app, live in the &ldquo;winnable&rdquo; and &ldquo;long
         tail&rdquo; rows. You will not outrank an incumbent for
         &ldquo;fitness&rdquo; this quarter, but you can absolutely own
-        &ldquo;strength training log for lifters&rdquo; — and those users convert
+        &ldquo;strength training log for lifters&rdquo; - and those users convert
         better anyway because the match is exact.
       </p>
 
@@ -134,12 +134,12 @@ export default function Page(): JSX.Element {
         <li>
           <strong>Google Play:</strong> no keywords field, so weave your phrases
           into the title, the 80-character short description, and naturally into
-          the full description — two or three mentions, not twenty.
+          the full description - two or three mentions, not twenty.
         </li>
       </ul>
       <p>
         A single phrase might live in your App Store subtitle and your Google
-        Play short description — same research, different slot. Keeping that
+        Play short description - same research, different slot. Keeping that
         mapping straight across languages is the tedious part; a listing editor
         with per-store counters helps, but a table works too.
       </p>
@@ -148,7 +148,7 @@ export default function Page(): JSX.Element {
       <p>
         Research is a hypothesis. Rankings are the result. Record where you rank
         for your target phrases before a change, ship the change, and check again
-        in a week or two — store indexes take days to update, so do not panic on
+        in a week or two - store indexes take days to update, so do not panic on
         day one.
       </p>
       <p>
@@ -170,7 +170,7 @@ export default function Page(): JSX.Element {
       <h2>What you can safely ignore</h2>
       <p>
         You do not need precise search-volume numbers to start. You do not need
-        to target hundreds of keywords — a focused set of ten to fifteen you can
+        to target hundreds of keywords - a focused set of ten to fifteen you can
         realistically win beats a scattergun of a hundred you cannot. And you do
         not need to re-research from scratch every month; revisit when you add a
         major feature, enter a new market, or see a phrase in your reviews you

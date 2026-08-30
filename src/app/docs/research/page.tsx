@@ -20,7 +20,7 @@ export default function ResearchPage(): JSX.Element {
   return (
     <DocsLayout slug={SLUG}>
       <p>
-        Research works on <strong>any</strong> store app — not just the ones you
+        Research works on <strong>any</strong> store app - not just the ones you
         have connected. Point it at a competitor, an app you&apos;re considering,
         or your own listing to pull rankings, reviews, and market data.
       </p>
@@ -28,29 +28,29 @@ export default function ResearchPage(): JSX.Element {
       <h2>What you can run</h2>
       <ul>
         <li>
-          <strong>App search</strong> — find an app on the App Store or Google
+          <strong>App search</strong> - find an app on the App Store or Google
           Play to research.
         </li>
         <li>
-          <strong>Review scraping</strong> — pull recent reviews and categorize
+          <strong>Review scraping</strong> - pull recent reviews and categorize
           the complaints heuristically. This works even without an AI key.
         </li>
         <li>
-          <strong>AI analysis</strong> — summarize themes and sentiment across
+          <strong>AI analysis</strong> - summarize themes and sentiment across
           the reviews you scraped.
         </li>
         <li>
-          <strong>Keyword tracking</strong> — check where an app ranks for the
+          <strong>Keyword tracking</strong> - check where an app ranks for the
           search terms you care about.
         </li>
         <li>
-          <strong>Market comparison</strong> — compare apps across a market.
+          <strong>Market comparison</strong> - compare apps across a market.
         </li>
         <li>
-          <strong>Competitor compare</strong> — put two apps side by side.
+          <strong>Competitor compare</strong> - put two apps side by side.
         </li>
         <li>
-          <strong>Visual analysis</strong> — analyze store screenshots.
+          <strong>Visual analysis</strong> - analyze store screenshots.
         </li>
       </ul>
 
@@ -98,7 +98,7 @@ export default function ResearchPage(): JSX.Element {
       <p>
         For a fuller picture, deep mode fetches more reviews and analyzes them in
         parallel chunks before combining the results. It costs more time and, for
-        AI steps, more tokens — reach for it when a single pass isn&apos;t enough
+        AI steps, more tokens - reach for it when a single pass isn&apos;t enough
         signal.
       </p>
 
