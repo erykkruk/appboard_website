@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ArticleLayout } from "@/components/layout/article-layout";
-import { JsonLd } from "@/components/ui";
+import { Callout, JsonLd } from "@/components/ui";
 import { buildBlogAlternates, getArticlePl, getEnSlugForPl } from "@/lib/blog";
 import { buildFaqSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
@@ -18,7 +18,7 @@ const article = getArticlePl(SLUG);
 
 export const metadata: Metadata = buildPageMetadata({
   description:
-    "Wideo promocyjne w App Store i Google Play: ile realnie daje w konwersji, czym App Preview różni się od filmu na Play, kanały YouTube per język i pułapka poziomego wideo, która potrafi zabrać zrzuty ekranu z wyników wyszukiwania.",
+    "Ile realnie daje wideo promocyjne w App Store i Google Play, czym App Preview różni się od filmu na Play, kanały YouTube per język i pułapka poziomego wideo, która zabiera zrzuty z wyników wyszukiwania.",
   languages: buildBlogAlternates(EN_SLUG),
   locale: "pl_PL",
   ogType: "article",
@@ -76,62 +76,44 @@ export default function Page(): JSX.Element {
     >
       <JsonLd data={buildFaqSchema(`/pl/blog/${SLUG}`, FAQ, "pl-PL")} />
       <p>
-        Każda inna powierzchnia, której dotyka użytkownik, dawno przeszła na
-        wideo. Instagram zamienił feed w Reels, Facebook poszedł za nim, TikTok
-        nigdy nie miał formatu statycznego. Karty produktu w sklepach z
-        aplikacjami to ostatnie miejsce, gdzie sporo dobrych zespołów nadal
-        wrzuca pięć statycznych klatek i uznaje pracę nad kreacją za skończoną.
-      </p>
-      <p>
-        To niekoniecznie błąd. Karta produktu to nie feed i liczby nie
-        przekładają się jeden do jednego. Ale różnica między nakładem pracy na
-        kreację do kampanii płatnej a nakładem na App Preview jest zwykle nie do
-        obrony, a mechanika wideo w sklepach jest na tyle słabo udokumentowana,
-        że zespoły, które w nie inwestują, często przy okazji psują sobie
-        listing. Ten tekst jest o obu rzeczach: ile wideo jest warte i jak je
-        wdrożyć, nie pogarszając wyniku w wyszukiwarce sklepu.
+        Każda inna powierzchnia przeszła na wideo lata temu. Listingi w sklepach
+        to ostatnie miejsce, gdzie dobre zespoły nadal wrzucają pięć statycznych
+        klatek, a te, które dokładają wideo, często przy okazji psują sobie wynik
+        w wyszukiwarce sklepu.
       </p>
 
-      <h2>Najważniejsze wnioski</h2>
-      <ul>
+      <Callout title="W skrócie">
+        <ul>
         <li>
           Na Meta wideo mniej więcej podwaja klikalność w tym samym miejscu
-          reklamowym i utrzymuje uwagę około trzy razy dłużej niż statyczna
-          grafika. Statyk nadal wygrywa na czystej efektywności kosztowej w
-          prospectingu.
+          reklamowym. Statyk nadal wygrywa na efektywności kosztowej.
         </li>
         <li>
-          W sklepach efekt jest znacznie mniejszy: testy dostawców mówią o{" "}
-          <strong>wzroście konwersji na instalację o 5 do 30 procent</strong>,
-          mocno zależnie od kategorii. Gry zyskują najwięcej. Część testów w
-          finansach i produktywności wychodzi na minus.
+          W sklepach efekt jest mniejszy: mniej więcej{" "}
+          <strong>od 5 do 30 procent wzrostu konwersji na instalację</strong>,
+          zależnie od kategorii. Gry zyskują najwięcej, część testów w finansach
+          i produktywności wychodzi na minus.
         </li>
         <li>
-          Apple i Google wystawiają wideo w zupełnie innych miejscach. App
-          Preview odtwarza się w wynikach wyszukiwania. Film z Google Play nie
-          pojawia się w wyszukiwarce Play w ogóle.
+          App Preview odtwarza się w wynikach wyszukiwania App Store. Film z
+          Google Play nie pojawia się w wyszukiwarce Play w ogóle.
         </li>
         <li>
-          Google Play ma drugą, prawie nieużywaną powierzchnię wideo: kanały albo
-          playlisty YouTube podpięte per język.
+          Play ma drugą, prawie nieużywaną powierzchnię: kanały YouTube per
+          język.
         </li>
         <li>
           <strong>Poziome wideo w App Store potrafi wyrzucić zrzuty ekranu z
-          Twojego wiersza w wynikach wyszukiwania</strong>, a czasem zostawia
-          wiersz zupełnie bez grafik. Zrzuty tego niżej.
-        </li>
-        <li>
-          Klatka poster i pierwsze trzy sekundy bez dźwięku to dla większości
-          oglądających cały materiał. Traktuj je jak zrzuty ekranu, nie jak film.
-        </li>
-      </ul>
+            Twojego wiersza w wynikach wyszukiwania</strong>, czasem
+            zostawiając go zupełnie bez grafik.
+          </li>
+        </ul>
+      </Callout>
 
-      <h2>Feed rozstrzygnął ten spór lata temu</h2>
+      <h2>Ile realnie warte jest wideo</h2>
       <p>
-        Zacznijmy od platformy, gdzie próby są ogromne, a pętla informacji
-        zwrotnej trwa jeden dzień. Zagregowane benchmarki z kont reklamowych Meta
-        za 2026 rok (zestawienia agencyjne, nie oficjalne dane Meta, więc
-        kierunkowo) za każdym razem lądują mniej więcej w tym samym miejscu.
+        Zagregowane benchmarki z kont reklamowych Meta za 2026 rok (zestawienia
+        agencyjne, nie oficjalne dane Meta, więc kierunkowo):
       </p>
       <table>
         <thead>
@@ -165,59 +147,18 @@ export default function Page(): JSX.Element {
         </tbody>
       </table>
       <p>
-        Wideo zabiera dziś jakieś 58 procent budżetów reklamowych na Meta, Reels
-        wychodzą około 26 procent taniej za kliknięcie niż Feed, a
-        zaangażowanie w Instagram Stories jest wyraźnie wyższe niż w Facebook
-        Feed. Uczciwy kontrapunkt, bo ma znaczenie: kreacja statyczna nadal
-        często wygrywa na CPM, CPC i ROAS w prospectingu. Statyczna grafika
-        przekazuje propozycję wartości w ułamku sekundy i przy kampanii
-        konwersyjnej z ciasnym CPA bywa to lepsze niż film, którego nikt nie
-        dogląda do końca.
+        Te liczby się nie przenoszą. W feedzie komuś przerywasz i wideo wygrywa,
+        bo lepiej zatrzymuje scrollowanie. Na karcie produktu użytkownik już
+        kliknął i decyduje, czy zainstalować, dlatego wzrosty w sklepach są
+        jedno- i niskie dwucyfrowe, i dlatego słabe wideo potrafi zabrać
+        instalacje, podczas gdy słaba reklama zostaje zignorowana.
       </p>
       <p>
-        Uczciwe podsumowanie nie brzmi więc &quot;wideo wygrywa&quot;. Brzmi:
-        wideo kupuje uwagę i zaangażowanie, statyk kupuje efektywność, a to,
-        który format wygrywa, zależy od tego, czego potrzebujesz od konkretnego
-        umiejscowienia.
-      </p>
-
-      <h2>Karta produktu to nie feed</h2>
-      <p>
-        I właśnie dlatego liczby z social mediów się nie przenoszą. W feedzie
-        komuś przerywasz. Wideo wygrywa tam, bo lepiej zatrzymuje scrollowanie.
-      </p>
-      <p>
-        Na karcie produktu użytkownik już kliknął. Ma intencję. Nie decyduje, czy
-        popatrzeć, tylko czy zainstalować, a zadanie kreacji zmieniło się z
-        zatrzymywania uwagi na odpowiadanie na pytanie. Dlatego wzrosty w
-        sklepach liczy się w pojedynczych i niskich dwucyfrowych procentach, a
-        nie w wielokrotnościach, i dlatego słabe wideo potrafi realnie zabrać
-        instalacje, podczas gdy słaba reklama zostaje po prostu zignorowana.
-      </p>
-
-      <h2>Ile realnie warte jest wideo w sklepach</h2>
-      <p>
-        Wszystkie publikowane liczby pochodzą od dostawców platform do testów
-        A/B, więc każda poniższa jest kierunkowa, a nie recenzowana naukowo. Są
-        na tyle spójne, że da się na nich planować.
-      </p>
-      <ul>
-        <li>
-          SplitMetrics podaje około <strong>+16%</strong> konwersji na instalację
-          po dodaniu App Preview w App Store.
-        </li>
-        <li>
-          Dane testowe StoreMaven umieszczają ten sam efekt w przedziale{" "}
-          <strong>+20% do +35%</strong>.
-        </li>
-        <li>
-          Dobry zestaw statycznych zrzutów jest wart podobnie sam z siebie, i to
-          jest część, którą się pomija: wideo jest dodatkiem do dobrych zrzutów,
-          a nie ich zamiennikiem.
-        </li>
-      </ul>
-      <p>
-        W rozbiciu na kategorie kierunkowe przedziały AppFollow wyglądają tak:
+        SplitMetrics podaje około <strong>+16%</strong> po dodaniu App Preview,
+        StoreMaven <strong>+20% do +35%</strong>. Dobry zestaw statycznych zrzutów
+        jest wart podobnie sam z siebie, więc wideo jest dodatkiem do dobrych
+        zrzutów, a nie ich zamiennikiem. W rozbiciu na kategorie, kierunkowe
+        przedziały AppFollow:
       </p>
       <table>
         <thead>
@@ -254,20 +195,13 @@ export default function Page(): JSX.Element {
         </tbody>
       </table>
       <p>
-        I wynik, którego nikt nie cytuje: kilka firm testowych raportuje, że
-        wideo <em>szkodzi</em> konwersji w finansach i produktywności, rzędu 3 do
-        7 procent. Wzorzec jest prosty. Wideo wygrywa, kiedy Twoja aplikacja jest
-        czymś do oglądania: rozgrywka, ruch, transformacja, moment społeczny.
-        Przegrywa, kiedy aplikacja jest czymś do używania, bo dwudziestosekundowy
-        film to wolniejszy sposób powiedzenia &quot;to skanuje paragony&quot; niż
-        jedna podpisana klatka.
+        Kilka firm testowych raportuje też, że wideo <em>szkodzi</em> konwersji w
+        finansach i produktywności, o 3 do 7 procent. Zasada: wideo wygrywa,
+        kiedy Twoja aplikacja jest czymś do oglądania, a przegrywa, kiedy jest
+        czymś do używania.
       </p>
 
-      <h2>Apple i Google wystawiają wideo gdzie indziej</h2>
-      <p>
-        Tu mieszka większość błędów, których dało się uniknąć. Oba sklepy nie
-        mają tutaj wspólnego prawie nic poza słowem &quot;wideo&quot;.
-      </p>
+      <h2>Oba sklepy wystawiają wideo inaczej</h2>
       <table>
         <thead>
           <tr>
@@ -315,80 +249,57 @@ export default function Page(): JSX.Element {
         </tbody>
       </table>
       <p>
-        Przeczytaj jeszcze raz wiersz o wynikach wyszukiwania. W App Store wideo
-        jest zasobem odkrywania, gra zanim ktokolwiek Cię wybrał. W Google Play
-        jest zasobem konwersji, istnieje dopiero po kliknięciu. Ta jedna różnica
-        powinna decydować o podziale budżetu i jest odwrotnością tego, jak
-        większość zespołów go dzieli.
+        W App Store wideo jest zasobem odkrywania, gra zanim ktokolwiek Cię
+        wybrał. W Play istnieje dopiero po kliknięciu. Ta jedna różnica powinna
+        decydować o podziale budżetu i jest odwrotnością tego, jak większość
+        zespołów go dzieli.
       </p>
 
-      <h2>Google Play: kanały YouTube per język, z których prawie nikt nie korzysta</h2>
+      <h2>Play: kanały YouTube per język</h2>
       <p>
-        Pole na film promocyjny w głównej karcie produktu to nie jedyna
-        powierzchnia wideo w Play. W sekcji{" "}
+        W sekcji{" "}
         <strong>Rozwijaj odbiorców, Obecność w sklepie, Filmy w YouTube</strong>{" "}
-        możesz podpiąć do listingu kanały lub playlisty YouTube: jedną dedykowaną
-        playlistę dla aplikacji, kilka playlist albo kanałów dla gry.
+        podpinasz do listingu kanały lub playlisty z ustawionym językiem, po
+        jednym języku na kanał. Listing w czterech językach może mieć cztery
+        powierzchnie wideo zamiast jednej. Bardzo mało kart to robi. Zasady:
       </p>
-      <p>
-        Rzeczą wartą zachodu jest targetowanie językowe. Ustawiasz język na
-        każdym kanale albo playliście, trzymając jeden język na kanał, a Play
-        pokazuje je użytkownikom z pasującymi ustawieniami języka. Listing
-        zlokalizowany na angielski, polski, niemiecki i hiszpański może więc mieć
-        cztery osobne powierzchnie wideo zamiast jednej. Bardzo mało kart
-        produktu to robi.
-      </p>
-      <p>Zasady, które odbiją Ci materiał, jeśli je przegapisz:</p>
       <ul>
+        <li>Filmy publiczne, choć same playlisty mogą być niepubliczne.</li>
         <li>
-          Filmy muszą być publiczne, choć same playlisty mogą być niepubliczne.
+          Monetyzacja wyłączona, możliwość osadzania włączona, własność Twojej
+          aplikacji lub gry.
         </li>
+        <li>Bez Shorts i bez transmisji na żywo.</li>
         <li>
-          Monetyzacja wyłączona, bez reklam, możliwość osadzania włączona,
-          własność Twojej aplikacji lub gry.
-        </li>
-        <li>Bez YouTube Shorts i bez transmisji na żywo.</li>
-        <li>
-          Okna świeżości dla gier: wgrane w ciągu 90 dni, żeby pokazać się na
-          karcie produktu, 21 dni dla zakładki Gry, 180 dni dla zakładki
-          Aplikacje.
+          Gry: wgrane w ciągu 90 dni, żeby pokazać się na karcie produktu, 21 dni
+          dla zakładki Gry, 180 dni dla zakładki Aplikacje.
         </li>
         <li>
           Wymagana kwalifikacja do Premium growth tools i uprawnienie do
-          zarządzania obecnością w sklepie na koncie.
+          zarządzania obecnością w sklepie.
         </li>
+        <li>Jedna playlista dla aplikacji, kilka playlist lub kanałów dla gry.</li>
       </ul>
       <p>
-        Play Console raportuje potem oglądających, klikalność i instalacje w
-        oknie 28 dni, czyli daje więcej pomiaru niż Apple przy App Preview.
-      </p>
-      <p>
-        Żywy przykład takiego ustawienia:{" "}
+        Play Console raportuje potem oglądających, klikalność i instalacje w oknie
+        28 dni. Żywy przykład:{" "}
         <a
           href="https://play.google.com/store/apps/details?id=tech.ravenlab.buzzin"
           rel="noopener"
           target="_blank"
         >
-          Buzzin: TV Party Game Show w Google Play
+          Buzzin: TV Party Game Show
         </a>
-        , gra imprezowa, w której wideo realnie pracuje, bo produktem są
-        dosłownie ludzie grający razem w jednym pokoju. Warto zwrócić uwagę na
-        sam adres: Play przyjmuje parametr <code>referrer</code> w linkach do
-        sklepu, więc jeśli chcesz wiedzieć, czy instalację przyniosło wideo,
-        newsletter czy kampania na TikToku, otaguj link przed udostępnieniem
-        zamiast zgadywać ze skoku liczby instalacji.
+        . Play przyjmuje też parametr <code>referrer</code> w linkach do sklepu,
+        więc taguj je przed udostępnieniem zamiast zgadywać, co przyniosło
+        instalację.
       </p>
 
       <h2>Pułapka poziomego wideo w App Store</h2>
       <p>
         Apple pozwala, żeby App Preview było pionowe albo poziome, i nie ostrzega
-        przed żadną z konsekwencji. Są dwie i obie są brzydkie, jeśli Twoje
-        zrzuty ekranu są pionowe.
-      </p>
-      <p>
-        <strong>Na karcie produktu</strong> poziome wideo nie prowadzi galerii
-        zrzutów. Zostaje przeniesione do osobnej sekcji{" "}
-        <em>A Closer Look</em>, oddzielonej od zrzutów:
+        przed żadną z konsekwencji. Na karcie produktu poziome wideo nie prowadzi
+        galerii, tylko trafia do osobnej sekcji <em>A Closer Look</em>:
       </p>
       <figure>
         <Image
@@ -400,22 +311,15 @@ export default function Page(): JSX.Element {
           width={620}
         />
         <figcaption>
-          Poziome App Preview ląduje we własnym bloku <em>A Closer Look</em>,
-          zamiast prowadzić galerię.
+          Poziome wideo zepchnięte do własnego bloku, zamiast prowadzić galerię.
         </figcaption>
       </figure>
       <p>
-        Gorzej, układ nie jest taki sam dla wszystkich. Jeśli oglądający ma już
-        pobraną aplikację albo ma ją na koncie, wideo renderuje się w innym
-        miejscu. Testowanie własnego listingu na własnym telefonie mówi Ci więc
-        bardzo niewiele. Sprawdź to na urządzeniu, które nigdy tej aplikacji nie
-        instalowało.
-      </p>
-      <p>
-        <strong>W wynikach wyszukiwania</strong> poziome wideo zajmuje całą
-        szerokość wiersza, a zrzuty nie są pokazywane obok niego. To jest
-        udokumentowane zachowanie. W praktyce bywa gorzej: wiersz renderuje się
-        zupełnie bez grafik.
+        W wynikach wyszukiwania zajmuje całą szerokość wiersza, a zrzuty nie są
+        pokazywane obok. W praktyce bywa gorzej: wiersz renderuje się zupełnie
+        bez grafik. Niżej ta sama aplikacja stoi między dwoma konkurentami
+        pokazującymi po trzy klatki i nie pokazuje nic poza ikoną i linijką
+        tekstu.
       </p>
       <figure>
         <Image
@@ -427,47 +331,45 @@ export default function Page(): JSX.Element {
           width={620}
         />
         <figcaption>
-          Ta sama aplikacja w wyszukiwarce. Listingi nad i pod pokazują po trzy
-          klatki. Nasz nie pokazuje nic poza ikoną, tytułem i podtytułem.
+          Ta sama aplikacja w wyszukiwarce. Sąsiedzi po trzy klatki, my linijka
+          tekstu.
         </figcaption>
       </figure>
-      <p>
-        Spójrz na środkowy wiersz, a potem na sąsiadów. Dwaj konkurenci zajmują
-        po trzy klatki ekranu na przedstawienie swojej sprawy, a aplikacja
-        pomiędzy nimi jest linijką tekstu. Wyniki wyszukiwania to miejsce, gdzie
-        odbywa się skanowanie wzrokiem i gdzie porównują Cię obok siebie. Utrata
-        kreacji tam kosztuje więcej, niż wideo miało zarobić na karcie produktu.
-      </p>
-
-      <h3>Co z tym zrobić</h3>
+      <Callout title="Sprawdź to przed czymkolwiek innym" variant="warning">
+        <p>
+          Wyniki wyszukiwania to miejsce, gdzie porównują Cię obok siebie. Utrata
+          kreacji tam kosztuje więcej, niż wideo miało zarobić na karcie
+          produktu, a App Store Connect w żaden sposób Cię o tym nie ostrzeże.
+        </p>
+      </Callout>
       <ul>
         <li>
-          <strong>Jeśli aplikacja jest pionowa, zostaw pionowe wideo.</strong>{" "}
-          Pionowe App Preview stoi w wierszu obok pierwszych zrzutów, zamiast je
-          zastępować, więc zachowujesz obie powierzchnie.
+          <strong>Aplikacja pionowa, wideo pionowe.</strong> Stoi wtedy obok
+          pierwszych zrzutów zamiast je zastępować, więc zachowujesz obie
+          powierzchnie.
         </li>
         <li>
-          <strong>Jeśli produkt jest naprawdę poziomy</strong>, gra na telewizor,
-          wyścigi, edytor wideo, masz realną decyzję, a nie pomyłkę. Albo wsadzasz
-          poziomy materiał w pionową ramkę z czarnymi pasami, żeby wiersz
-          zachował galerię, albo świadomie akceptujesz goły wiersz i każesz
-          ikonie, tytułowi i podtytułowi go udźwignąć.
+          <strong>Produkt naprawdę poziomy</strong> (gra na telewizor, wyścigi,
+          edytor wideo): albo wsadź materiał w pionową ramkę z czarnymi pasami,
+          żeby wiersz zachował galerię, albo świadomie zaakceptuj goły wiersz.
         </li>
         <li>
-          <strong>Nigdy nie mieszaj orientacji</strong> w zestawie zrzutów dla
-          jednego urządzenia. Poza bałaganem w układzie, pionowy interfejs
-          pokazany w poziomej ramce jest udokumentowanym powodem odrzucenia w App
-          Review.
+          <strong>Nigdy nie mieszaj orientacji</strong> w zestawie dla jednego
+          urządzenia. Pionowy interfejs w poziomej ramce to udokumentowany powód
+          odrzucenia w App Review, a{" "}
+          <Link href="/pl/blog/app-store-connect-publikacja-aplikacji">
+            wymagane rozmiary zrzutów
+          </Link>{" "}
+          warto sprawdzić przed eksportem.
         </li>
         <li>
-          <strong>Sprawdzaj po każdej publikacji.</strong> To renderowanie
-          zmieniało się już nieraz, a Apple opisuje je szczątkowo. Po każdym
-          wydaniu metadanych wyszukaj własną aplikację na czystym urządzeniu i
-          popatrz na wiersz, nie tylko na kartę produktu.
+          <strong>Sprawdzaj na czystym urządzeniu po każdej publikacji.</strong>{" "}
+          Dla osób, które mają już aplikację, układ jest inny, więc własny telefon
+          mówi Ci niewiele.
         </li>
       </ul>
       <p>
-        Ta sama aplikacja w drugim sklepie, dla porównania:{" "}
+        Ta sama aplikacja w drugim sklepie:{" "}
         <a
           href="https://apps.apple.com/pl/app/buzzin-tv-party-game-show/id6787068440"
           rel="noopener"
@@ -475,90 +377,62 @@ export default function Page(): JSX.Element {
         >
           Buzzin w App Store
         </a>
-        . Ten sam produkt, ten sam materiał, dwa zupełnie różne zestawy
-        ograniczeń, co jest sednem całego tego tekstu.
+        .
       </p>
 
-      <h2>Klatka poster to zrzut ekranu</h2>
-      <p>
-        Automatyczne odtwarzanie jest warunkowe. Zależy od powierzchni,
-        urządzenia, trybu niskiego zużycia energii, warunków sieciowych i
-        ustawień samego użytkownika. Kiedy się nie odpali, całe wideo zwija się
-        do jednego kadru: klatki poster.
-      </p>
-      <p>
-        Czyli klatka poster wykonuje pracę zrzutu ekranu i powinna być zrobiona
-        jak zrzut. Daj jej podpis, zadbaj o czytelność w rozmiarze miniatury i
-        wybierz moment, który mówi, czym jest aplikacja, zamiast planszy
-        tytułowej albo animacji logo. Klatka poster będąca czarnym ekranem z
-        logotypem to zmarnowany slot na najcenniejszym kawałku Twojego listingu.
-      </p>
-
-      <h2>Pierwsze trzy sekundy muszą działać bez dźwięku</h2>
-      <p>
-        W wynikach wyszukiwania App Store odtwarza wideo wyciszone. Zakładaj brak
-        dźwięku, zawsze, i zakładaj, że większość oglądających odpadnie przed
-        połową.
-      </p>
+      <h2>Zasady rzemiosła, które decydują o wyniku</h2>
       <ul>
         <li>
-          Pokaż produkt w pierwszej sekundzie. Bez intro z logo, bez splasha.
+          <strong>Klatka poster to zrzut ekranu.</strong> Autoodtwarzanie jest
+          warunkowe, więc gdy się nie odpali, całe wideo zwija się do tego jednego
+          kadru. Podpisz go, zadbaj o czytelność w miniaturze, nigdy czarny ekran
+          z logotypem.
         </li>
         <li>
-          Przekaz nieś tekstem na ekranie, bo z perspektywy widza lektora nie ma.
+          <strong>Pierwsze trzy sekundy działają bez dźwięku.</strong> Produkt w
+          pierwszej sekundzie, przekaz tekstem na ekranie, najlepszy moment na
+          początek.
         </li>
         <li>
-          Najlepszy moment daj na początek. Nie buduj do niego napięcia, i tak
-          tam nie dojdziesz.
+          <strong>15 do 20 sekund</strong>, mimo że Apple pozwala na 30. Krótsze
+          pętle zostają obejrzane więcej niż raz.
         </li>
         <li>
-          Trzymaj 15 do 20 sekund, mimo że Apple pozwala na 30. Krótsze pętle
-          zostają obejrzane więcej niż raz.
+          <strong>Lokalizuj.</strong> Wideo jest per lokalizacja w obu sklepach, a
+          wypalony angielski tekst na niemieckim listingu to ten sam błąd co
+          nieprzetłumaczony podpis.
         </li>
         <li>
-          Lokalizuj. Wideo jest per lokalizacja w obu sklepach, a wypalony
-          angielski tekst na niemieckim listingu to ten sam błąd co
-          nieprzetłumaczony podpis pod zrzutem. Więcej o tym w tekście o{" "}
-          <Link href="/pl/blog/pozycjonowanie-aplikacji-mobilnych">
-            pozycjonowaniu aplikacji mobilnych
-          </Link>
-          .
+          <strong>Trzymaj aktualne.</strong> App Preview z interfejsem sprzed
+          dwóch redesignów jest gorsze niż brak wideo.
         </li>
       </ul>
 
-      <h2>Czy w ogóle robić wideo</h2>
-      <p>Kilka uczciwych bramek, zanim wydasz budżet:</p>
+      <h2>Zanim wydasz budżet</h2>
       <ol>
         <li>
-          <strong>Czy zrzuty ekranu są już dobre?</strong> Jeśli pierwsze dwie
-          klatki to surowe zrzuty bez podpisów, napraw najpierw je. To większa i
-          tańsza wygrana niż jakiekolwiek wideo.
+          Jeśli pierwsze dwie klatki to surowe zrzuty bez podpisów, napraw
+          najpierw je. To większa i tańsza wygrana.
         </li>
         <li>
-          <strong>Czy jest tam ruch wart oglądania?</strong> Jeśli nieruchoma
-          klatka przekazuje to samo, wideo dokłada czas ładowania i ryzyko, nie
-          dokładając informacji.
+          Jeśli nieruchoma klatka przekazuje to samo, wideo dokłada czas ładowania
+          i ryzyko, nie dokładając informacji.
         </li>
         <li>
-          <strong>Czy utrzymasz je aktualne?</strong> App Preview pokazujące
-          interfejs sprzed dwóch redesignów jest gorsze niż brak wideo, a w Play
-          powierzchnie YouTube mają wprost określone okna świeżości.
-        </li>
-        <li>
-          <strong>Dla którego sklepu to robisz?</strong> W App Store wideo kupuje
-          Ci powierzchnię odkrywania. W Play zwraca się dopiero po kliknięciu.
-          Przy ciasnym budżecie najpierw iOS.
+          Przy ciasnym budżecie najpierw iOS: tam wideo kupuje powierzchnię
+          odkrywania, w Play zwraca się dopiero po kliknięciu.
         </li>
       </ol>
-
-      <h2>Testuj zamiast wierzyć benchmarkom</h2>
       <p>
-        Każda liczba w tym tekście jest czyjąś średnią. Oba sklepy dają darmowe
-        narzędzia do znalezienia własnej: Product Page Optimization w App Store,
-        eksperymenty karty produktu w Google Play. Puść wideo przeciwko brakowi
-        wideo, a osobno klatki poster przeciwko sobie, bo to są dwa różne
-        eksperymenty, a zespoły regularnie je mieszają. Konfigurację obu konsol
-        opisaliśmy w przewodnikach po{" "}
+        Potem testuj zamiast wierzyć w powyższe średnie. Product Page
+        Optimization w App Store i eksperymenty karty produktu w Google Play są
+        darmowe. Puść wideo przeciwko brakowi wideo, a osobno klatki poster
+        przeciwko sobie. Daj każdemu testowi dwa tygodnie, zmieniaj jedną rzecz
+        naraz i zapisuj, jak wyglądał listing, kiedy liczby drgnęły. Ta ostatnia
+        część po cichu się sypie, a trzymanie zapisu tego, co i kiedy poszło, per
+        język i per sklep, to spora część tego, po co zrobiliśmy{" "}
+        <Link href="/pricing">AppBoard</Link>. Konfigurację obu konsol opisaliśmy
+        w przewodnikach po{" "}
         <Link href="/pl/blog/app-store-connect-publikacja-aplikacji">
           App Store Connect
         </Link>{" "}
@@ -569,21 +443,10 @@ export default function Page(): JSX.Element {
         .
       </p>
       <p>
-        Daj testowi minimum dwa tygodnie i ruch, który cokolwiek znaczy, zmieniaj
-        jedną rzecz naraz i zapisuj, jak wyglądał listing, kiedy liczby drgnęły.
-        Ta ostatnia część po cichu się sypie: pół roku później nikt nie pamięta,
-        który zestaw zrzutów był na produkcji w dobrym kwartale ani które języki
-        w ogóle dostały zlokalizowane wideo. Trzymanie zapisu tego, co i kiedy
-        poszło, per język i per sklep, to spora część tego, po co zrobiliśmy{" "}
-        <Link href="/pricing">AppBoard</Link>, ale arkusz, który realnie
-        prowadzisz, bije narzędzie, którego nie używasz.
-      </p>
-      <p>
-        Cokolwiek ostatecznie wypuścisz, zrób najpierw tani test. Wyszukaj własną
-        aplikację na telefonie, który nigdy jej nie instalował, i zobacz, co
-        renderuje się w wierszu. Jeśli wraca linijka tekstu między dwoma
-        konkurentami pokazującymi po trzy klatki, żadna jakość produkcji wideo
-        tego nie naprawi.
+        Najpierw jednak zrób tani test. Wyszukaj własną aplikację na telefonie,
+        który nigdy jej nie instalował, i zobacz, co renderuje się w wierszu.
+        Jeśli wraca linijka tekstu między dwoma konkurentami pokazującymi po trzy
+        klatki, żadna jakość produkcji tego nie naprawi.
       </p>
 
       <h2>Najczęstsze pytania</h2>
@@ -597,9 +460,8 @@ export default function Page(): JSX.Element {
       <p>
         Zasady sklepów sprawdzone w dokumentacji Apple i Google w sierpniu 2026
         roku. Dane o konwersji pochodzą od dostawców narzędzi do testów A/B
-        (SplitMetrics, StoreMaven, AppFollow) i są kierunkowe, a nie recenzowane
-        naukowo. Jeśli czytasz to znacznie później, zweryfikuj limity i zachowanie
-        wyników wyszukiwania przed wydaniem.
+        (SplitMetrics, StoreMaven, AppFollow) i są kierunkowe, nie recenzowane
+        naukowo.
       </p>
     </ArticleLayout>
   );

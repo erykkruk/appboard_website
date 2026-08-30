@@ -1,4 +1,5 @@
 export { ButtonLink } from "./button-link";
+export { Callout } from "./callout";
 export { ComingSoonBadge } from "./coming-soon-badge";
 export { Eyebrow } from "./eyebrow";
 export { FeatureCard } from "./feature-card";
