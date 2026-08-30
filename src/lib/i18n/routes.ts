@@ -42,6 +42,8 @@ const MIRRORED_PATHS: string[] = [
  */
 const TRANSLATED_PATHS: Record<string, Partial<Record<Locale, string>>> = {
   "/blog/app-preview-video-vs-screenshots": {
+    de: "/de/blog/app-preview-video-oder-screenshots",
+    es: "/es/blog/video-promocional-o-capturas",
     pl: "/pl/blog/wideo-promocyjne-aplikacji",
   },
   "/blog/app-store-localization": {
