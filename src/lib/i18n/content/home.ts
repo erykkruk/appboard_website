@@ -1065,15 +1065,15 @@ const DE: HomeContent = {
     items: [
       {
         description:
-          "App Store Connect und Google Play Console einmal verbinden. AppBoard holt jede App und jede Lokalisierung, die Sie bereits haben.",
-        href: "/de/docs/connect-app-store",
-        title: "Einmal verbinden, alles importieren",
+          "Einen App-Store- oder Google-Play-Link einfügen, und der ganze Eintrag ist in AppBoard. Die Store-API verbinden Sie später, nur zum Veröffentlichen.",
+        href: "/de/docs",
+        title: "Start mit einem Store-Link",
       },
       {
         description:
-          "Store-Grafiken im Browser gestalten und in exakten Gerätegrößen exportieren. Kein Konto, keine Installation, dauerhaft kostenlos.",
-        href: `${APP_URL}/editor`,
-        title: "Kostenloser Screenshot-Editor",
+          "ASO-Check, Keyword-Check und Screenshot-Editor laufen im Browser - kostenlos, ohne Login, nichts wird hochgeladen.",
+        href: "/de#free-tools",
+        title: "Kostenlose Tools ohne Konto",
       },
       {
         description:
@@ -1119,8 +1119,32 @@ const DE: HomeContent = {
     ctaLabel: "Editor öffnen",
     ctaNote: "Dauerhaft kostenlos · ohne Login",
     description:
-      "Screenshots für App Store und Google Play kostenlos gestalten, direkt im Browser. Vorlage wählen, eigenen Screenshot einsetzen, ein echtes 3D-Gerät drehen, in exakten Store-Maßen exportieren. Ohne Konto.",
-    eyebrow: "Kostenloses Werkzeug",
+      "Jeden Eintrag prüfen, eigene Keywords bewerten und Store-Screenshots gestalten - alles im Browser, nichts wird hochgeladen, keine Registrierung. Dieselbe Engine, die AppBoard im Panel nutzt.",
+    editorTitle: "Kostenloser ASO-Screenshot-Editor",
+    eyebrow: "Kostenlose Tools",
+    tools: [
+      {
+        ctaLabel: "Eintrag prüfen",
+        description:
+          "App-Store-Link einfügen: Bewertung des Eintrags, die Keywords, für die Sie ranken (Top 200), der Wettbewerb und drei konkrete nächste Schritte.",
+        href: `${APP_URL}/aso-check`,
+        title: "ASO-Check",
+      },
+      {
+        ctaLabel: "Keywords bewerten",
+        description:
+          "Bis zu fünf Keywords pro Tag: Popularität, Schwierigkeit, Chance und eine Download-Schätzung für den gewählten Markt.",
+        href: `${APP_URL}/keyword-check`,
+        title: "Keyword-Check",
+      },
+      {
+        ctaLabel: "Editor öffnen",
+        description:
+          "Vorlagen, echte 3D-Geräte, exakte Store-Maße. Exportieren und hochladen - oder die Store-Screenshots direkt aus dem Panel öffnen.",
+        href: `${APP_URL}/editor`,
+        title: "Screenshot-Editor",
+      },
+    ],
     gallery: [
       {
         alt: "Hero-Vorlage: im 3D-Winkel gekipptes iPhone auf einem Magenta-Violett-Verlauf mit kräftiger Überschrift",
@@ -1176,18 +1200,18 @@ const DE: HomeContent = {
       "Panorama-Layouts, die als mehrere aufeinanderfolgende Store-Screenshots exportiert werden",
       "Zu 100 Prozent im Browser, ohne Registrierung, nichts wird auf einen Server geladen",
     ],
-    title: "Kostenloser ASO-Screenshot-Editor",
+    title: "Drei kostenlose Tools, kein Konto",
   },
   hero: {
     dashboardAlt:
       "AppBoard-Dashboard mit sechs Apps aus App Store und Google Play, gruppiert in einem Workspace",
     facts: [
       "App Store + Google Play",
-      "Jede Sprache in einem Editor",
+      "Start mit einem Store-Link, ohne API",
       "Diffs und Rollback",
       "Open Source",
     ],
-    lead: "Metadaten in jeder Sprache, Screenshots, Rezensionen und KI-Research für App Store und Google Play. Entwerfen, Diff prüfen, überall veröffentlichen.",
+    lead: "Store-Link einfügen, und Eintrag, Screenshots, Bewertungen und Rezensionen sind in AppBoard - ohne API-Schlüssel. Audit machen, Text per Diff annehmen oder ablehnen, dann veröffentlichen: per Kopieren und Einfügen oder mit einem Klick, sobald ein Store verbunden ist.",
     note: "Während der Beta kostenlos. Keine Kreditkarte, kein Vertriebsgespräch.",
     primaryCta: "Kostenlos starten",
     secondaryCta: "Live-Demo öffnen",
@@ -1199,26 +1223,26 @@ const DE: HomeContent = {
     steps: [
       {
         description:
-          "App Store Connect und Google Play Console einmal verbinden. Ihre Schlüssel wandern direkt in einen Ende-zu-Ende-verschlüsselten Tresor.",
-        title: "Stores verbinden",
+          "App über ihre App-Store- oder Google-Play-Seite hinzufügen. Der Eintrag in jeder Sprache, Screenshots, Bewertungen und Rezensionen kommen von selbst - ohne API-Zugangsdaten, ohne Konsole.",
+        title: "Store-Link einfügen",
       },
       {
         description:
-          "Jedes Feld, jede Sprache, ein Editor. Store-Grafiken im Browser gestalten, in genau den Größen, die jeder Store verlangt.",
-        title: "Einträge und Screenshots bearbeiten",
+          "Eine Bewertung des Eintrags so, wie der Store ihn wirklich ausliefert, die Keywords, die Sie tatsächlich gewinnen können, und Textkorrekturen als Diffs zum Annehmen oder Ablehnen. Der Entwurf rührt den Store nie von allein an.",
+        title: "Audit und Textkorrekturen",
       },
       {
         description:
-          "Diff prüfen, dann in einem Rutsch in beide Stores schieben. Jede Änderung ist versioniert und einen Klick vom Rollback entfernt.",
-        title: "Überall veröffentlichen",
+          "Die Änderungen in die Konsole kopieren und als erledigt markieren - oder die Store-API verbinden und beide Stores in einem Rutsch beschicken, versioniert und einen Klick vom Rollback entfernt.",
+        title: "Veröffentlichen, wie Sie wollen",
       },
       {
         description:
-          "Die Rezensionen beider Stores landen in einem Posteingang. Keyword-Positionen, Marktdaten und Wettbewerbsanalyse liegen daneben.",
-        title: "Rezensionen und Keywords verfolgen",
+          "Nächtliche Keyword-Positionen mit jedem Release und jeder Textänderung im Diagramm markiert, Rezensionen aus jedem Storefront in einem Posteingang und ein Hinweis, wenn ein Entwurf unveröffentlicht liegen bleibt.",
+        title: "Sehen, was sich bewegt hat",
       },
     ],
-    title: "Vier Schritte, kein Konsolen-Hopping",
+    title: "Vier Schritte, angefangen mit einem Link",
   },
   pricingTeaser: {
     ctaHref: "/de/pricing",
@@ -1441,15 +1465,15 @@ const ES: HomeContent = {
     items: [
       {
         description:
-          "Conecta App Store Connect y Google Play Console una vez. AppBoard importa todas tus apps y todas las localizaciones que ya tienes.",
-        href: "/es/docs/connect-app-store",
-        title: "Conecta una vez, impórtalo todo",
+          "Pega un enlace de App Store o Google Play y toda la ficha está en AppBoard. Conecta la API de la tienda más tarde, solo para publicar.",
+        href: "/es/docs",
+        title: "Empieza con un enlace de la tienda",
       },
       {
         description:
-          "Diseña y exporta gráficos de tienda en el navegador con las medidas exactas de cada dispositivo. Sin cuenta, sin instalar, gratis para siempre.",
-        href: `${APP_URL}/editor`,
-        title: "Editor de capturas gratuito",
+          "ASO check-up, keyword check y el editor de capturas funcionan en tu navegador - gratis, sin login, sin subir nada.",
+        href: "/es#free-tools",
+        title: "Herramientas gratis, sin cuenta",
       },
       {
         description:
@@ -1495,8 +1519,32 @@ const ES: HomeContent = {
     ctaLabel: "Abrir el editor",
     ctaNote: "Gratis para siempre · sin login",
     description:
-      "Diseña capturas para App Store y Google Play gratis, directamente en el navegador. Elige una plantilla, coloca tu captura, gira un dispositivo 3D real y exporta con las medidas exactas de cada tienda. Sin cuenta.",
-    eyebrow: "Herramienta gratuita",
+      "Revisa cualquier ficha, puntúa tus keywords y diseña capturas para la tienda - todo en tu navegador, sin subir nada, sin registro. El mismo motor que AppBoard usa dentro del panel.",
+    editorTitle: "Editor de capturas ASO gratuito",
+    eyebrow: "Herramientas gratis",
+    tools: [
+      {
+        ctaLabel: "Revisar una ficha",
+        description:
+          "Pega un enlace de App Store: puntuación de la ficha, las keywords en las que posicionas (top 200), la competencia y tres siguientes pasos concretos.",
+        href: `${APP_URL}/aso-check`,
+        title: "ASO check-up",
+      },
+      {
+        ctaLabel: "Puntuar keywords",
+        description:
+          "Hasta cinco keywords al día: popularidad, dificultad, oportunidad y una estimación de descargas para el mercado que elijas.",
+        href: `${APP_URL}/keyword-check`,
+        title: "Keyword check",
+      },
+      {
+        ctaLabel: "Abrir el editor",
+        description:
+          "Plantillas, dispositivos 3D reales, medidas exactas de cada tienda. Exporta y sube - o abre las capturas de tu tienda directamente desde el panel.",
+        href: `${APP_URL}/editor`,
+        title: "Editor de capturas",
+      },
+    ],
     gallery: [
       {
         alt: "Plantilla hero: iPhone inclinado en 3D sobre un degradado magenta y violeta con un titular contundente",
@@ -1552,18 +1600,18 @@ const ES: HomeContent = {
       "Diseños panorámicos que se exportan como varias capturas consecutivas",
       "100 % en tu navegador, sin registro y sin subir nada a un servidor",
     ],
-    title: "Editor de capturas ASO gratuito",
+    title: "Tres herramientas gratis, sin cuenta",
   },
   hero: {
     dashboardAlt:
       "Panel de AppBoard con seis apps de App Store y Google Play agrupadas en un espacio de trabajo",
     facts: [
       "App Store + Google Play",
-      "Todos los idiomas en un editor",
+      "Empieza con un enlace de la tienda, sin API",
       "Diffs y reversión",
       "Open source",
     ],
-    lead: "Metadatos en todos los idiomas, capturas, reseñas e investigación con IA para App Store y Google Play. Redacta, revisa el diff y publica en todas partes.",
+    lead: "Pega un enlace de la tienda y la ficha, las capturas, las valoraciones y las reseñas están en AppBoard - sin claves de API. Haz la auditoría, corrige el texto con diffs que aceptas o rechazas y publica: copiando y pegando, o con un clic cuando conectes la tienda.",
     note: "Gratis durante la beta. Sin tarjeta y sin llamada comercial.",
     primaryCta: "Empezar gratis",
     secondaryCta: "Abrir la demo en vivo",
@@ -1575,26 +1623,26 @@ const ES: HomeContent = {
     steps: [
       {
         description:
-          "Conecta App Store Connect y Google Play Console una vez. Tus claves van directas a un baúl cifrado de extremo a extremo.",
-        title: "Conecta tus tiendas",
+          "Añade una app desde su página de App Store o Google Play. La ficha en cada idioma, las capturas, las valoraciones y las reseñas entran solas - sin credenciales de API, sin consola.",
+        title: "Pega un enlace de la tienda",
       },
       {
         description:
-          "Cada campo, cada idioma, un editor. Diseña los gráficos en el navegador con las medidas exactas que exige cada tienda.",
-        title: "Edita fichas y capturas",
+          "Una puntuación de la ficha tal como la sirve la tienda, las keywords que de verdad puedes ganar y correcciones de texto como diffs que aceptas o rechazas. El borrador nunca toca la tienda por su cuenta.",
+        title: "Audita y corrige el texto",
       },
       {
         description:
-          "Revisa el diff y sube a las dos tiendas en un lote. Cada cambio queda versionado y a un clic de la reversión.",
-        title: "Publica en todas partes",
+          "Copia los cambios a la consola y márcalos como hechos, o conecta la API de la tienda y publica en las dos tiendas en un lote - versionado y a un clic de la reversión.",
+        title: "Publica a tu manera",
       },
       {
         description:
-          "Las reseñas de las dos tiendas llegan a una bandeja. Al lado, posiciones de keywords, datos de mercado y análisis de competencia.",
-        title: "Sigue reseñas y keywords",
+          "Posiciones de keywords cada noche, con cada versión y cambio de texto marcado en la gráfica, reseñas de cada tienda en una bandeja y un aviso cuando un borrador se queda sin publicar.",
+        title: "Sigue lo que se movió",
       },
     ],
-    title: "Cuatro pasos, sin saltar entre consolas",
+    title: "Cuatro pasos, empezando por un enlace",
   },
   pricingTeaser: {
     ctaHref: "/es/pricing",

@@ -101,7 +101,35 @@ export function scopeCoversPath(
   return englishPath === "/blog" || englishPath.startsWith("/blog/");
 }
 
+/**
+ * Pages a site locale does not have yet. German and Spanish shipped with the
+ * marketing pages first; the legal text and the individual doc guides stay
+ * English until translated, so no link, alternate or sitemap entry may point
+ * at a localized page that does not exist.
+ */
+const PENDING_PATHS: Partial<Record<Locale, (englishPath: string) => boolean>> =
+  {
+    de: isLegalOrDocGuide,
+    es: isLegalOrDocGuide,
+  };
+
+function isLegalOrDocGuide(englishPath: string): boolean {
+  return (
+    englishPath === "/policy" ||
+    englishPath === "/terms" ||
+    englishPath.startsWith("/docs/")
+  );
+}
+
+/** True while a site locale still serves this page in English only. */
+export function isPendingPath(locale: Locale, englishPath: string): boolean {
+  return PENDING_PATHS[locale]?.(englishPath) ?? false;
+}
+
 export function localeCoversPath(locale: Locale, englishPath: string): boolean {
+  if (isPendingPath(locale, englishPath)) {
+    return false;
+  }
   return scopeCoversPath(LOCALE_CONFIG[locale].scope, englishPath);
 }
 

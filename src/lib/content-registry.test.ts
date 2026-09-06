@@ -14,9 +14,10 @@ import { ALL_DOC_PAGES_PL } from "./i18n/content/docs";
 import {
   BLOG_ONLY_LOCALES,
   DEFAULT_LOCALE,
+  isPendingPath,
   LOCALE_CONFIG,
-  LOCALES,
   localeHome,
+  LOCALES,
   scopeCoversPath,
   SITE_LOCALES,
 } from "./i18n/locales";
@@ -224,6 +225,12 @@ describe("locale scopes", () => {
       if (!englishPath || englishPath.startsWith("/blog")) continue;
 
       for (const locale of SITE_LOCALES) {
+        // A page a locale has not translated yet is left out on purpose, so
+        // nothing links to a localized URL that would 404.
+        if (isPendingPath(locale, englishPath)) {
+          expect(pair[locale], `${locale} must not claim ${englishPath}`).toBeUndefined();
+          continue;
+        }
         expect(pair[locale], `${locale} must serve ${englishPath}`).toBeDefined();
       }
     }

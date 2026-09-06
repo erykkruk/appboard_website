@@ -376,12 +376,17 @@ const DE: FaqPageContent = {
         },
         {
           answer:
+            "Nein. Fügen Sie einen Link zur Store-Seite Ihrer App ein, und AppBoard importiert den Eintrag in jeder Sprache, die Screenshots, Bewertungen und Rezensionen von selbst. Die Store-API zu verbinden ist optional: Sie bringt Veröffentlichen mit einem Klick, Screenshot-Upload und Antworten auf Rezensionen aus dem Panel. Ohne sie kopieren Sie den fertigen Text in die Konsole und markieren ihn in AppBoard als erledigt.",
+          question: "Brauche ich Zugang zur API von App Store Connect oder Google Play?",
+        },
+        {
+          answer:
             "Sie melden sich mit Ihrer E-Mail-Adresse und einem Einmalcode an, den wir Ihnen schicken. Es gibt kein Passwort, das Sie sich ausdenken oder merken müssten, und nichts zurückzusetzen.",
           question: "Wie funktioniert die Anmeldung?",
         },
         {
           answer:
-            "Etwa zehn Minuten, wenn Ihre Store-Schlüssel bereitliegen: ein App-Store-Connect-API-Key und ein Google-Play-Service-Account. Sobald sie verbunden sind, importiert AppBoard Ihre Apps und Einträge automatisch.",
+            "Unter einer Minute mit einem Store-Link: einfügen, und der Eintrag ist drin. Die Store-API zum Veröffentlichen zu verbinden dauert etwa zehn Minuten mehr, wenn die Schlüssel bereitliegen: ein App-Store-Connect-API-Key oder ein Google-Play-Service-Account.",
           question: "Wie lange dauert die Einrichtung?",
         },
         {
@@ -540,12 +545,17 @@ const ES: FaqPageContent = {
         },
         {
           answer:
+            "No. Pega un enlace a la página de tu app en la tienda y AppBoard importa por su cuenta la ficha en cada idioma, las capturas, las valoraciones y las reseñas. Conectar la API de la tienda es opcional: añade la publicación con un clic, la subida de capturas y las respuestas a reseñas desde el panel. Sin ella copias el texto final a la consola y lo marcas como hecho en AppBoard.",
+          question: "¿Necesito acceso a la API de App Store Connect o Google Play?",
+        },
+        {
+          answer:
             "Entras con tu correo y un código de un solo uso que te enviamos. No hay contraseña que inventar ni recordar, y nada que restablecer.",
           question: "¿Cómo funciona el acceso?",
         },
         {
           answer:
-            "Unos diez minutos si tienes a mano las claves: una clave de API de App Store Connect y una cuenta de servicio de Google Play. En cuanto están conectadas, AppBoard importa tus apps y tus fichas automáticamente.",
+            "Menos de un minuto con un enlace de la tienda: lo pegas y la ficha ya está dentro. Conectar la API de la tienda para publicar lleva unos diez minutos más si tienes las claves a mano: una clave de API de App Store Connect o una cuenta de servicio de Google Play.",
           question: "¿Cuánto se tarda en configurarlo?",
         },
         {

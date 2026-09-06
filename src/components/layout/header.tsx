@@ -9,6 +9,7 @@ import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/locales";
 import { APP_URL } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
+import { FreeToolsMenu } from "./free-tools-menu";
 import { LanguageSwitcher } from "./language-switcher";
 import { Logo } from "./logo";
 
@@ -30,6 +31,7 @@ export function Header({ locale = DEFAULT_LOCALE }: HeaderProps): JSX.Element {
           aria-label={chrome.mainNavLabel}
           className="hidden items-center gap-8 md:flex"
         >
+          <FreeToolsMenu menu={chrome.freeTools} />
           {chrome.navLinks.map((link) => (
             <Link
               className="anim-underline text-sm text-muted transition-colors hover:text-foreground"
@@ -78,6 +80,20 @@ export function Header({ locale = DEFAULT_LOCALE }: HeaderProps): JSX.Element {
           aria-label={chrome.mobileNavLabel}
           className="flex flex-col gap-1 px-4 py-4"
         >
+          <p className="px-3 pb-1 text-xs font-medium uppercase tracking-wide text-muted">
+            {chrome.freeTools.label}
+          </p>
+          {chrome.freeTools.items.map((tool) => (
+            <a
+              className="rounded-lg px-3 py-2.5 text-sm text-muted transition-colors hover:bg-panel hover:text-foreground"
+              href={tool.href}
+              key={tool.href}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {tool.label}
+            </a>
+          ))}
+          <div className="my-2 border-t border-line" />
           {chrome.navLinks.map((link) => (
             <Link
               className="rounded-lg px-3 py-2.5 text-sm text-muted transition-colors hover:bg-panel hover:text-foreground"

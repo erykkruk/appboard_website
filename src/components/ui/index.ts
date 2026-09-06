@@ -10,6 +10,7 @@ export {
   ChartIcon,
   ChatIcon,
   CheckIcon,
+  ChevronDownIcon,
   CloseIcon,
   DiscordIcon,
   ImageIcon,

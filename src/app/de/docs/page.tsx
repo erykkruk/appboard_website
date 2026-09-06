@@ -32,6 +32,7 @@ export default function DocsIndexPlPage(): JSX.Element {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-bright">
             Dokumentation
           </p>
+          <p className="mt-3 text-sm text-muted">Die Anleitungen selbst sind derzeit auf Englisch.</p>
           <h1 className="display mt-3 text-5xl text-foreground sm:text-6xl">
             Alles, was Sie brauchen, um ASO in AppBoard zu betreiben
           </h1>
@@ -50,7 +51,7 @@ export default function DocsIndexPlPage(): JSX.Element {
                 {section.pages.map((page) => (
                   <Link
                     className="group flex flex-col gap-2 rounded-2xl border border-line bg-panel/40 p-6 transition-colors hover:border-accent/50 hover:bg-panel"
-                    href={`/de/docs/${page.slug}`}
+                    href={`/docs/${page.slug}`}
                     key={page.slug}
                   >
                     <span className="flex items-center gap-2 text-base font-medium text-foreground">
