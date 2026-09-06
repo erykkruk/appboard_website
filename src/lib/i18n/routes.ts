@@ -32,6 +32,8 @@ const MIRRORED_PATHS: string[] = [
   "/docs",
   "/blog",
   "/screenshot-editor",
+  "/aso-check",
+  "/keyword-check",
   ...ALL_DOC_PAGES.map((page) => `/docs/${page.slug}`),
 ];
 
