@@ -19,6 +19,14 @@ interface LegalCopy {
 }
 
 const LEGAL_COPY: Record<SiteLocale, LegalCopy> = {
+  de: {
+    eyebrow: "Rechtliches",
+    lastUpdatedPrefix: "Zuletzt aktualisiert: ",
+  },
+  es: {
+    eyebrow: "Aviso legal",
+    lastUpdatedPrefix: "Última actualización: ",
+  },
   en: {
     eyebrow: "Legal",
     lastUpdatedPrefix: "Last updated: ",

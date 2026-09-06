@@ -1,10 +1,14 @@
 /** Locales that serve the whole site, marketing pages included. */
-export const SITE_LOCALES = ["en", "pl"] as const;
+export const SITE_LOCALES = ["en", "pl", "de", "es"] as const;
 
-/** Locales that serve the blog only. */
-export const BLOG_ONLY_LOCALES = ["de", "es"] as const;
+/**
+ * Locales that serve the blog only. Empty today: every locale we publish in
+ * has the full marketing site. The type stays so a future market can ship
+ * articles first and gain the product pages later.
+ */
+export const BLOG_ONLY_LOCALES: readonly Locale[] = [];
 
-export const LOCALES = [...SITE_LOCALES, ...BLOG_ONLY_LOCALES] as const;
+export const LOCALES = SITE_LOCALES;
 
 export type Locale = (typeof LOCALES)[number];
 
@@ -70,7 +74,7 @@ export const LOCALE_CONFIG: Record<Locale, LocaleConfig> = {
     label: "Deutsch",
     ogLocale: "de_DE",
     pathPrefix: "/de",
-    scope: "blog",
+    scope: "site",
     shortLabel: "DE",
   },
   es: {
@@ -80,7 +84,7 @@ export const LOCALE_CONFIG: Record<Locale, LocaleConfig> = {
     label: "Español",
     ogLocale: "es_ES",
     pathPrefix: "/es",
-    scope: "blog",
+    scope: "site",
     shortLabel: "ES",
   },
 };

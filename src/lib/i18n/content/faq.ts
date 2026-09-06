@@ -349,7 +349,338 @@ const PL: FaqPageContent = {
   title: "Wszystko, o co ludzie pytają, zanim powierzą nam klucze do sklepów",
 };
 
+
+const DE: FaqPageContent = {
+  categories: [
+    {
+      entries: [
+        {
+          answer:
+            "AppBoard ist ein Panel für Ihre Einträge im App Store und bei Google Play: Metadaten, Screenshots, Versionen, Rezensionen und ASO-Research, statt ständig zwischen App Store Connect und der Play Console zu wechseln. Gebaut für Indie-Entwickler und kleine Teams, die dieselbe App in beiden Stores veröffentlichen.",
+          question: "Was ist AppBoard?",
+        },
+        {
+          answer:
+            "Ja. Die Live-Demo ist ein echter AppBoard-Workspace, gefüllt mit Beispiel-Apps, Rezensionen und Eintragsverlauf. Sie öffnet sich mit einem Klick, ohne Registrierung und ohne Store-Zugangsdaten, sodass Sie jeden Screen ansehen können, bevor Sie sich entscheiden.",
+          question: "Kann ich es testen, ohne eigene Apps zu verbinden?",
+        },
+        {
+          answer:
+            "Sie melden sich mit Ihrer E-Mail-Adresse und einem Einmalcode an, den wir Ihnen schicken. Es gibt kein Passwort, das Sie sich ausdenken oder merken müssten, und nichts zurückzusetzen.",
+          question: "Wie funktioniert die Anmeldung?",
+        },
+        {
+          answer:
+            "Etwa zehn Minuten, wenn Ihre Store-Schlüssel bereitliegen: ein App-Store-Connect-API-Key und ein Google-Play-Service-Account. Sobald sie verbunden sind, importiert AppBoard Ihre Apps und Einträge automatisch.",
+          question: "Wie lange dauert die Einrichtung?",
+        },
+        {
+          answer:
+            "Ja. AppBoard ist ein Open-Source-Produkt und läuft vollständig im Web-Panel. Es gibt keine Desktop-App, kein Plugin und nichts zu installieren. Ein moderner Browser genügt.",
+          question: "Ist AppBoard Open Source, und muss ich etwas installieren?",
+        },
+      ],
+      title: "Erste Schritte",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "Beide. App Store Connect wird über einen API-Key verbunden: Issuer ID, Key ID und die .p8-Datei. Google Play über das JSON eines Service-Accounts. Die Apps aus beiden Stores liegen danach nebeneinander in einem Workspace.",
+          question: "Welche Stores unterstützt AppBoard?",
+        },
+        {
+          answer:
+            "Googles Reporting-API gibt Apps im Entwurfsstatus nicht heraus, eine brandneue App taucht also nicht von allein auf. Sie können ihr Package manuell erfassen, danach verfolgt AppBoard sie normal weiter.",
+          question: "Warum erscheint meine Google-Play-App im Entwurf nicht?",
+        },
+        {
+          answer:
+            "Ja. Ein vollständiger Re-Import pro Store holt alles frisch aus dem Store und ersetzt die lokalen Daten dieses Stores. Praktisch, wenn etwas auseinandergelaufen ist oder Sie direkt in der Store-Konsole gearbeitet haben.",
+          question: "Kann ich alles aus einem Store neu synchronisieren?",
+        },
+        {
+          answer:
+            "Ja. Sie können mehrere Apps und mehrere Workspaces führen, und App-Gruppen verbinden die Android- und die iOS-Fassung derselben App, sodass Sie beide gemeinsam bearbeiten und vergleichen.",
+          question: "Kann ich mehrere Apps und Workspaces verwalten?",
+        },
+      ],
+      title: "Stores und Verbindungen",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "In einem Ende-zu-Ende-verschlüsselten Tresor. Der Schlüssel zur Verschlüsselung wird aus Ihrer Passphrase abgeleitet, die Server von AppBoard speichern also ausschließlich Chiffrat und sehen Ihre Schlüssel nie im Klartext.",
+          question: "Wie werden meine Store-Zugangsdaten gespeichert?",
+        },
+        {
+          answer:
+            "Es gibt bewusst keine Hintertür, ein Zurücksetzen löscht daher die gespeicherten Zugangsdaten und Sie tragen Ihre Schlüssel danach neu ein. Das ist der Preis dafür, dass die Server sie nie lesen können.",
+          question: "Was passiert, wenn ich meine Passphrase vergesse?",
+        },
+        {
+          answer:
+            "Nur das, was Sie ausdrücklich auslösen. AppBoard nutzt Ihre Schlüssel, um Einträge zu lesen und zu bearbeiten, aber es geht nie etwas ohne Ihre ausdrückliche Aktion in einen Store.",
+          question: "Was kann AppBoard mit meinen Schlüsseln tatsächlich tun?",
+        },
+        {
+          answer:
+            "Nein. Zugangsdaten bleiben verschlüsselt im Tresor, und alles in AppBoard ist an den Workspace gebunden. Kolleginnen und Kollegen arbeiten mit Ihren Einträgen, ohne die rohen Schlüssel je zu sehen.",
+          question: "Können Teammitglieder meine Zugangsdaten sehen?",
+        },
+      ],
+      title: "Sicherheit",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "Nein. Alles, was Sie ändern, ist zunächst ein Entwurf, Sie sehen vor dem Veröffentlichen eine Diff-Vorschau pro Feld, und jede veröffentlichte Änderung bleibt im Verlauf mit Rollback per Klick.",
+          question: "Kann AppBoard meinen laufenden Eintrag beschädigen?",
+        },
+        {
+          answer:
+            "Jede veröffentlichte Änderung, pro Feld und pro Sprache, dargestellt als rot-grüner Diff. Sie sehen, was sich wann geändert hat, und können jedes Feld zurückrollen.",
+          question: "Was wird im Verlauf festgehalten?",
+        },
+        {
+          answer:
+            "Sie können eine Version als Entwurf hochladen oder zur Prüfung einreichen. AppBoard überschreibt Ihre Einstellungen zum gesteuerten Veröffentlichen nicht, die bleiben in der Play Console.",
+          question: "Welche Veröffentlichungsoptionen gibt es bei Google Play?",
+        },
+        {
+          answer:
+            "Screenshots werden pro Gerät und pro Sprache in den exakten Store-Maßen verwaltet, und der eingebaute Editor baut ganze Szenen aus Geräterahmen, Hintergrund und Überschrift und exportiert jedes Bild in der genau geforderten Größe, inklusive Sprachvarianten derselben Szene.",
+          question: "Wie geht AppBoard mit Screenshots um?",
+        },
+        {
+          answer:
+            "Laden Sie ein breites Panorama hoch, und AppBoard teilt es in 2 bis 10 aufeinanderfolgende Screenshots für den Panorama-Effekt im Store-Eintrag. Und wenn ein Bild die falsche Größe hat, rastet das Zuschneiden auf Geräte-Presets ein, vom iPhone 3,5 Zoll über das iPad Pro 12,9 Zoll bis zu Android-Tablets, sodass der Store den Upload beim ersten Versuch annimmt.",
+          question: "Was ist mit Panoramen und Bildern in falscher Größe?",
+        },
+      ],
+      title: "Bearbeiten und veröffentlichen",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "Ihren eigenen. Die KI läuft über Ihren OpenRouter-Key mit jedem Modell Ihrer Wahl, und Sie zahlen direkt beim Anbieter. AppBoard schlägt nichts auf und verkauft keine Token weiter.",
+          question: "Wessen KI-Key nutzt AppBoard?",
+        },
+        {
+          answer:
+            "Sie entwirft Beschreibungen, Übersetzungen, Keyword-Ideen und Antworten auf Rezensionen. Alles, was die KI produziert, ist ein Vorschlag, den Sie prüfen und freigeben. Nichts erreicht automatisch einen Store.",
+          question: "Was macht die KI konkret?",
+        },
+        {
+          answer:
+            "Ja. Scraping, Rank-Tracking und die heuristische Gruppierung negativer Rezensionen funktionieren ohne KI-Key. Ein eigener Key legt die tiefere KI-Analyse obendrauf.",
+          question: "Funktioniert Research auch ohne KI?",
+        },
+        {
+          answer:
+            "Ja. Sie können jede App in den Stores untersuchen: ihre Keywords, die Märkte, in denen sie rankt, ihre Rezensionen und einen visuellen Vergleich Seite an Seite mit Ihrer eigenen.",
+          question: "Kann ich den Wettbewerb untersuchen?",
+        },
+      ],
+      title: "KI und Research",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "AppBoard ist während der Beta kostenlos. Eine Kreditkarte ist nicht nötig, und vor der Einführung eines kostenpflichtigen Plans erhalten Sie rechtzeitig Bescheid.",
+          question: "Was kostet AppBoard?",
+        },
+        {
+          answer:
+            "Frühe Nutzer bekommen eine Ankündigung und einen Wechselpfad auf den passenden Plan. Keine stille Abbuchung und kein überraschender Sprung von kostenlos auf kostenpflichtig.",
+          question: "Was passiert nach der Beta mit meinem Konto?",
+        },
+      ],
+      title: "Abrechnung",
+    },
+  ],
+  eyebrow: "FAQ",
+  lead: "Ehrliche Antworten dazu, wie AppBoard sich mit Ihren Stores verbindet, Ihre Zugangsdaten verschlüsselt hält und Sie bearbeiten und veröffentlichen lässt, ohne etwas Laufendes zu beschädigen.",
+  outro: {
+    accountCta: "Kostenloses Konto anlegen",
+    demoCta: "Live-Demo ansehen",
+    lead: "Am schnellsten bekommen Sie eine Antwort, indem Sie es ausprobieren. Öffnen Sie die Live-Demo und klicken Sie durch einen echten Workspace, oder legen Sie Ihr eigenes Konto an, kostenlos während der Beta.",
+    title: "Noch eine Frage offen?",
+  },
+  title: "Alles, was Leute fragen, bevor sie uns ihre Store-Schlüssel anvertrauen",
+};
+
+const ES: FaqPageContent = {
+  categories: [
+    {
+      entries: [
+        {
+          answer:
+            "AppBoard es un solo panel para gestionar tus fichas de App Store y Google Play: metadatos, capturas, versiones, reseñas e investigación ASO, en lugar de saltar entre App Store Connect y Play Console. Está pensado para desarrolladores indie y equipos pequeños que publican la misma app en las dos tiendas.",
+          question: "¿Qué es AppBoard?",
+        },
+        {
+          answer:
+            "Sí. La demo en vivo es un espacio de trabajo real de AppBoard con apps de ejemplo, reseñas e historial de fichas. Se abre con un clic, sin registro y sin credenciales de tienda, así que puedes recorrer todas las pantallas antes de decidir.",
+          question: "¿Puedo probarlo sin conectar mis propias apps?",
+        },
+        {
+          answer:
+            "Entras con tu correo y un código de un solo uso que te enviamos. No hay contraseña que inventar ni recordar, y nada que restablecer.",
+          question: "¿Cómo funciona el acceso?",
+        },
+        {
+          answer:
+            "Unos diez minutos si tienes a mano las claves: una clave de API de App Store Connect y una cuenta de servicio de Google Play. En cuanto están conectadas, AppBoard importa tus apps y tus fichas automáticamente.",
+          question: "¿Cuánto se tarda en configurarlo?",
+        },
+        {
+          answer:
+            "Sí. AppBoard es un producto open source y funciona entero en el panel web. No hay aplicación de escritorio, ni plugin, ni nada que instalar. Basta con un navegador moderno.",
+          question: "¿AppBoard es open source y hay que instalar algo?",
+        },
+      ],
+      title: "Primeros pasos",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "Las dos. App Store Connect se conecta con una clave de API: issuer ID, key ID y el archivo .p8. Google Play, con el JSON de una cuenta de servicio. Las apps de ambas tiendas quedan luego una al lado de la otra en el mismo espacio de trabajo.",
+          question: "¿Qué tiendas admite AppBoard?",
+        },
+        {
+          answer:
+            "La API de informes de Google no expone las apps que siguen en borrador, así que una app recién creada no aparece sola. Puedes registrar su paquete a mano y AppBoard la seguirá con normalidad a partir de ahí.",
+          question: "¿Por qué no aparece mi app en borrador de Google Play?",
+        },
+        {
+          answer:
+            "Sí. Una reimportación completa por tienda trae todo de nuevo desde la tienda y reemplaza los datos locales de esa tienda. Va bien si algo se desincronizó o si tocaste cosas directamente en la consola.",
+          question: "¿Puedo volver a sincronizar todo desde una tienda?",
+        },
+        {
+          answer:
+            "Sí. Puedes tener varias apps y varios espacios de trabajo, y los grupos de apps enlazan la versión Android y la iOS de la misma app para editarlas y compararlas juntas.",
+          question: "¿Puedo gestionar varias apps y espacios de trabajo?",
+        },
+      ],
+      title: "Tiendas y conexiones",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "En un baúl cifrado de extremo a extremo. La clave de cifrado se deriva de tu frase de paso, así que los servidores de AppBoard solo guardan texto cifrado y nunca ven tus claves en claro.",
+          question: "¿Cómo se guardan mis credenciales de tienda?",
+        },
+        {
+          answer:
+            "Por diseño no hay puerta trasera, así que restablecerla borra las credenciales guardadas y luego vuelves a introducir tus claves. Ese es el precio de que los servidores nunca puedan leerlas.",
+          question: "¿Qué pasa si olvido mi frase de paso?",
+        },
+        {
+          answer:
+            "Solo lo que tú lances de forma explícita. AppBoard usa tus claves para leer y editar fichas, pero nunca se publica nada en una tienda sin una acción expresa tuya.",
+          question: "¿Qué puede hacer AppBoard realmente con mis claves?",
+        },
+        {
+          answer:
+            "No. Las credenciales siguen cifradas en el baúl y todo en AppBoard está acotado al espacio de trabajo: tus compañeros trabajan con tus fichas sin ver nunca las claves en bruto.",
+          question: "¿Pueden mis compañeros ver mis credenciales?",
+        },
+      ],
+      title: "Seguridad",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "No. Todo lo que cambias es un borrador, antes de publicar ves una vista previa del diff campo por campo, y cada cambio publicado queda en el historial con reversión en un clic.",
+          question: "¿Puede AppBoard romper mi ficha publicada?",
+        },
+        {
+          answer:
+            "Cada cambio publicado, por campo y por idioma, mostrado como un diff en rojo y verde. Ves qué cambió y cuándo, y puedes revertir cualquier campo.",
+          question: "¿Qué queda registrado en el historial?",
+        },
+        {
+          answer:
+            "Puedes subir una versión como borrador o enviarla a revisión. AppBoard no pisa la configuración de publicación gestionada que tengas puesta, eso sigue en Play Console.",
+          question: "¿Qué opciones de publicación hay en Google Play?",
+        },
+        {
+          answer:
+            "Las capturas se gestionan por dispositivo y por idioma con las medidas exactas de cada tienda, y el editor integrado compone escenas con marco de dispositivo, fondo y titular, y exporta cada imagen al tamaño exacto que piden las tiendas, con variantes de idioma de la misma escena.",
+          question: "¿Cómo trata AppBoard las capturas?",
+        },
+        {
+          answer:
+            "Sube un panorama ancho y AppBoard lo parte en 2 a 10 capturas consecutivas para el efecto panorámico en la ficha. Y si una imagen tiene el tamaño equivocado, el recorte se ajusta a preajustes por dispositivo, del iPhone de 3,5 pulgadas al iPad Pro de 12,9 y a las tabletas Android, para que la tienda acepte la subida al primer intento.",
+          question: "¿Y los panoramas y las imágenes con tamaño incorrecto?",
+        },
+      ],
+      title: "Edición y publicación",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "La tuya. La IA funciona con tu clave de OpenRouter y el modelo que elijas, y pagas directamente al proveedor. AppBoard no aplica margen ni revende tokens.",
+          question: "¿Qué clave de IA usa AppBoard?",
+        },
+        {
+          answer:
+            "Redacta descripciones, traducciones, ideas de keywords y respuestas a reseñas. Todo lo que produce la IA es una propuesta que revisas y apruebas: nada llega solo a una tienda.",
+          question: "¿Qué hace la IA exactamente?",
+        },
+        {
+          answer:
+            "Sí. El scraping, el seguimiento de posiciones y la agrupación heurística de reseñas negativas funcionan sin clave de IA. Añadir tu clave suma encima el análisis con IA.",
+          question: "¿Funciona el research sin IA?",
+        },
+        {
+          answer:
+            "Sí. Puedes investigar cualquier app de las tiendas: sus keywords, los mercados donde posiciona, sus reseñas y una comparación visual lado a lado con la tuya.",
+          question: "¿Puedo investigar a la competencia?",
+        },
+      ],
+      title: "IA e investigación",
+    },
+    {
+      entries: [
+        {
+          answer:
+            "AppBoard es gratis mientras está en beta. No hace falta tarjeta y te avisaremos con antelación antes de introducir cualquier plan de pago.",
+          question: "¿Cuánto cuesta AppBoard?",
+        },
+        {
+          answer:
+            "Quien llegue pronto recibirá aviso y una vía de migración al plan que le encaje. Sin cargos silenciosos y sin saltos por sorpresa de gratis a pago.",
+          question: "¿Qué pasa con mi cuenta después de la beta?",
+        },
+      ],
+      title: "Facturación",
+    },
+  ],
+  eyebrow: "FAQ",
+  lead: "Respuestas honestas sobre cómo AppBoard se conecta con tus tiendas, mantiene cifradas tus credenciales y te deja editar y publicar sin romper nada de lo que ya está en vivo.",
+  outro: {
+    accountCta: "Crear cuenta gratis",
+    demoCta: "Ver la demo en vivo",
+    lead: "La forma más rápida de resolver una duda es probarlo. Abre la demo en vivo y recorre un espacio de trabajo real, o crea tu propia cuenta gratis mientras AppBoard está en beta.",
+    title: "¿Te queda alguna duda?",
+  },
+  title: "Todo lo que preguntan antes de confiarnos las claves de su tienda",
+};
+
 export const FAQ_PAGE_CONTENT: Record<SiteLocale, FaqPageContent> = {
+  de: DE,
   en: EN,
+  es: ES,
   pl: PL,
 };
