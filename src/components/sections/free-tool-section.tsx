@@ -38,17 +38,41 @@ export function FreeToolSection({
 	}));
 
 	return (
-		<section className="scroll-mt-24 px-4 py-24 sm:px-6" id="free-tool">
+		<section className="scroll-mt-24 px-4 py-24 sm:px-6" id="free-tools">
 			<div className="mx-auto max-w-6xl">
-				<div className="rounded-3xl border border-line bg-panel/40 p-8 sm:p-12">
+				<SectionHeading
+					description={copy.description}
+					eyebrow={copy.eyebrow}
+					title={copy.title}
+				/>
+				<div className="mt-12 grid gap-6 md:grid-cols-3">
+					{copy.tools.map((tool) => (
+						<article
+							className="flex flex-col rounded-2xl border border-line bg-panel/40 p-6"
+							key={tool.href}
+						>
+							<h3 className="text-lg font-semibold text-foreground">
+								{tool.title}
+							</h3>
+							<p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+								{tool.description}
+							</p>
+							<div className="mt-6">
+								<ButtonLink href={tool.href} variant="secondary">
+									{tool.ctaLabel}
+									<ArrowRightIcon className="size-4" />
+								</ButtonLink>
+							</div>
+						</article>
+					))}
+				</div>
+
+				<div className="mt-12 rounded-3xl border border-line bg-panel/40 p-8 sm:p-12">
 					<div className="grid items-center gap-10 lg:grid-cols-[3fr_2fr]">
 						<div>
-							<SectionHeading
-								align="left"
-								description={copy.description}
-								eyebrow={copy.eyebrow}
-								title={copy.title}
-							/>
+							<h3 className="text-2xl font-semibold text-foreground">
+								{copy.editorTitle}
+							</h3>
 							<ul className="mt-8 space-y-4">
 								{copy.points.map((point) => (
 									<li className="flex gap-3" key={point}>

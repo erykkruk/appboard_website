@@ -64,6 +64,16 @@ const EN: ChromeDictionary = {
         { href: "/opensource", label: "Open source" },
         {
           external: true,
+          href: `${APP_URL}/aso-check`,
+          label: "Free ASO check-up",
+        },
+        {
+          external: true,
+          href: `${APP_URL}/keyword-check`,
+          label: "Free keyword check",
+        },
+        {
+          external: true,
           href: `${APP_URL}/editor`,
           label: "Free screenshot editor",
         },
@@ -87,7 +97,7 @@ const EN: ChromeDictionary = {
   mobileNavLabel: "Mobile navigation",
   navLinks: [
     { href: "/#tour", label: "Product" },
-    { external: true, href: `${APP_URL}/editor`, label: "Free editor" },
+    { href: "/#free-tools", label: "Free tools" },
     { href: "/opensource", label: "Open source" },
     { href: "/pricing", label: "Pricing" },
     { href: "/docs", label: "Docs" },
@@ -128,6 +138,16 @@ const PL: ChromeDictionary = {
         { href: "/pl/opensource", label: "Open source" },
         {
           external: true,
+          href: `${APP_URL}/aso-check`,
+          label: "Darmowy ASO check-up",
+        },
+        {
+          external: true,
+          href: `${APP_URL}/keyword-check`,
+          label: "Darmowy keyword check",
+        },
+        {
+          external: true,
           href: `${APP_URL}/editor`,
           label: "Darmowy edytor zrzutów",
         },
@@ -151,7 +171,7 @@ const PL: ChromeDictionary = {
   mobileNavLabel: "Nawigacja mobilna",
   navLinks: [
     { href: "/pl#tour", label: "Produkt" },
-    { external: true, href: `${APP_URL}/editor`, label: "Darmowy edytor" },
+    { href: "/pl#free-tools", label: "Darmowe narzędzia" },
     { href: "/pl/opensource", label: "Open source" },
     { href: "/pl/pricing", label: "Cennik" },
     { href: "/pl/docs", label: "Dokumentacja" },
@@ -191,6 +211,16 @@ const DE: ChromeDictionary = {
         { href: "/opensource", label: "Open Source" },
         {
           external: true,
+          href: `${APP_URL}/aso-check`,
+          label: "Kostenloser ASO-Check",
+        },
+        {
+          external: true,
+          href: `${APP_URL}/keyword-check`,
+          label: "Kostenloser Keyword-Check",
+        },
+        {
+          external: true,
           href: `${APP_URL}/editor`,
           label: "Kostenloser Screenshot-Editor",
         },
@@ -214,7 +244,7 @@ const DE: ChromeDictionary = {
   mobileNavLabel: "Mobile Navigation",
   navLinks: [
     { href: "/de/blog", label: "Blog" },
-    { external: true, href: `${APP_URL}/editor`, label: "Editor" },
+    { href: "/#free-tools", label: "Kostenlose Tools" },
     { href: "/opensource", label: "Open Source" },
     { href: "/pricing", label: "Preise" },
     { href: "/docs", label: "Docs" },
@@ -253,6 +283,16 @@ const ES: ChromeDictionary = {
         { href: "/opensource", label: "Open source" },
         {
           external: true,
+          href: `${APP_URL}/aso-check`,
+          label: "ASO check-up gratuito",
+        },
+        {
+          external: true,
+          href: `${APP_URL}/keyword-check`,
+          label: "Keyword check gratuito",
+        },
+        {
+          external: true,
           href: `${APP_URL}/editor`,
           label: "Editor de capturas gratuito",
         },
@@ -276,7 +316,7 @@ const ES: ChromeDictionary = {
   mobileNavLabel: "Navegación móvil",
   navLinks: [
     { href: "/es/blog", label: "Blog" },
-    { external: true, href: `${APP_URL}/editor`, label: "Editor" },
+    { href: "/#free-tools", label: "Herramientas gratis" },
     { href: "/opensource", label: "Open source" },
     { href: "/pricing", label: "Precios" },
     { href: "/docs", label: "Docs" },

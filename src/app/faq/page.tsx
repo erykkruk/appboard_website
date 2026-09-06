@@ -38,12 +38,17 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       },
       {
         answer:
+          "No. Paste a link to your app's store page and AppBoard imports the listing in every language, the screenshots, ratings and reviews on its own. Connecting the store API is optional: it adds one-click publishing, screenshot upload and replying to reviews from the panel. Without it you copy the finished text into the console and mark it done in AppBoard.",
+        question: "Do I need App Store Connect or Google Play API access?",
+      },
+      {
+        answer:
           "You sign in with your email and a one-time code we send you. There's no password to create or remember, and nothing to reset.",
         question: "How does login work?",
       },
       {
         answer:
-          "About ten minutes if you have your store keys ready - an App Store Connect API key and a Google Play service account. Once they're connected, AppBoard imports your apps and listings automatically.",
+          "Under a minute from a store link - paste it and the listing is in. Connecting the store API for publishing takes about ten more minutes if you have your keys ready: an App Store Connect API key or a Google Play service account.",
         question: "How long does setup take?",
       },
       {

@@ -67,11 +67,22 @@ export interface GalleryItemContent {
   label: string;
 }
 
+export interface FreeToolItemContent {
+  ctaLabel: string;
+  description: string;
+  href: string;
+  title: string;
+}
+
 export interface FreeToolContent {
   ctaLabel: string;
   ctaNote: string;
   description: string;
+  /** Heading of the editor block under the tool cards. */
+  editorTitle: string;
   eyebrow: string;
+  /** The tools themselves; the editor keeps its gallery below. */
+  tools: FreeToolItemContent[];
   gallery: GalleryItemContent[];
   galleryLead: string;
   points: string[];
@@ -247,15 +258,15 @@ const EN: HomeContent = {
     items: [
       {
         description:
-          "Link App Store Connect and Google Play Console once. AppBoard pulls in every app and every localization you already have.",
-        href: "/docs/connect-app-store",
-        title: "Connect once, import everything",
+          "Paste an App Store or Google Play link and the whole listing is in AppBoard. Connect the store API later, only for publishing.",
+        href: "/docs/getting-started",
+        title: "Start from a store link",
       },
       {
         description:
-          "Design and export store graphics in your browser at exact device sizes. No account, no install, free forever.",
-        href: `${APP_URL}/editor`,
-        title: "Free screenshot editor",
+          "ASO check-up, keyword check and the screenshot editor run in your browser - free, no login, nothing uploaded.",
+        href: "/#free-tools",
+        title: "Free tools, no account",
       },
       {
         description:
@@ -301,8 +312,32 @@ const EN: HomeContent = {
     ctaLabel: "Open the editor",
     ctaNote: "Free forever · no login",
     description:
-      "Design App Store and Google Play screenshots for free - right in your browser. Pick a template, drop in your screenshot, rotate a real 3D device, export at exact store dimensions. No account needed.",
-    eyebrow: "Free tool",
+      "Check any listing, score your keywords and design store screenshots - all in your browser, nothing uploaded, no sign-up. The same engine AppBoard uses inside the panel.",
+    editorTitle: "Free ASO Screenshot Editor",
+    eyebrow: "Free tools",
+    tools: [
+      {
+        ctaLabel: "Check a listing",
+        description:
+          "Paste an App Store link: listing score, the keywords you rank for (top 200), the competition and three concrete next steps.",
+        href: `${APP_URL}/aso-check`,
+        title: "ASO check-up",
+      },
+      {
+        ctaLabel: "Score keywords",
+        description:
+          "Up to five keywords a day: popularity, difficulty, opportunity and a download estimate for the market you pick.",
+        href: `${APP_URL}/keyword-check`,
+        title: "Keyword check",
+      },
+      {
+        ctaLabel: "Open the editor",
+        description:
+          "Templates, real 3D devices, exact store sizes. Export and upload - or open your store screenshots straight from the panel.",
+        href: `${APP_URL}/editor`,
+        title: "Screenshot editor",
+      },
+    ],
     gallery: [
       {
         alt: "Hero screenshot template: 3D-tilted iPhone on a magenta-violet gradient with a bold headline",
@@ -358,18 +393,18 @@ const EN: HomeContent = {
       "Panorama layouts that export as several consecutive store screenshots",
       "100% in your browser - no sign-up, nothing uploaded to a server",
     ],
-    title: "Free ASO Screenshot Editor",
+    title: "Three free tools, no account",
   },
   hero: {
     dashboardAlt:
       "AppBoard dashboard showing six apps from App Store and Google Play grouped in one workspace",
     facts: [
       "App Store + Google Play",
-      "Every language in one editor",
+      "Start from a store link, no API needed",
       "Diffs and rollback",
       "Open source",
     ],
-    lead: "Metadata in every language, screenshots, reviews and AI research for the App Store and Google Play. Draft it, review the diff, publish everywhere.",
+    lead: "Paste a store link and your listing, screenshots, ratings and reviews are in AppBoard - no API keys. Audit it, fix the text with accept-or-reject diffs, then publish: by copy and paste, or in one click once a store is connected.",
     note: "Free while in beta. No credit card, no sales call.",
     primaryCta: "Get started free",
     secondaryCta: "Open the live demo",
@@ -381,26 +416,26 @@ const EN: HomeContent = {
     steps: [
       {
         description:
-          "Link App Store Connect and Google Play Console once. Your keys go straight into an end-to-end encrypted vault.",
-        title: "Connect your stores",
+          "Add an app from its App Store or Google Play page. The listing in every language, screenshots, ratings and reviews come in on their own - no API credentials, no console.",
+        title: "Paste a store link",
       },
       {
         description:
-          "Every field, every language, one editor. Design store graphics in the browser at the exact sizes each store demands.",
-        title: "Edit listings and screenshots",
+          "A listing score on what the store really serves, the keywords you can actually win, and text fixes as diffs you accept or reject. The draft never touches the store on its own.",
+        title: "Audit and fix the text",
       },
       {
         description:
-          "Check the diff, then push to both stores in one batch. Every change is versioned and one click from a rollback.",
-        title: "Publish everywhere",
+          "Copy the changes into the console and mark them done, or connect the store API and push both stores in one batch - versioned, one click from a rollback.",
+        title: "Publish your way",
       },
       {
         description:
-          "Both stores' reviews land in one inbox. Keyword positions, market data and competitor research sit next to them.",
-        title: "Track reviews and keywords",
+          "Nightly keyword positions with every release and text change marked on the chart, reviews from every storefront in one inbox, and a nudge when a draft sits unpublished.",
+        title: "Track what moved",
       },
     ],
-    title: "Four steps, no console hopping",
+    title: "Four steps, starting from a link",
   },
   pricingTeaser: {
     ctaHref: "/pricing",
@@ -623,17 +658,17 @@ const PL: HomeContent = {
     items: [
       {
         description:
-          "Podłącz App Store Connect i Google Play Console raz. AppBoard zaciągnie każdą aplikację i każdą lokalizację, którą już masz.",
-        href: "/pl/docs/connect-app-store",
+          "Wklej link z App Store albo Google Play i cały listing jest w AppBoard. API sklepu podłączysz później, tylko do publikacji.",
+        href: "/pl/docs/getting-started",
         linkLabel: "Dowiedz się więcej",
-        title: "Podłącz raz, zaimportuj wszystko",
+        title: "Start od linku ze sklepu",
       },
       {
         description:
-          "Projektuj i eksportuj grafiki do sklepów w przeglądarce, dokładnie w wymiarach urządzeń. Bez konta, bez instalacji, za darmo na zawsze.",
-        href: `${APP_URL}/editor`,
+          "ASO check-up, keyword check i edytor zrzutów działają w przeglądarce - za darmo, bez logowania, nic nie trafia na serwer.",
+        href: "/pl#free-tools",
         linkLabel: "Dowiedz się więcej",
-        title: "Darmowy edytor zrzutów ekranu",
+        title: "Darmowe narzędzia bez konta",
       },
       {
         description:
@@ -684,8 +719,32 @@ const PL: HomeContent = {
     ctaLabel: "Otwórz edytor",
     ctaNote: "Za darmo na zawsze · bez logowania",
     description:
-      "Projektuj zrzuty ekranu do App Store i Google Play za darmo, prosto w przeglądarce. Wybierz szablon, wrzuć swój zrzut, obróć prawdziwe urządzenie 3D, wyeksportuj w dokładnych wymiarach sklepu. Konto niepotrzebne.",
-    eyebrow: "Darmowe narzędzie",
+      "Sprawdź dowolny listing, oceń swoje słowa kluczowe i zaprojektuj zrzuty do sklepu - wszystko w przeglądarce, nic nie trafia na serwer, bez rejestracji. Ten sam silnik, którego AppBoard używa w panelu.",
+    editorTitle: "Darmowy edytor zrzutów ekranu ASO",
+    eyebrow: "Darmowe narzędzia",
+    tools: [
+      {
+        ctaLabel: "Sprawdź listing",
+        description:
+          "Wklej link z App Store: ocena listingu, słowa kluczowe, na które rankujesz (top 200), konkurencja i trzy konkretne kolejne kroki.",
+        href: `${APP_URL}/aso-check`,
+        title: "ASO check-up",
+      },
+      {
+        ctaLabel: "Oceń słowa kluczowe",
+        description:
+          "Do pięciu słów kluczowych dziennie: popularność, trudność, szansa i estymata pobrań dla wybranego rynku.",
+        href: `${APP_URL}/keyword-check`,
+        title: "Keyword check",
+      },
+      {
+        ctaLabel: "Otwórz edytor",
+        description:
+          "Szablony, prawdziwe urządzenia 3D, dokładne wymiary sklepów. Wyeksportuj i wgraj albo otwórz zrzuty ze sklepu prosto z panelu.",
+        href: `${APP_URL}/editor`,
+        title: "Edytor zrzutów ekranu",
+      },
+    ],
     gallery: [
       {
         alt: "Szablon zrzutu Hero: iPhone przechylony w 3D na gradiencie magenta i fiolet z mocnym nagłówkiem",
@@ -741,18 +800,18 @@ const PL: HomeContent = {
       "Układy panoramiczne, które eksportują się jako kilka kolejnych zrzutów w sklepie",
       "100% w Twojej przeglądarce: bez rejestracji, nic nie trafia na serwer",
     ],
-    title: "Darmowy edytor zrzutów ekranu ASO",
+    title: "Trzy darmowe narzędzia, bez konta",
   },
   hero: {
     dashboardAlt:
       "Panel AppBoard z sześcioma aplikacjami z App Store i Google Play zebranymi w jednym workspace",
     facts: [
       "App Store + Google Play",
-      "Wszystkie języki w jednym edytorze",
+      "Start od linku ze sklepu, bez API",
       "Diffy i rollback",
       "Open source",
     ],
-    lead: "Metadane w każdym języku, zrzuty ekranu, opinie i research AI dla App Store i Google Play. Przygotuj draft, sprawdź diff, opublikuj wszędzie.",
+    lead: "Wklej link ze sklepu, a listing, zrzuty ekranu, oceny i opinie są w AppBoard - bez kluczy API. Zrób audyt, popraw tekst diffami do akceptacji, potem opublikuj: kopiuj-wklej albo jednym kliknięciem po podłączeniu sklepu.",
     note: "Za darmo w becie. Bez karty, bez rozmowy z handlowcem.",
     primaryCta: "Zacznij za darmo",
     secondaryCta: "Otwórz demo na żywo",
@@ -764,26 +823,26 @@ const PL: HomeContent = {
     steps: [
       {
         description:
-          "Podłącz App Store Connect i Google Play Console raz. Klucze trafiają prosto do sejfu szyfrowanego end-to-end.",
-        title: "Podłącz sklepy",
+          "Dodaj aplikację z jej strony w App Store albo Google Play. Listing w każdym języku, zrzuty ekranu, oceny i opinie wchodzą same - bez danych API, bez konsoli.",
+        title: "Wklej link ze sklepu",
       },
       {
         description:
-          "Każde pole, każdy język, jeden edytor. Grafiki do sklepów projektujesz w przeglądarce, dokładnie w wymiarach, których wymaga każdy sklep.",
-        title: "Edytuj listingi i zrzuty ekranu",
+          "Ocena listingu na tym, co sklep naprawdę serwuje, słowa kluczowe, które realnie da się wygrać, i poprawki tekstu jako diffy do akceptacji albo odrzucenia. Draft sam nie dotyka sklepu.",
+        title: "Audyt i poprawki tekstu",
       },
       {
         description:
-          "Sprawdź diff i wyślij zmiany do obu sklepów w jednej paczce. Każda zmiana jest wersjonowana, a rollback to jedno kliknięcie.",
-        title: "Publikuj wszędzie",
+          "Skopiuj zmiany do konsoli i oznacz jako wdrożone albo podłącz API sklepu i wyślij do obu sklepów w jednej paczce - wersjonowane, rollback jednym kliknięciem.",
+        title: "Publikuj po swojemu",
       },
       {
         description:
-          "Opinie z obu sklepów lądują w jednej skrzynce. Obok nich pozycje słów kluczowych, dane rynkowe i research konkurencji.",
-        title: "Śledź opinie i słowa kluczowe",
+          "Nocne pozycje słów kluczowych z każdym wydaniem i zmianą tekstu zaznaczoną na wykresie, opinie z każdego sklepu w jednej skrzynce i przypomnienie, gdy draft leży nieopublikowany.",
+        title: "Śledź, co się ruszyło",
       },
     ],
-    title: "Cztery kroki, bez skakania po konsolach",
+    title: "Cztery kroki, od linku",
   },
   pricingTeaser: {
     ctaHref: "/pl/pricing",

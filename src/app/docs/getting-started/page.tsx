@@ -24,7 +24,8 @@ export default function GettingStartedPage(): JSX.Element {
         AppBoard brings App Store Connect and Google Play Console into one panel
         so you can edit metadata, manage screenshots, publish changes, and mine
         reviews without switching consoles. This page takes you from a fresh
-        account to your first connected app in about ten minutes.
+        account to your first app in about a minute - and to a connected store
+        whenever you want one-click publishing.
       </p>
 
       <h2>Sign in</h2>
@@ -47,10 +48,28 @@ export default function GettingStartedPage(): JSX.Element {
         more workspaces later for separate teams or clients.
       </p>
 
-      <h2>Connect your first store</h2>
+      <h2>Add your first app</h2>
       <p>
-        Apps flow into AppBoard from a store connection. Pick the store you
-        publish on and follow the dedicated guide:
+        Paste a link to your app&apos;s App Store or Google Play page. AppBoard
+        imports the listing in every language it ships, the screenshots at full
+        size, the store rating and the reviews - no API credentials, no console.
+        Not published yet? Choose &quot;Something new&quot; and start from a
+        blank listing.
+      </p>
+      <p>
+        From there the panel walks you through the flow: review the text the
+        store serves, run the audit (listing score, the keywords you can win,
+        what is wrong and what is good), accept or reject the proposed text
+        fixes as diffs, open your screenshots in the editor, and publish.
+      </p>
+
+      <h2>Connect a store (optional)</h2>
+      <p>
+        Without a store connection you publish by copying the finished text
+        into the console and pressing &quot;I pasted it into the store&quot;
+        - AppBoard records the change in History and on the rank chart. Connect
+        the store API when you want the rest done for you: one-click publishing
+        to both stores, screenshot upload and review replies from the panel.
       </p>
       <ul>
         <li>
@@ -63,9 +82,10 @@ export default function GettingStartedPage(): JSX.Element {
         </li>
       </ul>
       <p>
-        The first time you save store credentials, AppBoard asks you to set up
-        the <a href="/docs/security">encrypted vault</a>. Credentials cannot be
-        stored outside it, so keep the passphrase somewhere safe.
+        Store credentials are encrypted at rest; you can additionally lock them
+        behind a passphrase-protected{" "}
+        <a href="/docs/security">vault</a> that AppBoard&apos;s servers cannot
+        open.
       </p>
 
       <blockquote>
@@ -78,8 +98,8 @@ export default function GettingStartedPage(): JSX.Element {
 
       <h2>Explore the dashboard</h2>
       <p>
-        Once a store is connected, your apps appear on the workspace dashboard
-        with their platform, version, and pending-change count. Open any app to
+        Every app you add appears on the workspace dashboard with its platform,
+        connection (link or API), version and pending-change count. Open any app to
         reach its listings, screenshots, history, reviews, and publish flow.
       </p>
 
@@ -91,8 +111,10 @@ export default function GettingStartedPage(): JSX.Element {
       <h2>What to do next</h2>
       <ol>
         <li>
-          <a href="/docs/listings">Edit a listing</a> in one language and watch
-          the character counters and dirty-state markers.
+          Open the app&apos;s <strong>Fixes</strong> screen and accept the text
+          proposals the audit made, or{" "}
+          <a href="/docs/listings">edit the listing</a> yourself with the store
+          limits shown live.
         </li>
         <li>
           <a href="/docs/publishing">Publish your changes</a> - nothing reaches

@@ -25,8 +25,8 @@ export default function GettingStartedPlPage(): JSX.Element {
         AppBoard zbiera App Store Connect i Google Play Console w jednym panelu,
         więc metadane edytujesz, screenshotami zarządzasz, zmiany publikujesz i
         opinie analizujesz bez przeskakiwania między konsolami. Ta strona
-        przeprowadzi Cię od świeżego konta do pierwszej podłączonej aplikacji w
-        jakieś dziesięć minut.
+        przeprowadzi Cię od świeżego konta do pierwszej aplikacji w minutę, a
+        do podłączonego sklepu wtedy, gdy zechcesz publikować jednym kliknięciem.
       </p>
 
       <h2>Logowanie</h2>
@@ -51,10 +51,28 @@ export default function GettingStartedPlPage(): JSX.Element {
         klientów.
       </p>
 
-      <h2>Podłącz pierwszy sklep</h2>
+      <h2>Dodaj pierwszą aplikację</h2>
       <p>
-        Aplikacje trafiają do AppBoard z połączenia ze sklepem. Wybierz sklep, w
-        którym publikujesz, i przejdź przez dedykowany przewodnik:
+        Wklej link do strony aplikacji w App Store albo Google Play. AppBoard
+        importuje listing w każdym języku, w którym go wydajesz, zrzuty ekranu w
+        pełnym rozmiarze, ocenę ze sklepu i opinie. Bez danych API, bez konsoli.
+        Aplikacja jeszcze nieopublikowana? Wybierz &quot;Something new&quot; i
+        zacznij od pustego listingu.
+      </p>
+      <p>
+        Dalej panel prowadzi Cię krok po kroku: przejrzyj tekst, który serwuje
+        sklep, uruchom audyt (ocena listingu, słowa kluczowe, które da się
+        wygrać, co jest źle, a co dobrze), zaakceptuj albo odrzuć propozycje
+        poprawek jako diffy, otwórz swoje zrzuty w edytorze i opublikuj.
+      </p>
+
+      <h2>Podłącz sklep (opcjonalnie)</h2>
+      <p>
+        Bez połączenia ze sklepem publikujesz, kopiując gotowy tekst do konsoli
+        i klikając &quot;I pasted it into the store&quot;: AppBoard zapisze
+        zmianę w historii i na wykresie pozycji. API sklepu podłącz wtedy, gdy
+        resztę ma zrobić za Ciebie: publikacja jednym kliknięciem do obu
+        sklepów, wgrywanie zrzutów i odpowiedzi na opinie z panelu.
       </p>
       <ul>
         <li>
@@ -67,10 +85,9 @@ export default function GettingStartedPlPage(): JSX.Element {
         </li>
       </ul>
       <p>
-        Przy pierwszym zapisie danych dostępowych do sklepu AppBoard poprosi Cię o
-        skonfigurowanie <a href="/pl/docs/security">zaszyfrowanego sejfu</a>. Poza
-        nim danych dostępowych nie da się przechować, więc trzymaj passphrase w
-        bezpiecznym miejscu.
+        Dane dostępowe są szyfrowane w spoczynku; dodatkowo możesz zamknąć je w{" "}
+        <a href="/pl/docs/security">sejfie</a> chronionym passphrase, którego
+        serwery AppBoard nie potrafią otworzyć.
       </p>
 
       <blockquote>
@@ -83,8 +100,9 @@ export default function GettingStartedPlPage(): JSX.Element {
 
       <h2>Rozejrzyj się po dashboardzie</h2>
       <p>
-        Po podłączeniu sklepu Twoje aplikacje pojawiają się na dashboardzie
-        workspace&apos;u razem z platformą, wersją i liczbą oczekujących zmian.
+        Każda dodana aplikacja pojawia się na dashboardzie workspace&apos;u
+        razem z platformą, rodzajem połączenia (link albo API), wersją i liczbą
+        oczekujących zmian.
         Otwórz dowolną aplikację, aby przejść do jej listingów, screenshotów,
         historii, opinii i publikacji.
       </p>
@@ -97,8 +115,10 @@ export default function GettingStartedPlPage(): JSX.Element {
       <h2>Co robić dalej</h2>
       <ol>
         <li>
-          <a href="/pl/docs/listings">Zedytuj listing</a> w jednym języku i
-          popatrz na liczniki znaków oraz oznaczenia stanu dirty.
+          Otwórz ekran <strong>Fixes</strong> aplikacji i zaakceptuj propozycje
+          tekstu z audytu albo{" "}
+          <a href="/pl/docs/listings">zedytuj listing</a> samodzielnie z
+          limitami sklepu pokazywanymi na żywo.
         </li>
         <li>
           <a href="/pl/docs/publishing">Opublikuj swoje zmiany</a>, bo nic nie
