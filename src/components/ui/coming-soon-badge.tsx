@@ -9,7 +9,9 @@ interface ComingSoonBadgeProps {
 }
 
 const LABEL: Record<SiteLocale, string> = {
+  de: "Demnächst",
   en: "Coming soon",
+  es: "Próximamente",
   pl: "Wkrótce",
 };
 

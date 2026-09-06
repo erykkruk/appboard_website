@@ -119,6 +119,14 @@ export function CheckIcon({ className }: IconProps): JSX.Element {
   );
 }
 
+export function ChevronDownIcon({ className }: IconProps): JSX.Element {
+  return (
+    <IconBase className={className}>
+      <path d="m6 9 6 6 6-6" />
+    </IconBase>
+  );
+}
+
 export function ArrowRightIcon({ className }: IconProps): JSX.Element {
   return (
     <IconBase className={className}>

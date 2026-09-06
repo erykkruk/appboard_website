@@ -8,6 +8,18 @@ export interface NavLink {
   label: string;
 }
 
+export interface FreeToolLink {
+  description: string;
+  href: string;
+  label: string;
+}
+
+/** The dropdown in the header: the same three tools the panel's public pages list. */
+export interface FreeToolsMenuContent {
+  items: FreeToolLink[];
+  label: string;
+}
+
 export interface FooterColumn {
   links: NavLink[];
   title: string;
@@ -25,6 +37,7 @@ export interface ChromeDictionary {
   footerCopyright: string;
   footerNote: string;
   footerTagline: string;
+  freeTools: FreeToolsMenuContent;
   languageLabel: string;
   mainNavLabel: string;
   mobileNavLabel: string;
@@ -92,12 +105,31 @@ const EN: ChromeDictionary = {
   footerNote: "Built independently, one release at a time.",
   footerTagline:
     "App Store Optimization for App Store and Google Play - listings, screenshots, research, and publishing from one panel.",
+  freeTools: {
+    items: [
+      {
+        description: "Score your keywords, rankings and what to fix - no account.",
+        href: `${APP_URL}/aso-check`,
+        label: "ASO check-up",
+      },
+      {
+        description: "How hard is any keyword, and who owns it today.",
+        href: `${APP_URL}/keyword-check`,
+        label: "Keyword difficulty checker",
+      },
+      {
+        description: "Turn raw screenshots into store-ready graphics.",
+        href: `${APP_URL}/editor`,
+        label: "Screenshot editor",
+      },
+    ],
+    label: "Free tools",
+  },
   languageLabel: "Language",
   mainNavLabel: "Main navigation",
   mobileNavLabel: "Mobile navigation",
   navLinks: [
     { href: "/#tour", label: "Product" },
-    { href: "/#free-tools", label: "Free tools" },
     { href: "/opensource", label: "Open source" },
     { href: "/pricing", label: "Pricing" },
     { href: "/docs", label: "Docs" },
@@ -166,12 +198,31 @@ const PL: ChromeDictionary = {
   footerNote: "Budowane niezależnie, wydanie po wydaniu.",
   footerTagline:
     "App Store Optimization dla App Store i Google Play. Listingi, zrzuty ekranu, research i publikacja z jednego panelu.",
+  freeTools: {
+    items: [
+      {
+        description: "Ocena słów kluczowych, pozycji i tego, co poprawić - bez konta.",
+        href: `${APP_URL}/aso-check`,
+        label: "ASO check-up",
+      },
+      {
+        description: "Jak trudne jest dane słowo i kto je dziś zajmuje.",
+        href: `${APP_URL}/keyword-check`,
+        label: "Trudność słów kluczowych",
+      },
+      {
+        description: "Zamień surowe zrzuty w gotowe grafiki do sklepu.",
+        href: `${APP_URL}/editor`,
+        label: "Edytor zrzutów ekranu",
+      },
+    ],
+    label: "Darmowe narzędzia",
+  },
   languageLabel: "Język",
   mainNavLabel: "Nawigacja główna",
   mobileNavLabel: "Nawigacja mobilna",
   navLinks: [
     { href: "/pl#tour", label: "Produkt" },
-    { href: "/pl#free-tools", label: "Darmowe narzędzia" },
     { href: "/pl/opensource", label: "Open source" },
     { href: "/pl/pricing", label: "Cennik" },
     { href: "/pl/docs", label: "Dokumentacja" },
@@ -239,12 +290,31 @@ const DE: ChromeDictionary = {
   footerNote: "Unabhängig gebaut, ein Release nach dem anderen.",
   footerTagline:
     "App Store Optimization für App Store und Google Play. Store-Einträge, Screenshots, Research und Veröffentlichung aus einem Panel.",
+  freeTools: {
+    items: [
+      {
+        description: "Keywords, Rankings und was zu tun ist - ohne Konto.",
+        href: `${APP_URL}/aso-check`,
+        label: "ASO-Check",
+      },
+      {
+        description: "Wie schwer ein Keyword ist und wer es heute besetzt.",
+        href: `${APP_URL}/keyword-check`,
+        label: "Keyword-Schwierigkeit",
+      },
+      {
+        description: "Rohe Screenshots in fertige Store-Grafiken verwandeln.",
+        href: `${APP_URL}/editor`,
+        label: "Screenshot-Editor",
+      },
+    ],
+    label: "Kostenlose Tools",
+  },
   languageLabel: "Sprache",
   mainNavLabel: "Hauptnavigation",
   mobileNavLabel: "Mobile Navigation",
   navLinks: [
     { href: "/de/blog", label: "Blog" },
-    { href: "/#free-tools", label: "Kostenlose Tools" },
     { href: "/opensource", label: "Open Source" },
     { href: "/pricing", label: "Preise" },
     { href: "/docs", label: "Docs" },
@@ -311,12 +381,31 @@ const ES: ChromeDictionary = {
   footerNote: "Construido de forma independiente, versión a versión.",
   footerTagline:
     "App Store Optimization para App Store y Google Play. Fichas, capturas, research y publicación desde un solo panel.",
+  freeTools: {
+    items: [
+      {
+        description: "Puntúa tus keywords, tus posiciones y qué corregir - sin cuenta.",
+        href: `${APP_URL}/aso-check`,
+        label: "ASO check-up",
+      },
+      {
+        description: "Cuánto cuesta cada keyword y quién la domina hoy.",
+        href: `${APP_URL}/keyword-check`,
+        label: "Dificultad de keywords",
+      },
+      {
+        description: "Convierte capturas en bruto en gráficos listos para la tienda.",
+        href: `${APP_URL}/editor`,
+        label: "Editor de capturas",
+      },
+    ],
+    label: "Herramientas gratis",
+  },
   languageLabel: "Idioma",
   mainNavLabel: "Navegación principal",
   mobileNavLabel: "Navegación móvil",
   navLinks: [
     { href: "/es/blog", label: "Blog" },
-    { href: "/#free-tools", label: "Herramientas gratis" },
     { href: "/opensource", label: "Open source" },
     { href: "/pricing", label: "Precios" },
     { href: "/docs", label: "Docs" },

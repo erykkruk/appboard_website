@@ -3,15 +3,15 @@ import Link from "next/link";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ArrowRightIcon } from "@/components/ui";
-import { ALL_DOC_PAGES, DOCS_SECTIONS, getDocPage } from "@/lib/docs";
 import {
-  ALL_DOC_PAGES_PL,
-  DOCS_SECTIONS_PL,
-  getDocPagePl,
+  getAllDocPagesFor,
+  getDocPageFor,
+  getDocSectionsFor,
 } from "@/lib/i18n/content/docs";
 import {
   DEFAULT_LOCALE,
   LOCALE_CONFIG,
+  SITE_LOCALES,
   type SiteLocale,
 } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
@@ -36,6 +36,24 @@ interface DocsCopy {
 }
 
 const DOCS_COPY: Record<SiteLocale, DocsCopy> = {
+  de: {
+    eyebrow: "Doku",
+    fallbackTitle: "Dokumentation",
+    menuLabel: "Dokumentationsmenü",
+    navLabel: "Dokumentation",
+    next: "Weiter",
+    paginationLabel: "Seitennavigation",
+    previous: "Zurück",
+  },
+  es: {
+    eyebrow: "Docs",
+    fallbackTitle: "Documentación",
+    menuLabel: "Menú de documentación",
+    navLabel: "Documentación",
+    next: "Siguiente",
+    paginationLabel: "Paginación",
+    previous: "Anterior",
+  },
   en: {
     eyebrow: "Docs",
     fallbackTitle: "Documentation",
@@ -63,20 +81,17 @@ interface DocsRegistry {
   sections: DocSection[];
 }
 
-const DOCS_REGISTRY: Record<SiteLocale, DocsRegistry> = {
-  en: {
-    allPages: ALL_DOC_PAGES,
-    basePath: "/docs",
-    getPage: getDocPage,
-    sections: DOCS_SECTIONS,
-  },
-  pl: {
-    allPages: ALL_DOC_PAGES_PL,
-    basePath: "/pl/docs",
-    getPage: getDocPagePl,
-    sections: DOCS_SECTIONS_PL,
-  },
-};
+const DOCS_REGISTRY: Record<SiteLocale, DocsRegistry> = Object.fromEntries(
+  SITE_LOCALES.map((locale) => [
+    locale,
+    {
+      allPages: getAllDocPagesFor(locale),
+      basePath: `${LOCALE_CONFIG[locale].pathPrefix}/docs`,
+      getPage: (slug: string) => getDocPageFor(locale, slug),
+      sections: getDocSectionsFor(locale),
+    },
+  ]),
+) as Record<SiteLocale, DocsRegistry>;
 
 function SidebarNav({
   locale,

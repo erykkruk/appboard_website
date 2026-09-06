@@ -1,10 +1,14 @@
 /** Locales that serve the whole site, marketing pages included. */
-export const SITE_LOCALES = ["en", "pl"] as const;
+export const SITE_LOCALES = ["en", "pl", "de", "es"] as const;
 
-/** Locales that serve the blog only. */
-export const BLOG_ONLY_LOCALES = ["de", "es"] as const;
+/**
+ * Locales that serve the blog only. Empty today: every locale we publish in
+ * has the full marketing site. The type stays so a future market can ship
+ * articles first and gain the product pages later.
+ */
+export const BLOG_ONLY_LOCALES: readonly Locale[] = [];
 
-export const LOCALES = [...SITE_LOCALES, ...BLOG_ONLY_LOCALES] as const;
+export const LOCALES = SITE_LOCALES;
 
 export type Locale = (typeof LOCALES)[number];
 
@@ -70,7 +74,7 @@ export const LOCALE_CONFIG: Record<Locale, LocaleConfig> = {
     label: "Deutsch",
     ogLocale: "de_DE",
     pathPrefix: "/de",
-    scope: "blog",
+    scope: "site",
     shortLabel: "DE",
   },
   es: {
@@ -80,7 +84,7 @@ export const LOCALE_CONFIG: Record<Locale, LocaleConfig> = {
     label: "Español",
     ogLocale: "es_ES",
     pathPrefix: "/es",
-    scope: "blog",
+    scope: "site",
     shortLabel: "ES",
   },
 };
@@ -97,7 +101,35 @@ export function scopeCoversPath(
   return englishPath === "/blog" || englishPath.startsWith("/blog/");
 }
 
+/**
+ * Pages a site locale does not have yet. German and Spanish shipped with the
+ * marketing pages first; the legal text and the individual doc guides stay
+ * English until translated, so no link, alternate or sitemap entry may point
+ * at a localized page that does not exist.
+ */
+const PENDING_PATHS: Partial<Record<Locale, (englishPath: string) => boolean>> =
+  {
+    de: isLegalOrDocGuide,
+    es: isLegalOrDocGuide,
+  };
+
+function isLegalOrDocGuide(englishPath: string): boolean {
+  return (
+    englishPath === "/policy" ||
+    englishPath === "/terms" ||
+    englishPath.startsWith("/docs/")
+  );
+}
+
+/** True while a site locale still serves this page in English only. */
+export function isPendingPath(locale: Locale, englishPath: string): boolean {
+  return PENDING_PATHS[locale]?.(englishPath) ?? false;
+}
+
 export function localeCoversPath(locale: Locale, englishPath: string): boolean {
+  if (isPendingPath(locale, englishPath)) {
+    return false;
+  }
   return scopeCoversPath(LOCALE_CONFIG[locale].scope, englishPath);
 }
 

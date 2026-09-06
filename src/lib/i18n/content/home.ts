@@ -971,4 +971,809 @@ const PL: HomeContent = {
   },
 };
 
-export const HOME_CONTENT: Record<SiteLocale, HomeContent> = { en: EN, pl: PL };
+
+const DE: HomeContent = {
+  cta: {
+    lead: "Klicken Sie sich durch die Live-Demo und sehen Sie sich einen echten Workspace an, oder verbinden Sie in wenigen Minuten Ihre eigenen Stores. Während der Beta kostenlos.",
+    primaryCta: "Live-Demo öffnen",
+    secondaryCta: "Kostenloses Konto anlegen",
+    titleHighlight: "ruhig",
+    titleLead: "Ihr nächster Release-Tag könnte",
+  },
+  diffDemo: {
+    headerNote: "3 Felder in 2 Sprachen",
+    headerTitle: "Offene Änderungen",
+    publishLabel: "In beide Stores veröffentlichen",
+    publishNote: "Nichts geht raus, bevor Sie darauf drücken",
+    rows: [
+      {
+        field: "Titel",
+        language: "EN",
+        newValue: "Lumina: AI Photo Editor",
+        oldValue: "Lumina - Photo Editor",
+      },
+      {
+        field: "Untertitel",
+        language: "EN",
+        newValue: "Edit photos with AI in seconds",
+        oldValue: "Edit your photos fast",
+      },
+      {
+        field: "Kurzbeschreibung",
+        language: "DE",
+        newValue: "Fotos mit KI bearbeiten",
+        oldValue: "Fotos schnell bearbeiten",
+      },
+    ],
+  },
+  faq: {
+    docsHref: "/de/docs",
+    docsLabel: "Dokumentation",
+    entries: [
+      {
+        answer:
+          "Nein. Die Live-Demo ist ein echter AppBoard-Workspace, gefüllt mit Beispiel-Apps, Rezensionen und Eintragsverlauf. Sie können sich durch alles klicken, ohne Registrierung und ohne Store-Zugangsdaten.",
+        question: "Kann ich AppBoard testen, ohne eigene Apps zu verbinden?",
+      },
+      {
+        answer:
+          "Ihr App-Store-Connect-Key und Ihr Google-Play-Service-Account liegen in einem Ende-zu-Ende-verschlüsselten Tresor. Sie werden mit einem aus Ihrer Passphrase abgeleiteten Schlüssel verschlüsselt, die Server von AppBoard sehen sie also nie im Klartext, und ohne entsperrten Tresor lässt sich nichts veröffentlichen.",
+        question: "Ist es sicher, meine Store-Zugangsdaten herzugeben?",
+      },
+      {
+        answer:
+          "Nein. Alles, was Sie bearbeiten, ist ein Entwurf, bis Sie es ausdrücklich veröffentlichen. Vorher sehen Sie einen Diff pro Feld und pro Sprache, und jede veröffentlichte Änderung landet im Verlauf, mit Rollback per Klick.",
+        question: "Kann AppBoard meinen laufenden Store-Eintrag beschädigen?",
+      },
+      {
+        answer:
+          "Beide. AppBoard verbindet sich mit App Store Connect und der Google Play Console, und Apps aus beiden Stores liegen nebeneinander in einem Workspace, inklusive gruppierter Android- und iOS-Paare derselben App.",
+        question: "Werden App Store und Google Play unterstützt?",
+      },
+      {
+        answer:
+          "App Store und Google Play funktionieren heute. Huawei AppGallery, Samsung Galaxy Store, Amazon Appstore, Xiaomi GetApps, RuStore und ONE Store sind als demnächst markiert: sie sind in aktiver Entwicklung und noch nicht veröffentlicht. Nehmen Sie jedes Demnächst-Label auf dieser Seite also genau so.",
+        question: "Was ist mit anderen Stores als Apple und Google?",
+      },
+      {
+        answer:
+          "KI-Funktionen laufen über OpenRouter mit Ihrem eigenen API-Key, Sie wählen also das Modell und zahlen direkt beim Anbieter. Die KI entwirft Beschreibungen, Übersetzungen, Keyword-Ideen und Antworten auf Rezensionen, aber ohne Ihre Freigabe geht nichts in einen Store.",
+        question: "Wie funktioniert die KI, und wessen API-Key nutzt sie?",
+      },
+      {
+        answer:
+          "Ja. AppBoard ist ein Open-Source-Produkt, und alles läuft im Web-Panel: keine Desktop-App, keine Plugins, nichts zu installieren. Wenn es in Ihrem Browser läuft, läuft es.",
+        question: "Ist AppBoard Open Source, und muss ich etwas installieren?",
+      },
+      {
+        answer:
+          "AppBoard ist während der Beta kostenlos. Eine Kreditkarte ist nicht nötig, und vor der Einführung eines kostenpflichtigen Plans erfahren Sie es rechtzeitig.",
+        question: "Was kostet es?",
+      },
+    ],
+    eyebrow: "FAQ",
+    faqHref: "/de/faq",
+    faqLabel: "vollständigen FAQ",
+    footnoteLead: "Mehr Antworten in der",
+    footnoteMiddle: "und im",
+    footnoteTail: ".",
+    schemaPath: "/de",
+    title: "Fragen, die wirklich gestellt werden",
+  },
+  features: {
+    eyebrow: "Funktionen",
+    items: [
+      {
+        description:
+          "Einen App-Store- oder Google-Play-Link einfügen, und der ganze Eintrag ist in AppBoard. Die Store-API verbinden Sie später, nur zum Veröffentlichen.",
+        href: "/de/docs",
+        title: "Start mit einem Store-Link",
+      },
+      {
+        description:
+          "ASO-Check, Keyword-Check und Screenshot-Editor laufen im Browser - kostenlos, ohne Login, nichts wird hochgeladen.",
+        href: "/de#free-tools",
+        title: "Kostenlose Tools ohne Konto",
+      },
+      {
+        description:
+          "Keyword-Positionen mit Tagesveränderung verfolgen, Märkte vergleichen und jede App im Store analysieren.",
+        href: "/de/docs/research",
+        title: "Keyword- und Marktanalyse",
+      },
+      {
+        description:
+          "Rezensionen beider Stores in einem Posteingang, mit Bewertung, Version und Gerät, plus KI-Entwürfe, die Sie freigeben.",
+        href: "/de/docs/reviews",
+        title: "Rezensionen in einem Posteingang",
+      },
+      {
+        description:
+          "Metadaten und Grafiken im Stapel in beide Stores veröffentlichen, als Entwurf oder direkt zur Prüfung, mit Bericht pro Position.",
+        href: "/de/docs/publishing",
+        title: "Aus einem Dashboard veröffentlichen",
+      },
+      {
+        description:
+          "Store-Zugangsdaten liegen in einem Ende-zu-Ende-verschlüsselten Tresor. Die Server von AppBoard sehen sie nie im Klartext.",
+        href: "/de/docs/security",
+        title: "Verschlüsselter Tresor für Zugangsdaten",
+      },
+      {
+        description:
+          "Kostenlos in der Beta und dauerhaft quelloffen einsehbar. Betreiben Sie das Ganze jederzeit auf Ihrem eigenen Server.",
+        href: "/de/docs/self-hosting",
+        title: "Open Source und selbst hostbar",
+      },
+      {
+        description:
+          "Schlagen Sie die Funktionen vor, die Sie brauchen, und stimmen Sie über die der anderen ab. So entscheiden die Menschen über die Roadmap, die Apps ausliefern.",
+        href: DISCORD_URL,
+        linkLabel: "Auf Discord mitgestalten",
+        title: "Eine Wunschliste zum Abstimmen",
+      },
+    ],
+    title: "Alles Weitere, kurz",
+  },
+  freeTool: {
+    ctaLabel: "Editor öffnen",
+    ctaNote: "Dauerhaft kostenlos · ohne Login",
+    description:
+      "Jeden Eintrag prüfen, eigene Keywords bewerten und Store-Screenshots gestalten - alles im Browser, nichts wird hochgeladen, keine Registrierung. Dieselbe Engine, die AppBoard im Panel nutzt.",
+    editorTitle: "Kostenloser ASO-Screenshot-Editor",
+    eyebrow: "Kostenlose Tools",
+    tools: [
+      {
+        ctaLabel: "Eintrag prüfen",
+        description:
+          "App-Store-Link einfügen: Bewertung des Eintrags, die Keywords, für die Sie ranken (Top 200), der Wettbewerb und drei konkrete nächste Schritte.",
+        href: `${APP_URL}/aso-check`,
+        title: "ASO-Check",
+      },
+      {
+        ctaLabel: "Keywords bewerten",
+        description:
+          "Bis zu fünf Keywords pro Tag: Popularität, Schwierigkeit, Chance und eine Download-Schätzung für den gewählten Markt.",
+        href: `${APP_URL}/keyword-check`,
+        title: "Keyword-Check",
+      },
+      {
+        ctaLabel: "Editor öffnen",
+        description:
+          "Vorlagen, echte 3D-Geräte, exakte Store-Maße. Exportieren und hochladen - oder die Store-Screenshots direkt aus dem Panel öffnen.",
+        href: `${APP_URL}/editor`,
+        title: "Screenshot-Editor",
+      },
+    ],
+    gallery: [
+      {
+        alt: "Hero-Vorlage: im 3D-Winkel gekipptes iPhone auf einem Magenta-Violett-Verlauf mit kräftiger Überschrift",
+        label: "Hero 3D",
+      },
+      {
+        alt: "Dark-Mode-Vorlage mit gepunktetem Hintergrund und heller App-Oberfläche im iPhone-Rahmen",
+        label: "Minimal dunkel",
+      },
+      {
+        alt: "Award-Lorbeer-Vorlage: App-of-the-Day-Lorbeeren über einem Geräte-Mockup auf tiefem Violett",
+        label: "Award-Lorbeer",
+      },
+      {
+        alt: "Sahara-Vorlage: warmer Dünen-Verlauf mit gekipptem Gerät und handschriftlicher Überschrift",
+        label: "Sahara",
+      },
+      {
+        alt: "Social-Proof-Vorlage mit einem Fünf-Sterne-Zitat über dem Gerät",
+        label: "Social Proof",
+      },
+      {
+        alt: "Midnight-Vorlage: elegante dunkle Szene mit der Überschrift After hours, in style",
+        label: "Midnight",
+      },
+      {
+        alt: "Curved-Promo-Vorlage: oranger Verlauf mit gebogenem Text Start your journey",
+        label: "Curved Promo",
+      },
+      {
+        alt: "Feature-Callout-Vorlage mit einer Sprechblase, die auf die App-Oberfläche zeigt",
+        label: "Feature-Callout",
+      },
+      {
+        alt: "Clay-Showcase-Vorlage: türkiser Wellen-Hintergrund mit Geräte-Mockup im Clay-Stil",
+        label: "Clay Showcase",
+      },
+      {
+        alt: "Bold-Statement-Vorlage: Überschrift Loved by 1M+ users, gelb unterstrichen",
+        label: "Bold Statement",
+      },
+      {
+        alt: "Minimal-hell-Vorlage: saubere weiße Szene mit der Überschrift Simple. Fast. Yours.",
+        label: "Minimal hell",
+      },
+    ],
+    galleryLead:
+      "Jede davon hat unter einer Minute gedauert: Vorlage wählen, Ihr Screenshot bleibt, die Szene wechselt:",
+    points: [
+      "Echte 3D-Gerätemodelle, iPhone oder Galaxy in echtem WebGL drehen, dazu gezeichnete und Clay-Stile",
+      "Über 20 Szenenvorlagen: Hero-Shots, Panoramen, Social Proof, Award-Lorbeeren, Dark Mode",
+      "Verläufe, Mesh, Muster, dekorativer Text, Formen und Sprachvarianten pro Locale",
+      "Panorama-Layouts, die als mehrere aufeinanderfolgende Store-Screenshots exportiert werden",
+      "Zu 100 Prozent im Browser, ohne Registrierung, nichts wird auf einen Server geladen",
+    ],
+    title: "Drei kostenlose Tools, kein Konto",
+  },
+  hero: {
+    dashboardAlt:
+      "AppBoard-Dashboard mit sechs Apps aus App Store und Google Play, gruppiert in einem Workspace",
+    facts: [
+      "App Store + Google Play",
+      "Start mit einem Store-Link, ohne API",
+      "Diffs und Rollback",
+      "Open Source",
+    ],
+    lead: "Store-Link einfügen, und Eintrag, Screenshots, Bewertungen und Rezensionen sind in AppBoard - ohne API-Schlüssel. Audit machen, Text per Diff annehmen oder ablehnen, dann veröffentlichen: per Kopieren und Einfügen oder mit einem Klick, sobald ein Store verbunden ist.",
+    note: "Während der Beta kostenlos. Keine Kreditkarte, kein Vertriebsgespräch.",
+    primaryCta: "Kostenlos starten",
+    secondaryCta: "Live-Demo öffnen",
+    titleHighlight: "einem Panel",
+    titleLead: "Jeden Store-Eintrag steuern aus",
+  },
+  howItWorks: {
+    eyebrow: "So funktioniert es",
+    steps: [
+      {
+        description:
+          "App über ihre App-Store- oder Google-Play-Seite hinzufügen. Der Eintrag in jeder Sprache, Screenshots, Bewertungen und Rezensionen kommen von selbst - ohne API-Zugangsdaten, ohne Konsole.",
+        title: "Store-Link einfügen",
+      },
+      {
+        description:
+          "Eine Bewertung des Eintrags so, wie der Store ihn wirklich ausliefert, die Keywords, die Sie tatsächlich gewinnen können, und Textkorrekturen als Diffs zum Annehmen oder Ablehnen. Der Entwurf rührt den Store nie von allein an.",
+        title: "Audit und Textkorrekturen",
+      },
+      {
+        description:
+          "Die Änderungen in die Konsole kopieren und als erledigt markieren - oder die Store-API verbinden und beide Stores in einem Rutsch beschicken, versioniert und einen Klick vom Rollback entfernt.",
+        title: "Veröffentlichen, wie Sie wollen",
+      },
+      {
+        description:
+          "Nächtliche Keyword-Positionen mit jedem Release und jeder Textänderung im Diagramm markiert, Rezensionen aus jedem Storefront in einem Posteingang und ein Hinweis, wenn ein Entwurf unveröffentlicht liegen bleibt.",
+        title: "Sehen, was sich bewegt hat",
+      },
+    ],
+    title: "Vier Schritte, angefangen mit einem Link",
+  },
+  pricingTeaser: {
+    ctaHref: "/de/pricing",
+    ctaLabel: "Geplante Pläne ansehen",
+    lead: "Während der Beta kostet jeder Plan 0 Euro: keine Kreditkarte, keine gesperrten Funktionen. Die Stufen Free, Pro und Team stehen bereits, die Preise nennen wir lange vor der allgemeinen Verfügbarkeit.",
+    titleHighlight: "kostenlos",
+    titleLead: "Gerade ist alles",
+  },
+  stores: {
+    eyebrow: "Veröffentlichen in",
+    footnote:
+      "Ein Eintrag, einmal geschrieben, unterwegs zu jedem Store, in dem Sie veröffentlichen.",
+    liveStores: ["App Store", "Google Play"],
+    plannedStores: [
+      "Huawei AppGallery",
+      "Samsung Galaxy Store",
+      "Amazon Appstore",
+      "Xiaomi GetApps",
+      "RuStore",
+      "ONE Store",
+    ],
+  },
+  tour: {
+    eyebrow: "Im Panel",
+    stops: [
+      {
+        docsHref: "/de/docs/listings",
+        docsLabel: "Einträge und Sprachen",
+        eyebrow: "Ein Editor",
+        lead: "App Store Connect und Google Play einmal verbinden, und AppBoard holt jede Lokalisierung aus beiden Stores. Danach liegen Titel, Untertitel, Beschreibung, Keywords und Neuheiten für jede Sprache in einem einzigen Editor, als Entwürfe.",
+        points: [
+          "Zeichenzähler laufen beim Tippen gegen die echten Limits jedes Stores",
+          "Bearbeitete Sprachen bleiben markiert, bis Sie sie hochschieben",
+          "Entwürfe stehen neben dem, was im Store tatsächlich live ist",
+        ],
+        title: "Jede Sprache in einem Editor",
+        visualAlt:
+          "AppBoard-Eintragseditor mit Feldern für Titel, Kurzbeschreibung und vollständige Beschreibung, Sprach-Tabs und laufenden Zeichenzählern",
+      },
+      {
+        docsHref: "/de/docs/publishing",
+        docsLabel: "Veröffentlichen",
+        eyebrow: "Diff vor dem Veröffentlichen",
+        lead: "Bevor irgendetwas einen Store erreicht, sehen Sie einen Diff im GitHub-Stil: genau welche Felder sich geändert haben, in welcher Sprache, alter Wert gegen das, was gerade live ist. Danach aus einem Dashboard in beide Stores schieben und einen Bericht pro Position bekommen.",
+        points: [
+          "Rot und Grün, Feld für Feld, Sprache für Sprache",
+          "Als Entwurf hochschieben oder direkt zur Prüfung senden",
+          "Nichts verlässt Ihren Entwurf, bevor Sie auf Veröffentlichen drücken",
+        ],
+        title: "Genau sehen, was sich ändert, bevor es live geht",
+        visualAlt: "",
+      },
+      {
+        docsHref: "/de/docs/ai-assistant",
+        docsLabel: "KI-Assistent",
+        eyebrow: "KI-Übersetzung",
+        lead: "Übersetzung, die ASO versteht, statt Wort für Wort zu übertragen. Titel, Untertitel und Keywords werden mit Blick auf Ihre Store-Limits und die Suchabsicht lokalisiert, und Markenbegriffe, die Sie als nicht zu übersetzen markieren, bleiben unangetastet.",
+        points: [
+          "Nicht zu übersetzende Begriffe pro Feld für Marken- und Produktnamen",
+          "Freitext-Anweisungen für Tonfall und Glossar",
+          "Läuft über Ihren eigenen OpenRouter-Key, mit jedem Modell Ihrer Wahl",
+        ],
+        title: "KI-Übersetzung, die ASO spricht, nicht nur Deutsch",
+        visualAlt: "",
+      },
+      {
+        docsHref: "/de/docs/history-and-rollback",
+        docsLabel: "Verlauf und Rollback",
+        eyebrow: "Verlauf",
+        lead: "Jede veröffentlichte Änderung wird pro Feld und pro Sprache mit Zeitstempel festgehalten, damit Sie die Frage was haben wir im Mai geändert beantworten können, ohne durch Slack zu scrollen. Stellt sich ein Update als Fehler heraus, setzt ein Klick den alten Wert in Ihren Entwurf zurück.",
+        points: [
+          "Das Protokoll nach Feld und nach Sprache filtern",
+          "Rollback per Klick in Ihren Entwurf, nie direkt in den Store",
+          "Ein vollständiger Prüfpfad, wer wann was geändert hat",
+        ],
+        title: "Ein Rückgängig-Knopf für Ihren Store-Eintrag",
+        visualAlt:
+          "AppBoard-Änderungsverlauf mit rot-grünen Diffs im GitHub-Stil pro Feld und Sprache und Rollback-Schaltflächen",
+      },
+      {
+        docsHref: "/de/docs/screenshots",
+        docsLabel: "Screenshots und Grafiken",
+        eyebrow: "Screenshots",
+        lead: "Screenshots, Icons und Feature-Grafiken liegen in einem Raster, pro Gerät und pro Sprache. Gestalten Sie sie im eingebauten Editor, kippen Sie ein echtes 3D-Gerät und exportieren Sie in der Größe, die jeder Store verlangt. Das hier ist der echte Editor, im Browser aufgenommen.",
+        points: [
+          "Pro Sprache und pro Gerät, vom iPhone bis zu 10-Zoll-Tablets",
+          "Echte WebGL-Gerätemodelle zum Drehen, dazu 40 Szenenvorlagen",
+          "Ohne Konto nutzbar, und nichts wird auf einen Server geladen",
+        ],
+        title: "Ein Grafikeditor, der jede Store-Größe kennt",
+        videoCaption:
+          "Vorlage wählen, 3D-Gerät kippen, in Store-Größe exportieren",
+        visualAlt:
+          "Bildschirmaufnahme des AppBoard-Screenshot-Editors: die Szenenvorlage Hero 3D wird angewendet und ein WebGL-iPhone-Modell durch Pose-Presets gedreht",
+      },
+      {
+        docsHref: "/de/docs/research",
+        docsLabel: "Research und Rezensionen",
+        eyebrow: "Research",
+        lead: "AppBoard liest die Rezensionen für Sie und gruppiert die Beschwerden zu Themen, damit Sie erfahren, was immer wieder hakt, ohne Hunderte davon zu lesen. Dieselbe Analyse läuft auf Wettbewerbern, daneben Keyword-Positionen und Marktvergleiche.",
+        points: [
+          "Rezensionsthemen, Stimmung und was Nutzer am meisten lieben oder hassen",
+          "Keyword-Rank-Tracking mit Veränderung von Tag zu Tag",
+          "Funktioniert für jede App im Store, nicht nur für die verbundenen",
+        ],
+        title: "Herausfinden, worüber Nutzer sich wirklich beschweren",
+        visualAlt:
+          "AppBoard-Rezensionsanalyse mit KI-Zusammenfassung, Zählern für positive und negative Stimmung, beliebten gegen kritisierte Funktionen und einer Rangliste der größten Ärgernisse",
+      },
+    ],
+    title: "Das bekommen Sie tatsächlich",
+  },
+  translateDemo: {
+    badgeDoNotTranslate: "Nicht übersetzen: Lumina",
+    badgeKeywords: "Behält ASO-Keywords",
+    badgeLimit: "Hält das Titel-Limit von 30 Zeichen ein",
+    footnote:
+      "Jede Zeile landet in Ihrem Entwurf. Sie bearbeiten und geben frei, bevor etwas veröffentlicht wird.",
+    rows: [
+      { language: "Deutsch", limit: 30, value: "Lumina: KI-Fotoeditor" },
+      { language: "Französisch", limit: 30, value: "Lumina : editeur photo IA" },
+      { language: "Spanisch", limit: 30, value: "Lumina: editor de fotos IA" },
+    ],
+    sourceLabel: "Quelle, Englisch",
+    sourceValue: "Lumina: AI Photo Editor",
+  },
+};
+
+
+const ES: HomeContent = {
+  cta: {
+    lead: "Entra en la demo en vivo y recorre un espacio de trabajo real, o conecta tus propias tiendas en unos minutos. Gratis durante la beta.",
+    primaryCta: "Abrir la demo en vivo",
+    secondaryCta: "Crear cuenta gratis",
+    titleHighlight: "tranquilo",
+    titleLead: "Tu próximo día de lanzamiento puede ser",
+  },
+  diffDemo: {
+    headerNote: "3 campos en 2 idiomas",
+    headerTitle: "Cambios pendientes",
+    publishLabel: "Publicar en las dos tiendas",
+    publishNote: "Nada sale hasta que lo pulsas",
+    rows: [
+      {
+        field: "Título",
+        language: "EN",
+        newValue: "Lumina: AI Photo Editor",
+        oldValue: "Lumina - Photo Editor",
+      },
+      {
+        field: "Subtítulo",
+        language: "EN",
+        newValue: "Edit photos with AI in seconds",
+        oldValue: "Edit your photos fast",
+      },
+      {
+        field: "Kurzbeschreibung",
+        language: "DE",
+        newValue: "Fotos mit KI bearbeiten",
+        oldValue: "Fotos schnell bearbeiten",
+      },
+    ],
+  },
+  faq: {
+    docsHref: "/es/docs",
+    docsLabel: "documentación",
+    entries: [
+      {
+        answer:
+          "No. La demo en vivo es un espacio de trabajo real de AppBoard con apps de ejemplo, reseñas e historial de fichas. Puedes recorrerlo todo sin registro y sin credenciales de tienda.",
+        question: "¿Puedo probar AppBoard sin conectar mis apps?",
+      },
+      {
+        answer:
+          "Tu clave de App Store Connect y tu cuenta de servicio de Google Play viven en un baúl cifrado de extremo a extremo. Se cifran con una clave derivada de tu frase de paso, así que los servidores de AppBoard nunca las ven en claro, y no se puede publicar nada sin que tú desbloquees el baúl.",
+        question: "¿Es seguro entregar mis credenciales de tienda?",
+      },
+      {
+        answer:
+          "No. Todo lo que editas es un borrador hasta que lo publicas de forma explícita. Antes de publicar ves un diff por campo y por idioma de lo que va a cambiar, y cada cambio publicado queda en el historial con reversión en un clic.",
+        question: "¿Puede AppBoard romper mi ficha publicada?",
+      },
+      {
+        answer:
+          "Las dos. AppBoard se conecta con App Store Connect y Google Play Console, y las apps de ambas tiendas quedan una al lado de la otra en un mismo espacio de trabajo, incluidas las parejas Android e iOS agrupadas de la misma app.",
+        question: "¿Admite App Store y Google Play?",
+      },
+      {
+        answer:
+          "App Store y Google Play funcionan hoy. Huawei AppGallery, Samsung Galaxy Store, Amazon Appstore, Xiaomi GetApps, RuStore y ONE Store aparecen como próximamente: están en desarrollo activo y aún no se han lanzado, así que toma cada etiqueta de próximamente de esta página tal cual.",
+        question: "¿Y las tiendas que no son de Apple ni de Google?",
+      },
+      {
+        answer:
+          "Las funciones de IA van por OpenRouter con tu propia clave de API, así que eliges el modelo y pagas directamente al proveedor. La IA redacta descripciones, traducciones, ideas de keywords y respuestas a reseñas, pero nunca se envía nada a una tienda sin tu aprobación.",
+        question: "¿Cómo funciona la IA y con qué clave de API?",
+      },
+      {
+        answer:
+          "Sí. AppBoard es un producto open source y todo funciona en el panel web: sin app de escritorio, sin plugins, sin nada que instalar. Si te funciona el navegador, te funciona.",
+        question: "¿AppBoard es open source y hay que instalar algo?",
+      },
+      {
+        answer:
+          "AppBoard es gratis durante la beta. No hace falta tarjeta y te avisaremos con mucha antelación antes de introducir cualquier plan de pago.",
+        question: "¿Cuánto cuesta?",
+      },
+    ],
+    eyebrow: "FAQ",
+    faqHref: "/es/faq",
+    faqLabel: "FAQ completo",
+    footnoteLead: "Más respuestas en la",
+    footnoteMiddle: "y en el",
+    footnoteTail: ".",
+    schemaPath: "/es",
+    title: "Preguntas que la gente hace de verdad",
+  },
+  features: {
+    eyebrow: "Funciones",
+    items: [
+      {
+        description:
+          "Pega un enlace de App Store o Google Play y toda la ficha está en AppBoard. Conecta la API de la tienda más tarde, solo para publicar.",
+        href: "/es/docs",
+        title: "Empieza con un enlace de la tienda",
+      },
+      {
+        description:
+          "ASO check-up, keyword check y el editor de capturas funcionan en tu navegador - gratis, sin login, sin subir nada.",
+        href: "/es#free-tools",
+        title: "Herramientas gratis, sin cuenta",
+      },
+      {
+        description:
+          "Sigue posiciones de keywords con el movimiento día a día, compara mercados y analiza a la competencia en cualquier app de la tienda.",
+        href: "/es/docs/research",
+        title: "Research de keywords y mercados",
+      },
+      {
+        description:
+          "Las reseñas de las dos tiendas en una bandeja, con valoración, versión y dispositivo, más borradores de IA que apruebas tú.",
+        href: "/es/docs/reviews",
+        title: "Reseñas en una sola bandeja",
+      },
+      {
+        description:
+          "Publica metadatos y gráficos por lotes en las dos tiendas, como borrador o directo a revisión, con informe por elemento.",
+        href: "/es/docs/publishing",
+        title: "Publica desde un solo panel",
+      },
+      {
+        description:
+          "Las credenciales viven en un baúl cifrado de extremo a extremo. Los servidores de AppBoard nunca las ven en claro.",
+        href: "/es/docs/security",
+        title: "Baúl de credenciales cifrado",
+      },
+      {
+        description:
+          "Gratis durante la beta y con el código visible siempre. Ejecuta todo en tu propio servidor cuando quieras.",
+        href: "/es/docs/self-hosting",
+        title: "Open source y autoalojable",
+      },
+      {
+        description:
+          "Propón las funciones que necesitas y vota las de los demás, para que la hoja de ruta la decida quien publica apps.",
+        href: DISCORD_URL,
+        linkLabel: "Opina en Discord",
+        title: "Una lista de deseos que se vota",
+      },
+    ],
+    title: "Todo lo demás, en breve",
+  },
+  freeTool: {
+    ctaLabel: "Abrir el editor",
+    ctaNote: "Gratis para siempre · sin login",
+    description:
+      "Revisa cualquier ficha, puntúa tus keywords y diseña capturas para la tienda - todo en tu navegador, sin subir nada, sin registro. El mismo motor que AppBoard usa dentro del panel.",
+    editorTitle: "Editor de capturas ASO gratuito",
+    eyebrow: "Herramientas gratis",
+    tools: [
+      {
+        ctaLabel: "Revisar una ficha",
+        description:
+          "Pega un enlace de App Store: puntuación de la ficha, las keywords en las que posicionas (top 200), la competencia y tres siguientes pasos concretos.",
+        href: `${APP_URL}/aso-check`,
+        title: "ASO check-up",
+      },
+      {
+        ctaLabel: "Puntuar keywords",
+        description:
+          "Hasta cinco keywords al día: popularidad, dificultad, oportunidad y una estimación de descargas para el mercado que elijas.",
+        href: `${APP_URL}/keyword-check`,
+        title: "Keyword check",
+      },
+      {
+        ctaLabel: "Abrir el editor",
+        description:
+          "Plantillas, dispositivos 3D reales, medidas exactas de cada tienda. Exporta y sube - o abre las capturas de tu tienda directamente desde el panel.",
+        href: `${APP_URL}/editor`,
+        title: "Editor de capturas",
+      },
+    ],
+    gallery: [
+      {
+        alt: "Plantilla hero: iPhone inclinado en 3D sobre un degradado magenta y violeta con un titular contundente",
+        label: "Hero 3D",
+      },
+      {
+        alt: "Plantilla en modo oscuro con fondo punteado y una interfaz clara dentro de un marco de iPhone",
+        label: "Oscuro minimal",
+      },
+      {
+        alt: "Plantilla de laureles: laureles de App del Día sobre un mockup de dispositivo en violeta intenso",
+        label: "Laureles",
+      },
+      {
+        alt: "Plantilla Sahara: degradado cálido de dunas con dispositivo inclinado y titular manuscrito",
+        label: "Sahara",
+      },
+      {
+        alt: "Plantilla de prueba social con una cita de cinco estrellas sobre el dispositivo",
+        label: "Prueba social",
+      },
+      {
+        alt: "Plantilla Midnight: escena oscura elegante con el titular After hours, in style",
+        label: "Midnight",
+      },
+      {
+        alt: "Plantilla promocional curva: degradado naranja con el texto Start your journey en arco",
+        label: "Promo curva",
+      },
+      {
+        alt: "Plantilla de anotación con un bocadillo que señala la interfaz de la app",
+        label: "Anotación",
+      },
+      {
+        alt: "Plantilla Clay: fondo de olas turquesa con un mockup de dispositivo en estilo arcilla",
+        label: "Escaparate clay",
+      },
+      {
+        alt: "Plantilla de afirmación rotunda: titular Loved by 1M+ users subrayado en amarillo",
+        label: "Afirmación",
+      },
+      {
+        alt: "Plantilla clara minimal: escena blanca y limpia con el titular Simple. Fast. Yours.",
+        label: "Claro minimal",
+      },
+    ],
+    galleryLead:
+      "Cada una llevó menos de un minuto: eliges plantilla, tu captura se queda, cambia la escena:",
+    points: [
+      "Modelos 3D reales de dispositivos, gira un iPhone o un Galaxy en WebGL de verdad, más estilos dibujado y arcilla",
+      "Más de 20 plantillas de escena: hero, panoramas, prueba social, laureles, modo oscuro",
+      "Degradados, mesh, patrones, texto decorativo, formas y variantes por idioma",
+      "Diseños panorámicos que se exportan como varias capturas consecutivas",
+      "100 % en tu navegador, sin registro y sin subir nada a un servidor",
+    ],
+    title: "Tres herramientas gratis, sin cuenta",
+  },
+  hero: {
+    dashboardAlt:
+      "Panel de AppBoard con seis apps de App Store y Google Play agrupadas en un espacio de trabajo",
+    facts: [
+      "App Store + Google Play",
+      "Empieza con un enlace de la tienda, sin API",
+      "Diffs y reversión",
+      "Open source",
+    ],
+    lead: "Pega un enlace de la tienda y la ficha, las capturas, las valoraciones y las reseñas están en AppBoard - sin claves de API. Haz la auditoría, corrige el texto con diffs que aceptas o rechazas y publica: copiando y pegando, o con un clic cuando conectes la tienda.",
+    note: "Gratis durante la beta. Sin tarjeta y sin llamada comercial.",
+    primaryCta: "Empezar gratis",
+    secondaryCta: "Abrir la demo en vivo",
+    titleHighlight: "un solo panel",
+    titleLead: "Gestiona todas tus fichas desde",
+  },
+  howItWorks: {
+    eyebrow: "Cómo funciona",
+    steps: [
+      {
+        description:
+          "Añade una app desde su página de App Store o Google Play. La ficha en cada idioma, las capturas, las valoraciones y las reseñas entran solas - sin credenciales de API, sin consola.",
+        title: "Pega un enlace de la tienda",
+      },
+      {
+        description:
+          "Una puntuación de la ficha tal como la sirve la tienda, las keywords que de verdad puedes ganar y correcciones de texto como diffs que aceptas o rechazas. El borrador nunca toca la tienda por su cuenta.",
+        title: "Audita y corrige el texto",
+      },
+      {
+        description:
+          "Copia los cambios a la consola y márcalos como hechos, o conecta la API de la tienda y publica en las dos tiendas en un lote - versionado y a un clic de la reversión.",
+        title: "Publica a tu manera",
+      },
+      {
+        description:
+          "Posiciones de keywords cada noche, con cada versión y cambio de texto marcado en la gráfica, reseñas de cada tienda en una bandeja y un aviso cuando un borrador se queda sin publicar.",
+        title: "Sigue lo que se movió",
+      },
+    ],
+    title: "Cuatro pasos, empezando por un enlace",
+  },
+  pricingTeaser: {
+    ctaHref: "/es/pricing",
+    ctaLabel: "Ver los planes previstos",
+    lead: "Mientras AppBoard está en beta todos los planes cuestan 0: sin tarjeta y sin funciones bloqueadas. Los niveles Free, Pro y Team ya están definidos, y los precios se anunciarán mucho antes del lanzamiento general.",
+    titleHighlight: "gratis",
+    titleLead: "Ahora mismo es",
+  },
+  stores: {
+    eyebrow: "Publica en",
+    footnote:
+      "Una ficha, escrita una vez, camino de todas las tiendas en las que publicas.",
+    liveStores: ["App Store", "Google Play"],
+    plannedStores: [
+      "Huawei AppGallery",
+      "Samsung Galaxy Store",
+      "Amazon Appstore",
+      "Xiaomi GetApps",
+      "RuStore",
+      "ONE Store",
+    ],
+  },
+  tour: {
+    eyebrow: "Dentro del panel",
+    stops: [
+      {
+        docsHref: "/es/docs/listings",
+        docsLabel: "Fichas e idiomas",
+        eyebrow: "Un editor",
+        lead: "Conecta App Store Connect y Google Play una vez y AppBoard trae todas las localizaciones de ambas tiendas. A partir de ahí, título, subtítulo, descripción, keywords y novedades de cada idioma viven en un único editor, como borradores.",
+        points: [
+          "Los contadores de caracteres corren contra los límites reales de cada tienda mientras escribes",
+          "Los idiomas que tocaste quedan marcados hasta que los subes",
+          "Los borradores están junto a lo que hay publicado de verdad en la tienda",
+        ],
+        title: "Todos los idiomas en un editor",
+        visualAlt:
+          "Editor de fichas de AppBoard con campos de título, descripción corta y descripción completa, pestañas por idioma y contadores de caracteres en vivo",
+      },
+      {
+        docsHref: "/es/docs/publishing",
+        docsLabel: "Publicación",
+        eyebrow: "Diff antes de publicar",
+        lead: "Antes de que algo llegue a una tienda ves un diff al estilo de GitHub: exactamente qué campos cambiaron, en qué idioma, el valor antiguo frente a lo que hay publicado ahora. Después subes a las dos tiendas desde un panel y recibes un informe por elemento.",
+        points: [
+          "Rojo y verde, campo por campo, idioma por idioma",
+          "Sube como borrador o manda directo a revisión",
+          "Nada sale de tu borrador hasta que pulsas publicar",
+        ],
+        title: "Ve exactamente qué cambia antes de que salga",
+        visualAlt: "",
+      },
+      {
+        docsHref: "/es/docs/ai-assistant",
+        docsLabel: "Asistente de IA",
+        eyebrow: "Traducción con IA",
+        lead: "Traducción que entiende de ASO en lugar de traducir palabra por palabra. Títulos, subtítulos y keywords se localizan teniendo en cuenta los límites de la tienda y la intención de búsqueda, y los términos de marca que marcas como no traducibles se quedan intactos.",
+        points: [
+          "Términos que no se traducen, por campo, para nombres de marca y producto",
+          "Instrucciones en texto libre para dirigir el tono y el glosario",
+          "Funciona con tu propia clave de OpenRouter y el modelo que elijas",
+        ],
+        title: "Traducción con IA que habla ASO, no solo español",
+        visualAlt: "",
+      },
+      {
+        docsHref: "/es/docs/history-and-rollback",
+        docsLabel: "Historial y reversión",
+        eyebrow: "Historial",
+        lead: "Cada cambio publicado queda registrado por campo y por idioma con su marca de tiempo, así que puedes responder a qué cambiamos en mayo sin rebuscar en Slack. Cuando una actualización resulta ser un error, un clic devuelve el valor antiguo a tu borrador.",
+        points: [
+          "Filtra el registro por campo y por idioma",
+          "Reversión en un clic a tu borrador, nunca directa a la tienda",
+          "Un rastro completo de quién cambió qué y cuándo",
+        ],
+        title: "Un botón de deshacer para tu ficha",
+        visualAlt:
+          "Historial de cambios de AppBoard con diffs en rojo y verde al estilo de GitHub por campo e idioma, y botones de reversión",
+      },
+      {
+        docsHref: "/es/docs/screenshots",
+        docsLabel: "Capturas y gráficos",
+        eyebrow: "Capturas",
+        lead: "Capturas, iconos y gráficos destacados viven en una sola rejilla, por dispositivo y por idioma. Diséñalos en el editor integrado, inclina un dispositivo 3D real y exporta con el tamaño exacto que exige cada tienda. Esto es el editor de verdad, grabado en el navegador.",
+        points: [
+          "Por idioma y por dispositivo, del iPhone a las tabletas de 10 pulgadas",
+          "Modelos WebGL reales que puedes girar, más 40 plantillas de escena",
+          "Se usa gratis sin cuenta y no se sube nada a un servidor",
+        ],
+        title: "Un editor de gráficos que conoce todas las medidas",
+        videoCaption:
+          "Elige plantilla, inclina el dispositivo 3D, exporta al tamaño de la tienda",
+        visualAlt:
+          "Grabación de pantalla del editor de capturas de AppBoard: se aplica la plantilla Hero 3D y se gira un modelo WebGL de iPhone entre poses predefinidas",
+      },
+      {
+        docsHref: "/es/docs/research",
+        docsLabel: "Research y reseñas",
+        eyebrow: "Research",
+        lead: "AppBoard lee las reseñas por ti y agrupa las quejas en temas, para que sepas qué falla una y otra vez sin leer cientos. El mismo análisis vale para la competencia, junto a las posiciones de keywords y la comparación de mercados.",
+        points: [
+          "Temas de reseñas, sentimiento y qué gusta o disgusta más",
+          "Seguimiento de posiciones con el movimiento día a día",
+          "Funciona con cualquier app de la tienda, no solo con las que conectaste",
+        ],
+        title: "Descubre de qué se queja la gente de verdad",
+        visualAlt:
+          "Análisis de reseñas de AppBoard con resumen de IA, recuentos de sentimiento positivo y negativo, funciones que gustan frente a las criticadas y una lista ordenada de las mayores molestias",
+      },
+    ],
+    title: "Esto es lo que realmente obtienes",
+  },
+  translateDemo: {
+    badgeDoNotTranslate: "No traducir: Lumina",
+    badgeKeywords: "Conserva las keywords ASO",
+    badgeLimit: "Respeta el límite de 30 caracteres del título",
+    footnote:
+      "Cada línea aterriza en tu borrador. Editas y apruebas antes de que se publique nada.",
+    rows: [
+      { language: "Alemán", limit: 30, value: "Lumina: KI-Fotoeditor" },
+      { language: "Francés", limit: 30, value: "Lumina : editeur photo IA" },
+      { language: "Español", limit: 30, value: "Lumina: editor de fotos IA" },
+    ],
+    sourceLabel: "Origen, inglés",
+    sourceValue: "Lumina: AI Photo Editor",
+  },
+};
+
+export const HOME_CONTENT: Record<SiteLocale, HomeContent> = {
+  de: DE,
+  en: EN,
+  es: ES,
+  pl: PL,
+};

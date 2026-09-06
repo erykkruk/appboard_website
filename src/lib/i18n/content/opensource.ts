@@ -542,7 +542,445 @@ const PL: OpenSourceContent = {
   },
 };
 
+
+const DE: OpenSourceContent = {
+  community: {
+    channels: [
+      {
+        cta: "Discord beitreten",
+        description:
+          "Der schnellste Draht zu uns. Fragen stellen, Fehler melden, Hilfe beim Self-Hosting bekommen und sehen, was gerade entsteht, bevor es ausgeliefert wird.",
+        name: "Discord",
+        points: [
+          "Direkte Leitung zu den Maintainern",
+          "Frühe Einblicke in neue Funktionen",
+          "Self-Hosting-Hilfe von Leuten, die es selbst betreiben",
+        ],
+      },
+      {
+        cta: "r/appboard beitreten",
+        description:
+          "Feature-Wünsche, ASO-Tipps und längere Diskussionen. Stimmen Sie darüber ab, was als Nächstes gebaut wird, die Roadmap entsteht mit der Community.",
+        name: "Reddit",
+        points: [
+          "Über Feature-Wünsche abstimmen",
+          "ASO-Erfolge und Lehren teilen",
+          "Release Notes und Changelogs",
+        ],
+      },
+    ],
+    description:
+      "AppBoard ist Open Source und entsteht öffentlich. Die Menschen, die es nutzen, bestimmen die Richtung. Machen Sie mit, sagen Sie Hallo und erzählen Sie uns, was Sie brauchen.",
+    eyebrow: "Community",
+    title: "Öffentlich gebaut, gemeinsam mit Ihnen",
+  },
+  comparison: {
+    description:
+      "Nichts davon ist Zauberei, es ist dieselbe Arbeit wie bisher, nur ohne Tab-Jonglage.",
+    eyebrow: "Wozu das Ganze",
+    headerTask: "Aufgabe am Release-Tag",
+    headerWith: "Mit AppBoard",
+    headerWithout: "Konsolen-Hopping",
+    rows: [
+      {
+        task: "Eine Beschreibung in 8 Sprachen aktualisieren",
+        withAppboard: "Ein Editor, Tabs pro Sprache, Veröffentlichen in einem Rutsch",
+        withoutAppboard: "Zwei Konsolen, acht Tabs, Copy-paste aus einer Tabelle",
+      },
+      {
+        task: "Nachsehen, was sich letzten Monat geändert hat",
+        withAppboard: "Verlauf auf Feldebene mit rot-grünen Diffs",
+        withoutAppboard: "Durch Slack scrollen und hoffen, dass es jemand notiert hat",
+      },
+      {
+        task: "Ein misslungenes Eintrags-Update zurücknehmen",
+        withAppboard: "Rollback per Klick in Ihren Entwurf",
+        withoutAppboard: "Den alten Text aus dem Gedächtnis rekonstruieren",
+      },
+      {
+        task: "Rezensionen in beiden Stores beantworten",
+        withAppboard: "Ein Posteingang, KI-Entwürfe, die Sie freigeben",
+        withoutAppboard: "Zwei Konsolen, zwei Antwortwege, kein Überblick",
+      },
+      {
+        task: "Screenshots für ein Release ausliefern",
+        withAppboard: "Eingebauter Editor exportiert exakte Store-Maße",
+        withoutAppboard: "Figma-Exporte, falsche Pixelmaße, Upload-Roulette",
+      },
+      {
+        task: "Verstehen, warum Nutzer unzufrieden sind",
+        withAppboard: "KI gruppiert Beschwerden aus Rezensionen zu Themen",
+        withoutAppboard: "Hunderte Rezensionen von Hand lesen",
+      },
+    ],
+    title: "Derselbe Release-Tag, mit und ohne AppBoard",
+  },
+  founderNote: {
+    eyebrow: "Notiz vom Entwickler",
+    paragraphs: [
+      "AppBoard begann als internes Werkzeug. Ich veröffentliche eigene Apps, und jedes Release endete gleich: zwei Konsolen, ein Dutzend Tabs, eine Tabelle voller Übersetzungen und die leise Angst, eine Beschreibung zu überschreiben, von der niemand ein Backup hatte.",
+      "Also habe ich das Werkzeug gebaut, das ich wollte: Einträge versioniert wie Code, Diffs vor jeder Veröffentlichung und beide Stores an einem Ort. Keine Growth-Hacks, keine Dashboards, die so tun, als wären sie Erkenntnisse, nur die Arbeit am Release-Tag, ruhig gestellt.",
+      "Wenn sich etwas falsch anfühlt oder fehlt, sagen Sie es mir. Es ist ein kleines Produkt, und Feedback verändert die Roadmap wirklich.",
+    ],
+    signature: "- Eryk, baut AppBoard",
+  },
+  page: {
+    discordCta: "Unserem Discord beitreten",
+    eyebrow: "Open Source",
+    githubCta: "Auf GitHub ansehen",
+    lead: "Die gesamte Plattform, Backend, Admin-Panel und diese Website, ist öffentlich und selbst hostbar. Und das bleibt so: AppBoard bekennt sich dauerhaft zu Open Source.",
+    licenseNote:
+      "Quelloffen einsehbar unter der PolyForm Noncommercial License, kostenlos für private und nicht kommerzielle Nutzung.",
+    repos: [
+      {
+        description:
+          "Bun + Elysia + Drizzle + PostgreSQL. Store-Verbindungen, Einträge, Veröffentlichen, Research, Keyword-Rank-Tracking, der verschlüsselte Tresor und die REST-API.",
+        id: "backend",
+        title: "appboard_backend - API",
+      },
+      {
+        description:
+          "Admin-Panel mit Next.js und React: Dashboard, Eintrags-Editor mit Diffs und Verlauf, Screenshot-Studio, Research, Rezensions-Posteingang und Automatisierung.",
+        id: "panel",
+        title: "appboard_web - Admin-Panel",
+      },
+      {
+        description:
+          "Diese Marketing-Site: Next.js-Landingpages, Dokumentation und Blog. Forken, daraus lernen oder selbst betreiben.",
+        id: "website",
+        title: "appboard_website - Website",
+      },
+    ],
+    reposDescription:
+      "AppBoard ist in drei Repositories aufgeteilt. Backend und Admin-Panel hosten Sie selbst, die Website liegt zum Nachschlagen dabei.",
+    reposEyebrow: "Repositories",
+    reposLinkLabel: "Auf GitHub ansehen",
+    reposTitle: "Wo alles liegt",
+    titleHighlight: "Open Source",
+    titleLead: "AppBoard ist",
+  },
+  research: {
+    description:
+      "Die meisten ASO-Tools hören bei Keywords auf. AppBoard macht aus Rezensionen und Rankings eine Research-Maschine. Unten ein echter Deep-Durchlauf zu Instagram und TikTok.",
+    docsHref: "/de/docs/research",
+    docsLabel: "Zur Doku: Research",
+    eyebrow: "Research und KI",
+    gallery: [
+      {
+        alt: "Von der KI ausgewertete Beschwerdethemen zu Instagram mit Schweregrad-Badges und wörtlichen Nutzerzitaten: fehlende Funktionen, UX und UI, Login und Konto, Abstürze",
+        caption:
+          "Beschwerdethemen mit Schweregrad und wörtlichen Zitaten, das Warum hinter den Sternen",
+        src: "/images/panel/research-themes.png",
+      },
+      {
+        alt: "Liste schneller Erfolge und ASO-Metadaten-Audit zu Instagram, mit Keyword-Abdeckung und dem Hinweis, welche Keywords in Titel und Beschreibung fehlen",
+        caption:
+          "Quick Wins und Metadaten-Audit, welche Keywords Ihrem Eintrag fehlen",
+        src: "/images/panel/research-quickwins.png",
+      },
+      {
+        alt: "Tabelle der ASO-Keyword-Positionen zu Instagram: jedes Keyword mit seinem App-Store-Rang in den Top 50 und der Begründung",
+        caption:
+          "Keyword-Positionen in den Top 50 des Stores, mit Begründung je Keyword",
+        src: "/images/panel/research-keywords.png",
+      },
+      {
+        alt: "Sterneverteilung und heuristische Problemkategorien zu TikTok aus 500 gescrapten App-Store-Rezensionen",
+        caption:
+          "Sterneverteilung und Problem-Buckets aus Rohrezensionen, funktioniert ohne KI-Key",
+        src: "/images/panel/research-categories.png",
+      },
+      {
+        alt: "Liste gescrapter App-Store-Rezensionen zu Instagram mit Bewertungen, Versionen und vollständigem Text",
+        caption:
+          "Das Rohmaterial: der komplette gescrapte Rezensionssatz, zum Selberlesen",
+        src: "/images/panel/research-reviews.png",
+      },
+    ],
+    heroAlt:
+      "KI-Research-Bericht von AppBoard zu Instagram: beliebte Funktionen, kritisierte Funktionen und die größten Ärgernisse der Nutzer, destilliert aus Rezensionen",
+    points: [
+      {
+        description:
+          "Richten Sie AppBoard auf jede App im Store, Ihre eigene oder die des Wettbewerbs. Es scrapt Eintrag und Rezensionen, und die KI verdichtet Hunderte davon zu dem, was Nutzer lieben, was sie kritisieren und was sie am meisten stört, mit wörtlichen Zitaten als Beleg.",
+        title: "KI-Auswertung von Rezensionen für jede App",
+      },
+      {
+        description:
+          "Der Deep-Modus holt den vollständigen Rezensionssatz, bis zu 1.500 bei Google Play und rund 500 im App Store, und führt ihn per Map-Reduce durch das Modell. So bildet der Bericht den ganzen Verlauf ab, nicht nur die letzte wütende Woche.",
+        title: "Deep-Modus für das ganze Bild",
+      },
+      {
+        description:
+          "Die Keyword-Abdeckung wird gegen Ihren tatsächlichen Titel und Ihre Beschreibung geprüft, und die Positionen werden in den Top 50 des Stores verfolgt, pro Markt und mit Begründung, warum ein Keyword zählt.",
+        title: "Keywords, Abdeckung und Positionen",
+      },
+      {
+        description:
+          "Bringen Sie Ihren eigenen OpenRouter-Key mit und wählen Sie jedes Modell. Sterneverteilung und Beschwerdegruppierung funktionieren sogar ganz ohne KI-Key.",
+        title: "Ihr Key, Ihr Modell",
+      },
+    ],
+    title: "Von jeder App im Store lernen",
+  },
+  selfHosted: {
+    description:
+      "AppBoard ist quelloffen einsehbar und selbst hostbar. Betreiben Sie es auf eigenen Servern und behalten Sie die volle Kontrolle über Ihre Daten, kostenlos für private und nicht kommerzielle Nutzung.",
+    discordCta: "Unserem Discord beitreten",
+    docsCta: "Anleitung zum Self-Hosting",
+    docsHref: "/de/docs/self-hosting",
+    eyebrow: "Selbst gehostet",
+    githubCta: "Auf GitHub ansehen",
+    licenseNote:
+      "Quelloffen einsehbar unter der PolyForm Noncommercial License, kostenlos für private und nicht kommerzielle Nutzung.",
+    points: [
+      {
+        description:
+          "Den ganzen Stack mit Docker auf eigenem VPS oder in der eigenen Cloud ausrollen. Ihre Datenbank, Ihre Store-Zugangsdaten, Ihre Regeln. Nichts verlässt Ihre Infrastruktur.",
+        title: "Ihre Daten gehören Ihnen",
+      },
+      {
+        description:
+          "Der vollständige Quellcode ist öffentlich: lesen, prüfen und an den eigenen Ablauf anpassen. Kostenlos für private und nicht kommerzielle Nutzung.",
+        title: "Quelloffen einsehbar",
+      },
+      {
+        description:
+          "Ein Backend, ein Panel, ein Postgres. Läuft auf allem, worauf Docker läuft, einem übrigen VPS, Ihrem Homelab oder einem bestehenden Cluster. Kein Vendor-Lock-in.",
+        title: "Überall betreibbar",
+      },
+      {
+        description:
+          "Store-Schlüssel liegen in einem Ende-zu-Ende-verschlüsselten Tresor auf Ihrem Server. Self-Hosting hält Ihre Zugangsdaten für App Store und Google Play vollständig unter Ihrer Kontrolle.",
+        title: "Zugangsdaten bleiben Ihre",
+      },
+    ],
+    titleHighlight: "eigenen Servern",
+    titleLead: "Ihre Daten gehören Ihnen. Betreiben Sie es auf",
+  },
+};
+
+
+const ES: OpenSourceContent = {
+  community: {
+    channels: [
+      {
+        cta: "Entrar en Discord",
+        description:
+          "La vía más rápida para hablar con nosotros. Pregunta, reporta fallos, pide ayuda con el self-hosting y mira qué se está construyendo antes de que salga.",
+        name: "Discord",
+        points: [
+          "Línea directa con quienes mantienen el proyecto",
+          "Adelantos de funciones nuevas",
+          "Ayuda con self-hosting de gente que lo tiene montado",
+        ],
+      },
+      {
+        cta: "Entrar en r/appboard",
+        description:
+          "Peticiones de funciones, consejos de ASO y discusiones más largas. Vota qué se construye a continuación: la hoja de ruta la moldea la comunidad.",
+        name: "Reddit",
+        points: [
+          "Votar peticiones de funciones",
+          "Compartir aciertos y lecciones de ASO",
+          "Notas de versión y changelogs",
+        ],
+      },
+    ],
+    description:
+      "AppBoard es open source y se construye a la vista. Quienes lo usan deciden hacia dónde va: únete, saluda y cuéntanos qué necesitas.",
+    eyebrow: "Comunidad",
+    title: "Construido a la vista, contigo",
+  },
+  comparison: {
+    description:
+      "Aquí no hay magia: es el mismo trabajo que ya haces, sin el malabarismo de pestañas.",
+    eyebrow: "Para qué",
+    headerTask: "Tarea del día de lanzamiento",
+    headerWith: "Con AppBoard",
+    headerWithout: "Saltando entre consolas",
+    rows: [
+      {
+        task: "Actualizar una descripción en 8 idiomas",
+        withAppboard: "Un editor, pestañas por idioma, publicación en un lote",
+        withoutAppboard: "Dos consolas, ocho pestañas, copiar y pegar de una hoja de cálculo",
+      },
+      {
+        task: "Ver qué cambió el mes pasado",
+        withAppboard: "Historial por campo con diffs en rojo y verde",
+        withoutAppboard: "Rebuscar en Slack y esperar que alguien lo anotara",
+      },
+      {
+        task: "Revertir una actualización de ficha que salió mal",
+        withAppboard: "Vuelta atrás al borrador en un clic",
+        withoutAppboard: "Reconstruir el texto anterior de memoria",
+      },
+      {
+        task: "Responder reseñas en las dos tiendas",
+        withAppboard: "Una bandeja, borradores de IA que apruebas tú",
+        withoutAppboard: "Dos consolas, dos flujos de respuesta, ninguna visión de conjunto",
+      },
+      {
+        task: "Preparar capturas para una versión",
+        withAppboard: "El editor integrado exporta las medidas exactas de cada tienda",
+        withoutAppboard: "Exportar de Figma, tamaños equivocados, ruleta de resubidas",
+      },
+      {
+        task: "Saber por qué los usuarios están descontentos",
+        withAppboard: "La IA agrupa las quejas de las reseñas por temas",
+        withoutAppboard: "Leer cientos de reseñas a mano",
+      },
+    ],
+    title: "El mismo día de lanzamiento, con y sin AppBoard",
+  },
+  founderNote: {
+    eyebrow: "Nota de quien lo construye",
+    paragraphs: [
+      "AppBoard empezó como una herramienta interna. Publico mis propias apps, y cada lanzamiento acababa igual: dos consolas, una docena de pestañas, una hoja de cálculo con traducciones y ese miedo silencioso a sobrescribir una descripción de la que nadie tenía copia.",
+      "Así que construí la herramienta que quería: fichas versionadas como el código, diffs antes de cada publicación y las dos tiendas en un mismo sitio. Sin trucos de crecimiento ni paneles que fingen ser conclusiones, solo el trabajo del día de lanzamiento, hecho con calma.",
+      "Si algo chirría o falta, dímelo: es un producto pequeño y el feedback cambia la hoja de ruta de verdad.",
+    ],
+    signature: "- Eryk, construyendo AppBoard",
+  },
+  page: {
+    discordCta: "Entrar en nuestro Discord",
+    eyebrow: "Open source",
+    githubCta: "Ver en GitHub",
+    lead: "Toda la plataforma, backend, panel de administración y esta web, es pública y se puede autoalojar. Y seguirá siendo así: AppBoard se compromete con el open source de forma permanente.",
+    licenseNote:
+      "Código visible bajo la PolyForm Noncommercial License, gratis para uso personal y no comercial.",
+    repos: [
+      {
+        description:
+          "Bun + Elysia + Drizzle + PostgreSQL. Conexiones con las tiendas, fichas, publicación, research, seguimiento de posiciones, el baúl cifrado y la API REST.",
+        id: "backend",
+        title: "appboard_backend - API",
+      },
+      {
+        description:
+          "Panel de administración en Next.js y React: dashboard, editor de fichas con diffs e historial, estudio de capturas, research, bandeja de reseñas y automatización.",
+        id: "panel",
+        title: "appboard_web - panel de administración",
+      },
+      {
+        description:
+          "Esta web de marketing: landings en Next.js, documentación y blog. Haz un fork, aprende de ella o monta la tuya.",
+        id: "website",
+        title: "appboard_website - web",
+      },
+    ],
+    reposDescription:
+      "AppBoard está repartido en tres repositorios. El backend y el panel se autoalojan; la web está aquí como referencia.",
+    reposEyebrow: "Repositorios",
+    reposLinkLabel: "Ver en GitHub",
+    reposTitle: "Dónde vive cada cosa",
+    titleHighlight: "open source",
+    titleLead: "AppBoard es",
+  },
+  research: {
+    description:
+      "La mayoría de herramientas ASO se quedan en las keywords. AppBoard convierte reseñas y rankings en un motor de research. Abajo, una pasada real en profundidad sobre Instagram y TikTok.",
+    docsHref: "/es/docs/research",
+    docsLabel: "Leer la documentación: Research",
+    eyebrow: "Research e IA",
+    gallery: [
+      {
+        alt: "Temas de queja analizados por IA para Instagram con distintivos de gravedad y citas literales de usuarios: funciones que faltan, UX e interfaz, acceso y cuenta, cierres inesperados",
+        caption:
+          "Temas de queja con gravedad y citas literales: el porqué detrás de las estrellas",
+        src: "/images/panel/research-themes.png",
+      },
+      {
+        alt: "Lista de mejoras rápidas y auditoría de metadatos ASO para Instagram, con etiquetas de cobertura que muestran qué keywords faltan en el título y la descripción",
+        caption:
+          "Mejoras rápidas y auditoría de metadatos: qué keywords le faltan a tu ficha",
+        src: "/images/panel/research-quickwins.png",
+      },
+      {
+        alt: "Tabla de posiciones de keywords ASO para Instagram: cada keyword con su puesto en el top 50 del App Store y por qué importa",
+        caption:
+          "Posiciones de keywords en el top 50 de la tienda, con el razonamiento de cada una",
+        src: "/images/panel/research-keywords.png",
+      },
+      {
+        alt: "Distribución de estrellas y categorías heurísticas de problemas para TikTok a partir de 500 reseñas extraídas del App Store",
+        caption:
+          "Distribución de estrellas y bloques de problemas a partir de reseñas en bruto: funciona sin clave de IA",
+        src: "/images/panel/research-categories.png",
+      },
+      {
+        alt: "Lista de reseñas del App Store extraídas para Instagram con valoraciones, versiones y el texto completo",
+        caption:
+          "La materia prima: el conjunto completo de reseñas extraídas, para leerlo tú",
+        src: "/images/panel/research-reviews.png",
+      },
+    ],
+    heroAlt:
+      "Informe de research con IA de AppBoard sobre Instagram: funciones que gustan, funciones que critican y las mayores molestias de los usuarios destiladas de las reseñas",
+    points: [
+      {
+        description:
+          "Apunta AppBoard a cualquier app de la tienda, la tuya o la de un competidor. Extrae la ficha y las reseñas, y la IA condensa cientos de ellas en qué gusta, qué critican y qué es lo que más molesta, con citas literales como prueba.",
+        title: "Análisis de reseñas con IA sobre cualquier app",
+      },
+      {
+        description:
+          "El modo profundo trae el conjunto completo de reseñas, hasta 1.500 en Google Play y unas 500 en el App Store, y lo procesa con map-reduce a través del modelo, así que el informe refleja toda la cola y no solo la última semana enfadada.",
+        title: "Modo profundo para la foto completa",
+      },
+      {
+        description:
+          "La cobertura de keywords se comprueba contra tu título y tu descripción reales, y las posiciones se siguen dentro del top 50 de la tienda, por mercado y con el motivo por el que cada keyword importa.",
+        title: "Keywords, cobertura y posiciones",
+      },
+      {
+        description:
+          "Trae tu propia clave de OpenRouter y elige el modelo que quieras. La distribución de estrellas y la agrupación de quejas funcionan incluso sin ninguna clave de IA.",
+        title: "Tu clave, tu modelo",
+      },
+    ],
+    title: "Aprende de cualquier app de la tienda",
+  },
+  selfHosted: {
+    description:
+      "El código de AppBoard es visible y se puede autoalojar. Ejecútalo en tus propios servidores y manten el control total de tus datos, gratis para uso personal y no comercial.",
+    discordCta: "Entrar en nuestro Discord",
+    docsCta: "Guía de self-hosting",
+    docsHref: "/es/docs/self-hosting",
+    eyebrow: "Autoalojado",
+    githubCta: "Ver en GitHub",
+    licenseNote:
+      "Código visible bajo la PolyForm Noncommercial License, gratis para uso personal y no comercial.",
+    points: [
+      {
+        description:
+          "Despliega todo el stack en tu VPS o tu nube con Docker. Tu base de datos, tus credenciales, tus reglas: nada sale de tu infraestructura.",
+        title: "Tus datos son tuyos",
+      },
+      {
+        description:
+          "El código completo es público: léelo, audítalo y adáptalo a tu flujo de trabajo. Gratis para uso personal y no comercial.",
+        title: "Código visible",
+      },
+      {
+        description:
+          "Un backend, un panel, un Postgres. Funciona en cualquier sitio donde funcione Docker: un VPS de sobra, tu homelab o un clúster existente. Sin dependencia de proveedor.",
+        title: "Despliégalo donde quieras",
+      },
+      {
+        description:
+          "Las claves de las tiendas viven en un baúl cifrado de extremo a extremo en tu servidor. El self-hosting deja tus credenciales de App Store y Google Play enteramente bajo tu control.",
+        title: "Las credenciales siguen siendo tuyas",
+      },
+    ],
+    titleHighlight: "tus propios servidores",
+    titleLead: "Tus datos son tuyos. Ejecútalo en",
+  },
+};
+
 export const OPEN_SOURCE_CONTENT: Record<SiteLocale, OpenSourceContent> = {
+  de: DE,
   en: EN,
+  es: ES,
   pl: PL,
 };

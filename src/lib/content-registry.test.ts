@@ -14,9 +14,10 @@ import { ALL_DOC_PAGES_PL } from "./i18n/content/docs";
 import {
   BLOG_ONLY_LOCALES,
   DEFAULT_LOCALE,
+  isPendingPath,
   LOCALE_CONFIG,
-  LOCALES,
   localeHome,
+  LOCALES,
   scopeCoversPath,
   SITE_LOCALES,
 } from "./i18n/locales";
@@ -205,7 +206,7 @@ describe("locale scope", () => {
   });
 });
 
-describe("blog-only locales", () => {
+describe("locale scopes", () => {
   it("keeps the site and blog-only locale tuples disjoint and complete", () => {
     const all = [...SITE_LOCALES, ...BLOG_ONLY_LOCALES].sort();
     expect(all).toEqual([...LOCALES].sort());
@@ -218,20 +219,24 @@ describe("blog-only locales", () => {
     }
   });
 
-  it("never registers a marketing route for a blog-only locale", () => {
+  it("registers every marketing route for every site locale", () => {
     for (const pair of ROUTE_PAIRS) {
       const englishPath = pair[DEFAULT_LOCALE];
       if (!englishPath || englishPath.startsWith("/blog")) continue;
 
-      for (const locale of BLOG_ONLY_LOCALES) {
-        expect(pair[locale], `${locale} must not serve ${englishPath}`).toBeUndefined();
+      for (const locale of SITE_LOCALES) {
+        // A page a locale has not translated yet is left out on purpose, so
+        // nothing links to a localized URL that would 404.
+        if (isPendingPath(locale, englishPath)) {
+          expect(pair[locale], `${locale} must not claim ${englishPath}`).toBeUndefined();
+          continue;
+        }
+        expect(pair[locale], `${locale} must serve ${englishPath}`).toBeDefined();
       }
-      expect(buildAlternates(englishPath)[LOCALE_CONFIG.de.hreflang]).toBeUndefined();
-      expect(buildAlternates(englishPath)[LOCALE_CONFIG.es.hreflang]).toBeUndefined();
     }
   });
 
-  it("offers every blog locale on a blog article and none on a marketing page", () => {
+  it("offers every locale on both an article and a marketing page", () => {
     const onArticle = switcherOptions("/blog/best-aso-tools").map(
       (option) => option.config.code,
     );
@@ -240,19 +245,33 @@ describe("blog-only locales", () => {
     const onPricing = switcherOptions("/pricing").map(
       (option) => option.config.code,
     );
-    expect(onPricing.sort()).toEqual([...SITE_LOCALES].sort());
+    expect(onPricing.sort()).toEqual([...LOCALES].sort());
   });
 
-  it("has a page and a registry entry for every blog-only locale article", () => {
-    for (const locale of BLOG_ONLY_LOCALES) {
+  it("has a page and a registry entry for every locale's articles", () => {
+    for (const locale of LOCALES) {
       const articles = BLOG_ARTICLES_BY_LOCALE[locale] ?? [];
       expect(articles.length).toBeGreaterThan(0);
+      const prefix = LOCALE_CONFIG[locale].pathPrefix.replace(/^\//, "");
       for (const article of articles) {
-        const pagePath = join(APP_DIR, locale, "blog", article.slug, "page.tsx");
-        expect(existsSync(pagePath), `${locale}: ${article.slug}`).toBe(true);
-        expect(/\d{4}/.test(article.slug), `date in slug: ${article.slug}`).toBe(false);
+        const segments = prefix
+          ? [APP_DIR, prefix, "blog", article.slug, "page.tsx"]
+          : [APP_DIR, "blog", article.slug, "page.tsx"];
+        expect(existsSync(join(...segments)), `${locale}: ${article.slug}`).toBe(
+          true,
+        );
+        expect(/\d{4}/.test(article.slug), `date in slug: ${article.slug}`).toBe(
+          false,
+        );
       }
-      expect(existsSync(join(APP_DIR, locale, "blog", "page.tsx"))).toBe(true);
+    }
+  });
+
+  it("has a marketing page file for every site locale", () => {
+    for (const locale of SITE_LOCALES) {
+      const prefix = LOCALE_CONFIG[locale].pathPrefix.replace(/^\//, "");
+      const segments = prefix ? [APP_DIR, prefix, "page.tsx"] : [APP_DIR, "page.tsx"];
+      expect(existsSync(join(...segments)), `${locale}: home`).toBe(true);
     }
   });
 });

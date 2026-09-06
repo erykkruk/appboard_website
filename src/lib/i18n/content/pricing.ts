@@ -97,7 +97,7 @@ const EN: PricingContent = {
       {
         description: "For developers who treat ASO as a growth channel.",
         features: [
-          "Unlimited connected apps",
+          "Unlímited connected apps",
           "AI assistant via OpenRouter - any model",
           "Keyword, market, and competitor research",
           "Screenshot studio with CLI and CI uploads",
@@ -205,7 +205,176 @@ const PL: PricingContent = {
   },
 };
 
+
+const DE: PricingContent = {
+  faq: {
+    entries: [
+      {
+        answer:
+          "Ja. AppBoard ist im Early Access und während der Beta ist jeder Plan kostenlos. Die endgültigen Preise kündigen wir vor der allgemeinen Verfügbarkeit an, mit reichlich Vorlauf für bestehende Nutzer.",
+        question: "Ist AppBoard gerade wirklich kostenlos?",
+      },
+      {
+        answer:
+          "AppBoard verbindet sich mit App Store Connect (Apple App Store) und der Google Play Console (Google Play). Die Einträge beider Stores verwalten Sie aus einem einzigen Workspace.",
+        question: "Welche App-Stores unterstützt AppBoard?",
+      },
+      {
+        answer:
+          "Store-Zugangsdaten schützt ein Ende-zu-Ende-verschlüsselter Tresor. Die Schlüssel werden mit einem aus Ihrer Passphrase abgeleiteten Schlüssel verschlüsselt und liegen auf unseren Servern nie im Klartext.",
+        question: "Wie sind meine Store-Zugangsdaten geschützt?",
+      },
+      {
+        answer:
+          "Der KI-Assistent läuft über OpenRouter, Sie wählen also jedes unterstützte Modell für Beschreibungen, Übersetzungen, ASO-Keyword-Vorschlaege und Antworten auf Rezensionen.",
+        question: "Welche KI-Modelle kann ich nutzen?",
+      },
+    ],
+    eyebrow: "FAQ",
+    title: "Häufige Fragen",
+  },
+  page: {
+    eyebrow: "Preise",
+    lead: "Von der ersten App bis zum ganzen Portfolio: kostenlos starten und in den Plan wachsen, der zu Ihrem Team passt.",
+    title: "Einfache Pläne für jede Phase",
+  },
+  tiers: {
+    betaSuffix: "während der Beta",
+    ctaLabel: "Jetzt starten",
+    earlyAccessBody:
+      "AppBoard ist während der Beta kostenlos. Die Pläne unten zeigen die geplante Struktur, die Preise nennen wir vor der allgemeinen Verfügbarkeit.",
+    earlyAccessLabel: "Early Access:",
+    mostPopular: "Am beliebtesten",
+    selfHostBody:
+      "Der Quellcode von AppBoard ist einsehbar und für private sowie nicht kommerzielle Nutzung kostenlos.",
+    selfHostLabel: "Lieber selbst hosten?",
+    selfHostLinkLabel: "Auf GitHub ansehen →",
+    tiers: [
+      {
+        description: "Für Indie-Entwickler, die ihre ersten Apps veröffentlichen.",
+        features: [
+          "1 Workspace",
+          "Bis zu 3 verbundene Apps",
+          "Eintrags-Editor mit Verlauf und Rollback",
+          "Rezensions-Posteingang",
+          "Veröffentlichen in beide Stores",
+        ],
+        name: "Free",
+      },
+      {
+        description: "Für Entwickler, die ASO als Wachstumskanal ernst nehmen.",
+        features: [
+          "Unbegrenzt verbundene Apps",
+          "KI-Assistent über OpenRouter, jedes Modell",
+          "Keyword-, Markt- und Wettbewerbsanalyse",
+          "Screenshot-Studio mit Upload per CLI und CI",
+          "Stapel-Veröffentlichung mit Bericht pro Position",
+        ],
+        highlighted: true,
+        name: "Pro",
+        regularPrice: "$10",
+      },
+      {
+        description: "Für Teams, die ihr Portfolio gemeinsam verwalten.",
+        features: [
+          "Alles aus Pro",
+          "Mehrere Workspaces mit Rollen",
+          "Ende-zu-Ende-verschlüsselter Tresor für Zugangsdaten",
+          "Feature-Flags pro Workspace",
+          "Priorisierter Support",
+        ],
+        name: "Team",
+      },
+    ],
+  },
+};
+
+const ES: PricingContent = {
+  faq: {
+    entries: [
+      {
+        answer:
+          "Sí. AppBoard está en acceso anticipado y durante la beta todos los planes son gratis. Anunciaremos los precios definitivos antes del lanzamiento general, con mucho margen para quienes ya lo usan.",
+        question: "¿Es AppBoard gratis de verdad ahora mismo?",
+      },
+      {
+        answer:
+          "AppBoard se conecta con App Store Connect (Apple App Store) y Google Play Console (Google Play). Gestionas las fichas de las dos tiendas desde un solo espacio de trabajo.",
+        question: "¿Qué tiendas de aplicaciones admite AppBoard?",
+      },
+      {
+        answer:
+          "Las credenciales de las tiendas están protegidas por un baúl cifrado de extremo a extremo. Las claves se cifran con una clave derivada de tu frase de paso, así que nunca se guardan ni se pueden leer en texto plano en nuestros servidores.",
+        question: "¿Cómo se protegen mis credenciales de las tiendas?",
+      },
+      {
+        answer:
+          "El asistente de IA funciona sobre OpenRouter, así que puedes elegir cualquier modelo compatible para generar descripciones, traducciones, sugerencias de keywords ASO y respuestas a reseñas.",
+        question: "¿Qué modelos de IA puedo usar?",
+      },
+    ],
+    eyebrow: "FAQ",
+    title: "Preguntas frecuentes",
+  },
+  page: {
+    eyebrow: "Precios",
+    lead: "De tu primera app a un portfolio completo: empieza gratis y pasa al plan que encaje con tu equipo.",
+    title: "Planes simples para cada etapa",
+  },
+  tiers: {
+    betaSuffix: "durante la beta",
+    ctaLabel: "Empezar",
+    earlyAccessBody:
+      "AppBoard es gratis durante la beta. Los planes de abajo muestran la estructura prevista y los precios se anunciarán antes del lanzamiento general.",
+    earlyAccessLabel: "Acceso anticipado:",
+    mostPopular: "El más elegido",
+    selfHostBody:
+      "El código de AppBoard es visible y gratuito para uso personal y no comercial.",
+    selfHostLabel: "¿Prefieres alojarlo tú?",
+    selfHostLinkLabel: "Verlo en GitHub →",
+    tiers: [
+      {
+        description: "Para desarrolladores indie que publican sus primeras apps.",
+        features: [
+          "1 espacio de trabajo",
+          "Hasta 3 apps conectadas",
+          "Editor de fichas con historial y reversión",
+          "Bandeja de reseñas",
+          "Publicación en las dos tiendas",
+        ],
+        name: "Free",
+      },
+      {
+        description: "Para quien trata el ASO como un canal de crecimiento.",
+        features: [
+          "Apps conectadas sin límite",
+          "Asistente de IA por OpenRouter, cualquier modelo",
+          "Research de keywords, mercados y competencia",
+          "Estudio de capturas con subida por CLI y CI",
+          "Publicación por lotes con informe por elemento",
+        ],
+        highlighted: true,
+        name: "Pro",
+        regularPrice: "$10",
+      },
+      {
+        description: "Para equipos que gestionan un portfolio juntos.",
+        features: [
+          "Todo lo de Pro",
+          "Varios espacios de trabajo con roles",
+          "Baúl de credenciales cifrado de extremo a extremo",
+          "Feature flags por espacio de trabajo",
+          "Soporte prioritario",
+        ],
+        name: "Team",
+      },
+    ],
+  },
+};
+
 export const PRICING_CONTENT: Record<SiteLocale, PricingContent> = {
+  de: DE,
   en: EN,
+  es: ES,
   pl: PL,
 };
